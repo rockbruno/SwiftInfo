@@ -2,6 +2,9 @@ import Foundation
 
 public struct TargetCountProvider: InfoProvider {
 
+    public let identifier: String = "target_count"
+    public let description: String = "Dependency Count"
+
     let lessIsBetter: Bool
 
     public func run() throws -> Info {

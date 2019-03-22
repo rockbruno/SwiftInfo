@@ -10,15 +10,17 @@ let package = Package(
         .executable(name: "swiftinfo", targets: ["SwiftInfo"])
     ],
     dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
     ],
     targets: [
+        // Csourcekitd: C modules wrapper for sourcekitd.
+        .target(
+            name: "Csourcekitd",
+            dependencies: []),
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "SwiftInfoCore",
-            dependencies: []),
+            dependencies: ["Csourcekitd"]),
         .target(
             name: "SwiftInfo",
             dependencies: ["SwiftInfoCore"]),

@@ -4,3 +4,6 @@
 /*.xcodeproj
 Infofile.swift
 swiftinfo
+/build
+/SwiftInfo-output
+Infofile
