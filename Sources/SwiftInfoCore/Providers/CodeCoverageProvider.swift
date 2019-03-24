@@ -46,16 +46,25 @@ public struct CodeCoverageProvider: InfoProvider {
         _ = Shell().run(supressOutput: true, "rm \(tempFile.path)")
     }
 
-    public func summary(comparingWith other: CodeCoverageProvider?) -> String {
-        let regularMessage = "Code Coverage: \(percentage)"
+    public func summary(comparingWith other: CodeCoverageProvider?) -> Summary {
+        let prefix = "📊 Code Coverage"
         guard let other = other else {
-            return regularMessage
+            return Summary(text: prefix + ": \(percentage)", style: .neutral)
         }
-        if percentage == other.percentage {
-            return regularMessage
+        guard percentage != other.percentage else {
+            return Summary(text: prefix + ": Unchanged. (\(percentage))", style: .neutral)
+        }
+        let modifier: String
+        let style: Summary.Style
+        if percentage > other.percentage {
+            modifier = "*grew*"
+            style = .positive
+        } else {
+            modifier = "was *reduced*"
+            style = .negative
         }
         let difference = abs(other.percentage - percentage)
-        let modifier = percentage > other.percentage ? "*grew*" : "was *reduced*"
-        return "Test count \(modifier) by \(Double(difference) / 10) (\(Double(percentage) / 10))"
+        let text = prefix + " \(modifier) by \(Double(difference) / 10) (\(Double(percentage) / 10))"
+        return Summary(text: text, style: style)
     }
 }

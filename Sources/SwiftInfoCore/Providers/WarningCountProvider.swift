@@ -20,16 +20,25 @@ public struct WarningCountProvider: InfoProvider {
         return WarningCountProvider(count: count)
     }
 
-    public func summary(comparingWith other: WarningCountProvider?) -> String {
-        let regularMessage = "Warning count: \(count)"
+    public func summary(comparingWith other: WarningCountProvider?) -> Summary {
+        let prefix = "⚠️ Warning count"
         guard let other = other else {
-            return regularMessage
+            return Summary(text: prefix + ": \(count)", style: .neutral)
         }
-        if count == other.count {
-            return regularMessage
+        guard count != other.count else {
+            return Summary(text: prefix + ": Unchanged. (\(count))", style: .neutral)
+        }
+        let modifier: String
+        let style: Summary.Style
+        if count > other.count {
+            modifier = "*grew*"
+            style = .negative
+        } else {
+            modifier = "was *reduced*"
+            style = .positive
         }
         let difference = abs(other.count - count)
-        let modifier = count > other.count ? "*grew*" : "was *reduced*"
-        return "Warning count \(modifier) by \(difference) (\(count))"
+        let text = prefix + " \(modifier) by \(difference) (\(count))"
+        return Summary(text: text, style: style)
     }
 }
