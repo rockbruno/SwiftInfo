@@ -5,12 +5,10 @@ struct SwiftInfo {
     static func run() {
         let utils = FileUtils()
         guard let path = utils.infofileFolder() else {
-            print("Infofile.swift not found.")
-            exit(-1)
+            fail("Infofile.swift not found.")
         }
         guard let toolFolder = utils.toolFolder() else {
-            print("Couldn't determine the folder that's running SwiftInfo.")
-            exit(-1)
+            fail("Couldn't determine the folder that's running SwiftInfo.")
         }
         print("SwiftInfo")
         let shell = Shell()
@@ -22,7 +20,7 @@ struct SwiftInfo {
                   toolFolder,
                   "-lSwiftInfoCore")
         shell.run("./Infofile")
-        shell.run("rm", "Infofile")
+        shell.run("rm Infofile")
     }
 }
 

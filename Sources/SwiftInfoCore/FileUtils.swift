@@ -17,12 +17,18 @@ public struct FileUtils {
         return try? String(contentsOf: url)
     }
 
-    public var outputJson: [String: Any] {
+    public var outputJson: [[String: Any]] {
         guard let data = try? Data(contentsOf: outputFileFolderURL()) else {
-            return [:]
+            return []
         }
-        let json = try? JSONSerialization.jsonObject(with: data, options: [])
-        return json as? [String: Any] ?? [:]
+        let object = try? JSONSerialization.jsonObject(with: data, options: [])
+        let json = object as? [String: Any]
+        return json?["data"] as? [[String: Any]] ?? []
+    }
+
+    public var lastOutput: Output {
+        let last = outputJson.first ?? [:]
+        return Output(rawDictionary: last)
     }
 
     public init() {}
@@ -48,8 +54,9 @@ public struct FileUtils {
         return URL(string: executionPath)?.deletingLastPathComponent().absoluteString
     }
 
-    public func save(output: [String: Any]) throws {
-        let json = try JSONSerialization.data(withJSONObject: output, options: [.prettyPrinted])
+    public func save(output: [[String: Any]]) throws {
+        let dictionary = ["data": output]
+        let json = try JSONSerialization.data(withJSONObject: dictionary, options: [.prettyPrinted])
         try? FileManager.default.createDirectory(atPath: outputFileFolderPath(),
                                                  withIntermediateDirectories: true,
                                                  attributes: nil)
