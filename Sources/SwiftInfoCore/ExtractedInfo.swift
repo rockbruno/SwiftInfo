@@ -2,7 +2,7 @@ import Foundation
 
 struct ExtractedInfo<T: InfoProvider>: Codable {
     let data: T
-    let summary: String
+    let summary: Summary
 
     func encoded() throws -> [String: Any] {
         let data = try JSONEncoder().encode(self)

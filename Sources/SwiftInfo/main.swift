@@ -1,7 +1,7 @@
 import Foundation
 import SwiftInfoCore
 
-struct SwiftInfo {
+struct Main {
     static func run() {
         let utils = FileUtils()
         guard let path = utils.infofileFolder() else {
@@ -12,6 +12,7 @@ struct SwiftInfo {
         }
         print("SwiftInfo")
         let shell = Shell()
+        //FIXME: Shutting down SwiftInfo should force the sub processes to shut down as well.
         shell.run("swiftc",
                   path + "Infofile.swift",
                   "-I",
@@ -24,4 +25,4 @@ struct SwiftInfo {
     }
 }
 
-SwiftInfo.run()
+Main.run()

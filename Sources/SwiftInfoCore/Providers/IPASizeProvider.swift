@@ -39,17 +39,26 @@ public struct IPASizeProvider: InfoProvider {
         return String(format: "%4.2f %@", convertedValue, tokens[multiplyFactor])
     }
 
-    public func summary(comparingWith other: IPASizeProvider?) -> String {
-        let regularMessage = ".ipa size: \(friendlySize)"
+    public func summary(comparingWith other: IPASizeProvider?) -> Summary {
+        let prefix = "📦 .ipa size"
         guard let other = other else {
-            return regularMessage
+            return Summary(text: prefix + ": \(friendlySize)", style: .neutral)
         }
-        if size == other.size {
-            return regularMessage
+        guard size != other.size else {
+            return Summary(text: prefix + ": Unchanged. (\(friendlySize))", style: .neutral)
+        }
+        let modifier: String
+        let style: Summary.Style
+        if size > other.size {
+            modifier = "*grew*"
+            style = .negative
+        } else {
+            modifier = "was *reduced*"
+            style = .positive
         }
         let difference = abs(other.size - size)
-        let modifier = size > other.size ? "*grew*" : "was *reduced*"
         let friendlyDifference = IPASizeProvider.convertToFileString(with: difference)
-        return ".ipa size \(modifier) by \(friendlyDifference) (\(friendlySize))"
+        let text = prefix + " \(modifier) by \(friendlyDifference) (\(friendlySize))"
+        return Summary(text: text, style: style)
     }
 }

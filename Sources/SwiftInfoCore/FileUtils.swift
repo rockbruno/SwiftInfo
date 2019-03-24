@@ -28,7 +28,7 @@ public struct FileUtils {
 
     public var lastOutput: Output {
         let last = outputJson.first ?? [:]
-        return Output(rawDictionary: last)
+        return Output(rawDictionary: last, summaries: [])
     }
 
     public init() {}

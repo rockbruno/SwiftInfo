@@ -10,6 +10,7 @@ let package = Package(
         .executable(name: "swiftinfo", targets: ["SwiftInfo"])
     ],
     dependencies: [
+        .package(url: "https://github.com/tuist/xcodeproj.git", .exact("6.6.0"))
     ],
     targets: [
         // Csourcekitd: C modules wrapper for sourcekitd.
@@ -20,7 +21,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
         .target(
             name: "SwiftInfoCore",
-            dependencies: ["Csourcekitd"]),
+            dependencies: ["Csourcekitd", "xcodeproj"]),
         .target(
             name: "SwiftInfo",
             dependencies: ["SwiftInfoCore"]),
