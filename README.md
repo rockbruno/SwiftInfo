@@ -68,7 +68,7 @@ api.sendToSlack(output: output, webhookUrl: "YOUR_SLACK_WEBHOOK_HERE")
 api.save(output: output)
 ```
 
-The documentation for the `SwiftInfo` api [is available here.](Sources/SwiftInfoCore/SwiftInfo.swift)
+The `SwiftInfo` API [is available here.](Sources/SwiftInfoCore/SwiftInfo.swift)
 
 ## Available Providers
 
