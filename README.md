@@ -84,7 +84,7 @@ The documentation for the `SwiftInfo` api [is available here.](Sources/SwiftInfo
 
 After successfully extracting data, SwiftInfo will add/update a json file in the `{Infofile path}/SwiftInfo-output` folder. It's important to commit this file after the running the tool as this is what SwiftInfo uses to compare new pieces of information.
 
-Although you can't do anything with the output for now besides sending it to Slack, we'll develop tools in the future that allow you to convert this JSON to graphs inside a HTML page.
+Although you can't do anything with the output for now besides sending it to Slack, tools are being developed that allows you to convert this JSON to graphs inside a HTML page.
 
 ## Tracking custom info
 
