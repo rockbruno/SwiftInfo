@@ -8,12 +8,14 @@ public struct FileUtils {
     public let outputFileName = "SwiftInfoOutput.json"
 
     public var testLog: String? {
-        let url = URL(fileURLWithPath: FileUtils.testLogFilePath)
+        let folder = infofileFolder() ?? ""
+        let url = URL(fileURLWithPath: folder + FileUtils.testLogFilePath)
         return try? String(contentsOf: url)
     }
 
     public var buildLog: String? {
-        let url = URL(fileURLWithPath: FileUtils.buildLogFilePath)
+        let folder = infofileFolder() ?? ""
+        let url = URL(fileURLWithPath: folder + FileUtils.buildLogFilePath)
         return try? String(contentsOf: url)
     }
 

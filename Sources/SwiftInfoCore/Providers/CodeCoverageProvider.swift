@@ -11,10 +11,10 @@ public struct CodeCoverageProvider: InfoProvider {
     }
 
     public let description: String = "Code Coverage"
-    public let percentage: Int
+    public let percentageInt: Int
 
-    public init(percentage: Int) {
-        self.percentage = percentage
+    public init(percentageInt: Int) {
+        self.percentageInt = percentageInt
     }
 
     public static func extract() throws -> CodeCoverageProvider {
@@ -39,7 +39,7 @@ public struct CodeCoverageProvider: InfoProvider {
         }
         let codeCoverage = desiredTarget["lineCoverage"] as! Double
         let rounded = Int(1000 * codeCoverage)
-        return CodeCoverageProvider(percentage: rounded)
+        return CodeCoverageProvider(percentageInt: rounded)
     }
 
     static func removeTemporaryFile() {
@@ -48,23 +48,29 @@ public struct CodeCoverageProvider: InfoProvider {
 
     public func summary(comparingWith other: CodeCoverageProvider?) -> Summary {
         let prefix = "📊 Code Coverage"
+        let percentage = toPercentage(percentageInt: percentageInt)
         guard let other = other else {
             return Summary(text: prefix + ": \(percentage)", style: .neutral)
         }
-        guard percentage != other.percentage else {
+        guard percentageInt != other.percentageInt else {
             return Summary(text: prefix + ": Unchanged. (\(percentage))", style: .neutral)
         }
         let modifier: String
         let style: Summary.Style
-        if percentage > other.percentage {
+        if percentageInt > other.percentageInt {
             modifier = "*grew*"
             style = .positive
         } else {
             modifier = "was *reduced*"
             style = .negative
         }
-        let difference = abs(other.percentage - percentage)
-        let text = prefix + " \(modifier) by \(Double(difference) / 10) (\(Double(percentage) / 10))"
+        let differenceInt = abs(other.percentageInt - percentageInt)
+        let differencePercentage = toPercentage(percentageInt: differenceInt)
+        let text = prefix + " \(modifier) by \(percentage) (\(differencePercentage))"
         return Summary(text: text, style: style)
+    }
+
+    func toPercentage(percentageInt: Int) -> String {
+        return "\(Double(percentageInt) / 10)%"
     }
 }

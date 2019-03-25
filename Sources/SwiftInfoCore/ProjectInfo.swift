@@ -28,11 +28,11 @@ public struct ProjectInfo: CustomStringConvertible {
             guard let contents = try? FileManager.default.contentsOfDirectory(atPath: projectFolder) else {
                 fail("FileManager failed.")
             }
-            guard let project = contents.first(where: { $0.hasSuffix(".xcodeproj") }) else {
+            guard let project = contents.first(where: { $0.hasSuffix(xcodeproj) }) else {
                 fail("Project file not found.")
             }
-            guard let xcodeproj = try? XcodeProj(path: Path(project)) else {
-                fail("Failed to load .pbxproj!")
+            guard let xcodeproj = try? XcodeProj(path: Path(projectFolder + project)) else {
+                fail("Failed to load .pbxproj! (\(projectFolder + project))")
             }
             guard let pbxTarget = xcodeproj.pbxproj.targets(named: target).first else {
                 fail("Target not found.")
@@ -51,8 +51,9 @@ public struct ProjectInfo: CustomStringConvertible {
     }
 
     func plistDict() -> NSDictionary {
-        guard let dictionary = NSDictionary(contentsOfFile: plistPath) else {
-            fail("Failed to load plist \(plistPath)")
+        let folder = fileUtils.infofileFolder() ?? ""
+        guard let dictionary = NSDictionary(contentsOfFile: folder + plistPath) else {
+            fail("Failed to load plist \(folder + plistPath)")
         }
         return dictionary
     }

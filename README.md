@@ -8,7 +8,9 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 
 ## Usage
 
-SwiftInfo requires the raw logs of a succesful test/archive build combo to work, so it's better used as the last step of a CI pipeline. If you use Fastlane, you can easily expose the raw logs by adding a `buildlog_path` to `scan` and `gym`. Here's a simple example of a Fastlane step that runs tests, submits an archive to TestFlight and runs SwiftInfo (be sure to edit the folder paths to what's being used by your project):
+SwiftInfo requires the raw logs of a succesful test/archive build combo to work, so it's better used as the last step of a CI pipeline. 
+
+If you use Fastlane, you can easily expose the raw logs by adding `buildlog_path` to `scan` and `gym`. Here's a simple example of a Fastlane step that runs tests, submits an archive to TestFlight and runs SwiftInfo (be sure to edit the folder paths to what's being used by your project):
 
 ```ruby
 desc "Submits a new beta build and runs SwiftInfo"
@@ -70,9 +72,15 @@ api.save(output: output)
 
 The full list of providers you can use and the documentation for the `SwiftInfo` api is available here. --WIP--
 
+## Output
+
+After successfully extracting data, SwiftInfo will add/update a json file in the `{Infofile path}/SwiftInfo-output` folder. It's important to commit this file after the running the tool as this is what SwiftInfo uses to compare new pieces of information.
+
+Although you can't do anything with the output for now besides sending it to Slack, we'll develop tools in the future that allow you to convert this JSON to graphs inside a HTML page.
+
 ## Tracking custom info
 
-If you wish to track something that's not handled by the default providers, you can do so by creating your own provider by creating a `struct` that [inherits from InfoProvider](https://github.com/rockbruno/SwiftInfo/blob/master/Sources/SwiftInfoCore/InfoProvider.swift) and adding it to your Infofile. Here's a simple provider that tracks the number of files in a project where adding new files is bad:
+If you wish to track something that's not handled by the default providers, you can create your own provider by creating a `struct` that [inherits from InfoProvider](https://github.com/rockbruno/SwiftInfo/blob/master/Sources/SwiftInfoCore/InfoProvider.swift) inside your Infofile. Here's a simple provider that tracks the number of files in a project where adding new files is bad:
 
 ```swift
 struct FileCountProvider: InfoProvider {
@@ -112,12 +120,6 @@ struct FileCountProvider: InfoProvider {
 ```
 
 **If you end up creating a custom provider, consider submitting it here as a pull request to have it added as a default one!**
-
-## Output
-
-After successfully extracting data, SwiftInfo will add/update a json file in the `{Infofile path}/SwiftInfo-output` folder. It's important to commit this file after the running the tool as this is what SwiftInfo uses to compare new pieces of information.
-
-Although for now you can't do anything with the output besides sending it to Slack, we'll develop tools in the future that allow you to convert this JSON to graphs inside a HTML page.
 
 ## Installation
 
