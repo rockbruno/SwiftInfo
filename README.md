@@ -1,10 +1,8 @@
 # 📊 SwiftInfo
 
---WIP--
-
 <img src="https://i.imgur.com/Y6z0xij.png" height="200">
 
-SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that are useful for Swift apps. Besides the default tracking options that are shipped with the tool, you can also customize SwiftInfo to track pretty much anything that can be conveyed in a simple `.swift` script.
+SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that are useful for Swift apps. Besides the default tracking options that are shipped with the tool, you can customize SwiftInfo to track pretty much anything that can be conveyed in a simple `.swift` script.
 
 ## Usage
 
@@ -70,7 +68,17 @@ api.sendToSlack(output: output, webhookUrl: "YOUR_SLACK_WEBHOOK_HERE")
 api.save(output: output)
 ```
 
-The full list of providers you can use and the documentation for the `SwiftInfo` api is available here. --WIP--
+The documentation for the `SwiftInfo` api [is available here.](Sources/SwiftInfoCore/SwiftInfo.swift)
+
+## Available Providers
+
+| **Type Name** | **Description** | **Requirements** |
+|---|:---:|:---:|
+| **IPASizeProvider**        | Size of the .ipa archive | Build logs |
+| **CodeCoverageProvider**        | Code coverage percentage | Test logs, Xcode developer tools, Test targets with code coverage reports enabled |
+| **TargetCountProvider**        | Number of targets (dependencies) | Build logs |
+| **TestCountProvider**        | Sum of all test target's tests | Test logs |
+| **WarningCountProvider**        | Number of warnings in a build | Build logs |
 
 ## Output
 
@@ -80,7 +88,7 @@ Although you can't do anything with the output for now besides sending it to Sla
 
 ## Tracking custom info
 
-If you wish to track something that's not handled by the default providers, you can create your own provider by creating a `struct` that [inherits from InfoProvider](https://github.com/rockbruno/SwiftInfo/blob/master/Sources/SwiftInfoCore/InfoProvider.swift) inside your Infofile. Here's a simple provider that tracks the number of files in a project where adding new files is bad:
+If you wish to track something that's not handled by the default providers, you can create your own provider by creating a `struct` that [inherits from InfoProvider](Sources/SwiftInfoCore/InfoProvider.swift) inside your Infofile. Here's a simple provider that tracks the number of files in a project where adding new files is bad:
 
 ```swift
 struct FileCountProvider: InfoProvider {
