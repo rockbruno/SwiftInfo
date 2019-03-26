@@ -127,6 +127,8 @@ struct FileCountProvider: InfoProvider {
 }
 ```
 
+Documentation of useful types and methods from SwiftInfoCore that you can use when building custom providers will be available soon.
+
 **If you end up creating a custom provider, consider submitting it here as a pull request to have it added as a default one!**
 
 ## Installation
