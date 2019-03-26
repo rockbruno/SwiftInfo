@@ -18,9 +18,7 @@ public struct CodeCoverageProvider: InfoProvider {
     }
 
     public static func extract() throws -> CodeCoverageProvider {
-        guard let testLog = FileUtils().testLog else {
-            fail("No build log!")
-        }
+        let testLog = FileUtils().testLog
         guard let reportFilePath = testLog.match(regex: "(?<=Generated coverage report: ).*").first else {
             fail("Couldn't find code coverage report, is it enabled?")
         }

@@ -12,9 +12,7 @@ public struct WarningCountProvider: InfoProvider {
     }
 
     public static func extract() throws -> WarningCountProvider {
-        guard let buildLog = FileUtils().buildLog else {
-            fail("No build log!")
-        }
+        let buildLog = FileUtils().buildLog
         let results = buildLog.match(regex: "\n.*warning:.*\n")
         let count = Set(results).count
         return WarningCountProvider(count: count)

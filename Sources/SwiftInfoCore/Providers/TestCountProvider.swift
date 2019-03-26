@@ -12,9 +12,7 @@ public struct TestCountProvider: InfoProvider {
     }
 
     public static func extract() throws -> TestCountProvider {
-        guard let testLog = FileUtils().testLog else {
-            fail("No test log!")
-        }
+        let testLog = FileUtils().testLog
         let count = testLog.insensitiveMatch(regex: "Test Case '.*' passed").count +
                     testLog.insensitiveMatch(regex: "Test Case '.*' failed").count
         return TestCountProvider(count: count)

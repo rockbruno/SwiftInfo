@@ -18,10 +18,13 @@ public struct SwiftInfo {
 
     public func extract<T: InfoProvider>(_ provider: T.Type) -> Output {
         do {
-            print("Extracting \(provider.identifier)")
+            log("Extracting \(provider.identifier)")
             let extracted = try provider.extract()
+            log("\(provider.identifier): Parsing previously extracted info", verbose: true)
             let other = try fileUtils.lastOutput.extractedInfo(ofType: provider)
+            log("\(provider.identifier): Comparing with previously extracted info", verbose: true)
             let summary = extracted.summary(comparingWith: other)
+            log("\(provider.identifier): Finishing", verbose: true)
             let info = ExtractedInfo(data: extracted, summary: summary)
             return try Output(info: info)
         } catch {
@@ -30,13 +33,14 @@ public struct SwiftInfo {
     }
 
     public func sendToSlack(output: Output, webhookUrl: String) {
-        print("Sending to slack...")
+        log("Sending to Slack")
+        log("Slack Webhook: \(webhookUrl)", verbose: true)
         let formatted = slackFormatter.format(output: output, projectInfo: projectInfo)
         network.syncPost(urlString: webhookUrl, json: formatted)
     }
 
     public func save(output: Output) {
-        print("Saving output to disk...")
+        log("Saving output to disk")
         let outputFile = fileUtils.outputJson
         var dict = output.rawDictionary
         dict["swiftinfo_run_description_key"] = projectInfo.description
@@ -49,5 +53,6 @@ public struct SwiftInfo {
 }
 
 public func fail(_ message: String) -> Never {
-    fatalError(message)
+    log("Fatal error: \(message)")
+    exit(-1)
 }

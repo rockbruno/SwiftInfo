@@ -1,32 +1,51 @@
 import Foundation
 import SwiftInfoCore
 
+let task = Process()
+
 struct Main {
     static func run() {
         let utils = FileUtils()
-        guard let path = utils.infofileFolder() else {
-            fail("Infofile.swift not found.")
+        let path = utils.infofileFolder()
+        let toolFolder = utils.toolFolder()
+
+        log("SwiftInfo")
+        log("Dylib Folder: \(toolFolder)", verbose: true)
+        log("Infofile Path: \(path)", verbose: true)
+
+        let args = ["swiftc",
+        "--driver-mode=swift", // Don't generate a binary, just run directly.
+        "-L", // Link with SwiftInfoCore manually.
+        toolFolder,
+        "-I",
+        toolFolder,
+        "-lSwiftInfoCore",
+        path + "Infofile.swift",
+        ] + Array(ProcessInfo.processInfo.arguments.dropFirst()) // Route SwiftInfo args to the sub process
+
+        task.launchPath = "/bin/bash"
+        task.arguments = ["-c", args.joined(separator: " ")]
+        task.standardOutput = FileHandle.standardOutput
+        task.standardError = FileHandle.standardError
+
+        task.terminationHandler = { t -> Void in
+            exit(t.terminationStatus)
         }
-        guard let toolFolder = utils.toolFolder() else {
-            fail("Couldn't determine the folder that's running SwiftInfo.")
-        }
-        print("SwiftInfo")
-        let shell = Shell()
-        shell.run("install_name_tool",
-                  "-id",
-                  toolFolder + "/libSwiftInfoCore.dylib",
-                  toolFolder + "/libSwiftInfoCore.dylib")
-        //FIXME: Shutting down SwiftInfo should force the sub processes to shut down as well.
-        shell.run("swiftc",
-                  path + "Infofile.swift",
-                  "-I",
-                  toolFolder,
-                  "-L",
-                  toolFolder,
-                  "-lSwiftInfoCore")
-        shell.run("./Infofile")
-        shell.run("rm Infofile")
+
+        task.launch()
     }
 }
 
+/////////
+// Detect interruptions and use it to interrupt the sub process.
+signal(SIGINT, SIG_IGN)
+let source = DispatchSource.makeSignalSource(signal: SIGINT)
+source.setEventHandler {
+    task.interrupt()
+    exit(SIGINT)
+}
+////////
+
+source.resume()
 Main.run()
+dispatchMain()

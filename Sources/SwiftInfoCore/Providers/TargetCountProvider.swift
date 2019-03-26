@@ -12,9 +12,7 @@ public struct TargetCountProvider: InfoProvider {
     }
 
     public static func extract() throws -> TargetCountProvider {
-        guard let buildLog = FileUtils().buildLog else {
-            fail("No build log!")
-        }
+        let buildLog = FileUtils().buildLog
         let modules = Set(buildLog.match(regex: "(?<=-module-name ).*?(?= )"))
         return TargetCountProvider(count: modules.count)
     }
