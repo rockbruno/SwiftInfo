@@ -1,6 +1,6 @@
 # 📊 SwiftInfo
 
-<img src="https://i.imgur.com/Y6z0xij.png" height="200">
+<img src="https://i.imgur.com/Y6z0xij.png">
 
 SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that are useful for Swift apps. Besides the default tracking options that are shipped with the tool, you can customize SwiftInfo to track pretty much anything that can be conveyed in a simple `.swift` script.
 
@@ -74,7 +74,7 @@ The `SwiftInfo` API [is available here.](Sources/SwiftInfoCore/SwiftInfo.swift)
 
 | **Type Name** | **Description** | **Requirements** |
 |---|:---:|:---:|
-| **IPASizeProvider**        | Size of the .ipa archive | Build logs |
+| **IPASizeProvider**        | Size of the .ipa archive (Not the App Store size!) | Successful xcodebuild archive |
 | **CodeCoverageProvider**        | Code coverage percentage | Test logs, Xcode developer tools, Test targets with code coverage reports enabled |
 | **TargetCountProvider**        | Number of targets (dependencies) | Build logs |
 | **TestCountProvider**        | Sum of all test target's tests | Test logs |
