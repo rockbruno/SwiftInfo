@@ -12,6 +12,10 @@ struct Main {
         }
         print("SwiftInfo")
         let shell = Shell()
+        shell.run("install_name_tool",
+                  "-id",
+                  toolFolder + "/libSwiftInfoCore.dylib",
+                  toolFolder + "/libSwiftInfoCore.dylib")
         //FIXME: Shutting down SwiftInfo should force the sub processes to shut down as well.
         shell.run("swiftc",
                   path + "Infofile.swift",

@@ -1,5 +1,6 @@
 .DS_Store
 /.build
+/.builda
 /Packages
 /*.xcodeproj
 Infofile.swift
