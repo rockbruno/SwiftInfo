@@ -11,8 +11,8 @@ public struct TestCountProvider: InfoProvider {
         self.count = count
     }
 
-    public static func extract() throws -> TestCountProvider {
-        let testLog = FileUtils().testLog
+    public static func extract(fromApi api: SwiftInfo) throws -> TestCountProvider {
+        let testLog = api.fileUtils.testLog
         let count = testLog.insensitiveMatch(regex: "Test Case '.*' passed").count +
                     testLog.insensitiveMatch(regex: "Test Case '.*' failed").count
         return TestCountProvider(count: count)

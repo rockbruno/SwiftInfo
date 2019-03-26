@@ -1,9 +1,19 @@
 import XCTest
 
+extension FileUtilsTests {
+    static let __allTests = [
+        ("testBuildLogs", testBuildLogs),
+        ("testInfofileFinder", testInfofileFinder),
+        ("testLastOutput", testLastOutput),
+        ("testSaveOutput", testSaveOutput),
+        ("testTestLogs", testTestLogs),
+    ]
+}
+
 #if !os(macOS)
-public func allTests() -> [XCTestCaseEntry] {
+public func __allTests() -> [XCTestCaseEntry] {
     return [
-        testCase(SwiftInfoTests.allTests),
+        testCase(FileUtilsTests.__allTests),
     ]
 }
 #endif

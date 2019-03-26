@@ -5,7 +5,6 @@ public struct CodeCoverageProvider: InfoProvider {
     public static let identifier: String = "code_coverage"
     static let tempFileName = "swiftinfo_codecov.txt"
 
-
     static var tempFile: URL {
         return URL(fileURLWithPath: "./\(tempFileName)")
     }
@@ -17,12 +16,12 @@ public struct CodeCoverageProvider: InfoProvider {
         self.percentageInt = percentageInt
     }
 
-    public static func extract() throws -> CodeCoverageProvider {
-        let testLog = FileUtils().testLog
+    public static func extract(fromApi api: SwiftInfo) throws -> CodeCoverageProvider {
+        let testLog = api.fileUtils.testLog
         guard let reportFilePath = testLog.match(regex: "(?<=Generated coverage report: ).*").first else {
             fail("Couldn't find code coverage report, is it enabled?")
         }
-        let shell = Shell()
+        let shell = api.shell
         removeTemporaryFile()
         _ = shell.run(supressOutput: true, "xcrun xccov view \(reportFilePath) --json > \(tempFileName)")
         let data = try! Data(contentsOf: tempFile)

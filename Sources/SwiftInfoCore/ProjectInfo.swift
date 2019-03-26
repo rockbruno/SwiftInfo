@@ -22,7 +22,7 @@ public struct ProjectInfo: CustomStringConvertible {
         self.configuration = configuration
         self.fileUtils = fileUtils
         func projectPlist() -> String {
-            let projectFolder = fileUtils.infofileFolder()
+            let projectFolder = fileUtils.infofileFolder
             do {
                 let contents = try FileManager.default.contentsOfDirectory(atPath: projectFolder)
                 guard let project = contents.first(where: { $0.hasSuffix(xcodeproj) }) else {
@@ -51,7 +51,7 @@ public struct ProjectInfo: CustomStringConvertible {
     }
 
     func plistDict() -> NSDictionary {
-        let folder = fileUtils.infofileFolder()
+        let folder = fileUtils.infofileFolder
         guard let dictionary = NSDictionary(contentsOfFile: folder + plistPath) else {
             fail("Failed to load plist \(folder + plistPath)")
         }

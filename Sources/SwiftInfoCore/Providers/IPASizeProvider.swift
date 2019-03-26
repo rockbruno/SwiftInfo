@@ -13,8 +13,8 @@ public struct IPASizeProvider: InfoProvider {
         self.friendlySize = friendlySize
     }
 
-    public static func extract() throws -> IPASizeProvider {
-        let infofileFolder = FileUtils().infofileFolder()
+    public static func extract(fromApi api: SwiftInfo) throws -> IPASizeProvider {
+        let infofileFolder = api.fileUtils.infofileFolder
         let buildFolder = infofileFolder + "build/"
         let contents = try FileManager.default.contentsOfDirectory(atPath: buildFolder)
         guard let ipa = contents.first(where: { $0.hasSuffix(".ipa") }) else {

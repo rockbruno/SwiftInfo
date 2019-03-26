@@ -6,8 +6,8 @@ let task = Process()
 struct Main {
     static func run() {
         let utils = FileUtils()
-        let path = utils.infofileFolder()
-        let toolFolder = utils.toolFolder()
+        let path = utils.infofileFolder
+        let toolFolder = utils.toolFolder
 
         log("SwiftInfo")
         log("Dylib Folder: \(toolFolder)", verbose: true)

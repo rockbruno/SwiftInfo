@@ -11,8 +11,8 @@ public struct TargetCountProvider: InfoProvider {
         self.count = count
     }
 
-    public static func extract() throws -> TargetCountProvider {
-        let buildLog = FileUtils().buildLog
+    public static func extract(fromApi api: SwiftInfo) throws -> TargetCountProvider {
+        let buildLog = api.fileUtils.buildLog
         let modules = Set(buildLog.match(regex: "(?<=-module-name ).*?(?= )"))
         return TargetCountProvider(count: modules.count)
     }
