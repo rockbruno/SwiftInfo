@@ -68,7 +68,7 @@ api.sendToSlack(output: output, webhookUrl: "YOUR_SLACK_WEBHOOK_HERE")
 api.save(output: output)
 ```
 
-The `SwiftInfo` API [is available here.](Sources/SwiftInfoCore/SwiftInfo.swift)
+You can see `SwiftInfo`'s properties and methods [here.](Sources/SwiftInfoCore/SwiftInfo.swift)
 
 ## Available Providers
 
@@ -82,7 +82,7 @@ The `SwiftInfo` API [is available here.](Sources/SwiftInfoCore/SwiftInfo.swift)
 
 ## Output
 
-After successfully extracting data, SwiftInfo will add/update a json file in the `{Infofile path}/SwiftInfo-output` folder. It's important to commit this file after the running the tool as this is what SwiftInfo uses to compare new pieces of information.
+After successfully extracting data, SwiftInfo will add/update a json file in the `{Infofile path}/SwiftInfo-output` folder. It's important to add this file to version control after the running the tool as this is what SwiftInfo uses to compare new pieces of information.
 
 Although you can't do anything with the output for now besides sending it to Slack, tools are being developed that allows you to convert this JSON to graphs inside a HTML page.
 
@@ -97,7 +97,7 @@ struct FileCountProvider: InfoProvider {
 
     let fileCount: Int
 
-    static func extract() throws -> FileCountProvider {
+    static func extract(fromApi api: SwiftInfo) throws -> FileCountProvider {
         let count = // get the number of files in the project folder
         return FileCountProvider(fileCount: count)
     }
@@ -139,7 +139,7 @@ Documentation of useful types and methods from SwiftInfoCore that you can use wh
 
 ### Swift Package Manager
 
-`.package(url: "https://github.com/rockbruno/SwiftInfo.git", from: .upToNextMajor(from: "0.1.0"))`
+`.package(url: "https://github.com/rockbruno/SwiftInfo.git", from: .upToNextMajor(from: "1.0.0"))`
 
 ## License
 
