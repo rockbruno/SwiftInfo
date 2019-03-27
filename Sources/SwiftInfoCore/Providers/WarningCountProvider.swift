@@ -15,7 +15,6 @@ public struct WarningCountProvider: InfoProvider {
         let buildLog = api.fileUtils.buildLog
         let results = buildLog.match(regex: "(: warning:.*\n)|((warning:.*\n))")
         let count = Set(results).count
-        print(results)
         return WarningCountProvider(count: count)
     }
 

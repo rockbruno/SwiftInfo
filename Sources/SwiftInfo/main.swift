@@ -3,25 +3,16 @@ import SwiftInfoCore
 
 let task = Process()
 
-struct Main {
+public struct Main {
     static func run() {
-        let utils = FileUtils()
-        let path = utils.infofileFolder
-        let toolFolder = utils.toolFolder
-
+        let fileUtils = FileUtils()
         log("SwiftInfo")
-        log("Dylib Folder: \(toolFolder)", verbose: true)
-        log("Infofile Path: \(path)", verbose: true)
+        log("Dylib Folder: \(fileUtils.toolFolder)", verbose: true)
+        log("Infofile Path: \(fileUtils.infofileFolder)", verbose: true)
 
-        let args = ["swiftc",
-        "--driver-mode=swift", // Don't generate a binary, just run directly.
-        "-L", // Link with SwiftInfoCore manually.
-        toolFolder,
-        "-I",
-        toolFolder,
-        "-lSwiftInfoCore",
-        path + "Infofile.swift",
-        ] + Array(ProcessInfo.processInfo.arguments.dropFirst()) // Route SwiftInfo args to the sub process
+        let processInfoArgs = ProcessInfo.processInfo.arguments
+        let args = Runner.getCoreSwiftCArguments(fileUtils: fileUtils,
+                                                 processInfoArgs: processInfoArgs)
 
         task.launchPath = "/bin/bash"
         task.arguments = ["-c", args.joined(separator: " ")]

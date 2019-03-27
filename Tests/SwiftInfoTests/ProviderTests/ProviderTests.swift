@@ -18,8 +18,7 @@ extension SwiftInfo {
         return SwiftInfo(projectInfo: projectInfo,
                          fileUtils: fileUtils,
                          slackFormatter: .init(),
-                         network: .init(),
-                         shell: .init())
+                         client: .init())
     }
 
     var mockFileManager: MockFileManager {

@@ -2,6 +2,16 @@ import XCTest
 @testable import SwiftInfoCore
 
 final class CoreTests: XCTestCase {
+    func testSwiftCArgs() {
+        let api = SwiftInfo.mock()
+        let exampleRun = ["swiftinfo", "-v", "-s"]
+        let args = Runner.getCoreSwiftCArguments(fileUtils: api.fileUtils,
+                                                 processInfoArgs: exampleRun)
+        let executionPath = ProcessInfo.processInfo.arguments.first!
+        let toolFolder = URL(string: executionPath)!.deletingLastPathComponent().absoluteString
+        XCTAssertEqual(args, ["swiftc", "--driver-mode=swift", "-L", toolFolder, "-I", toolFolder, "-lSwiftInfoCore", "./Infofile.swift", "-v", "-s"])
+    }
+
     func testFullRun() {
         let api = SwiftInfo.mock()
         let outputPath = "SwiftInfo-output/SwiftInfoOutput.json"
@@ -97,34 +107,3 @@ struct MockInfoProvider: InfoProvider {
         return Summary(text: "Old: \(other.value), New: \(value)", style: .neutral)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

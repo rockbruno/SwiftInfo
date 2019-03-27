@@ -4,6 +4,7 @@ extension CoreTests {
     static let __allTests = [
         ("testFullRun", testFullRun),
         ("testFullRunWithEmptyOutput", testFullRunWithEmptyOutput),
+        ("testSwiftCArgs", testSwiftCArgs),
     ]
 }
 

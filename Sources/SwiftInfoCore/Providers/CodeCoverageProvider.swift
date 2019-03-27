@@ -21,11 +21,10 @@ public struct CodeCoverageProvider: InfoProvider {
         guard let reportFilePath = testLog.match(regex: "(?<=Generated coverage report: ).*").first else {
             fail("Couldn't find code coverage report, is it enabled?")
         }
-        let shell = api.shell
-        removeTemporaryFile()
-        _ = shell.run(supressOutput: true, "xcrun xccov view \(reportFilePath) --json > \(tempFileName)")
+        removeTemporaryFileIfNeeded()
+        runShell("xcrun xccov view \(reportFilePath) --json > \(tempFileName)")
         let data = try! Data(contentsOf: tempFile)
-        removeTemporaryFile()
+        removeTemporaryFileIfNeeded()
         let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
         let targets = json["targets"] as! [[String: Any]]
         guard let desiredTarget = targets.first(where: {
@@ -39,8 +38,18 @@ public struct CodeCoverageProvider: InfoProvider {
         return CodeCoverageProvider(percentageInt: rounded)
     }
 
-    static func removeTemporaryFile() {
-        _ = Shell().run(supressOutput: true, "rm \(tempFile.path)")
+    static func removeTemporaryFileIfNeeded() {
+        runShell("rm \(tempFile.path)")
+    }
+
+    static func runShell(_ command: String) {
+        let task = Process()
+        task.launchPath = "/bin/bash"
+        task.arguments = ["-c", command]
+        task.standardOutput = nil
+        task.standardError = nil
+        task.launch()
+        task.waitUntilExit()
     }
 
     public func summary(comparingWith other: CodeCoverageProvider?) -> Summary {

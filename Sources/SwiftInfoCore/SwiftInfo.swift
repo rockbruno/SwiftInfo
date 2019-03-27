@@ -4,19 +4,16 @@ public struct SwiftInfo {
     public let projectInfo: ProjectInfo
     public let fileUtils: FileUtils
     public let slackFormatter: SlackFormatter
-    public let network: Network
-    public let shell: Shell
+    public let client: HTTPClient
 
     public init(projectInfo: ProjectInfo,
                 fileUtils: FileUtils = .init(),
                 slackFormatter: SlackFormatter = .init(),
-                network: Network = Network.shared,
-                shell: Shell = .init()) {
+                client: HTTPClient = .init()) {
         self.projectInfo = projectInfo
         self.fileUtils = fileUtils
         self.slackFormatter = slackFormatter
-        self.network = network
-        self.shell = shell
+        self.client = client
     }
 
     public func extract<T: InfoProvider>(_ provider: T.Type) -> Output {
@@ -39,7 +36,7 @@ public struct SwiftInfo {
         log("Sending to Slack")
         log("Slack Webhook: \(webhookUrl)", verbose: true)
         let formatted = slackFormatter.format(output: output, projectInfo: projectInfo)
-        network.syncPost(urlString: webhookUrl, json: formatted)
+        client.syncPost(urlString: webhookUrl, json: formatted)
     }
 
     public func save(output: Output) {
