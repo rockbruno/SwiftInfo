@@ -3,5 +3,6 @@ import XCTest
 import SwiftInfoTests
 
 var tests = [XCTestCaseEntry]()
-tests += SwiftInfoTests.allTests()
+tests += SwiftInfoTests.__allTests()
+
 XCTMain(tests)

@@ -1,11 +1,13 @@
 import Foundation
 
-public final class Network {
-    public static let shared = Network()
+public final class HTTPClient {
+
     let client = URLSession.shared
     let group = DispatchGroup()
 
-    func syncPost(urlString: String, json: [String: Any]) {
+    public init() {}
+
+    public func syncPost(urlString: String, json: [String: Any]) {
         guard let url = URL(string: urlString) else {
             return
         }
