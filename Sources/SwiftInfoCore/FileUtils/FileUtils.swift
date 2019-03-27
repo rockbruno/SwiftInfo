@@ -66,7 +66,7 @@ public struct FileUtils {
 
     public var buildLog: String {
         do {
-            let testLog = try _getTestLog()
+            let testLog = try _getBuildLog()
             return testLog
         } catch {
             fail("""

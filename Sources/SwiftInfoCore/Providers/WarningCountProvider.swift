@@ -13,8 +13,9 @@ public struct WarningCountProvider: InfoProvider {
 
     public static func extract(fromApi api: SwiftInfo) throws -> WarningCountProvider {
         let buildLog = api.fileUtils.buildLog
-        let results = buildLog.match(regex: "\n.*warning:.*\n")
+        let results = buildLog.match(regex: "(: warning:.*\n)|((warning:.*\n))")
         let count = Set(results).count
+        print(results)
         return WarningCountProvider(count: count)
     }
 

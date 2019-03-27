@@ -27,6 +27,13 @@ final class MockFileOpener: FileOpener {
         return file
     }
 
+    override func plistContents(ofPath path: String) -> NSDictionary? {
+        guard let file = mockFM.plistContents(atPath: path) else {
+            return nil
+        }
+        return file
+    }
+
     override func write(data: Data, toUrl url: URL) throws {
         let contents = String(data: data, encoding: .utf8)!
         mockFM.add(file: url.relativePath, contents: contents)

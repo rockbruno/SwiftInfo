@@ -9,6 +9,10 @@ open class FileOpener {
         return try Data(contentsOf: url)
     }
 
+    open func plistContents(ofPath path: String) -> NSDictionary? {
+        return NSDictionary(contentsOfFile: path)
+    }
+
     open func write(data: Data, toUrl url: URL) throws {
         try data.write(to: url)
     }
