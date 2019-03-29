@@ -139,10 +139,6 @@ Documentation of useful types and methods from SwiftInfoCore that you can use wh
 
 `pod 'SwiftInfo'`
 
-### Swift Package Manager
-
-`.package(url: "https://github.com/rockbruno/SwiftInfo.git", from: .upToNextMajor(from: "1.0.0"))`
-
 ## License
 
 SwiftInfo is released under the GNU GPL v3.0 license. See LICENSE for details.
