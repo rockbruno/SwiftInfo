@@ -5,15 +5,23 @@ public struct SwiftInfo {
     public let fileUtils: FileUtils
     public let slackFormatter: SlackFormatter
     public let client: HTTPClient
+    public let sourceKit: SourceKit
 
     public init(projectInfo: ProjectInfo,
                 fileUtils: FileUtils = .init(),
                 slackFormatter: SlackFormatter = .init(),
-                client: HTTPClient = .init()) {
+                client: HTTPClient = .init(),
+                sourceKit: SourceKit? = nil) {
         self.projectInfo = projectInfo
         self.fileUtils = fileUtils
         self.slackFormatter = slackFormatter
         self.client = client
+        if let sourceKit = sourceKit {
+            self.sourceKit = sourceKit
+        } else {
+            let toolchain = UserDefaults.standard.string(forKey: "toolchain") ?? ""
+            self.sourceKit = SourceKit(path: toolchain)
+        }
     }
 
     public func extract<T: InfoProvider>(_ provider: T.Type) -> Output {

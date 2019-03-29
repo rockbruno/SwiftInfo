@@ -94,4 +94,9 @@ aaa
         let extracted = try! TestCountProvider.extract(fromApi: api)
         XCTAssertEqual(extracted.count, 5)
     }
+
+    func testNonFinalClassCount() {
+        let extracted = try! NonFinalClassCount.extract(fromApi: api)
+        XCTAssertEqual(extracted.count, 2)
+    }
 }

@@ -2,6 +2,7 @@ import Foundation
 
 public enum Runner {
     public static func getCoreSwiftCArguments(fileUtils: FileUtils,
+                                              toolchainPath: String,
                                               processInfoArgs: [String]) -> [String] {
         return [
             "swiftc",
@@ -11,7 +12,12 @@ public enum Runner {
             "-I",
             fileUtils.toolFolder,
             "-lSwiftInfoCore",
+            "-Xcc",
+            "-fmodule-map-file=\(fileUtils.toolFolder)/Csourcekitd/include/module.modulemap",
+            "-I",
+            "\(fileUtils.toolFolder)/Csourcekitd/include",
             fileUtils.infofileFolder + "Infofile.swift",
-            ] + Array(processInfoArgs.dropFirst()) // Route SwiftInfo args to the sub process
+            "-toolchain",
+            "\(toolchainPath)"] + Array(processInfoArgs.dropFirst()) // Route SwiftInfo args to the sub process
     }
 }
