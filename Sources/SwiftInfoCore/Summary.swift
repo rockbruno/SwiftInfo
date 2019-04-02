@@ -26,4 +26,27 @@ public struct Summary: Codable, Hashable {
         self.text = text
         self.color = style.hexColor
     }
+
+    static func genericFor<T: Comparable>(prefix: String,
+                                          now: T,
+                                          old: T?,
+                                          difference: ((T, T) -> T)) -> Summary {
+        guard let old = old else {
+            return Summary(text: prefix + ": \(now)", style: .neutral)
+        }
+        guard now != old else {
+            return Summary(text: prefix + ": Unchanged. (\(now))", style: .neutral)
+        }
+        let modifier: String
+        let style: Summary.Style
+        if now > old {
+            modifier = "*grew*"
+            style = .positive
+        } else {
+            modifier = "was *reduced*"
+            style = .negative
+        }
+        let text = prefix + " \(modifier) by \(difference(now, old)) (\(now))"
+        return Summary(text: text, style: style)
+    }
 }

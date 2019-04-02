@@ -18,7 +18,8 @@ extension SwiftInfo {
         return SwiftInfo(projectInfo: projectInfo,
                          fileUtils: fileUtils,
                          slackFormatter: .init(),
-                         client: .init())
+                         client: .init(),
+                         sourceKit: MockSourceKit())
     }
 
     var mockFileManager: MockFileManager {
@@ -95,8 +96,20 @@ aaa
         XCTAssertEqual(extracted.count, 5)
     }
 
-    func testNonFinalClassCount() {
-        let extracted = try! NonFinalClassCount.extract(fromApi: api)
-        XCTAssertEqual(extracted.count, 2)
+    func testObjcCount() {
+        FileUtils.buildLogFilePath = "./build.log"
+        let log =
+        """
+CompileC bla SDWebImage/SDWebImage/UIView+WebCacheOperation.m normal armv7
+CompileC bla SDWebImage/SDWebImage/UIView+WebCacheOperation.m normal armv7
+CompileC bla SDWebImage/SDWebImage/UIView+WebCacheOperation2.m normal armv7
+CompileC bla SDWebImage/SDWebImage/UIView+WebCacheOperation3.m normal armv7
+CpHeader SDWebImage/a.h normal armv7
+CpHeader SDWebImage/a2.h normal armv7
+CpHeader SDWebImage/a3.h normal armv7
+"""
+        api.mockFileManager.add(file: "build.log", contents: log)
+        let extracted = try! OBJCFileCountProvider.extract(fromApi: api)
+        XCTAssertEqual(extracted.count, 6)
     }
 }
