@@ -20,23 +20,8 @@ public struct TestCountProvider: InfoProvider {
 
     public func summary(comparingWith other: TestCountProvider?) -> Summary {
         let prefix = "🎯 Test Count"
-        guard let other = other else {
-            return Summary(text: prefix + ": \(count)", style: .neutral)
+        return Summary.genericFor(prefix: prefix, now: count, old: other?.count) {
+            return abs($1 - $0)
         }
-        guard count != other.count else {
-            return Summary(text: prefix + ": Unchanged. (\(count))", style: .neutral)
-        }
-        let modifier: String
-        let style: Summary.Style
-        if count > other.count {
-            modifier = "*grew*"
-            style = .positive
-        } else {
-            modifier = "was *reduced*"
-            style = .negative
-        }
-        let difference = abs(other.count - count)
-        let text = prefix + " \(modifier) by \(difference) (\(count))"
-        return Summary(text: text, style: style)
     }
 }

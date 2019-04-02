@@ -10,6 +10,7 @@
 
 ## master
 * Linked sourcekitd to allow extraction of code related metrics - Bruno Rocha
+* Added OBJCFileCountProvider
 
 ## 1.0.0
 * Added Unit Tests - Bruno Rocha

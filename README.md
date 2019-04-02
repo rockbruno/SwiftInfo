@@ -77,6 +77,7 @@ You can see `SwiftInfo`'s properties and methods [here.](Sources/SwiftInfoCore/S
 | **Type Name** | **Description** | **Requirements** |
 |---|:---:|:---:|
 | **IPASizeProvider**        | Size of the .ipa archive (Not the App Store size!) | Successful xcodebuild archive |
+| **OBJCFileCountProvider**        | Number of OBJ-C files and headers | Build logs |
 | **CodeCoverageProvider**        | Code coverage percentage | Test logs, Xcode developer tools, Test targets with code coverage reports enabled |
 | **TargetCountProvider**        | Number of targets (dependencies) | Build logs |
 | **TestCountProvider**        | Sum of all test target's tests | Test logs |
