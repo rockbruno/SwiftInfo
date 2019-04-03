@@ -54,29 +54,15 @@ public struct CodeCoverageProvider: InfoProvider {
 
     public func summary(comparingWith other: CodeCoverageProvider?) -> Summary {
         let prefix = "📊 Code Coverage"
-        let percentage = toPercentage(percentageInt: percentageInt)
-        guard let other = other else {
-            return Summary(text: prefix + ": \(percentage)", style: .neutral)
+        let formatter: ((Int) -> String) = { value in
+            return "\(CodeCoverageProvider.toPercentage(percentageInt: value))"
         }
-        guard percentageInt != other.percentageInt else {
-            return Summary(text: prefix + ": Unchanged. (\(percentage))", style: .neutral)
+        return Summary.genericFor(prefix: prefix, now: percentageInt, old: other?.percentageInt, formatter: formatter) {
+            return abs($1 - $0)
         }
-        let modifier: String
-        let style: Summary.Style
-        if percentageInt > other.percentageInt {
-            modifier = "*grew*"
-            style = .positive
-        } else {
-            modifier = "was *reduced*"
-            style = .negative
-        }
-        let differenceInt = abs(other.percentageInt - percentageInt)
-        let differencePercentage = toPercentage(percentageInt: differenceInt)
-        let text = prefix + " \(modifier) by \(percentage) (\(differencePercentage))"
-        return Summary(text: text, style: style)
     }
 
-    func toPercentage(percentageInt: Int) -> String {
+    static func toPercentage(percentageInt: Int) -> String {
         return "\(Double(percentageInt) / 10)%"
     }
 }

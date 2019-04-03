@@ -6,11 +6,15 @@ public struct LongestTestDurationProvider: InfoProvider {
 
     public let description: String = "Longest Test Duration"
     public let name: String
-    public let duration: Float
+    public let durationInt: Int
 
-    public init(name: String, duration: Float) {
+    public var duration: Float {
+        return Float(durationInt) / 1000
+    }
+
+    public init(name: String, durationInt: Int) {
         self.name = name
-        self.duration = duration
+        self.durationInt = durationInt
     }
 
     public static func extract(fromApi api: SwiftInfo) throws -> LongestTestDurationProvider {
@@ -33,15 +37,16 @@ public struct LongestTestDurationProvider: InfoProvider {
         guard let longest = formatted.max(by: { $0.1 < $1.1 }) else {
             fail("Couldn't determine the longest test because no tests were found!")
         }
-        return LongestTestDurationProvider(name: longest.0, duration: longest.1)
+        return LongestTestDurationProvider(name: longest.0,
+                                           durationInt: Int(longest.1 * 1000))
     }
 
     public func summary(comparingWith other: LongestTestDurationProvider?) -> Summary {
         var prefix = "⏰ Longest Test: \(name) (\(duration))"
         let style: Summary.Style
-        if let other = other, other.duration != duration {
+        if let other = other, other.durationInt != durationInt {
             prefix += " - previously \(other.name) (\(duration))"
-            style = other.duration > duration ? .negative : .positive
+            style = other.durationInt > durationInt ? .negative : .positive
         } else {
             style = .neutral
         }
