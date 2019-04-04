@@ -24,21 +24,11 @@ public struct IPASizeProvider: InfoProvider {
         return IPASizeProvider(size: fileSize)
     }
 
-    static func convertToFileString(with size: Int) -> String {
-        var convertedValue = Double(size)
-        var multiplyFactor = 0
-        let tokens = ["bytes", "KB", "MB", "GB", "TB", "PB",  "EB",  "ZB", "YB"]
-        while convertedValue > 1000 {
-            convertedValue /= 1000
-            multiplyFactor += 1
-        }
-        return String(format: "%4.2f %@", convertedValue, tokens[multiplyFactor])
-    }
-
     public func summary(comparingWith other: IPASizeProvider?) -> Summary {
-        let prefix = "📦 .ipa size"
+        let prefix = "📦 .ipa Size"
         let formatter: ((Int) -> String) = { value in
-            return IPASizeProvider.convertToFileString(with: value)
+            return ByteCountFormatter.string(fromByteCount: Int64(value),
+                                             countStyle: .file)
         }
         return Summary.genericFor(prefix: prefix, now: size, old: other?.size, formatter: formatter) {
             return abs($1 - $0)

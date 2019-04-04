@@ -46,7 +46,7 @@ public struct LongestTestDurationProvider: InfoProvider {
         let style: Summary.Style
         if let other = other, other.durationInt != durationInt {
             prefix += " - previously \(other.name) (\(duration))"
-            style = other.durationInt > durationInt ? .negative : .positive
+            style = other.durationInt > durationInt ? .positive : .negative
         } else {
             style = .neutral
         }

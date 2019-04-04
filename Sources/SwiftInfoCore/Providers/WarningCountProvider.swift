@@ -19,7 +19,7 @@ public struct WarningCountProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: WarningCountProvider?) -> Summary {
-        let prefix = "⚠️ Warning count"
+        let prefix = "⚠️ Warning Count"
         return Summary.genericFor(prefix: prefix, now: count, old: other?.count) {
             return abs($1 - $0)
         }

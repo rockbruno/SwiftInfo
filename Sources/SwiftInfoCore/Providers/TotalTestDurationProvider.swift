@@ -23,7 +23,7 @@ public struct TotalTestDurationProvider: InfoProvider {
     public func summary(comparingWith other: TotalTestDurationProvider?) -> Summary {
         let prefix = "🛏 Total Test Duration"
         let formatter: ((Int) -> String) = { value in
-            return "\(Float(value) / 1000)"
+            return "\(Float(value) / 1000) secs"
         }
         return Summary.genericFor(prefix: prefix, now: durationInt, old: other?.durationInt, formatter: formatter) {
             return abs($1 - $0)

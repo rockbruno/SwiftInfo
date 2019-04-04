@@ -76,12 +76,16 @@ You can see `SwiftInfo`'s properties and methods [here.](Sources/SwiftInfoCore/S
 
 | **Type Name** | **Description** | **Requirements** |
 |---|:---:|:---:|
-| **IPASizeProvider**        | Size of the .ipa archive (Not the App Store size!) | Successful xcodebuild archive |
-| **OBJCFileCountProvider**        | Number of OBJ-C files and headers | Build logs |
+| **IPASizeProvider**        | Size of the .ipa archive (Not the App Store size!) | Successful xcodebuild archive and build logs |
 | **CodeCoverageProvider**        | Code coverage percentage | Test logs, Xcode developer tools, Test targets with code coverage reports enabled |
 | **TargetCountProvider**        | Number of targets (dependencies) | Build logs |
 | **TestCountProvider**        | Sum of all test target's tests | Test logs |
 | **WarningCountProvider**        | Number of warnings in a build | Build logs |
+| **OBJCFileCountProvider**        | Number of OBJ-C files and headers | Build logs |
+| **LongestTestDurationProvider**        | The name and duration of the longest test | Test logs |
+| **TotalTestDurationProvider**        | The sum of the duration of all tests | Test logs |
+| **LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs |
+| **TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
 
 ## Output
 
