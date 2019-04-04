@@ -42,10 +42,10 @@ public struct LongestTestDurationProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: LongestTestDurationProvider?) -> Summary {
-        var prefix = "⏰ Longest Test: \(name) (\(duration))"
+        var prefix = "⏰ Longest Test: \(name) (\(duration) secs)"
         let style: Summary.Style
         if let other = other, other.durationInt != durationInt {
-            prefix += " - previously \(other.name) (\(duration))"
+            prefix += " - previously \(other.name) (\(duration) secs)"
             style = other.durationInt > durationInt ? .positive : .negative
         } else {
             style = .neutral
