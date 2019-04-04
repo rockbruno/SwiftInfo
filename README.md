@@ -6,6 +6,21 @@
 
 SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that are useful for Swift apps. Besides the default tracking options that are shipped with the tool, you can customize SwiftInfo to track pretty much anything that can be conveyed in a simple `.swift` script.
 
+## Available Providers
+
+| **Type Name** | **Description** | **Requirements** |
+|---|:---:|:---:|
+| **📦 IPASizeProvider**        | Size of the .ipa archive (Not the App Store size!) | Successful xcodebuild archive and build logs |
+| **📊 CodeCoverageProvider**        | Code coverage percentage | Test logs, Xcode developer tools, Test targets with code coverage reports enabled |
+| **👶 TargetCountProvider**        | Number of targets (dependencies) | Build logs |
+| **🎯 TestCountProvider**        | Sum of all test target's test count | Test logs |
+| **⚠️ WarningCountProvider**        | Number of warnings in a build | Build logs |
+| **🧙‍♂️ OBJCFileCountProvider**        | Number of OBJ-C files and headers (for mixed OBJ-C / Swift projects) | Build logs |
+| **⏰ LongestTestDurationProvider**        | The name and duration of the longest test | Test logs |
+| **🛏 TotalTestDurationProvider**        | The sum of the duration of all tests | Test logs |
+| **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs |
+| **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
+
 ## Usage
 
 SwiftInfo requires the raw logs of a succesful test/archive build combo to work, so it's better used as the last step of a CI pipeline. 
@@ -71,21 +86,6 @@ api.save(output: output)
 ```
 
 You can see `SwiftInfo`'s properties and methods [here.](Sources/SwiftInfoCore/SwiftInfo.swift)
-
-## Available Providers
-
-| **Type Name** | **Description** | **Requirements** |
-|---|:---:|:---:|
-| **📦 IPASizeProvider**        | Size of the .ipa archive (Not the App Store size!) | Successful xcodebuild archive and build logs |
-| **📊 CodeCoverageProvider**        | Code coverage percentage | Test logs, Xcode developer tools, Test targets with code coverage reports enabled |
-| **👶 TargetCountProvider**        | Number of targets (dependencies) | Build logs |
-| **🎯 TestCountProvider**        | Sum of all test target's test count | Test logs |
-| **⚠️ WarningCountProvider**        | Number of warnings in a build | Build logs |
-| **🧙‍♂️ OBJCFileCountProvider**        | Number of OBJ-C files and headers (for mixed OBJ-C / Swift projects) | Build logs |
-| **⏰ LongestTestDurationProvider**        | The name and duration of the longest test | Test logs |
-| **🛏 TotalTestDurationProvider**        | The sum of the duration of all tests | Test logs |
-| **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs |
-| **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
 
 ## Output
 
