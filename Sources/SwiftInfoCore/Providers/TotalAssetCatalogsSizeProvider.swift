@@ -14,7 +14,7 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
     public static func extract(fromApi api: SwiftInfo) throws -> TotalAssetCatalogsSizeProvider {
         let catalogs = allCatalogs(api: api)
         let total = catalogs.map { $0.size }.reduce(0, +)
-        return AssetCatalogsSizeProvider(size: total)
+        return TotalAssetCatalogsSizeProvider(size: total)
     }
 
     public static func allCatalogs(api: SwiftInfo) -> [(name: String, size: Int)] {
