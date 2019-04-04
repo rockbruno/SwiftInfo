@@ -26,4 +26,41 @@ public struct Summary: Codable, Hashable {
         self.text = text
         self.color = style.hexColor
     }
+
+    static func genericFor<T: Comparable>(prefix: String,
+                                          now: T,
+                                          old: T?,
+                                          formatter: ((T) -> String)? = nil,
+                                          difference: ((T, T) -> T)) -> Summary {
+        let formatter = formatter ?? { return "\($0)" }
+        guard let old = old else {
+            return Summary(text: prefix + ": \(formatter(now))", style: .neutral)
+        }
+        guard now != old else {
+            return Summary(text: prefix + ": Unchanged. (\(formatter(now)))", style: .neutral)
+        }
+        let modifier: String
+        let style = genericStyleFor(now, old)
+        switch style {
+        case .positive:
+            modifier = " *grew* by"
+        case .negative:
+            modifier = " was *reduced* by"
+        case .neutral:
+            modifier = " is still at"
+        }
+        let diff = difference(now, old)
+        let text = prefix + "\(modifier) \(formatter(diff)) (\(formatter(now)))"
+        return Summary(text: text, style: style)
+    }
+
+    static func genericStyleFor<T: Comparable>(_ now: T, _ old: T) -> Style {
+        if now > old {
+            return .positive
+        } else if now < old {
+            return .negative
+        } else {
+            return .neutral
+        }
+    }
 }

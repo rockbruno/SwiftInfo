@@ -15,28 +15,38 @@ import sourcekitd
 // Adapted from SourceKit-LSP.
 
 /// A wrapper for accessing the API of a sourcekitd library loaded via `dlopen`.
-public final class SourceKit {
+open class SourceKit {
 
     /// The path to the sourcekitd dylib.
-    let path: String
+    public let path: String
 
     /// The handle to the dylib.
-    let dylib: DLHandle
+    let dylib: DLHandle!
 
     /// The sourcekitd API functions.
-    public let api: sourcekitd_functions_t
+    public let api: sourcekitd_functions_t!
 
     /// Convenience for accessing known keys.
-    public let keys: sourcekitd_keys
+    public let keys: sourcekitd_keys!
 
     /// Convenience for accessing known keys.
-    public let requests: sourcekitd_requests
+    public let requests: sourcekitd_requests!
 
     /// Convenience for accessing known keys.
-    public let values: sourcekitd_values
+    public let values: sourcekitd_values!
 
     enum Error: Swift.Error {
         case missingRequiredSymbol(String)
+    }
+
+    public init() {
+        // This is supposed to be used for unit tests. It won't work in production.
+        self.path = ""
+        self.api = nil
+        self.keys = nil
+        self.requests = nil
+        self.values = nil
+        self.dylib = nil
     }
 
     public init(path: String) {
@@ -136,6 +146,9 @@ public final class SourceKit {
 
     deinit {
         // FIXME: is it safe to dlclose() sourcekitd? If so, do that here. For now, let the handle leak.
+        guard dylib != nil else {
+            return
+        }
         dylib.leak()
     }
 }

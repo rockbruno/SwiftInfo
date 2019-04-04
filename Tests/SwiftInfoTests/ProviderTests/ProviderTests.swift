@@ -18,7 +18,8 @@ extension SwiftInfo {
         return SwiftInfo(projectInfo: projectInfo,
                          fileUtils: fileUtils,
                          slackFormatter: .init(),
-                         client: .init())
+                         client: .init(),
+                         sourceKit: MockSourceKit())
     }
 
     var mockFileManager: MockFileManager {
@@ -95,8 +96,49 @@ aaa
         XCTAssertEqual(extracted.count, 5)
     }
 
-    func testNonFinalClassCount() {
-        let extracted = try! NonFinalClassCount.extract(fromApi: api)
-        XCTAssertEqual(extracted.count, 2)
+    func testObjcCount() {
+        FileUtils.buildLogFilePath = "./build.log"
+        let log =
+        """
+CompileC bla SDWebImage/SDWebImage/UIView+WebCacheOperation.m normal armv7
+CompileC bla SDWebImage/SDWebImage/UIView+WebCacheOperation.m normal armv7
+CompileC bla SDWebImage/SDWebImage/UIView+WebCacheOperation2.m normal armv7
+CompileC bla SDWebImage/SDWebImage/UIView+WebCacheOperation3.m normal armv7
+CpHeader SDWebImage/a.h normal armv7
+CpHeader SDWebImage/a2.h normal armv7
+CpHeader SDWebImage/a3.h normal armv7
+"""
+        api.mockFileManager.add(file: "build.log", contents: log)
+        let extracted = try! OBJCFileCountProvider.extract(fromApi: api)
+        XCTAssertEqual(extracted.count, 6)
+    }
+
+    func testLongestTest() {
+        FileUtils.testLogFilePath = "./test.log"
+        let log =
+        """
+Test suite 'DeviceRequestTests' started on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)'
+Test case 'DeviceRequestTests.testEventNameFormatter()' passed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (0.001 seconds)
+Test suite 'FareEstimateTests' started on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)'
+Test case 'FareEstimateTests.testJsonDecoder()' passed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (0.464 seconds)
+Test suite 'CartItemTests' started on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)'
+Test case 'CartItemTests.testPriceLogic()' passed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (0.001 seconds)
+"""
+        api.mockFileManager.add(file: "test.log", contents: log)
+        let extracted = try! LongestTestDurationProvider.extract(fromApi: api)
+        XCTAssertEqual(extracted.durationInt, 464)
+    }
+
+    func testTotalTestDuration() {
+        FileUtils.testLogFilePath = "./test.log"
+        let log =
+        """
+Generating coverage data...
+Generated coverage report: /Users/bruno.rocha/Library/Developer/Xcode/DerivedData/Rapiddo-cbobntbmchyaczezxxpesrevoisy/Logs/Test/Run-Marketplace-2019.03.25_12-55-36--0300.xcresult/2_Test/action.xccovreport
+** TEST SUCCEEDED ** [37.368 sec]
+"""
+        api.mockFileManager.add(file: "test.log", contents: log)
+        let extracted = try! TotalTestDurationProvider.extract(fromApi: api)
+        XCTAssertEqual(extracted.durationInt, 37368)
     }
 }

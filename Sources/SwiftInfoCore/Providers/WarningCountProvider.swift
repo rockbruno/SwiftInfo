@@ -19,24 +19,9 @@ public struct WarningCountProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: WarningCountProvider?) -> Summary {
-        let prefix = "⚠️ Warning count"
-        guard let other = other else {
-            return Summary(text: prefix + ": \(count)", style: .neutral)
+        let prefix = "⚠️ Warning Count"
+        return Summary.genericFor(prefix: prefix, now: count, old: other?.count) {
+            return abs($1 - $0)
         }
-        guard count != other.count else {
-            return Summary(text: prefix + ": Unchanged. (\(count))", style: .neutral)
-        }
-        let modifier: String
-        let style: Summary.Style
-        if count > other.count {
-            modifier = "*grew*"
-            style = .negative
-        } else {
-            modifier = "was *reduced*"
-            style = .positive
-        }
-        let difference = abs(other.count - count)
-        let text = prefix + " \(modifier) by \(difference) (\(count))"
-        return Summary(text: text, style: style)
     }
 }

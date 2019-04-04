@@ -6,11 +6,9 @@ public struct IPASizeProvider: InfoProvider {
 
     public let description: String = ".ipa Size"
     public let size: Int
-    public let friendlySize: String
 
-    public init(size: Int, friendlySize: String) {
+    public init(size: Int) {
         self.size = size
-        self.friendlySize = friendlySize
     }
 
     public static func extract(fromApi api: SwiftInfo) throws -> IPASizeProvider {
@@ -23,41 +21,17 @@ public struct IPASizeProvider: InfoProvider {
         }
         let attributes = try fileUtils.fileManager.attributesOfItem(atPath: buildFolder + ipa)
         let fileSize = Int(attributes[.size] as? UInt64 ?? 0)
-        let friendlySize = convertToFileString(with: fileSize)
-        return IPASizeProvider(size: fileSize, friendlySize: friendlySize)
-    }
-
-    static func convertToFileString(with size: Int) -> String {
-        var convertedValue = Double(size)
-        var multiplyFactor = 0
-        let tokens = ["bytes", "KB", "MB", "GB", "TB", "PB",  "EB",  "ZB", "YB"]
-        while convertedValue > 1000 {
-            convertedValue /= 1000
-            multiplyFactor += 1
-        }
-        return String(format: "%4.2f %@", convertedValue, tokens[multiplyFactor])
+        return IPASizeProvider(size: fileSize)
     }
 
     public func summary(comparingWith other: IPASizeProvider?) -> Summary {
-        let prefix = "📦 .ipa size"
-        guard let other = other else {
-            return Summary(text: prefix + ": \(friendlySize)", style: .neutral)
+        let prefix = "📦 .ipa Size"
+        let formatter: ((Int) -> String) = { value in
+            return ByteCountFormatter.string(fromByteCount: Int64(value),
+                                             countStyle: .file)
         }
-        guard size != other.size else {
-            return Summary(text: prefix + ": Unchanged. (\(friendlySize))", style: .neutral)
+        return Summary.genericFor(prefix: prefix, now: size, old: other?.size, formatter: formatter) {
+            return abs($1 - $0)
         }
-        let modifier: String
-        let style: Summary.Style
-        if size > other.size {
-            modifier = "*grew*"
-            style = .negative
-        } else {
-            modifier = "was *reduced*"
-            style = .positive
-        }
-        let difference = abs(other.size - size)
-        let friendlyDifference = IPASizeProvider.convertToFileString(with: difference)
-        let text = prefix + " \(modifier) by \(friendlyDifference) (\(friendlySize))"
-        return Summary(text: text, style: style)
     }
 }

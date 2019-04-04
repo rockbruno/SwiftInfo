@@ -9,7 +9,14 @@
 -->
 
 ## master
+
+## 1.1.0
 * Linked sourcekitd to allow extraction of code related metrics - Bruno Rocha
+* Added OBJCFileCountProvider - Bruno Rocha
+* Added LongestTestDurationProvider - Bruno Rocha
+* Added TotalTestDurationProvider - Bruno Rocha
+* Added LargestAssetCatalogProvider - Bruno Rocha
+* Added TotalAssetCatalogsSizeProvider - Bruno Rocha
 
 ## 1.0.0
 * Added Unit Tests - Bruno Rocha
