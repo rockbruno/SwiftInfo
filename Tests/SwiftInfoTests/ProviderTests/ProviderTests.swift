@@ -76,6 +76,31 @@ ahfgvnvnrjrjjffj fjjnf nhfjfjfj nfnfnf -module-name MyMock2 nbvbfhuff fjjf
         api.mockFileManager.add(file: "build.log", contents: log)
         let extracted = try! TargetCountProvider.extract(fromApi: api)
         XCTAssertEqual(extracted.count, 3)
+        XCTAssertEqual(
+            extracted.summary(comparingWith: TargetCountProvider(count: 2),
+                              args: nil).color,
+            Summary.Style.negative.hexColor
+        )
+        XCTAssertEqual(
+            extracted.summary(comparingWith: TargetCountProvider(count: 2),
+                              args: .init(mode: .complainOnAdditions)).color,
+            Summary.Style.negative.hexColor
+        )
+        XCTAssertEqual(
+            extracted.summary(comparingWith: TargetCountProvider(count: 2),
+                              args: .init(mode: .complainOnRemovals)).color,
+            Summary.Style.positive.hexColor
+        )
+        XCTAssertEqual(
+            extracted.summary(comparingWith: TargetCountProvider(count: 2),
+                              args: .init(mode: .neutral)).color,
+            Summary.Style.neutral.hexColor
+        )
+        XCTAssertEqual(
+            extracted.summary(comparingWith: TargetCountProvider(count: 3),
+                              args: .init(mode: .complainOnAdditions)).color,
+            Summary.Style.neutral.hexColor
+        )
     }
 
     func testTestCount() {

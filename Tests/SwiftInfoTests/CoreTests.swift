@@ -100,15 +100,18 @@ final class CoreTests: XCTestCase {
 
 struct MockInfoProvider: InfoProvider {
 
+    public struct Args {}
+    public typealias Arguments = Args
+
     static let identifier: String = "mock_provider"
     let description: String = "Fake provider for testing purposes"
     let value: Int
 
-    static func extract(fromApi api: SwiftInfo) throws -> MockInfoProvider {
+    static func extract(fromApi api: SwiftInfo, args: Args?) throws -> MockInfoProvider {
         return MockInfoProvider(value: 10)
     }
 
-    func summary(comparingWith other: MockInfoProvider?) -> Summary {
+    func summary(comparingWith other: MockInfoProvider?, args: Args?) -> Summary {
         guard let other = other else {
             return Summary(text: "\(value)", style: .neutral)
         }

@@ -24,14 +24,15 @@ public struct SwiftInfo {
         }
     }
 
-    public func extract<T: InfoProvider>(_ provider: T.Type) -> Output {
+    public func extract<T: InfoProvider>(_ provider: T.Type,
+                                         args: T.Arguments? = nil) -> Output {
         do {
             log("Extracting \(provider.identifier)")
-            let extracted = try provider.extract(fromApi: self)
+            let extracted = try provider.extract(fromApi: self, args: args)
             log("\(provider.identifier): Parsing previously extracted info", verbose: true)
             let other = try fileUtils.lastOutput.extractedInfo(ofType: provider)
             log("\(provider.identifier): Comparing with previously extracted info", verbose: true)
-            let summary = extracted.summary(comparingWith: other)
+            let summary = extracted.summary(comparingWith: other, args: args)
             log("\(provider.identifier): Finishing", verbose: true)
             let info = ExtractedInfo(data: extracted, summary: summary)
             return try Output(info: info)

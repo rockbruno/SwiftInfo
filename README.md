@@ -22,6 +22,13 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 | **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
 | **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. Basically, you need the code coverage report of your main application. |
 
+## Available Arguments
+
+| **Type Name** | **Signature** | **Description** |
+|---|:---:|:---:|
+| **👶 TargetCountProvider**        | `mode: Mode` | How to treat target count changes. Can be `.complainOnAdditions` (default), `.complainOnRemovals` and `.neutral`. |
+| **💻 LinesOfCodeProvider**        | `targets: Set<String>` | If provided, only lines of code from the provided targets will be considered.  |
+
 ## Usage
 
 SwiftInfo requires the raw logs of a succesful test/archive build combo to work, so it's better used as the last step of a CI pipeline. 
@@ -73,11 +80,12 @@ let projectInfo = ProjectInfo(xcodeproj: "MyApp.xcodeproj",
 
 let api = SwiftInfo(projectInfo: projectInfo)
 
-let output = api.extract(IPASizeProvider.self)      +
+let output = api.extract(IPASizeProvider.self) +
              api.extract(WarningCountProvider.self) +
-             api.extract(TestCountProvider.self)    +
-             api.extract(TargetCountProvider.self)  +
-             api.extract(CodeCoverageProvider.self)
+             api.extract(TestCountProvider.self) +
+             api.extract(TargetCountProvider.self, args: .init(mode: .complainOnRemovals)) +
+             api.extract(CodeCoverageProvider.self) +
+             api.extract(LinesOfCodeProvider.self, args: .init(targets: ["NetworkModule", "MyApp"]))
 
 // Send the results to Slack.
 api.sendToSlack(output: output, webhookUrl: "YOUR_SLACK_WEBHOOK_HERE")
@@ -100,18 +108,25 @@ If you wish to track something that's not handled by the default providers, you 
 
 ```swift
 struct FileCountProvider: InfoProvider {
+
+    struct Args {
+        let fromFolders: [String]
+    }
+
+    typealias Arguments = Args
+
     static let identifier = "file_count"
     let description = "Number of files"
 
     let fileCount: Int
 
-    static func extract(fromApi api: SwiftInfo) throws -> FileCountProvider {
-        let count = // get the number of files in the project folder
+    static func extract(fromApi api: SwiftInfo, args: Args?) throws -> FileCountProvider {
+        let count = // get the number of files from the provided `args?.fromFolders`
         return FileCountProvider(fileCount: count)
     }
 
     // Given another instance of this provider, return a `Summary` that explains the difference between them.
-    func summary(comparingWith other: FileCountProvider?) -> Summary {
+    func summary(comparingWith other: FileCountProvider?, args: Args?) -> Summary {
         let prefix = "File Count"
         guard let other = other else {
             return Summary(text: prefix + ": \(count)", style: .neutral)

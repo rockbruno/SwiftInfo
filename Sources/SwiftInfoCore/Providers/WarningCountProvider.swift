@@ -2,6 +2,9 @@ import Foundation
 
 public struct WarningCountProvider: InfoProvider {
 
+    public struct Args {}
+    public typealias Arguments = Args
+
     public static let identifier: String = "warning_count"
 
     public let description: String = "Warning Count"
@@ -11,14 +14,14 @@ public struct WarningCountProvider: InfoProvider {
         self.count = count
     }
 
-    public static func extract(fromApi api: SwiftInfo) throws -> WarningCountProvider {
+    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> WarningCountProvider {
         let buildLog = api.fileUtils.buildLog
         let results = buildLog.match(regex: "(: warning:.*\n)|((warning:.*\n))")
         let count = Set(results).count
         return WarningCountProvider(count: count)
     }
 
-    public func summary(comparingWith other: WarningCountProvider?) -> Summary {
+    public func summary(comparingWith other: WarningCountProvider?, args: Args?) -> Summary {
         let prefix = "⚠️ Warning Count"
         return Summary.genericFor(prefix: prefix, now: count, old: other?.count) {
             return abs($1 - $0)

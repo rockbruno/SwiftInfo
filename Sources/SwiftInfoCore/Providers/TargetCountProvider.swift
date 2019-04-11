@@ -2,6 +2,21 @@ import Foundation
 
 public struct TargetCountProvider: InfoProvider {
 
+    public struct Args {
+        public enum Mode {
+            case complainOnAdditions
+            case complainOnRemovals
+            case neutral
+        }
+
+        public let mode: Mode
+
+        public init(mode: Mode) {
+            self.mode = mode
+        }
+    }
+    public typealias Arguments = Args
+
     public static let identifier: String = "target_count"
 
     public let description: String = "Dependency Count"
@@ -11,16 +26,29 @@ public struct TargetCountProvider: InfoProvider {
         self.count = count
     }
 
-    public static func extract(fromApi api: SwiftInfo) throws -> TargetCountProvider {
+    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> TargetCountProvider {
         let buildLog = api.fileUtils.buildLog
         let modules = Set(buildLog.match(regex: "(?<=-module-name ).*?(?= )"))
         return TargetCountProvider(count: modules.count)
     }
 
-    public func summary(comparingWith other: TargetCountProvider?) -> Summary {
+    public func summary(comparingWith other: TargetCountProvider?, args: Args?) -> Summary {
         let prefix = "👶 Dependency Count"
-        return Summary.genericFor(prefix: prefix, now: count, old: other?.count) {
+        let summary = Summary.genericFor(prefix: prefix, now: count, old: other?.count) {
             return abs($1 - $0)
+        }
+        guard let old = other?.count, old != count else {
+            return summary
+        }
+        let mode = args?.mode ?? .complainOnAdditions
+        switch mode {
+        case .complainOnRemovals:
+            return summary
+        case .neutral:
+            return Summary(text: summary.text, style: .neutral)
+        case .complainOnAdditions:
+            let style: Summary.Style = count > old ? .negative: .positive
+            return Summary(text: summary.text, style: style)
         }
     }
 }

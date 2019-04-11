@@ -2,6 +2,9 @@ import Foundation
 
 public struct CodeCoverageProvider: InfoProvider {
 
+    public struct Args {}
+    public typealias Arguments = Args
+
     public static let identifier: String = "code_coverage"
     static let tempFileName = "swiftinfo_codecov.txt"
 
@@ -16,7 +19,7 @@ public struct CodeCoverageProvider: InfoProvider {
         self.percentageInt = percentageInt
     }
 
-    public static func extract(fromApi api: SwiftInfo) throws -> CodeCoverageProvider {
+    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> CodeCoverageProvider {
         let json = getCodeCoverageJson(api: api)
         let targets = json["targets"] as! [[String: Any]]
         guard let desiredTarget = targets.first(where: {
@@ -56,7 +59,7 @@ public struct CodeCoverageProvider: InfoProvider {
         task.waitUntilExit()
     }
 
-    public func summary(comparingWith other: CodeCoverageProvider?) -> Summary {
+    public func summary(comparingWith other: CodeCoverageProvider?, args: Args?) -> Summary {
         let prefix = "📊 Code Coverage"
         let formatter: ((Int) -> String) = { value in
             return "\(CodeCoverageProvider.toPercentage(percentageInt: value))"
