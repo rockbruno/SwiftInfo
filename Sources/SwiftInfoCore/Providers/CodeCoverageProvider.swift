@@ -17,15 +17,7 @@ public struct CodeCoverageProvider: InfoProvider {
     }
 
     public static func extract(fromApi api: SwiftInfo) throws -> CodeCoverageProvider {
-        let testLog = api.fileUtils.testLog
-        guard let reportFilePath = testLog.match(regex: "(?<=Generated coverage report: ).*").first else {
-            fail("Couldn't find code coverage report, is it enabled?")
-        }
-        removeTemporaryFileIfNeeded()
-        runShell("xcrun xccov view \(reportFilePath) --json > \(tempFileName)")
-        let data = try! Data(contentsOf: tempFile)
-        removeTemporaryFileIfNeeded()
-        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+        let json = getCodeCoverageJson(api: api)
         let targets = json["targets"] as! [[String: Any]]
         guard let desiredTarget = targets.first(where: {
             let name = ($0["name"] as? String ?? "")
@@ -36,6 +28,18 @@ public struct CodeCoverageProvider: InfoProvider {
         let codeCoverage = desiredTarget["lineCoverage"] as! Double
         let rounded = Int(1000 * codeCoverage)
         return CodeCoverageProvider(percentageInt: rounded)
+    }
+
+    static func getCodeCoverageJson(api: SwiftInfo) -> [String: Any] {
+        let testLog = api.fileUtils.testLog
+        guard let reportFilePath = testLog.match(regex: "(?<=Generated coverage report: ).*").first else {
+            fail("Couldn't find code coverage report, is it enabled?")
+        }
+        removeTemporaryFileIfNeeded()
+        runShell("xcrun xccov view \(reportFilePath) --json > \(tempFileName)")
+        let data = try! Data(contentsOf: tempFile)
+        removeTemporaryFileIfNeeded()
+        return try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
     }
 
     static func removeTemporaryFileIfNeeded() {

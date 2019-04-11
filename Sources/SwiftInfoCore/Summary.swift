@@ -37,17 +37,18 @@ public struct Summary: Codable, Hashable {
             return Summary(text: prefix + ": \(formatter(now))", style: .neutral)
         }
         guard now != old else {
-            return Summary(text: prefix + ": Unchanged. (\(formatter(now)))", style: .neutral)
+            return Summary(text: prefix + ": Still at \(formatter(now))",
+                           style: .neutral)
         }
         let modifier: String
         let style = genericStyleFor(now, old)
         switch style {
         case .positive:
-            modifier = " *grew* by"
+            modifier = ": *Increased* by"
         case .negative:
-            modifier = " was *reduced* by"
+            modifier = ": *Reduced* by"
         case .neutral:
-            modifier = " is still at"
+            modifier = ": Still at"
         }
         let diff = difference(now, old)
         let text = prefix + "\(modifier) \(formatter(diff)) (\(formatter(now)))"
