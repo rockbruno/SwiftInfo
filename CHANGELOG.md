@@ -10,6 +10,10 @@
 
 ## master
 
+## 1.2.0
+* Added LinesOfCodeProvider - Bruno Rocha
+* Slightly improved generic summary messages - Bruno Rocha
+
 ## 1.1.0
 * Linked sourcekitd to allow extraction of code related metrics - Bruno Rocha
 * Added OBJCFileCountProvider - Bruno Rocha
