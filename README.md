@@ -20,6 +20,7 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 | **🛏 TotalTestDurationProvider**        | The sum of the duration of all tests | Test logs |
 | **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs |
 | **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
+| **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. Basically, you need the code coverage report of your main application. |
 
 ## Usage
 
