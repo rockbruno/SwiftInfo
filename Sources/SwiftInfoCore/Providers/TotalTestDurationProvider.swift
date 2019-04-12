@@ -16,7 +16,7 @@ public struct TotalTestDurationProvider: InfoProvider {
 
     public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> TotalTestDurationProvider {
         let testLog = api.fileUtils.testLog
-        let durationString = testLog.match(regex: "(?<=\\*\\* TEST SUCCEEDED \\*\\* \\[).*?(?= sec)").first
+        let durationString = testLog.match(regex: #"(?<=\*\* TEST SUCCEEDED \*\* \[).*?(?= sec)"#).first
         guard let duration = Float(durationString ?? "") else {
             fail("Total test duration not found in logs.")
         }

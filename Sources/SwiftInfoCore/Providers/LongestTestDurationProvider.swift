@@ -22,7 +22,7 @@ public struct LongestTestDurationProvider: InfoProvider {
 
     public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LongestTestDurationProvider {
         let testLog = api.fileUtils.testLog
-        let data = testLog.match(regex: "Test.*passed.*seconds\\)")
+        let data = testLog.match(regex: #"Test.*passed.*seconds\)"#)
         let formatted = data.map { a -> (String, Float) in
             let components = a.components(separatedBy: "'")
             let name = components[1]
