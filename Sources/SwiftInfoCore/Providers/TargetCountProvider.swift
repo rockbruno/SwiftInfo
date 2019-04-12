@@ -9,12 +9,15 @@ public struct TargetCountProvider: InfoProvider {
             case neutral
         }
 
+        /// Determines how the summary message should treat target count changes.
+        /// If no args are provided, .complainOnAdditions will be used.
         public let mode: Mode
 
         public init(mode: Mode) {
             self.mode = mode
         }
     }
+
     public typealias Arguments = Args
 
     public static let identifier: String = "target_count"

@@ -20,14 +20,17 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 | **🛏 TotalTestDurationProvider**        | The sum of the duration of all tests | Test logs |
 | **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs |
 | **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
-| **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. Basically, you need the code coverage report of your main application. |
+| **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. |
 
 ## Available Arguments
 
-| **Type Name** | **Signature** | **Description** |
-|---|:---:|:---:|
-| **👶 TargetCountProvider**        | `mode: Mode` | How to treat target count changes. Can be `.complainOnAdditions` (default), `.complainOnRemovals` and `.neutral`. |
-| **💻 LinesOfCodeProvider**        | `targets: Set<String>` | If provided, only lines of code from the provided targets will be considered.  |
+To be able to support different types of projects, SwiftInfo provides customization options to some providers. Click on each of them to see their documentation!
+
+[👶 TargetCountProvider](Sources/SwiftInfoCore/Providers/TargetCountProvider.swift#L16)
+
+[💻 LinesOfCodeProvider](Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift#L11)
+
+[📊 CodeCoverageProvider](Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift#L11)
 
 ## Usage
 
@@ -84,7 +87,7 @@ let output = api.extract(IPASizeProvider.self) +
              api.extract(WarningCountProvider.self) +
              api.extract(TestCountProvider.self) +
              api.extract(TargetCountProvider.self, args: .init(mode: .complainOnRemovals)) +
-             api.extract(CodeCoverageProvider.self) +
+             api.extract(CodeCoverageProvider.self, args: .init(targets: ["NetworkModule", "MyApp"])) +
              api.extract(LinesOfCodeProvider.self, args: .init(targets: ["NetworkModule", "MyApp"]))
 
 // Send the results to Slack.

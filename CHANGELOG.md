@@ -10,6 +10,11 @@
 
 ## master
 
+## 2.0.0
+* Added support for arguments - Bruno Rocha
+* Updated to Swift 5 - Bruno Rocha
+* Improved CodeCoverageProvider and LinesOfCodeProvider - Bruno Rocha
+
 ## 1.2.0
 * Added LinesOfCodeProvider - Bruno Rocha
 * Slightly improved generic summary messages - Bruno Rocha

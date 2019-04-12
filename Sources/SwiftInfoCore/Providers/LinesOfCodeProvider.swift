@@ -3,7 +3,13 @@ import Foundation
 public struct LinesOfCodeProvider: InfoProvider {
 
     public struct Args {
+        /// If provided, only these targets will be considered
+        /// when calculating the result. The contents should be the name
+        /// of the generated frameworks. For example, For MyLib.framework and MyApp.app,
+        /// `targets` should be ["MyLib", "MyApp"].
+        /// If no args are provided, all targets are going to be considered.
         public let targets: Set<String>
+
         public init(targets: Set<String>) {
             self.targets = targets
         }
@@ -31,7 +37,9 @@ public struct LinesOfCodeProvider: InfoProvider {
             {
                 fail("Failed to retrieve target name from xccov.")
             }
+            log("Getting lines of code for: \(rawName)", verbose: true)
             guard args?.targets.contains(name) != false else {
+                log("Skipping, as \(rawName) was not included in the args.", verbose: true)
                 return current
             }
             guard let count = target["executableLines"] as? Int else {
