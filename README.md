@@ -165,4 +165,4 @@ Documentation of useful types and methods from SwiftInfoCore that you can use wh
 
 ## License
 
-SwiftInfo is released under the GNU GPL v3.0 license. See LICENSE for details.
+SwiftInfo is released under the MIT license. See LICENSE for details.
