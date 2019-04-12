@@ -2,6 +2,9 @@ import Foundation
 
 public struct TotalAssetCatalogsSizeProvider: InfoProvider {
 
+    public struct Args {}
+    public typealias Arguments = Args
+
     public static let identifier: String = "total_asset_catalogs_size"
 
     public let description: String = "Asset Catalogs Size"
@@ -11,7 +14,7 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
         self.size = size
     }
 
-    public static func extract(fromApi api: SwiftInfo) throws -> TotalAssetCatalogsSizeProvider {
+    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> TotalAssetCatalogsSizeProvider {
         let catalogs = allCatalogs(api: api)
         let total = catalogs.map { $0.size }.reduce(0, +)
         return TotalAssetCatalogsSizeProvider(size: total)
@@ -43,7 +46,7 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
         return fileSize
     }
 
-    public func summary(comparingWith other: TotalAssetCatalogsSizeProvider?) -> Summary {
+    public func summary(comparingWith other: TotalAssetCatalogsSizeProvider?, args: Args?) -> Summary {
         let prefix = "🎨 Total Asset Catalogs Size"
         let formatter: ((Int) -> String) = { value in
             return ByteCountFormatter.string(fromByteCount: Int64(value),

@@ -2,6 +2,9 @@ import Foundation
 
 public struct LongestTestDurationProvider: InfoProvider {
 
+    public struct Args {}
+    public typealias Arguments = Args
+
     public static let identifier: String = "longest_test_duration"
 
     public let description: String = "Longest Test Duration"
@@ -17,9 +20,9 @@ public struct LongestTestDurationProvider: InfoProvider {
         self.durationInt = durationInt
     }
 
-    public static func extract(fromApi api: SwiftInfo) throws -> LongestTestDurationProvider {
+    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LongestTestDurationProvider {
         let testLog = api.fileUtils.testLog
-        let data = testLog.match(regex: "Test.*passed.*seconds\\)")
+        let data = testLog.match(regex: #"Test.*passed.*seconds\)"#)
         let formatted = data.map { a -> (String, Float) in
             let components = a.components(separatedBy: "'")
             let name = components[1]
@@ -41,7 +44,7 @@ public struct LongestTestDurationProvider: InfoProvider {
                                            durationInt: Int(longest.1 * 1000))
     }
 
-    public func summary(comparingWith other: LongestTestDurationProvider?) -> Summary {
+    public func summary(comparingWith other: LongestTestDurationProvider?, args: Args?) -> Summary {
         var prefix = "⏰ Longest Test: \(name) (\(duration) secs)"
         let style: Summary.Style
         if let other = other, other.durationInt != durationInt {

@@ -2,6 +2,9 @@ import Foundation
 
 public struct IPASizeProvider: InfoProvider {
 
+    public struct Args {}
+    public typealias Arguments = Args
+
     public static let identifier: String = "ipa_size"
 
     public let description: String = ".ipa Size"
@@ -11,7 +14,7 @@ public struct IPASizeProvider: InfoProvider {
         self.size = size
     }
 
-    public static func extract(fromApi api: SwiftInfo) throws -> IPASizeProvider {
+    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> IPASizeProvider {
         let fileUtils = api.fileUtils
         let infofileFolder = fileUtils.infofileFolder
         let buildFolder = infofileFolder + "build/"
@@ -24,8 +27,8 @@ public struct IPASizeProvider: InfoProvider {
         return IPASizeProvider(size: fileSize)
     }
 
-    public func summary(comparingWith other: IPASizeProvider?) -> Summary {
-        let prefix = "📦 .ipa Size"
+    public func summary(comparingWith other: IPASizeProvider?, args: Args?) -> Summary {
+        let prefix = "📦 Compressed App Size (.ipa)"
         let formatter: ((Int) -> String) = { value in
             return ByteCountFormatter.string(fromByteCount: Int64(value),
                                              countStyle: .file)

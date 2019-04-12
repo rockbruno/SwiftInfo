@@ -20,7 +20,17 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 | **🛏 TotalTestDurationProvider**        | The sum of the duration of all tests | Test logs |
 | **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs |
 | **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
-| **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. Basically, you need the code coverage report of your main application. |
+| **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. |
+
+## Available Arguments
+
+To be able to support different types of projects, SwiftInfo provides customization options to some providers. Click on each of them to see their documentation!
+
+[👶 TargetCountProvider](Sources/SwiftInfoCore/Providers/TargetCountProvider.swift#L16)
+
+[💻 LinesOfCodeProvider](Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift#L11)
+
+[📊 CodeCoverageProvider](Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift#L11)
 
 ## Usage
 
@@ -73,11 +83,12 @@ let projectInfo = ProjectInfo(xcodeproj: "MyApp.xcodeproj",
 
 let api = SwiftInfo(projectInfo: projectInfo)
 
-let output = api.extract(IPASizeProvider.self)      +
+let output = api.extract(IPASizeProvider.self) +
              api.extract(WarningCountProvider.self) +
-             api.extract(TestCountProvider.self)    +
-             api.extract(TargetCountProvider.self)  +
-             api.extract(CodeCoverageProvider.self)
+             api.extract(TestCountProvider.self) +
+             api.extract(TargetCountProvider.self, args: .init(mode: .complainOnRemovals)) +
+             api.extract(CodeCoverageProvider.self, args: .init(targets: ["NetworkModule", "MyApp"])) +
+             api.extract(LinesOfCodeProvider.self, args: .init(targets: ["NetworkModule", "MyApp"]))
 
 // Send the results to Slack.
 api.sendToSlack(output: output, webhookUrl: "YOUR_SLACK_WEBHOOK_HERE")
@@ -100,18 +111,25 @@ If you wish to track something that's not handled by the default providers, you 
 
 ```swift
 struct FileCountProvider: InfoProvider {
+
+    struct Args {
+        let fromFolders: [String]
+    }
+
+    typealias Arguments = Args
+
     static let identifier = "file_count"
     let description = "Number of files"
 
     let fileCount: Int
 
-    static func extract(fromApi api: SwiftInfo) throws -> FileCountProvider {
-        let count = // get the number of files in the project folder
+    static func extract(fromApi api: SwiftInfo, args: Args?) throws -> FileCountProvider {
+        let count = // get the number of files from the provided `args?.fromFolders`
         return FileCountProvider(fileCount: count)
     }
 
     // Given another instance of this provider, return a `Summary` that explains the difference between them.
-    func summary(comparingWith other: FileCountProvider?) -> Summary {
+    func summary(comparingWith other: FileCountProvider?, args: Args?) -> Summary {
         let prefix = "File Count"
         guard let other = other else {
             return Summary(text: prefix + ": \(count)", style: .neutral)

@@ -2,6 +2,9 @@ import Foundation
 
 public struct LargestAssetCatalogProvider: InfoProvider {
 
+    public struct Args {}
+    public typealias Arguments = Args
+
     public static let identifier: String = "largest_asset_catalog_size"
 
     public let description: String = "Largest Asset Catalog"
@@ -13,7 +16,7 @@ public struct LargestAssetCatalogProvider: InfoProvider {
         self.size = size
     }
 
-    public static func extract(fromApi api: SwiftInfo) throws -> LargestAssetCatalogProvider {
+    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LargestAssetCatalogProvider {
         let catalogs = TotalAssetCatalogsSizeProvider.allCatalogs(api: api)
         guard let largest = catalogs.max(by: { $0.size < $1.size }) else {
             fail("No Asset Catalogs were found!")
@@ -21,7 +24,7 @@ public struct LargestAssetCatalogProvider: InfoProvider {
         return LargestAssetCatalogProvider(name: largest.name, size: largest.size)
     }
 
-    public func summary(comparingWith other: LargestAssetCatalogProvider?) -> Summary {
+    public func summary(comparingWith other: LargestAssetCatalogProvider?, args: Args?) -> Summary {
         func format(value: Int) -> String {
             return ByteCountFormatter.string(fromByteCount: Int64(value),
                                              countStyle: .file)
