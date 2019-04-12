@@ -22,16 +22,6 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 | **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
 | **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. |
 
-## Available Arguments
-
-To be able to support different types of projects, SwiftInfo provides customization options to some providers. Click on each of them to see their documentation!
-
-[👶 TargetCountProvider](Sources/SwiftInfoCore/Providers/TargetCountProvider.swift#L16)
-
-[💻 LinesOfCodeProvider](Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift#L11)
-
-[📊 CodeCoverageProvider](Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift#L11)
-
 ## Usage
 
 SwiftInfo requires the raw logs of a succesful test/archive build combo to work, so it's better used as the last step of a CI pipeline. 
@@ -98,6 +88,16 @@ api.save(output: output)
 ```
 
 You can see `SwiftInfo`'s properties and methods [here.](Sources/SwiftInfoCore/SwiftInfo.swift)
+
+## Available Arguments
+
+To be able to support different types of projects, SwiftInfo provides customization options to some providers. Click on each of them to see their documentation!
+
+[👶 TargetCountProvider](Sources/SwiftInfoCore/Providers/TargetCountProvider.swift#L16)
+
+[💻 LinesOfCodeProvider](Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift#L11)
+
+[📊 CodeCoverageProvider](Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift#L11)
 
 ## Output
 
