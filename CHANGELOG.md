@@ -10,6 +10,9 @@
 
 ## master
 
+## 2.0.1
+* Fixed LongestTest's provider not working with non-legacy workspaces - Bruno Rocha
+
 ## 2.0.0
 * Added support for arguments - Bruno Rocha
 * Updated to Swift 5 - Bruno Rocha
