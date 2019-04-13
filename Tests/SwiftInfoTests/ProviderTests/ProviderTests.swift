@@ -146,6 +146,8 @@ Test suite 'DeviceRequestTests' started on 'Clone 1 of iPhone 5s - Rapiddo.app (
 Test case 'DeviceRequestTests.testEventNameFormatter()' passed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (0.001 seconds)
 Test suite 'FareEstimateTests' started on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)'
 Test case 'FareEstimateTests.testJsonDecoder()' passed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (0.464 seconds)
+Test case 'FareEstimateTests.testJsonDecoder()' failed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (1000.464 seconds)
+Test Case '-[UnitTests.AccountTagsWorkerTests Account_Tags_Worker__Fetching_tags__Try_to_get_tags_when_user_is_not_logged_in]' passed (0.013 seconds).
 Test suite 'CartItemTests' started on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)'
 Test case 'CartItemTests.testPriceLogic()' passed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (0.001 seconds)
 """

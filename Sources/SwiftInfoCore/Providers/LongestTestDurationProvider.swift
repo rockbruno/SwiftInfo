@@ -22,18 +22,17 @@ public struct LongestTestDurationProvider: InfoProvider {
 
     public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LongestTestDurationProvider {
         let testLog = api.fileUtils.testLog
-        let data = testLog.match(regex: #"Test.*passed.*seconds\)"#)
-        let formatted = data.map { a -> (String, Float) in
-            let components = a.components(separatedBy: "'")
+        let data = testLog.match(regex: #"Test.* seconds\)"#)
+        let formatted = data
+                        .filter { $0.contains(" passed ") }
+                        .map { str -> (String, Float) in
+            let components = str.components(separatedBy: "'")
             let name = components[1]
-            let durationString = String(components
-                                        .last?
-                                        .components(separatedBy: " seconds")
-                                        .first?
-                                        .dropFirst()
-                                        .dropFirst() ?? "")
-            guard let duration = Float(durationString) else {
-                fail("Failed to extract test durations.")
+            let secondsPart = components.last
+            let timePart = secondsPart?.components(separatedBy: " seconds") ?? []
+            let time = timePart[timePart.count - 2].components(separatedBy: "(").last
+            guard let duration = Float(time ?? "") else {
+                fail("Failed to extract test duration from this line: \(str).")
             }
             return (name, duration)
         }
