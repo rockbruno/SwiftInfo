@@ -52,7 +52,7 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
             return ByteCountFormatter.string(fromByteCount: Int64(value),
                                              countStyle: .file)
         }
-        return Summary.genericFor(prefix: prefix, now: size, old: other?.size, formatter: formatter) {
+        return Summary.genericFor(prefix: prefix, now: size, old: other?.size, increaseIsBad: true, formatter: formatter) {
             return abs($1 - $0)
         }
     }

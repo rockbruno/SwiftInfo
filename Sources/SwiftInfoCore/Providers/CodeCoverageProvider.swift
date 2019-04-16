@@ -103,7 +103,7 @@ public struct CodeCoverageProvider: InfoProvider {
         let formatter: ((Int) -> String) = { value in
             return "\(CodeCoverageProvider.toPercentage(percentageInt: value))"
         }
-        return Summary.genericFor(prefix: prefix, now: percentageInt, old: other?.percentageInt, formatter: formatter) {
+        return Summary.genericFor(prefix: prefix, now: percentageInt, old: other?.percentageInt, increaseIsBad: false, formatter: formatter) {
             return abs($1 - $0)
         }
     }

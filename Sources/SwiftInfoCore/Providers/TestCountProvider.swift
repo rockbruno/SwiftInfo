@@ -23,7 +23,7 @@ public struct TestCountProvider: InfoProvider {
 
     public func summary(comparingWith other: TestCountProvider?, args: Args?) -> Summary {
         let prefix = "🎯 Test Count"
-        return Summary.genericFor(prefix: prefix, now: count, old: other?.count) {
+        return Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: false) {
             return abs($1 - $0)
         }
     }

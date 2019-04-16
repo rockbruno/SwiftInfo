@@ -30,6 +30,7 @@ public struct Summary: Codable, Hashable {
     static func genericFor<T: Comparable>(prefix: String,
                                           now: T,
                                           old: T?,
+                                          increaseIsBad: Bool,
                                           formatter: ((T) -> String)? = nil,
                                           difference: ((T, T) -> T)) -> Summary {
         let formatter = formatter ?? { return "\($0)" }
@@ -41,27 +42,19 @@ public struct Summary: Codable, Hashable {
                            style: .neutral)
         }
         let modifier: String
-        let style = genericStyleFor(now, old)
-        switch style {
-        case .positive:
+        let style: Style
+        if now > old {
             modifier = ": *Increased* by"
-        case .negative:
+            style = increaseIsBad ? .negative : .positive
+        } else if now < old {
             modifier = ": *Reduced* by"
-        case .neutral:
+            style = increaseIsBad ? .positive : .negative
+        } else {
             modifier = ": Still at"
+            style = .neutral
         }
         let diff = difference(now, old)
         let text = prefix + "\(modifier) \(formatter(diff)) (\(formatter(now)))"
         return Summary(text: text, style: style)
-    }
-
-    static func genericStyleFor<T: Comparable>(_ now: T, _ old: T) -> Style {
-        if now > old {
-            return .positive
-        } else if now < old {
-            return .negative
-        } else {
-            return .neutral
-        }
     }
 }

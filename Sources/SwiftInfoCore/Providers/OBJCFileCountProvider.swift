@@ -23,7 +23,7 @@ public struct OBJCFileCountProvider: InfoProvider {
 
     public func summary(comparingWith other: OBJCFileCountProvider?, args: Args?) -> Summary {
         let prefix = "🧙‍♂️ OBJ-C .h/.m File Count"
-        return Summary.genericFor(prefix: prefix, now: count, old: other?.count) {
+        return Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: true) {
             return abs($1 - $0)
         }
     }

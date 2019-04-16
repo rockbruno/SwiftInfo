@@ -37,7 +37,7 @@ public struct TargetCountProvider: InfoProvider {
 
     public func summary(comparingWith other: TargetCountProvider?, args: Args?) -> Summary {
         let prefix = "👶 Dependency Count"
-        let summary = Summary.genericFor(prefix: prefix, now: count, old: other?.count) {
+        let summary = Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: false) {
             return abs($1 - $0)
         }
         guard let old = other?.count, old != count else {

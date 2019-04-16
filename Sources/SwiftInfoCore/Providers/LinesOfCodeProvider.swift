@@ -52,7 +52,7 @@ public struct LinesOfCodeProvider: InfoProvider {
 
     public func summary(comparingWith other: LinesOfCodeProvider?, args: Args?) -> Summary {
         let text = "💻 Executable Lines of Code"
-        let summary = Summary.genericFor(prefix: text, now: count, old: other?.count) {
+        let summary = Summary.genericFor(prefix: text, now: count, old: other?.count, increaseIsBad: false) {
             return abs($1 - $0)
         }
         return Summary(text: summary.text, style: .neutral)

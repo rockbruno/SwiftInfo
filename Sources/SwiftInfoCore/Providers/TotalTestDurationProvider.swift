@@ -28,8 +28,9 @@ public struct TotalTestDurationProvider: InfoProvider {
         let formatter: ((Int) -> String) = { value in
             return "\(Float(value) / 1000) secs"
         }
-        return Summary.genericFor(prefix: prefix, now: durationInt, old: other?.durationInt, formatter: formatter) {
+        let summary = Summary.genericFor(prefix: prefix, now: durationInt, old: other?.durationInt, increaseIsBad: false, formatter: formatter) {
             return abs($1 - $0)
         }
+        return Summary(text: summary.text, style: .neutral)
     }
 }

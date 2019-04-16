@@ -10,6 +10,9 @@
 
 ## master
 
+## 2.0.2
+* Fixed some providers reporting wrong colors for the result - Bruno Rocha
+
 ## 2.0.1
 * Fixed LongestTest's provider not working with non-legacy workspaces - Bruno Rocha
 
