@@ -103,7 +103,9 @@ To be able to support different types of projects, SwiftInfo provides customizat
 
 After successfully extracting data, SwiftInfo will add/update a json file in the `{Infofile path}/SwiftInfo-output` folder. It's important to add this file to version control after the running the tool as this is what SwiftInfo uses to compare new pieces of information.
 
-Although you can't do anything with the output for now besides sending it to Slack, tools are being developed that allows you to convert this JSON to graphs inside a HTML page.
+[SwiftInfo-Reader](https://github.com/rockbruno/SwiftInfo-Reader) can be used to transform this output into a more visual static HTML page:
+
+<img src="https://i.imgur.com/62jNGdh.png">
 
 ## Tracking custom info
 
