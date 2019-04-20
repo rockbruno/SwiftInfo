@@ -21,33 +21,37 @@ public struct LongestTestDurationProvider: InfoProvider {
     }
 
     public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LongestTestDurationProvider {
-        let testLog = api.fileUtils.testLog
-        let data = testLog.match(regex: #"Test.* seconds\)"#)
-        let formatted = data
-                        .filter { $0.contains(" passed ") }
-                        .map { str -> (String, Float) in
-            let components = str.components(separatedBy: "'")
-            let name = components[1]
-            let secondsPart = components.last
-            let timePart = secondsPart?.components(separatedBy: " seconds") ?? []
-            let time = timePart[timePart.count - 2].components(separatedBy: "(").last
-            guard let duration = Float(time ?? "") else {
-                fail("Failed to extract test duration from this line: \(str).")
-            }
-            return (name, duration)
-        }
-        guard let longest = formatted.max(by: { $0.1 < $1.1 }) else {
-            fail("Couldn't determine the longest test because no tests were found!")
+        let tests = try allTests(api: api)
+        guard let longest = tests.max(by: { $0.1 < $1.1 }) else {
+            throw error("Couldn't determine the longest test because no tests were found!")
         }
         return LongestTestDurationProvider(name: longest.0,
                                            durationInt: Int(longest.1 * 1000))
+    }
+
+    public static func allTests(api: SwiftInfo) throws -> [(String, Float)] {
+        let testLog = try api.fileUtils.testLog()
+        let data = testLog.match(regex: #"Test.* seconds\)"#)
+        return try data
+            .filter { $0.contains(" passed ") }
+            .map { str -> (String, Float) in
+                let components = str.components(separatedBy: "'")
+                let name = components[1]
+                let secondsPart = components.last
+                let timePart = secondsPart?.components(separatedBy: " seconds") ?? []
+                let time = timePart[timePart.count - 2].components(separatedBy: "(").last
+                guard let duration = Float(time ?? "") else {
+                    throw error("Failed to extract test duration from this line: \(str).")
+                }
+                return (name, duration)
+        }
     }
 
     public func summary(comparingWith other: LongestTestDurationProvider?, args: Args?) -> Summary {
         var prefix = "⏰ Longest Test: \(name) (\(duration) secs)"
         let style: Summary.Style
         if let other = other, other.durationInt != durationInt {
-            prefix += " - previously \(other.name) (\(duration) secs)"
+            prefix += " - previously \(other.name) (\(other.duration) secs)"
             style = other.durationInt > durationInt ? .positive : .negative
         } else {
             style = .neutral

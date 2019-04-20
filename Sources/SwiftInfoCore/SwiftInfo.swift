@@ -30,14 +30,18 @@ public struct SwiftInfo {
             log("Extracting \(provider.identifier)")
             let extracted = try provider.extract(fromApi: self, args: args)
             log("\(provider.identifier): Parsing previously extracted info", verbose: true)
-            let other = try fileUtils.lastOutput.extractedInfo(ofType: provider)
+            let other = try fileUtils.lastOutput().extractedInfo(ofType: provider)
             log("\(provider.identifier): Comparing with previously extracted info", verbose: true)
             let summary = extracted.summary(comparingWith: other, args: args)
             log("\(provider.identifier): Finishing", verbose: true)
             let info = ExtractedInfo(data: extracted, summary: summary)
             return try Output(info: info)
         } catch {
-            fail(error.localizedDescription)
+            let message = "**\(provider.identifier):** \(error.localizedDescription)"
+            log(message)
+            return Output(rawDictionary: [:],
+                          summaries: [],
+                          errors: [message])
         }
     }
 
@@ -50,10 +54,18 @@ public struct SwiftInfo {
 
     public func save(output: Output) {
         log("Saving output to disk")
-        let outputFile = fileUtils.outputArray
         var dict = output.rawDictionary
         dict["swiftinfo_run_description_key"] = projectInfo.description
+        dict["swiftinfo_run_project_info"] = [
+            "xcodeproj": projectInfo.xcodeproj,
+            "target": projectInfo.target,
+            "configuration": projectInfo.configuration,
+            "versionString": (try? projectInfo.versionString()) ?? "(Failed to parse version)",
+            "buildNumber": (try? projectInfo.buildNumber()) ?? "(Failed to parse build number)",
+            "description": projectInfo.description
+        ]
         do {
+            let outputFile = try fileUtils.outputArray()
             try fileUtils.save(output: [dict] + outputFile)
         } catch {
             fail(error.localizedDescription)

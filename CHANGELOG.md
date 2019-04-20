@@ -10,6 +10,13 @@
 
 ## master
 
+## 2.1.0
+* Added ArchiveTimeProvider - Bruno Rocha
+* SwiftInfo will now continue executing even if a provider fails (the reasons are be printed in the final summary) - Bruno Rocha
+* Improvements to the durability of many providers and fixing minor bugs related to them - Bruno Rocha
+* Fixed many providers silently failing if Xcode's new build system was active - Bruno Rocha
+* Fixed many providers reporting empty results when they should have failed - Bruno Rocha
+
 ## 2.0.2
 * Fixed some providers reporting wrong colors for the result - Bruno Rocha
 

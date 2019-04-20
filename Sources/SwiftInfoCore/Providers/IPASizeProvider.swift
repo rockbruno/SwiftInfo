@@ -16,11 +16,11 @@ public struct IPASizeProvider: InfoProvider {
 
     public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> IPASizeProvider {
         let fileUtils = api.fileUtils
-        let infofileFolder = fileUtils.infofileFolder
+        let infofileFolder = try fileUtils.infofileFolder()
         let buildFolder = infofileFolder + "build/"
         let contents = try fileUtils.fileManager.contentsOfDirectory(atPath: buildFolder)
         guard let ipa = contents.first(where: { $0.hasSuffix(".ipa") }) else {
-            fail(".ipa not found! Attempted to find .ipa at: \(buildFolder)")
+            throw error(".ipa not found! Attempted to find .ipa at: \(buildFolder)")
         }
         let attributes = try fileUtils.fileManager.attributesOfItem(atPath: buildFolder + ipa)
         let fileSize = Int(attributes[.size] as? UInt64 ?? 0)

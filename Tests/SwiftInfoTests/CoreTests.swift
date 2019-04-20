@@ -52,6 +52,14 @@ final class CoreTests: XCTestCase {
         let dataArray = expectedOutput["data"] as! [[String: Any]]
         let newDataArray: [[String: Any]] = [[
             "swiftinfo_run_description_key": "Mock 1.0 (1) - Mock-Debug",
+            "swiftinfo_run_project_info": [
+                "buildNumber": "1",
+                "configuration": "Mock-Debug",
+                "description": "Mock 1.0 (1) - Mock-Debug",
+                "target": "Mock",
+                "versionString": "1.0",
+                "xcodeproj": "Mock.xcproject",
+            ],
             "mock_provider": [
                 "data": [
                     "value": 10,
@@ -79,6 +87,14 @@ final class CoreTests: XCTestCase {
         let expectedOutput: [String: Any] = [
             "data": [[
             "swiftinfo_run_description_key": "Mock 1.0 (1) - Mock-Debug",
+            "swiftinfo_run_project_info": [
+                "buildNumber": "1",
+                "configuration": "Mock-Debug",
+                "description": "Mock 1.0 (1) - Mock-Debug",
+                "target": "Mock",
+                "versionString": "1.0",
+                "xcodeproj": "Mock.xcproject",
+            ],
             "mock_provider": [
                 "data": [
                     "value": 10,

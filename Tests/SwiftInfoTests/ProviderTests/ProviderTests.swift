@@ -160,6 +160,14 @@ Test case 'CartItemTests.testPriceLogic()' passed on 'Clone 1 of iPhone 5s - Rap
         FileUtils.testLogFilePath = "./test.log"
         let log =
         """
+Test suite 'DeviceRequestTests' started on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)'
+Test case 'DeviceRequestTests.testEventNameFormatter()' passed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (0.001 seconds)
+Test suite 'FareEstimateTests' started on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)'
+Test case 'FareEstimateTests.testJsonDecoder()' passed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (0.464 seconds)
+Test case 'FareEstimateTests.testJsonDecoder()' failed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (1000.464 seconds)
+Test Case '-[UnitTests.AccountTagsWorkerTests Account_Tags_Worker__Fetching_tags__Try_to_get_tags_when_user_is_not_logged_in]' passed (0.013 seconds).
+Test suite 'CartItemTests' started on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)'
+Test case 'CartItemTests.testPriceLogic()' passed on 'Clone 1 of iPhone 5s - Rapiddo.app (13627)' (0.001 seconds)
 Generating coverage data...
 Generated coverage report: /Users/bruno.rocha/Library/Developer/Xcode/DerivedData/Rapiddo-cbobntbmchyaczezxxpesrevoisy/Logs/Test/Run-Marketplace-2019.03.25_12-55-36--0300.xcresult/2_Test/action.xccovreport
 ** TEST SUCCEEDED ** [37.368 sec]
@@ -167,5 +175,20 @@ Generated coverage report: /Users/bruno.rocha/Library/Developer/Xcode/DerivedDat
         api.mockFileManager.add(file: "test.log", contents: log)
         let extracted = try! TotalTestDurationProvider.extract(fromApi: api)
         XCTAssertEqual(extracted.durationInt, 37368)
+    }
+
+    func testArchiveTime() {
+        FileUtils.buildLogFilePath = "./build.log"
+        let log =
+        """
+Touch /Users/bruno.rocha/Library/Developer/Xcode/DerivedData/Rapiddo-cbobntbmchyaczezxxpesrevoisy/Build/Intermediates.noindex/ArchiveIntermediates/Marketplace-AppStore/InstallationBuildProductsLocation/Applications/Rapiddo.app (in target: Rapiddo)
+    cd /Users/bruno.rocha/Desktop/MovileRepos/rapiddo-vision-ios
+    /usr/bin/touch -c /Users/bruno.rocha/Library/Developer/Xcode/DerivedData/Rapiddo-cbobntbmchyaczezxxpesrevoisy/Build/Intermediates.noindex/ArchiveIntermediates/Marketplace-AppStore/InstallationBuildProductsLocation/Applications/Rapiddo.app
+
+** ARCHIVE SUCCEEDED ** [309.407 sec]
+"""
+        api.mockFileManager.add(file: "build.log", contents: log)
+        let extracted = try! ArchiveDurationProvider.extract(fromApi: api)
+        XCTAssertEqual(extracted.timeInt, 309407)
     }
 }

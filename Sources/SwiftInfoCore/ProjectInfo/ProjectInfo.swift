@@ -8,7 +8,13 @@ public struct ProjectInfo: CustomStringConvertible {
     let plistPath: String
 
     public var description: String {
-        return "\(target) \(versionString()) (\(buildNumber())) - \(configuration)"
+        let version: String
+        do {
+            version = "\(try versionString()) (\(try buildNumber()))"
+        } catch {
+            version = "(Failed to retrieve version info)"
+        }
+        return "\(target) \(version) - \(configuration)"
     }
 
     public init(xcodeproj: String,
@@ -26,24 +32,24 @@ public struct ProjectInfo: CustomStringConvertible {
                                                          fileUtils: fileUtils)
     }
 
-    func plistDict() -> NSDictionary {
-        let folder = fileUtils.infofileFolder
+    func plistDict() throws -> NSDictionary {
+        let folder = try fileUtils.infofileFolder()
         guard let dictionary = fileUtils.fileOpener.plistContents(ofPath: folder + plistPath) else {
             fail("Failed to load plist \(folder + plistPath)")
         }
         return dictionary
     }
 
-    func versionString() -> String {
-        let plist = plistDict()
+    func versionString() throws -> String {
+        let plist = try plistDict()
         guard let version = plist["CFBundleShortVersionString"] as? String else {
             fail("Project version not found.")
         }
         return version
     }
 
-    func buildNumber() -> String {
-        let plist = plistDict()
+    func buildNumber() throws -> String {
+        let plist = try plistDict()
         guard let version = plist["CFBundleVersion"] as? String else {
             fail("Project build number not found.")
         }

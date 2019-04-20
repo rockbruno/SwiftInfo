@@ -27,15 +27,15 @@ public struct LinesOfCodeProvider: InfoProvider {
     }
 
     public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LinesOfCodeProvider {
-        let json = CodeCoverageProvider.getCodeCoverageJson(api: api)
+        let json = try CodeCoverageProvider.getCodeCoverageJson(api: api)
         let targets = json["targets"] as? [[String: Any]] ?? []
-        let count = targets.reduce(0) {
+        let count = try targets.reduce(0) {
             let current = $0
             let target = $1
             guard let rawName = target["name"] as? String,
                   let name = rawName.components(separatedBy: ".").first else
             {
-                fail("Failed to retrieve target name from xccov.")
+                throw error("Failed to retrieve target name from xccov.")
             }
             log("Getting lines of code for: \(rawName)", verbose: true)
             guard args?.targets.contains(name) != false else {
@@ -43,7 +43,7 @@ public struct LinesOfCodeProvider: InfoProvider {
                 return current
             }
             guard let count = target["executableLines"] as? Int else {
-                fail("Failed to retrieve the number of executable lines from xccov.")
+                throw error("Failed to retrieve the number of executable lines from xccov.")
             }
             return current + count
         }
