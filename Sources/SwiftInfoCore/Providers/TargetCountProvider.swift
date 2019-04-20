@@ -30,7 +30,7 @@ public struct TargetCountProvider: InfoProvider {
     }
 
     public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> TargetCountProvider {
-        let buildLog = api.fileUtils.buildLog
+        let buildLog = try api.fileUtils.buildLog()
         let modules = Set(buildLog.match(regex: "(?<=-module-name ).*?(?= )"))
         return TargetCountProvider(count: modules.count)
     }

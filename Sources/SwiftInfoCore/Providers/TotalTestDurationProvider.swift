@@ -7,7 +7,7 @@ public struct TotalTestDurationProvider: InfoProvider {
 
     public static let identifier: String = "total_test_duration"
 
-    public let description: String = "Total Test Duration"
+    public let description: String = "Time to Build and Run Tests"
     public let durationInt: Int
 
     public init(durationInt: Int) {
@@ -15,16 +15,16 @@ public struct TotalTestDurationProvider: InfoProvider {
     }
 
     public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> TotalTestDurationProvider {
-        let testLog = api.fileUtils.testLog
+        let testLog = try api.fileUtils.testLog()
         let durationString = testLog.match(regex: #"(?<=\*\* TEST SUCCEEDED \*\* \[).*?(?= sec)"#).first
         guard let duration = Float(durationString ?? "") else {
-            fail("Total test duration not found in logs.")
+            throw error("Total test duration (** TEST SUCCEEDED **) not found in the logs. Did the tests fail?")
         }
         return TotalTestDurationProvider(durationInt: Int(duration * 1000))
     }
 
     public func summary(comparingWith other: TotalTestDurationProvider?, args: Args?) -> Summary {
-        let prefix = "🛏 Total Test Duration"
+        let prefix = "🛏 Time to Build and Run Tests"
         let formatter: ((Int) -> String) = { value in
             return "\(Float(value) / 1000) secs"
         }

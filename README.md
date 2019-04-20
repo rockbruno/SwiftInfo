@@ -17,10 +17,11 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 | **⚠️ WarningCountProvider**        | Number of warnings in a build | Build logs |
 | **🧙‍♂️ OBJCFileCountProvider**        | Number of OBJ-C files and headers (for mixed OBJ-C / Swift projects) | Build logs |
 | **⏰ LongestTestDurationProvider**        | The name and duration of the longest test | Test logs |
-| **🛏 TotalTestDurationProvider**        | The sum of the duration of all tests | Test logs |
+| **🛏 TotalTestDurationProvider**        | Time it took to build and run all tests | Test logs |
 | **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs |
 | **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
 | **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. |
+| **🚚 ArchiveDurationProvider**        | Time it took to build and archive the app | Successful xcodebuild archive and build logs |
 
 ## Usage
 

@@ -35,11 +35,11 @@ public struct CodeCoverageProvider: InfoProvider {
         if args == nil {
             log("No targets provided, getting code coverage of the main .apps", verbose: true)
         }
-        let json = getCodeCoverageJson(api: api)
-        let targets = json["targets"] as! [[String: Any]]
-        let desiredTargets = targets.filter {
+        let json = try getCodeCoverageJson(api: api)
+        let targets = json["targets"] as? [[String: Any]] ?? []
+        let desiredTargets = try targets.filter {
             guard let rawName = $0["name"] as? String else {
-                fail("Failed to retrieve target name from xccov.")
+                throw error("Failed to retrieve target name from xccov.")
             }
             if let targets = args?.targets,
                let name = rawName.components(separatedBy: ".").first
@@ -55,13 +55,13 @@ public struct CodeCoverageProvider: InfoProvider {
             }
         }
         guard desiredTargets.isEmpty == false else {
-            fail("Couldn't find the desired targets in the code coverage report.")
+            throw error("Couldn't find the desired targets in the code coverage report.")
         }
-        let lineData = desiredTargets.map { target -> (Int, Int) in
+        let lineData = try desiredTargets.map { target -> (Int, Int) in
             guard let lines = target["executableLines"] as? Int,
                   let covered = target["coveredLines"] as? Int else
             {
-                fail("One of the found targets was missing the coverage data!")
+                throw error("One of the found targets was missing the coverage data!")
             }
             return (lines, covered)
         }.reduce((0, 0), {
@@ -72,16 +72,27 @@ public struct CodeCoverageProvider: InfoProvider {
         return CodeCoverageProvider(percentageInt: rounded)
     }
 
-    static func getCodeCoverageJson(api: SwiftInfo) -> [String: Any] {
-        let testLog = api.fileUtils.testLog
+    public static func getCodeCoverageJson(api: SwiftInfo) throws -> [String: Any] {
+        let testLog = try api.fileUtils.testLog()
         guard let reportFilePath = testLog.match(regex: "(?<=Generated coverage report: ).*").first else {
-            fail("Couldn't find code coverage report, is it enabled?")
+            throw error("Couldn't find code coverage report path in the logs, is it enabled?")
         }
         removeTemporaryFileIfNeeded()
-        runShell("xcrun xccov view \(reportFilePath) --json > \(tempFileName)")
-        let data = try! Data(contentsOf: tempFile)
-        removeTemporaryFileIfNeeded()
-        return try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
+        let command = "xcrun xccov view \(reportFilePath) --json > \(tempFileName)"
+        log("Processing code coverage report: \(command)", verbose: true)
+        runShell(command)
+        do {
+            let data = try Data(contentsOf: tempFile)
+            removeTemporaryFileIfNeeded()
+            guard let object = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String: Any] else
+            {
+                throw error("xccov failed to generate a coverage JSON. Was the report file deleted?")
+            }
+            return object
+        } catch {
+            let message = "Failed to read \(tempFile)! Error: \(error.localizedDescription)"
+            throw self.error(message)
+        }
     }
 
     static func removeTemporaryFileIfNeeded() {

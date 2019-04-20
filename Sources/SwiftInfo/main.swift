@@ -9,7 +9,7 @@ public struct Main {
         let toolchainPath = getToolchainPath()
         log("SwiftInfo")
         log("Dylib Folder: \(fileUtils.toolFolder)", verbose: true)
-        log("Infofile Path: \(fileUtils.infofileFolder)", verbose: true)
+        log("Infofile Path: \(try! fileUtils.infofileFolder())", verbose: true)
         log("Toolchain Path: \(toolchainPath)", verbose: true)
 
         let processInfoArgs = ProcessInfo.processInfo.arguments

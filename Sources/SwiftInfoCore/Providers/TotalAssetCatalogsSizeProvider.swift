@@ -15,32 +15,41 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
     }
 
     public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> TotalAssetCatalogsSizeProvider {
-        let catalogs = allCatalogs(api: api)
+        let catalogs = try allCatalogs(api: api)
         let total = catalogs.map { $0.size }.reduce(0, +)
         return TotalAssetCatalogsSizeProvider(size: total)
     }
 
-    public static func allCatalogs(api: SwiftInfo) -> [(name: String, size: Int)] {
-        let buildLog = api.fileUtils.buildLog
+    public static func allCatalogs(api: SwiftInfo) throws -> [(name: String, size: Int)] {
+        let buildLog = try api.fileUtils.buildLog()
         let compileRows = buildLog.match(regex: "CompileAssetCatalog.*")
         let catalogs: [String] = compileRows.compactMap {
             let formatted = $0.replacingEscapedSpaces
-            let catalog = formatted.components(separatedBy: " ").last
+            let catalog = formatted.components(separatedBy: " ").first {
+                $0.hasSuffix(".xcassets")
+            }
             return catalog?.removingPlaceholder
         }
-        let infofileFolder = api.fileUtils.infofileFolder
-        let sizes = catalogs.map { folderSize(ofCatalog: infofileFolder + $0, api: api) }
+        let sizes = try catalogs.map { try folderSize(ofCatalog: $0, api: api) }
         let result = zip(catalogs, sizes).map { ($0.0, $0.1) }
         return result
     }
 
-    public static func folderSize(ofCatalog catalog: String, api: SwiftInfo) -> Int {
+    public static func folderSize(ofCatalog catalog: String, api: SwiftInfo) throws -> Int {
         let fileManager = api.fileUtils.fileManager
-        let enumerator = fileManager.enumerator(atPath: catalog)
+        let enumerator: FileManager.DirectoryEnumerator?
+        if fileManager.enumerator(atPath: catalog)?.nextObject() == nil {
+            // Xcode's new build system
+            let infofileFolder = try api.fileUtils.infofileFolder()
+            enumerator = fileManager.enumerator(atPath: infofileFolder + catalog)
+        } else {
+            // Legacy build
+            enumerator = fileManager.enumerator(atPath: catalog)
+        }
         var fileSize = 0
         while let next = enumerator?.nextObject() as? String {
-            let attributes = try? fileManager.attributesOfItem(atPath: catalog + "/" + next)
-            let size = Int(attributes?[.size] as? UInt64 ?? 0)
+            let attributes = try fileManager.attributesOfItem(atPath: catalog + "/" + next)
+            let size = Int(attributes[.size] as? UInt64 ?? 0)
             fileSize += size
         }
         return fileSize

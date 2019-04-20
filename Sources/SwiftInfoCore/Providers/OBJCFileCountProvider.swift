@@ -15,7 +15,7 @@ public struct OBJCFileCountProvider: InfoProvider {
     }
 
     public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> OBJCFileCountProvider {
-        let buildLog = api.fileUtils.buildLog
+        let buildLog = try api.fileUtils.buildLog()
         let impl = Set(buildLog.match(regex: #"CompileC.* (.*\.m)"#))
         let headers = buildLog.match(regex: "CpHeader")
         return OBJCFileCountProvider(count: impl.count + headers.count)

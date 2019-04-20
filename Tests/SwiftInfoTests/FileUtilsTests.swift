@@ -17,41 +17,41 @@ final class FileUtilsTests: XCTestCase {
     }
 
     func testInfofileFinder() {
-        XCTAssertNil(fileUtils._getInfofileFolder())
+        XCTAssertNil(try? fileUtils.infofileFolder())
         fileManager.add(file: "../../Infofile.swift", contents: "")
-        XCTAssertNotNil(fileUtils._getInfofileFolder())
-        XCTAssertEqual(fileUtils.infofileFolder, "../../")
+        XCTAssertNotNil(try? fileUtils.infofileFolder())
+        XCTAssertEqual(try! fileUtils.infofileFolder(), "../../")
     }
 
     func testBuildLogs() {
         fileManager.add(file: "./Infofile.swift", contents: "")
         let logPath = "builds/build.log"
         let contents = "MY LOG"
-        XCTAssertNil((try? fileUtils._getBuildLog()))
+        XCTAssertNil((try? fileUtils.buildLog()))
         fileManager.add(file: logPath, contents: contents)
-        XCTAssertNil((try? fileUtils._getBuildLog()))
+        XCTAssertNil((try? fileUtils.buildLog()))
         FileUtils.buildLogFilePath = logPath
-        XCTAssertEqual((try? fileUtils._getBuildLog()), contents)
+        XCTAssertEqual((try? fileUtils.buildLog()), contents)
     }
 
     func testTestLogs() {
         fileManager.add(file: "./Infofile.swift", contents: "")
         let logPath = "builds/test.log"
         let contents = "MY TEST LOG"
-        XCTAssertNil((try? fileUtils._getTestLog()))
+        XCTAssertNil((try? fileUtils.testLog()))
         fileManager.add(file: logPath, contents: contents)
-        XCTAssertNil((try? fileUtils._getTestLog()))
+        XCTAssertNil((try? fileUtils.testLog()))
         FileUtils.testLogFilePath = logPath
-        XCTAssertEqual((try? fileUtils._getTestLog()), contents)
+        XCTAssertEqual((try? fileUtils.testLog()), contents)
     }
 
     func testLastOutput() {
         fileManager.add(file: "../../Infofile.swift", contents: "")
-        XCTAssertEqual(fileUtils.outputFileFolder, "../../SwiftInfo-output/")
-        XCTAssertEqual(fileUtils.outputFileURL.relativePath, "../../SwiftInfo-output/SwiftInfoOutput.json")
+        XCTAssertEqual(try? fileUtils.outputFileFolder(), "../../SwiftInfo-output/")
+        XCTAssertEqual(try? fileUtils.outputFileURL().relativePath, "../../SwiftInfo-output/SwiftInfoOutput.json")
         fileManager.add(file: "../../SwiftInfo-output/SwiftInfoOutput.json", contents: "{\"data\":[{\"a\": \"b\"}]}")
-        let last = fileUtils.lastOutput
-        XCTAssertEqual((last.rawDictionary["a"] as? String), "b")
+        let last = try? fileUtils.lastOutput()
+        XCTAssertEqual((last?.rawDictionary["a"] as? String), "b")
     }
 
     func testSaveOutput() {
@@ -59,9 +59,9 @@ final class FileUtilsTests: XCTestCase {
         XCTAssertEqual(fileManager.createdDicts, [])
         let dict: [[String: Any]] = [["b": "c"]]
         try! fileUtils.save(output: dict)
-        XCTAssertEqual(fileManager.createdDicts.contains(fileUtils.outputFileFolder), true)
-        let last = fileUtils.lastOutput
+        XCTAssertEqual(fileManager.createdDicts.contains(try! fileUtils.outputFileFolder()), true)
+        let last = try! fileUtils.lastOutput()
         XCTAssertEqual((last.rawDictionary["b"] as? String), "c")
-        XCTAssertNotNil(fileUtils.fullOutput["data"])
+        XCTAssertNotNil(try! fileUtils.fullOutput()["data"])
     }
 }

@@ -26,89 +26,87 @@ public struct FileUtils {
         return url
     }
 
-    func _getInfofileFolder() -> String? {
-        return FileUtils.supportedInfofilePaths.first {
+    public func infofileFolder() throws -> String {
+        guard let path = FileUtils.supportedInfofilePaths.first(where: {
             fileManager.fileExists(atPath: $0 + infofileName)
+        }) else {
+            throw SwiftInfoError.generic("Infofile.swift not found.")
         }
+        return path
     }
 
-    public var infofileFolder: String {
-        guard let folder = _getInfofileFolder() else {
-            fail("Infofile.swift not found.")
-        }
-        return folder
-    }
-
-    func _getTestLog() throws -> String {
-        let folder = infofileFolder
+    public func testLog() throws -> String {
+        let folder = try infofileFolder()
         let url = URL(fileURLWithPath: folder + FileUtils.testLogFilePath)
-        return try fileOpener.stringContents(ofUrl: url)
-    }
-
-    public var testLog: String {
         do {
-            let testLog = try _getTestLog()
-            return testLog
+            return try fileOpener.stringContents(ofUrl: url)
         } catch {
-            fail("""
+            throw SwiftInfoError.generic("""
                 Test log not found!
                 Expected path: \(FileUtils.testLogFilePath)
                 Thrown error: \(error.localizedDescription)
-                """)
+            """)
         }
     }
 
-    func _getBuildLog() throws -> String {
-        let folder = infofileFolder
+    public func buildLog() throws -> String {
+        let folder = try infofileFolder()
         let url = URL(fileURLWithPath: folder + FileUtils.buildLogFilePath)
-        return try fileOpener.stringContents(ofUrl: url)
-    }
-
-    public var buildLog: String {
         do {
-            let testLog = try _getBuildLog()
-            return testLog
+            return try fileOpener.stringContents(ofUrl: url)
         } catch {
-            fail("""
+            throw SwiftInfoError.generic("""
                 Build log not found!
                 Expected path: \(FileUtils.buildLogFilePath)
                 Thrown error: \(error.localizedDescription)
-                """)
+            """)
         }
     }
 
-    public var outputFileFolder: String {
-        return infofileFolder + "SwiftInfo-output/"
+    public func outputFileFolder() throws -> String {
+        return (try infofileFolder()) + "SwiftInfo-output/"
     }
 
-    public var outputFileURL: URL {
-        return URL(fileURLWithPath: outputFileFolder + outputFileName)
+    public func outputFileURL() throws -> URL {
+        return URL(fileURLWithPath: (try outputFileFolder()) + outputFileName)
     }
 
-    public var fullOutput: [String: Any] {
-        guard let data = try? fileOpener.dataContents(ofUrl: outputFileURL) else {
+    public func fullOutput() throws -> [String: Any] {
+        guard let data = try? fileOpener.dataContents(ofUrl: (try outputFileURL())) else {
             return [:]
         }
-        let object = try? JSONSerialization.jsonObject(with: data, options: [])
+        let object = try JSONSerialization.jsonObject(with: data, options: [])
         return object as? [String: Any] ?? [:]
     }
 
-    public var outputArray: [[String: Any]] {
-        return (fullOutput["data"] as? [[String: Any]]) ?? []
+    public func outputArray() throws -> [[String: Any]] {
+        return ((try fullOutput())["data"] as? [[String: Any]]) ?? []
     }
 
-    public var lastOutput: Output {
-        return Output(rawDictionary: outputArray.first ?? [:], summaries: [])
+    public func lastOutput() throws -> Output {
+        let array = try outputArray()
+        return Output(rawDictionary: array.first ?? [:], summaries: [], errors: [])
     }
 
     public func save(output: [[String: Any]]) throws {
-        let path = outputFileURL
+        let path = try outputFileURL()
         log("Path to save: \(path.absoluteString)", verbose: true)
         let dictionary = ["data": output]
         let json = try JSONSerialization.data(withJSONObject: dictionary, options: [.prettyPrinted])
-        try? fileManager.createDirectory(atPath: outputFileFolder,
+        try? fileManager.createDirectory(atPath: (try outputFileFolder()),
                                          withIntermediateDirectories: true,
                                          attributes: nil)
         try fileOpener.write(data: json, toUrl: path)
+    }
+}
+
+public enum SwiftInfoError: Error, LocalizedError {
+    case generic(String)
+
+    public var errorDescription: String? {
+        switch self {
+        case let .generic(message):
+            return message
+        }
     }
 }

@@ -18,7 +18,7 @@ public struct XcodeprojPlistExtractor: PlistExtractor {
                                  configuration: String,
                                  fileUtils: FileUtils) -> String {
         do {
-            let projectFolder = fileUtils.infofileFolder
+            let projectFolder = try fileUtils.infofileFolder()
             let fileManager = fileUtils.fileManager
             let contents = try fileManager.contentsOfDirectory(atPath: projectFolder)
             guard let project = contents.first(where: { $0.hasSuffix(xcodeproj) }) else {
