@@ -52,17 +52,18 @@ public struct SwiftInfo {
         client.syncPost(urlString: webhookUrl, json: formatted)
     }
 
-    public func save(output: Output) {
+    public func save(output: Output,
+                     timestamp: TimeInterval = Date().timeIntervalSince1970) {
         log("Saving output to disk")
         var dict = output.rawDictionary
-        dict["swiftinfo_run_description_key"] = projectInfo.description
         dict["swiftinfo_run_project_info"] = [
             "xcodeproj": projectInfo.xcodeproj,
             "target": projectInfo.target,
             "configuration": projectInfo.configuration,
             "versionString": (try? projectInfo.versionString()) ?? "(Failed to parse version)",
             "buildNumber": (try? projectInfo.buildNumber()) ?? "(Failed to parse build number)",
-            "description": projectInfo.description
+            "description": projectInfo.description,
+            "timestamp": timestamp
         ]
         do {
             let outputFile = try fileUtils.outputArray()

@@ -27,7 +27,6 @@ final class CoreTests: XCTestCase {
         var currentOutput = [String: Any]()
         currentOutput["data"] = [
             [
-                "swiftinfo_run_description_key": "Mock 1.0 (1) - Mock-Debug",
                 "mock_provider": [
                     "data": [
                         "value": 5,
@@ -47,11 +46,10 @@ final class CoreTests: XCTestCase {
         XCTAssertEqual(api.mockFileManager.stringContents(atPath: outputPath),
                        currentOutputString)
         let output = api.extract(MockInfoProvider.self)
-        api.save(output: output)
+        api.save(output: output, timestamp: 0)
         var expectedOutput = currentOutput
         let dataArray = expectedOutput["data"] as! [[String: Any]]
         let newDataArray: [[String: Any]] = [[
-            "swiftinfo_run_description_key": "Mock 1.0 (1) - Mock-Debug",
             "swiftinfo_run_project_info": [
                 "buildNumber": "1",
                 "configuration": "Mock-Debug",
@@ -59,6 +57,7 @@ final class CoreTests: XCTestCase {
                 "target": "Mock",
                 "versionString": "1.0",
                 "xcodeproj": "Mock.xcproject",
+                "timestamp": 0
             ],
             "mock_provider": [
                 "data": [
@@ -67,7 +66,9 @@ final class CoreTests: XCTestCase {
                 ],
                 "summary": [
                     "text": "Old: 5, New: 10",
-                    "color": "#757575"
+                    "color": "#757575",
+                    "numericValue": 0,
+                    "stringValue": "a"
                 ]
             ]
         ]] + dataArray
@@ -83,10 +84,9 @@ final class CoreTests: XCTestCase {
         let outputPath = "SwiftInfo-output/SwiftInfoOutput.json"
         XCTAssertNil(api.mockFileManager.stringContents(atPath: outputPath))
         let output = api.extract(MockInfoProvider.self)
-        api.save(output: output)
+        api.save(output: output, timestamp: 0)
         let expectedOutput: [String: Any] = [
             "data": [[
-            "swiftinfo_run_description_key": "Mock 1.0 (1) - Mock-Debug",
             "swiftinfo_run_project_info": [
                 "buildNumber": "1",
                 "configuration": "Mock-Debug",
@@ -94,6 +94,7 @@ final class CoreTests: XCTestCase {
                 "target": "Mock",
                 "versionString": "1.0",
                 "xcodeproj": "Mock.xcproject",
+                "timestamp": 0
             ],
             "mock_provider": [
                 "data": [
@@ -102,7 +103,9 @@ final class CoreTests: XCTestCase {
                 ],
                 "summary": [
                     "text": "10",
-                    "color": "#757575"
+                    "color": "#757575",
+                    "numericValue": 0,
+                    "stringValue": "a"
                 ]
             ]
             ]]
@@ -129,8 +132,8 @@ struct MockInfoProvider: InfoProvider {
 
     func summary(comparingWith other: MockInfoProvider?, args: Args?) -> Summary {
         guard let other = other else {
-            return Summary(text: "\(value)", style: .neutral)
+            return Summary(text: "\(value)", style: .neutral, numericValue: 0, stringValue: "a")
         }
-        return Summary(text: "Old: \(other.value), New: \(value)", style: .neutral)
+        return Summary(text: "Old: \(other.value), New: \(value)", style: .neutral, numericValue: 0, stringValue: "a")
     }
 }

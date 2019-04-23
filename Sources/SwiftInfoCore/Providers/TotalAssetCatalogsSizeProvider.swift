@@ -7,7 +7,7 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
 
     public static let identifier: String = "total_asset_catalogs_size"
 
-    public let description: String = "Asset Catalogs Size"
+    public let description: String = "🎨 Total Asset Catalogs Size"
     public let size: Int
 
     public init(size: Int) {
@@ -20,7 +20,7 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
         return TotalAssetCatalogsSizeProvider(size: total)
     }
 
-    public static func allCatalogs(api: SwiftInfo) throws -> [(name: String, size: Int)] {
+    static func allCatalogs(api: SwiftInfo) throws -> [AssetCatalog] {
         let buildLog = try api.fileUtils.buildLog()
         let compileRows = buildLog.match(regex: "CompileAssetCatalog.*")
         let catalogs: [String] = compileRows.compactMap {
@@ -32,10 +32,10 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
         }
         let sizes = try catalogs.map { try folderSize(ofCatalog: $0, api: api) }
         let result = zip(catalogs, sizes).map { ($0.0, $0.1) }
-        return result
+        return result.map { AssetCatalog(name: $0.0, size: $0.1.0, largestInnerFile: $0.1.1) }
     }
 
-    public static func folderSize(ofCatalog catalog: String, api: SwiftInfo) throws -> Int {
+    static func folderSize(ofCatalog catalog: String, api: SwiftInfo) throws -> (size: Int, largestInnerFile: File?) {
         let fileManager = api.fileUtils.fileManager
         let enumerator: FileManager.DirectoryEnumerator?
         if fileManager.enumerator(atPath: catalog)?.nextObject() == nil {
@@ -47,21 +47,28 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
             enumerator = fileManager.enumerator(atPath: catalog)
         }
         var fileSize = 0
+        var largestInnerFile: File?
         while let next = enumerator?.nextObject() as? String {
-            let attributes = try fileManager.attributesOfItem(atPath: catalog + "/" + next)
+            let name = catalog + "/" + next
+            let attributes = try fileManager.attributesOfItem(atPath: name)
             let size = Int(attributes[.size] as? UInt64 ?? 0)
             fileSize += size
+            if size > (largestInnerFile?.size ?? 0) {
+                largestInnerFile = File(name: name, size: size)
+            }
         }
-        return fileSize
+        return (fileSize, largestInnerFile)
     }
 
     public func summary(comparingWith other: TotalAssetCatalogsSizeProvider?, args: Args?) -> Summary {
-        let prefix = "🎨 Total Asset Catalogs Size"
-        let formatter: ((Int) -> String) = { value in
-            return ByteCountFormatter.string(fromByteCount: Int64(value),
-                                             countStyle: .file)
+        let prefix = description
+        let stringFormatter: ((Int) -> String) = { value in
+            let formatter = ByteCountFormatter()
+            formatter.allowsNonnumericFormatting = false
+            formatter.countStyle = .file
+            return formatter.string(fromByteCount: Int64(value))
         }
-        return Summary.genericFor(prefix: prefix, now: size, old: other?.size, increaseIsBad: true, formatter: formatter) {
+        return Summary.genericFor(prefix: prefix, now: size, old: other?.size, increaseIsBad: true, stringValueFormatter: stringFormatter) {
             return abs($1 - $0)
         }
     }

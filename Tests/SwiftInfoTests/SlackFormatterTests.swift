@@ -4,7 +4,7 @@ import XCTest
 final class SlackFormatterTests: XCTestCase {
     func testFormatter() {
         let swiftInfo = SwiftInfo.mock()
-        let summaries = [Summary(text: "A", style: .positive)]
+        let summaries = [Summary(text: "A", style: .positive, numericValue: 0, stringValue: "a")]
         let output = Output(rawDictionary: [:], summaries: summaries, errors: [])
         let formatted = SlackFormatter().format(output: output, projectInfo: swiftInfo.projectInfo)
         let dictionary = NSDictionary(dictionary: formatted)
@@ -18,7 +18,7 @@ final class SlackFormatterTests: XCTestCase {
 
     func testFormatterWithError() {
         let swiftInfo = SwiftInfo.mock()
-        let summaries = [Summary(text: "A", style: .positive)]
+        let summaries = [Summary(text: "A", style: .positive, numericValue: 0, stringValue: "a")]
         let output = Output(rawDictionary: [:], summaries: summaries, errors: ["abc", "cde"])
         let formatted = SlackFormatter().format(output: output, projectInfo: swiftInfo.projectInfo)
         let dictionary = NSDictionary(dictionary: formatted)

@@ -135,23 +135,23 @@ struct FileCountProvider: InfoProvider {
     func summary(comparingWith other: FileCountProvider?, args: Args?) -> Summary {
         let prefix = "File Count"
         guard let other = other else {
-            return Summary(text: prefix + ": \(count)", style: .neutral)
+            return Summary(text: prefix + ": \(fileCount)", style: .neutral)
         }
         guard count != other.count else {
-            return Summary(text: prefix + ": Unchanged. (\(count))", style: .neutral)
+            return Summary(text: prefix + ": Unchanged. (\(fileCount))", style: .neutral)
         }
         let modifier: String
         let style: Summary.Style
-        if count > other.count {
+        if fileCount > other.fileCount {
             modifier = "*grew*"
             style = .negative
         } else {
             modifier = "was *reduced*"
             style = .positive
         }
-        let difference = abs(other.count - count)
-        let text = prefix + " \(modifier) by \(difference) (\(count))"
-        return Summary(text: text, style: style)
+        let difference = abs(other.fileCount - fileCount)
+        let text = prefix + " \(modifier) by \(difference) (\(fileCount))"
+        return Summary(text: text, style: style, numericValue: Float(fileCount), stringValue: "\(fileCount) files")
     }
 }
 ```

@@ -19,27 +19,47 @@ public struct Summary: Codable, Hashable {
         }
     }
 
+    /// The descriptive result of this summary.
     let text: String
+    /// A hex value that represents the result of this summary.
     let color: String
+    /// The numeric value that represents this summary, to be used in tools like SwiftInfo-Reader.
+    let numericValue: Float
+    /// The string value that represents this summary, to be used in tools like SwiftInfo-Reader.
+    let stringValue: String
 
-    public init(text: String, style: Style) {
-        self.text = text
-        self.color = style.hexColor
+    var slackDictionary: [String: Any] {
+        return ["text": text, "color": color]
     }
 
-    static func genericFor<T: Comparable>(prefix: String,
-                                          now: T,
-                                          old: T?,
-                                          increaseIsBad: Bool,
-                                          formatter: ((T) -> String)? = nil,
-                                          difference: ((T, T) -> T)) -> Summary {
-        let formatter = formatter ?? { return "\($0)" }
+    public init(text: String, style: Style, numericValue: Float, stringValue: String) {
+        self.text = text
+        self.color = style.hexColor
+        self.numericValue = numericValue
+        self.stringValue = stringValue
+    }
+
+    static func genericFor<T: BinaryInteger>(prefix: String,
+                                             now: T,
+                                             old: T?,
+                                             increaseIsBad: Bool,
+                                             stringValueFormatter: ((T) -> String)? = nil,
+                                             numericValueFormatter: ((T) -> Float)? = nil,
+                                             difference: ((T, T) -> T))
+                                             -> Summary {
+        let stringFormatter = stringValueFormatter ?? { return "\($0)" }
+        let numberFormatter = numericValueFormatter ?? { Float($0) }
+        func result(text: String, style: Style) -> Summary {
+            return Summary(text: text,
+                           style: style,
+                           numericValue: numberFormatter(now),
+                           stringValue: stringFormatter(now))
+        }
         guard let old = old else {
-            return Summary(text: prefix + ": \(formatter(now))", style: .neutral)
+            return result(text: prefix + ": \(stringFormatter(now))", style: .neutral)
         }
         guard now != old else {
-            return Summary(text: prefix + ": Still at \(formatter(now))",
-                           style: .neutral)
+            return result(text: prefix + ": Still at \(stringFormatter(now))", style: .neutral)
         }
         let modifier: String
         let style: Style
@@ -54,7 +74,7 @@ public struct Summary: Codable, Hashable {
             style = .neutral
         }
         let diff = difference(now, old)
-        let text = prefix + "\(modifier) \(formatter(diff)) (\(formatter(now)))"
-        return Summary(text: text, style: style)
+        let text = prefix + "\(modifier) \(stringFormatter(diff)) (\(stringFormatter(now)))"
+        return result(text: text, style: style)
     }
 }

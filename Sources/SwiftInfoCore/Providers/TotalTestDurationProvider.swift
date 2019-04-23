@@ -7,7 +7,7 @@ public struct TotalTestDurationProvider: InfoProvider {
 
     public static let identifier: String = "total_test_duration"
 
-    public let description: String = "Time to Build and Run Tests"
+    public let description: String = "🛏 Time to Build and Run Tests"
     public let durationInt: Int
 
     public init(durationInt: Int) {
@@ -24,13 +24,19 @@ public struct TotalTestDurationProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: TotalTestDurationProvider?, args: Args?) -> Summary {
-        let prefix = "🛏 Time to Build and Run Tests"
-        let formatter: ((Int) -> String) = { value in
-            return "\(Float(value) / 1000) secs"
+        let prefix = description
+        let numberFormatter: ((Int) -> Float) = { value in
+            return Float(value) / 1000
         }
-        let summary = Summary.genericFor(prefix: prefix, now: durationInt, old: other?.durationInt, increaseIsBad: false, formatter: formatter) {
+        let stringFormatter: ((Int) -> String) = { value in
+            return "\(numberFormatter(value)) secs"
+        }
+        let summary = Summary.genericFor(prefix: prefix, now: durationInt, old: other?.durationInt, increaseIsBad: false, stringValueFormatter: stringFormatter, numericValueFormatter: numberFormatter) {
             return abs($1 - $0)
         }
-        return Summary(text: summary.text, style: .neutral)
+        return Summary(text: summary.text,
+                       style: .neutral,
+                       numericValue: summary.numericValue,
+                       stringValue: summary.stringValue)
     }
 }

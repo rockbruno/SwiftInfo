@@ -7,7 +7,7 @@ public struct IPASizeProvider: InfoProvider {
 
     public static let identifier: String = "ipa_size"
 
-    public let description: String = ".ipa Size"
+    public let description: String = "📦 Compressed App Size (.ipa)"
     public let size: Int
 
     public init(size: Int) {
@@ -28,12 +28,18 @@ public struct IPASizeProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: IPASizeProvider?, args: Args?) -> Summary {
-        let prefix = "📦 Compressed App Size (.ipa)"
-        let formatter: ((Int) -> String) = { value in
-            return ByteCountFormatter.string(fromByteCount: Int64(value),
-                                             countStyle: .file)
+        let prefix = description
+        let stringFormatter: ((Int) -> String) = { value in
+            let formatter = ByteCountFormatter()
+            formatter.allowsNonnumericFormatting = false
+            formatter.countStyle = .file
+            return formatter.string(fromByteCount: Int64(value))
         }
-        return Summary.genericFor(prefix: prefix, now: size, old: other?.size, increaseIsBad: true, formatter: formatter) {
+        return Summary.genericFor(prefix: prefix,
+                                  now: size,
+                                  old: other?.size,
+                                  increaseIsBad: true,
+                                  stringValueFormatter: stringFormatter) {
             return abs($1 - $0)
         }
     }

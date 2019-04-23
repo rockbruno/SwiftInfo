@@ -7,7 +7,7 @@ public struct OBJCFileCountProvider: InfoProvider {
 
     public static let identifier: String = "objc_file_count"
 
-    public let description: String = "Objective-C File Count"
+    public let description: String = "🧙‍♂️ OBJ-C .h/.m File Count"
     public let count: Int
 
     public init(count: Int) {
@@ -22,7 +22,7 @@ public struct OBJCFileCountProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: OBJCFileCountProvider?, args: Args?) -> Summary {
-        let prefix = "🧙‍♂️ OBJ-C .h/.m File Count"
+        let prefix = description
         return Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: true) {
             return abs($1 - $0)
         }

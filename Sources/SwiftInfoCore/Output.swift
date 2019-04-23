@@ -7,7 +7,7 @@ public struct Output {
 
     init<T: InfoProvider>(info: ExtractedInfo<T>) throws {
         self.rawDictionary = try info.encoded()
-        self.summaries = [info.summary]
+        self.summaries = [info.summary].compactMap { $0 }
         self.errors = []
     }
 

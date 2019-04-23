@@ -24,7 +24,7 @@ public struct CodeCoverageProvider: InfoProvider {
         return URL(fileURLWithPath: "./\(tempFileName)")
     }
 
-    public let description: String = "Code Coverage"
+    public let description: String = "📊 Code Coverage"
     public let percentageInt: Int
 
     public init(percentageInt: Int) {
@@ -110,16 +110,24 @@ public struct CodeCoverageProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: CodeCoverageProvider?, args: Args?) -> Summary {
-        let prefix = "📊 Code Coverage"
-        let formatter: ((Int) -> String) = { value in
-            return "\(CodeCoverageProvider.toPercentage(percentageInt: value))"
+        let prefix = description
+        let numberFormatter: ((Int) -> Float) = { value in
+            return Float(value) / 10
         }
-        return Summary.genericFor(prefix: prefix, now: percentageInt, old: other?.percentageInt, increaseIsBad: false, formatter: formatter) {
+        let stringFormatter: ((Int) -> String) = { value in
+            return "\(numberFormatter(value))%"
+        }
+        return Summary.genericFor(prefix: prefix,
+                                  now: percentageInt,
+                                  old: other?.percentageInt,
+                                  increaseIsBad: false,
+                                  stringValueFormatter: stringFormatter,
+                                  numericValueFormatter: numberFormatter) {
             return abs($1 - $0)
         }
     }
 
-    static func toPercentage(percentageInt: Int) -> String {
-        return "\(Double(percentageInt) / 10)%"
+    static func toPercentage(percentageInt: Int) -> Float {
+        return Float(percentageInt / 10)
     }
 }

@@ -1,13 +1,14 @@
 import Foundation
 
-public struct LargestAssetCatalogProvider: InfoProvider {
+public struct LargestAssetProvider: InfoProvider {
 
     public struct Args {}
     public typealias Arguments = Args
 
-    public static let identifier: String = "largest_asset_catalog_size"
+    public static let identifier: String = "largest_asset"
 
-    public let description: String = "🖼 Largest Asset Catalog"
+    public let description: String = "📷 Largest Asset"
+
     public let name: String
     public let size: Int
 
@@ -16,15 +17,16 @@ public struct LargestAssetCatalogProvider: InfoProvider {
         self.size = size
     }
 
-    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LargestAssetCatalogProvider {
+    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LargestAssetProvider {
         let catalogs = try TotalAssetCatalogsSizeProvider.allCatalogs(api: api)
-        guard let largest = catalogs.max(by: { $0.size < $1.size }) else {
-            throw error("No Asset Catalogs were found!")
+        let files = catalogs.compactMap { $0.largestInnerFile }
+        guard let maxFile = files.max(by: { $0.size < $1.size }) else {
+            throw error("Can't find the largest asset because no assets were found.")
         }
-        return LargestAssetCatalogProvider(name: largest.name, size: largest.size)
+        return LargestAssetProvider(name: maxFile.name, size: maxFile.size)
     }
 
-    public func summary(comparingWith other: LargestAssetCatalogProvider?, args: Args?) -> Summary {
+    public func summary(comparingWith other: LargestAssetProvider?, args: Args?) -> Summary {
         let stringFormatter: ((Int) -> String) = { value in
             let formatter = ByteCountFormatter()
             formatter.allowsNonnumericFormatting = false
@@ -37,7 +39,7 @@ public struct LargestAssetCatalogProvider: InfoProvider {
         if let other = other, other.size != size {
             let otherFormatted = stringFormatter(other.size)
             prefix += " - previously \(other.name) (\(otherFormatted))"
-            style = other.size > size ? .positive : .negative
+            style = size < other.size ? .positive : .negative
         } else {
             style = .neutral
         }
