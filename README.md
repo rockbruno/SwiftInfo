@@ -22,6 +22,7 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 | **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
 | **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. |
 | **🚚 ArchiveDurationProvider**        | Time it took to build and archive the app | Successful xcodebuild archive and build logs |
+| **📷 LargestAssetProvider**        | The largest asset in the project. Only considers files inside asset catalogs. | Build logs |
 
 ## Usage
 
