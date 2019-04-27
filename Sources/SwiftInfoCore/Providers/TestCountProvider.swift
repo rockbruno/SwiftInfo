@@ -7,7 +7,7 @@ public struct TestCountProvider: InfoProvider {
 
     public static let identifier: String = "test_count"
 
-    public let description: String = "Test Cases Count"
+    public let description: String = "🎯 Test Count"
     public let count: Int
 
     public init(count: Int) {
@@ -22,7 +22,7 @@ public struct TestCountProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: TestCountProvider?, args: Args?) -> Summary {
-        let prefix = "🎯 Test Count"
+        let prefix = description
         return Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: false) {
             return abs($1 - $0)
         }

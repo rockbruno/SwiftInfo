@@ -22,7 +22,7 @@ public struct TargetCountProvider: InfoProvider {
 
     public static let identifier: String = "target_count"
 
-    public let description: String = "Dependency Count"
+    public let description: String = "👶 Dependency Count"
     public let count: Int
 
     public init(count: Int) {
@@ -36,7 +36,7 @@ public struct TargetCountProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: TargetCountProvider?, args: Args?) -> Summary {
-        let prefix = "👶 Dependency Count"
+        let prefix = description
         let summary = Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: false) {
             return abs($1 - $0)
         }
@@ -48,10 +48,16 @@ public struct TargetCountProvider: InfoProvider {
         case .complainOnRemovals:
             return summary
         case .neutral:
-            return Summary(text: summary.text, style: .neutral)
+            return Summary(text: summary.text,
+                           style: .neutral,
+                           numericValue: summary.numericValue,
+                           stringValue: summary.stringValue)
         case .complainOnAdditions:
             let style: Summary.Style = count > old ? .negative: .positive
-            return Summary(text: summary.text, style: style)
+            return Summary(text: summary.text,
+                           style: style,
+                           numericValue: summary.numericValue,
+                           stringValue: summary.stringValue)
         }
     }
 }

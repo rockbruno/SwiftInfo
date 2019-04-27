@@ -10,6 +10,11 @@
 
 ## master
 
+## 2.2.0
+* Added LargestAssetProvider - Bruno Rocha
+* Changed how SwiftInfo generates summary results to allow custom providers to make use of SwiftInfo-Reader - Bruno Rocha
+* Small visual improvements to summaries - Bruno Rocha
+
 ## 2.1.0
 * Added ArchiveTimeProvider - Bruno Rocha
 * SwiftInfo will now continue executing even if a provider fails (the reasons are printed in the final summary) - Bruno Rocha

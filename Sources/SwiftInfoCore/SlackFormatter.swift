@@ -5,8 +5,7 @@ public struct SlackFormatter {
     public init() {}
 
     public func format(output: Output, projectInfo: ProjectInfo) -> [String: Any] {
-        let data = try! JSONEncoder().encode(output.summaries)
-        let json = try! JSONSerialization.jsonObject(with: data, options: []) as! [[String: Any]]
+        let json = output.summaries.map { $0.slackDictionary }
         let prefix = "SwiftInfo results for \(projectInfo.description):"
         let errors = "\nErrors:\n\(output.errors.joined(separator: "\n"))"
         let text = prefix + (output.errors.isEmpty ? "" : errors)

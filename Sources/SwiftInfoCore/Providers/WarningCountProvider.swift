@@ -7,7 +7,7 @@ public struct WarningCountProvider: InfoProvider {
 
     public static let identifier: String = "warning_count"
 
-    public let description: String = "Warning Count"
+    public let description: String = "⚠️ Warning Count"
     public let count: Int
 
     public init(count: Int) {
@@ -22,7 +22,7 @@ public struct WarningCountProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: WarningCountProvider?, args: Args?) -> Summary {
-        let prefix = "⚠️ Warning Count"
+        let prefix = description
         return Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: true) {
             return abs($1 - $0)
         }

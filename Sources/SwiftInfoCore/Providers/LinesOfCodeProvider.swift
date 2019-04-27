@@ -19,7 +19,7 @@ public struct LinesOfCodeProvider: InfoProvider {
 
     public static let identifier: String = "lines_of_code"
 
-    public let description: String = "Executable Lines of Code"
+    public let description: String = "💻 Executable Lines of Code"
     public let count: Int
 
     public init(count: Int) {
@@ -51,10 +51,10 @@ public struct LinesOfCodeProvider: InfoProvider {
     }
 
     public func summary(comparingWith other: LinesOfCodeProvider?, args: Args?) -> Summary {
-        let text = "💻 Executable Lines of Code"
+        let text = description
         let summary = Summary.genericFor(prefix: text, now: count, old: other?.count, increaseIsBad: false) {
             return abs($1 - $0)
         }
-        return Summary(text: summary.text, style: .neutral)
+        return Summary(text: summary.text, style: .neutral, numericValue: summary.numericValue, stringValue: summary.stringValue)
     }
 }
