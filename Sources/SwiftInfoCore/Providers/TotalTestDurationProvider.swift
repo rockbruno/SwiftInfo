@@ -31,12 +31,13 @@ public struct TotalTestDurationProvider: InfoProvider {
         let stringFormatter: ((Int) -> String) = { value in
             return "\(numberFormatter(value)) secs"
         }
-        let summary = Summary.genericFor(prefix: prefix, now: durationInt, old: other?.durationInt, increaseIsBad: false, stringValueFormatter: stringFormatter, numericValueFormatter: numberFormatter) {
+        return Summary.genericFor(prefix: prefix,
+                                  now: durationInt,
+                                  old: other?.durationInt,
+                                  increaseIsBad: true,
+                                  stringValueFormatter: stringFormatter,
+                                  numericValueFormatter: numberFormatter) {
             return abs($1 - $0)
         }
-        return Summary(text: summary.text,
-                       style: .neutral,
-                       numericValue: summary.numericValue,
-                       stringValue: summary.stringValue)
     }
 }
