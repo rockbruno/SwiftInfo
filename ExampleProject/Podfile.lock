@@ -1,0 +1,16 @@
+PODS:
+  - SwiftInfo (2.2.0)
+
+DEPENDENCIES:
+  - SwiftInfo
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SwiftInfo
+
+SPEC CHECKSUMS:
+  SwiftInfo: 5280279f9054046e3e65c68ea73345969b6372b6
+
+PODFILE CHECKSUM: 1d7fb25dd62a23adb9690445429e9aca351900ef
+
+COCOAPODS: 1.6.1

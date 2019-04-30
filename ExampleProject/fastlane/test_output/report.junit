@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='SwiftInfoExampleTests.xctest' tests='2' failures='0'>
+  <testsuite name='SwiftInfoExampleTests.SwiftInfoExampleTests' tests='2' failures='0'>
+    <testcase classname='SwiftInfoExampleTests.SwiftInfoExampleTests' name='testExample' time='0.001'/>
+    <testcase classname='SwiftInfoExampleTests.SwiftInfoExampleTests' name='testPerformanceExample' time='0.338'/>
+  </testsuite>
+</testsuites>
