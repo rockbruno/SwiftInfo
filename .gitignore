@@ -3,11 +3,9 @@
 /.builda
 /Packages
 /*.xcodeproj
-Infofile.swift
 swiftinfo
 /build
 /build1
 /build2
 /SwiftInfo-output
-Infofile
 /bin

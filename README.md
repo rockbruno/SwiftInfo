@@ -28,7 +28,9 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 
 SwiftInfo requires the raw logs of a succesful test/archive build combo to work, so it's better used as the last step of a CI pipeline. 
 
-If you use Fastlane, you can easily expose the raw logs by adding `buildlog_path` to `scan` and `gym`. Here's a simple example of a Fastlane step that runs tests, submits an archive to TestFlight and runs SwiftInfo (be sure to edit the folder paths to what's being used by your project):
+### Retrieving raw logs with Fastlane
+
+If you use Fastlane, you can expose the raw logs after building by adding `buildlog_path` to `scan` and `gym`. Here's a simple example of a Fastlane step that runs tests, submits an archive to TestFlight and runs SwiftInfo (be sure to edit the folder paths to what's being used by your project):
 
 ```ruby
 desc "Submits a new beta build and runs SwiftInfo"
@@ -39,10 +41,11 @@ lane :beta do
     buildlog_path: "./build/tests_log"
   )
     
-  # Archive the app, copying the raw logs to the project folder 
+  # Archive the app, copying the raw logs to the project folder and the .ipa to the /build folder
   gym(
     workspace: "MyApp.xcworkspace",
     scheme: "Release",
+    output_directory: "build",
     buildlog_path: "./build/build_log"
   )
  
@@ -61,7 +64,19 @@ lane :beta do
 end
 ```
 
+### Retrieving raw logs manually
+
+An alternative that doesn't require Fastlane is to simply manually run `xcodebuild` / `xctest` and pipe the output to a file. We don't recommend doing this in a real project, but it can be useful if you just want to test the tool without having to download other tools.
+
+```
+xcodebuild -workspace ./Example.xcworkspace -scheme Example &> ./build/build_log/Example-Release.log
+```
+
+## Configuring
+
 SwiftInfo itself is configured by creating a `Infofile.swift` file in your project's root. Here's an example Infofile that retrieves some data and sends it to Slack:
+
+**Note:** This repository contains an example project. Check it out to see the tool in action!
 
 ```swift
 import SwiftInfoCore
@@ -166,6 +181,14 @@ Documentation of useful types and methods from SwiftInfoCore that you can use wh
 ### CocoaPods
 
 `pod 'SwiftInfo'`
+
+### Manually
+
+Download the [latest release](https://github.com/rockbruno/SwiftInfo/releases) and unzip the contents somewhere in your project's folder.
+
+### Swift Package Manager
+
+SwiftPM is currently not supported due to the need of shipping additional files with the binary, which SwiftPM does not support. We might find a solution for this, but for now there's no way to use the tool with it.
 
 ## License
 
