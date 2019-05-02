@@ -18,12 +18,15 @@ public struct FileUtils {
     }
 
     public var toolFolder: String {
-        guard let executionPath = ProcessInfo.processInfo.arguments.first,
-              let url = URL(string: executionPath)?.deletingLastPathComponent().absoluteString else
-        {
+        guard let executablePath = ProcessInfo.processInfo.arguments.first else {
             fail("Couldn't determine the folder that's running SwiftInfo.")
         }
-        return url
+        let executableUrl = URL(fileURLWithPath: executablePath)
+        if let isAliasFile = try! executableUrl.resourceValues(forKeys: [URLResourceKey.isAliasFileKey]).isAliasFile, isAliasFile {
+            return try! URL(resolvingAliasFileAt: executableUrl).deletingLastPathComponent().path
+        } else {
+            return executableUrl.deletingLastPathComponent().path
+        }
     }
 
     public func infofileFolder() throws -> String {
