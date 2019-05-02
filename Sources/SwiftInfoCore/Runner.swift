@@ -13,9 +13,9 @@ public enum Runner {
             fileUtils.toolFolder,
             "-lSwiftInfoCore",
             "-Xcc",
-            "-fmodule-map-file=\(fileUtils.toolFolder)Csourcekitd/include/module.modulemap",
+            "-fmodule-map-file=\(fileUtils.toolFolder)/Csourcekitd/include/module.modulemap",
             "-I",
-            "\(fileUtils.toolFolder)Csourcekitd/include",
+            "\(fileUtils.toolFolder)/Csourcekitd/include",
             (try! fileUtils.infofileFolder()) + "Infofile.swift",
             "-toolchain",
             "\(toolchainPath)"] + Array(processInfoArgs.dropFirst()) // Route SwiftInfo args to the sub process
