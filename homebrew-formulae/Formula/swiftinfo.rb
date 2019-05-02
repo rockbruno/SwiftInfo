@@ -1,12 +1,13 @@
 class Swiftinfo < Formula
   desc "Extract and analyze the evolution of an iOS app's code."
   homepage "https://github.com/rockbruno/SwiftInfo"
-  url "https://github.com/rockbruno/SwiftInfo.git", :revision => "4dc083130a0b519307436c7083e3d417d1aea870"
-  version "2.2.0"
+  version "2.2.1"
+  url "https://github.com/rockbruno/SwiftInfo/releases/download/#{version}/swiftinfo.zip"
+  # TODO: Try something to provide a SHA automatically
 
   def install
-    bin.install "swiftinfo"
-    include.install Dir["*"]
+    bin.install "bin/swiftinfo"
+    include.install Dir["include/*"]
   end
 
   test do

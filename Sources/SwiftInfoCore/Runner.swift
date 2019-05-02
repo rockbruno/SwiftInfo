@@ -4,18 +4,19 @@ public enum Runner {
     public static func getCoreSwiftCArguments(fileUtils: FileUtils,
                                               toolchainPath: String,
                                               processInfoArgs: [String]) -> [String] {
+        let include = fileUtils.toolFolder + "/../include/swiftinfo"
         return [
             "swiftc",
             "--driver-mode=swift", // Don't generate a binary, just run directly.
             "-L", // Link with SwiftInfoCore manually.
-            fileUtils.toolFolder,
+            include,
             "-I",
-            fileUtils.toolFolder,
+            include,
             "-lSwiftInfoCore",
             "-Xcc",
-            "-fmodule-map-file=\(fileUtils.toolFolder)Csourcekitd/include/module.modulemap",
+            "-fmodule-map-file=\(include)/Csourcekitd/include/module.modulemap",
             "-I",
-            "\(fileUtils.toolFolder)Csourcekitd/include",
+            "\(include)/Csourcekitd/include",
             (try! fileUtils.infofileFolder()) + "Infofile.swift",
             "-toolchain",
             "\(toolchainPath)"] + Array(processInfoArgs.dropFirst()) // Route SwiftInfo args to the sub process

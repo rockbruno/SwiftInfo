@@ -55,7 +55,7 @@ lane :beta do
   )
 
   # Run SwiftInfo
-  sh("../Pods/SwiftInfo/swiftinfo")
+  sh("../Pods/SwiftInfo/bin/swiftinfo")
 
   # Commit and push SwiftInfo's result
   sh("git add ../SwiftInfo-output/SwiftInfoOutput.json")
