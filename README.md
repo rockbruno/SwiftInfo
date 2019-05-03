@@ -184,7 +184,7 @@ To install SwiftInfo the first time, simply run these commands:
 
 ```bash
 brew tap rockbruno/SwiftInfo https://github.com/rockbruno/SwiftInfo.git
-brew install swiftinfo
+brew install rockbruno/SwiftInfo/swiftinfo
 ```
 
 To **update** to the newest version of SwiftInfo when you have an old version already installed run:
