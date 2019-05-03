@@ -1,46 +1,47 @@
 SHELL = /bin/bash
 
-prefix ?= /usr/local
-bindir ?= $(prefix)/bin
-libdir ?= $(prefix)/lib
-srcdir = Sources
-
 REPODIR = $(shell pwd)
 BUILDDIR = $(REPODIR)/.build
-SOURCES = $(wildcard $(srcdir)/**/*.swift)
+RELEASEBUILDDIR = $(BUILDDIR)/release
+TEMPPRODUCTDIR = $(BUILDDIR)/_PRODUCT
+PRODUCTDIR = $(RELEASEBUILDDIR)/_PRODUCT
 
 .DEFAULT_GOAL = all
 
 .PHONY: all
-all: swiftinfo
+all: build
 
-swiftinfo: $(SOURCES)
+.PHONY: build
+build:
 	@swift build \
 		-c release \
 		--disable-sandbox \
 		--build-path "$(BUILDDIR)"
+	@rm -rf "$(PRODUCTDIR)"
+	@rm -rf "$(TEMPPRODUCTDIR)"
+	@mkdir -p "$(TEMPPRODUCTDIR)"
+	@mkdir -p "$(TEMPPRODUCTDIR)/include/swiftinfo"
+	@cp -a "$(RELEASEBUILDDIR)/." "$(TEMPPRODUCTDIR)/include/swiftinfo"
+	@cp -a "$(TEMPPRODUCTDIR)/." "$(PRODUCTDIR)"
+	@rm -rf "$(TEMPPRODUCTDIR)"
+	@mkdir -p "$(PRODUCTDIR)/bin"
+	@rm -rf $(PRODUCTDIR)/include/swiftinfo/*.build
+	@rm -rf $(PRODUCTDIR)/include/swiftinfo/*.product
+	@rm -rf $(PRODUCTDIR)/include/swiftinfo/ModuleCache
+	@rm -f "$(PRODUCTDIR)/include/swiftinfo/SwiftInfo.swiftdoc"
+	@rm -f "$(PRODUCTDIR)/include/swiftinfo/SwiftInfo.swiftmodule"
+	@mv "$(PRODUCTDIR)/include/swiftinfo/swiftinfo" "$(PRODUCTDIR)/bin"
+	@cp -a "$(REPODIR)/Sources/Csourcekitd/." "$(PRODUCTDIR)/include/swiftinfo/Csourcekitd"
+	@rm -f "$(RELEASEBUILDDIR)/swiftinfo"
+	@ln -s "$(PRODUCTDIR)/bin/swiftinfo" "$(RELEASEBUILDDIR)/swiftinfo"
+	@cp "$(REPODIR)/LICENSE" "$(PRODUCTDIR)/LICENSE"
 
-.PHONY: install
-install: swiftinfo
-	@install -d "$(bindir)" "$(libdir)"
-	@install "$(BUILDDIR)/release/swiftinfo" "$(bindir)"
-	@cp -a "$(REPODIR)/Sources/Csourcekitd/." "$(bindir)/Csourcekitd"
-
-.PHONY: portable_zip
-portable_zip: swiftinfo
-	rm -f "$(BUILDDIR)/release/portable_swiftinfo.zip"
-	zip -j "$(BUILDDIR)/release/portable_swiftinfo.zip" "$(BUILDDIR)/release/swiftinfo" "$(REPODIR)/LICENSE"
-	echo "Portable ZIP created at: $(BUILDDIR)/release/portable_swiftinfo.zip"
-
-.PHONY: uninstall
-uninstall:
-	@rm -rf "$(bindir)/swiftinfo"
-	@rm -rf "$(bindir)/Csourcekitd"
+.PHONY: package
+package:
+	rm -f "$(PRODUCTDIR)/swiftinfo.zip"
+	cd $(PRODUCTDIR) && zip -r ./swiftinfo.zip ./
+	echo "ZIP created at: $(PRODUCTDIR)/swiftinfo.zip"
 
 .PHONY: clean
-distclean:
-	@rm -f $(BUILDDIR)/release
-
-.PHONY: clean
-clean: distclean
-	@rm -rf $(BUILDDIR)
+clean:
+	@rm -rf "$(BUILDDIR)"

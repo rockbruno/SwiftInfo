@@ -178,7 +178,7 @@ Documentation of useful types and methods from SwiftInfoCore that you can use wh
 
 ## Installation
 
-### [Homebrew](https://brew.sh/) (Recommended)
+### [Homebrew](https://brew.sh/)
 
 To install SwiftInfo the first time, simply run these commands:
 
@@ -187,7 +187,7 @@ brew tap rockbruno/SwiftInfo https://github.com/rockbruno/SwiftInfo.git
 brew install swiftinfo
 ```
 
-To **update** to the newest version of SwiftINfo when you have an old version already installed run:
+To **update** to the newest version of SwiftInfo when you have an old version already installed run:
 
 ```bash
 brew upgrade swiftinfo
@@ -197,7 +197,7 @@ brew upgrade swiftinfo
 
 `pod 'SwiftInfo'`
 
-### Manually
+### Manual
 
 Download the [latest release](https://github.com/rockbruno/SwiftInfo/releases) and unzip the contents somewhere in your project's folder.
 
