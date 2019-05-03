@@ -7,7 +7,10 @@ public struct Main {
     static func run() {
         let fileUtils = FileUtils()
         let toolchainPath = getToolchainPath()
-        log("SwiftInfo")
+        log("SwiftInfo 2.3.0")
+        if ProcessInfo.processInfo.arguments.contains("-version") {
+            exit(0)
+        }
         log("Dylib Folder: \(fileUtils.toolFolder)", verbose: true)
         log("Infofile Path: \(try! fileUtils.infofileFolder())", verbose: true)
         log("Toolchain Path: \(toolchainPath)", verbose: true)

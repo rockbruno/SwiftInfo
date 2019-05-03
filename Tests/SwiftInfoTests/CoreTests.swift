@@ -10,13 +10,15 @@ final class CoreTests: XCTestCase {
                                                  toolchainPath: toolchainPath,
                                                  processInfoArgs: exampleRun)
         let executionPath = ProcessInfo.processInfo.arguments.first!
-        let toolFolder = URL(string: executionPath)!.deletingLastPathComponent().absoluteString
+        let toolFolder = URL(string: executionPath)!
+                         .deletingLastPathComponent()
+                         .absoluteString + "../include/swiftinfo"
         XCTAssertEqual(args, ["swiftc",
                               "--driver-mode=swift",
                               "-L", toolFolder, "-I", toolFolder, "-lSwiftInfoCore",
                               "-Xcc",
-                              "-fmodule-map-file=\(toolFolder)Csourcekitd/include/module.modulemap",
-                              "-I", "\(toolFolder)Csourcekitd/include",
+                              "-fmodule-map-file=\(toolFolder)/Csourcekitd/include/module.modulemap",
+                              "-I", "\(toolFolder)/Csourcekitd/include",
                               "./Infofile.swift", "-toolchain", "\(toolchainPath)", "-v", "-s"])
     }
 

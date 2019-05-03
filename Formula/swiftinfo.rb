@@ -1,12 +1,18 @@
 class Swiftinfo < Formula
   desc "📊 Extract and analyze the evolution of an iOS app's code."
   homepage "https://github.com/rockbruno/SwiftInfo"
-  url "https://github.com/rockbruno/SwiftInfo.git", :tag => "2.2.0", :revision => "4dc083130a0b519307436c7083e3d417d1aea870"
-  head "https://github.com/rockbruno/SwiftInfo.git"
+  version "2.3.0"
+  url "https://github.com/rockbruno/SwiftInfo/releases/download/#{version}/swiftinfo.zip"
+  # TODO: Try something to provide a SHA automatically
 
   depends_on :xcode => ["10.2", :build]
 
   def install
-    system "make", "install", "prefix=#{prefix}"
+    bin.install Dir["bin/*"]
+    include.install Dir["include/*"]
+  end
+
+  test do
+    system bin/"swiftinfo", "-version"
   end
 end
