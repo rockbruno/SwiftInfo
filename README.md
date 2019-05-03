@@ -26,7 +26,7 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 
 ## Usage
 
-SwiftInfo requires the raw logs of a succesful test/archive build combo to work, so it's better used as the last step of a CI pipeline. 
+SwiftInfo requires the raw logs of a succesful test/archive build combo to work, so it's better used as the last step of a CI pipeline.
 
 ### Retrieving raw logs with Fastlane
 
@@ -35,12 +35,12 @@ If you use Fastlane, you can expose the raw logs after building by adding `build
 ```ruby
 desc "Submits a new beta build and runs SwiftInfo"
 lane :beta do
-  # Run tests, copying the raw logs to the project folder 
+  # Run tests, copying the raw logs to the project folder
   scan(
     scheme: "MyScheme",
     buildlog_path: "./build/tests_log"
   )
-    
+
   # Archive the app, copying the raw logs to the project folder and the .ipa to the /build folder
   gym(
     workspace: "MyApp.xcworkspace",
@@ -48,7 +48,7 @@ lane :beta do
     output_directory: "build",
     buildlog_path: "./build/build_log"
   )
- 
+
   # Send to TestFlight
   pilot(
       skip_waiting_for_build_processing: true
@@ -178,11 +178,26 @@ Documentation of useful types and methods from SwiftInfoCore that you can use wh
 
 ## Installation
 
+### [Homebrew](https://brew.sh/)
+
+To install SwiftInfo the first time, simply run these commands:
+
+```bash
+brew tap rockbruno/SwiftInfo https://github.com/rockbruno/SwiftInfo.git
+brew install swiftinfo
+```
+
+To **update** to the newest version of SwiftInfo when you have an old version already installed run:
+
+```bash
+brew upgrade swiftinfo
+```
+
 ### CocoaPods
 
 `pod 'SwiftInfo'`
 
-### Manually
+### Manual
 
 Download the [latest release](https://github.com/rockbruno/SwiftInfo/releases) and unzip the contents somewhere in your project's folder.
 
