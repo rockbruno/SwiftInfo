@@ -13,6 +13,6 @@ class Swiftinfo < Formula
   end
 
   test do
-    system "false"
+    system bin/"swiftinfo", "-version"
   end
 end
