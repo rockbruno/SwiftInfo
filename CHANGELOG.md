@@ -1,6 +1,6 @@
 <!--
 
-// Please add your own contribution below inside the Current Release section. The version numbers will be updated
+// Please add your own contribution below inside the `master` section. The version numbers will be updated
 // once we deploy a new version.
 //
 // These docs are aimed for us developers to make things easier to maintain, so don't worry
@@ -9,6 +9,8 @@
 -->
 
 ## master
+
+## 2.3.0
 * Added support for installation via Homebrew. - [Cihat Gündüz](https://github.com/Dschee) (Issue [#17](https://github.com/rockbruno/SwiftInfo/issues/17), PR [#20](https://github.com/rockbruno/SwiftInfo/pull/20))
 
 ## 2.2.0
