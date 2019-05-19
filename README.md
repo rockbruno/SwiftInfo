@@ -4,7 +4,11 @@
 
 [![GitHub release](https://img.shields.io/github/tag/rockbruno/SwiftInfo.svg)](https://github.com/rockbruno/SwiftInfo/releases)
 
-SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that are useful for Swift apps. Besides the default tracking options that are shipped with the tool, you can customize SwiftInfo to track pretty much anything that can be conveyed in a simple `.swift` script.
+SwiftInfo is a CLI tool that extracts, tracks and analyzes metrics that are useful for Swift apps. Besides the default tracking options that are shipped with the tool, you can also customize SwiftInfo to track pretty much anything that can be conveyed in a simple `.swift` script.
+
+By default SwiftInfo will assume you're extracting info from a release build and send the final results to Slack, but it can be used to extract info from individual pull requests as well with the [danger-SwiftInfo](https://github.com/rockbruno/danger-SwiftInfo) [danger](https://github.com/danger/danger) plugin.
+
+<img src="https://i.imgur.com/8kvEx5O.png">
 
 ## Available Providers
 
@@ -26,11 +30,15 @@ SwiftInfo is a simple CLI tool that extracts, tracks and analyzes metrics that a
 
 ## Usage
 
-SwiftInfo requires the raw logs of a succesful test/archive build combo to work, so it's better used as the last step of a CI pipeline.
+SwiftInfo extracts information by analyzing the logs that logs that Xcode generates when you build and/or test your app. Because it requires these logs to work, SwiftInfo is meant to be used alongside a build automation tool like [fastlane](https://github.com/fastlane/fastlane). The following topics describe how you can retrieve these logs and setup SwiftInfo itself.
 
-### Retrieving raw logs with Fastlane
+We'll show how to get the logs first as you'll need them to configure SwiftInfo.
 
-If you use Fastlane, you can expose the raw logs after building by adding `buildlog_path` to `scan` and `gym`. Here's a simple example of a Fastlane step that runs tests, submits an archive to TestFlight and runs SwiftInfo (be sure to edit the folder paths to what's being used by your project):
+**Note:** This repository contains an example project. Check it out to see the tool in action!
+
+### Retrieving raw logs with [fastlane](https://github.com/fastlane/fastlane)
+
+If you use fastlane, you can expose the raw logs by adding the `buildlog_path` argument to `scan` (test logs) and `gym` (build logs). Here's a simple example of a fastlane step that runs tests, submits an archive to TestFlight and runs SwiftInfo (be sure to edit the folder paths to what's being used by your project):
 
 ```ruby
 desc "Submits a new beta build and runs SwiftInfo"
@@ -66,30 +74,31 @@ end
 
 ### Retrieving raw logs manually
 
-An alternative that doesn't require Fastlane is to simply manually run `xcodebuild` / `xctest` and pipe the output to a file. We don't recommend doing this in a real project, but it can be useful if you just want to test the tool without having to download other tools.
+An alternative that doesn't require fastlane is to simply manually run `xcodebuild` / `xctest` and pipe the output to a file. We don't recommend doing this in a real project, but it can be useful if you just want to test the tool without having to setup fastlane.
 
 ```
 xcodebuild -workspace ./Example.xcworkspace -scheme Example &> ./build/build_log/Example-Release.log
 ```
 
-## Configuring
+## Configuring SwiftInfo
 
-SwiftInfo itself is configured by creating a `Infofile.swift` file in your project's root. Here's an example Infofile that retrieves some data and sends it to Slack:
-
-**Note:** This repository contains an example project. Check it out to see the tool in action!
+SwiftInfo itself is configured by creating a `Infofile.swift` file in your project's root. Here's an example one:
 
 ```swift
 import SwiftInfoCore
 
+// 1
 FileUtils.buildLogFilePath = "./build/build_log/MyApp-MyConfig.log"
 FileUtils.testLogFilePath = "./build/tests_log/MyApp-MyConfig.log"
 
+// 2
 let projectInfo = ProjectInfo(xcodeproj: "MyApp.xcodeproj",
                               target: "MyTarget",
                               configuration: "MyConfig")
 
 let api = SwiftInfo(projectInfo: projectInfo)
 
+// 3
 let output = api.extract(IPASizeProvider.self) +
              api.extract(WarningCountProvider.self) +
              api.extract(TestCountProvider.self) +
@@ -97,12 +106,23 @@ let output = api.extract(IPASizeProvider.self) +
              api.extract(CodeCoverageProvider.self, args: .init(targets: ["NetworkModule", "MyApp"])) +
              api.extract(LinesOfCodeProvider.self, args: .init(targets: ["NetworkModule", "MyApp"]))
 
-// Send the results to Slack.
-api.sendToSlack(output: output, webhookUrl: "YOUR_SLACK_WEBHOOK_HERE")
+// 4
 
-// Save the output to disk.
-api.save(output: output)
+if isInPullRequestMode {
+    // If called from danger-SwiftInfo, print the results to the pull request
+    api.print(output: output)
+} else {
+    // If called manually, send the results to Slack...
+    api.sendToSlack(output: output, webhookUrl: url)
+    // ...and save the output to your repo so it serves as the basis for new comparisons.
+    api.save(output: output)
+}
 ```
+
+- 1: Use `FileUtils` to configure the path of your logs. If you're using fastlane and don't know what the name of the log files are going to be, just run it once to have it create them.
+- 2: Create a `SwiftInfo` instance by passing your project's information.
+- 3: Use `SwiftInfo`'s `extract()` to extract and append all the information you want into a single property.
+- 4: Lastly, you can act upon this output. Here, I print the results to a pull request if [danger-SwiftInfo](https://github.com/rockbruno/danger-SwiftInfo) is being used, or send it to Slack / save it to the repo if this is the result of a release build.
 
 You can see `SwiftInfo`'s properties and methods [here.](Sources/SwiftInfoCore/SwiftInfo.swift)
 
@@ -118,9 +138,9 @@ To be able to support different types of projects, SwiftInfo provides customizat
 
 ## Output
 
-After successfully extracting data, SwiftInfo will add/update a json file in the `{Infofile path}/SwiftInfo-output` folder. It's important to add this file to version control after the running the tool as this is what SwiftInfo uses to compare new pieces of information.
+After successfully extracting data, you can call `api.save(output: output)` to have SwiftInfo add/update a json file in the `{Infofile path}/SwiftInfo-output` folder. It's important to add this file to version control after the running the tool as this is what SwiftInfo uses to compare new pieces of information.
 
-[SwiftInfo-Reader](https://github.com/rockbruno/SwiftInfo-Reader) can be used to transform this output into a more visual static HTML page:
+[SwiftInfo-Reader](https://github.com/rockbruno/SwiftInfo-Reader) can be used to transform this output into a more visual static HTML page.
 
 <img src="https://i.imgur.com/62jNGdh.png">
 
