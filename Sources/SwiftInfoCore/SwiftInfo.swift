@@ -82,6 +82,6 @@ public struct SwiftInfo {
 }
 
 public func fail(_ message: String) -> Never {
-    log("Fatal error: \(message)")
+    print("SwiftInfo crashed. Reason: \(message)")
     exit(-1)
 }
