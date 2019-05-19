@@ -49,7 +49,14 @@ public struct SwiftInfo {
         log("Sending to Slack")
         log("Slack Webhook: \(webhookUrl)", verbose: true)
         let formatted = slackFormatter.format(output: output, projectInfo: projectInfo)
-        client.syncPost(urlString: webhookUrl, json: formatted)
+        client.syncPost(urlString: webhookUrl, json: formatted.json)
+    }
+
+    public func print(output: Output) {
+        let formatted = slackFormatter.format(output: output, projectInfo: projectInfo)
+        // We print directly so that `log()`'s conditions don't interfere.
+        // This is meant to be used with `danger-SwiftInfo` for printing to pull requests.
+        Swift.print(formatted.message)
     }
 
     public func save(output: Output,
