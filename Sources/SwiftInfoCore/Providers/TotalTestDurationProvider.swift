@@ -18,7 +18,7 @@ public struct TotalTestDurationProvider: InfoProvider {
         let testLog = try api.fileUtils.testLog()
         let durationString = testLog.match(regex: #"(?<=\*\* TEST SUCCEEDED \*\* \[).*?(?= sec)"#).first
         guard let duration = Float(durationString ?? "") else {
-            throw error("Total test duration (** TEST SUCCEEDED **) not found in the logs. Did the tests fail?")
+            throw error("Total test duration (TEST SUCCEEDED) not found in the logs. Did the tests fail?")
         }
         return TotalTestDurationProvider(durationInt: Int(duration * 1000))
     }
