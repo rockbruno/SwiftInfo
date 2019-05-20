@@ -18,6 +18,9 @@ public struct TestCountProvider: InfoProvider {
         let testLog = try api.fileUtils.testLog()
         let count = testLog.insensitiveMatch(regex: "Test Case '.*' passed").count +
                     testLog.insensitiveMatch(regex: "Test Case '.*' failed").count
+        guard count > 0 else {
+            fail("Failing because 0 tests were found, and this is probably not intentional.")
+        }
         return TestCountProvider(count: count)
     }
 

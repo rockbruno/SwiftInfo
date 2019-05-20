@@ -18,7 +18,7 @@ public struct ArchiveDurationProvider: InfoProvider {
         let buildLog = try api.fileUtils.buildLog()
         let durationString = buildLog.match(regex: #"(?<=\*\* ARCHIVE SUCCEEDED \*\* \[).*?(?= sec)"#).first
         guard let duration = Float(durationString ?? "") else {
-            throw error("Total archive time (** ARCHIVE SUCCEEDED **) not found in the logs. Did the archive fail?")
+            throw error("Total archive time (ARCHIVE SUCCEEDED) not found in the logs. Did the archive fail?")
         }
         return ArchiveDurationProvider(timeInt: Int(duration * 1000))
     }
