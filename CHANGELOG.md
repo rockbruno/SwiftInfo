@@ -10,6 +10,10 @@
 
 ## master
 
+## 2.3.1
+* Adding support to danger-SwiftInfo - Bruno Rocha
+* Making some failure messages better - Bruno Rocha
+
 ## 2.3.0
 * Added support for installation via Homebrew. - [Cihat Gündüz](https://github.com/Dschee) (Issue [#17](https://github.com/rockbruno/SwiftInfo/issues/17), PR [#20](https://github.com/rockbruno/SwiftInfo/pull/20))
 
