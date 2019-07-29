@@ -10,6 +10,9 @@
 
 ## master
 
+## 2.3.2
+* ProjectInfo now allows you to manually specify a `versionNumber` and `buildNumber` in case your Info.plist doesn't have them (Buck iOS apps) - Bruno Rocha
+
 ## 2.3.1
 * Adding support to danger-SwiftInfo - Bruno Rocha
 * Making some failure messages better - Bruno Rocha
