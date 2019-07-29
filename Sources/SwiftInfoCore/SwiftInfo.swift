@@ -67,8 +67,8 @@ public struct SwiftInfo {
             "xcodeproj": projectInfo.xcodeproj,
             "target": projectInfo.target,
             "configuration": projectInfo.configuration,
-            "versionString": (try? projectInfo.versionString()) ?? "(Failed to parse version)",
-            "buildNumber": (try? projectInfo.buildNumber()) ?? "(Failed to parse build number)",
+            "versionString": (try? projectInfo.getVersionString()) ?? "(Failed to parse version)",
+            "buildNumber": (try? projectInfo.getBuildNumber()) ?? "(Failed to parse build number)",
             "description": projectInfo.description,
             "timestamp": timestamp
         ]
