@@ -25,7 +25,7 @@ extension InfoProvider {
         return summary(comparingWith: other, args: nil)
     }
 
-    static func error(_ message: String) -> SwiftInfoError {
+    public static func error(_ message: String) -> SwiftInfoError {
         return .generic(message)
     }
 }

@@ -22,6 +22,7 @@ public struct ProjectInfo: CustomStringConvertible {
     public init(xcodeproj: String,
                 target: String,
                 configuration: String,
+                plistPath: String? = nil,
                 versionString: String? = nil,
                 buildNumber: String? = nil,
                 fileUtils: FileUtils = .init(),
@@ -32,10 +33,10 @@ public struct ProjectInfo: CustomStringConvertible {
         self.versionString = versionString
         self.buildNumber = buildNumber
         self.fileUtils = fileUtils
-        self.plistPath = plistExtractor.extractPlistPath(xcodeproj: xcodeproj,
-                                                         target: target,
-                                                         configuration: configuration,
-                                                         fileUtils: fileUtils)
+        self.plistPath = plistPath ?? plistExtractor.extractPlistPath(xcodeproj: xcodeproj,
+                                                                      target: target,
+                                                                      configuration: configuration,
+                                                                      fileUtils: fileUtils)
     }
 
     func plistDict() throws -> NSDictionary {

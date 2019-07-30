@@ -18,14 +18,9 @@ public struct XcodeprojPlistExtractor: PlistExtractor {
                                  configuration: String,
                                  fileUtils: FileUtils) -> String {
         do {
-            let projectFolder = try fileUtils.infofileFolder()
-            let fileManager = fileUtils.fileManager
-            let contents = try fileManager.contentsOfDirectory(atPath: projectFolder)
-            guard let project = contents.first(where: { $0.hasSuffix(xcodeproj) }) else {
-                fail("Project file not found.")
-            }
-            guard let xcodeproj = try? XcodeProj(path: Path(projectFolder + project)) else {
-                fail("Failed to load .pbxproj! (\(projectFolder + project))")
+            let projectFolder = try fileUtils.infofileFolder() + xcodeproj
+            guard let xcodeproj = try? XcodeProj(path: Path(projectFolder)) else {
+                fail("Failed to load .pbxproj! (\(projectFolder))")
             }
             guard let pbxTarget = xcodeproj.pbxproj.targets(named: target).first else {
                 fail("The provided target was not found in the .pbxproj.")

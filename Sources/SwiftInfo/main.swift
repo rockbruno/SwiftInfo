@@ -7,7 +7,7 @@ public struct Main {
     static func run() {
         let fileUtils = FileUtils()
         let toolchainPath = getToolchainPath()
-        log("SwiftInfo 2.3.1")
+        log("SwiftInfo 2.3.4")
         if ProcessInfo.processInfo.arguments.contains("-version") {
             exit(0)
         }

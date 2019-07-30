@@ -10,6 +10,9 @@
 
 ## master
 
+## 2.3.4
+* Fixes version string and makes error methods public for custom providers - Bruno Rocha
+
 ## 2.3.3
 * Make `Summary.genericFor` public for custom providers - Bruno Rocha
 
