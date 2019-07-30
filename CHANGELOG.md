@@ -10,6 +10,9 @@
 
 ## master
 
+## 2.3.3
+* Make `Summary.genericFor` public for custom providers - Bruno Rocha
+
 ## 2.3.2
 * ProjectInfo now allows you to manually specify a `versionNumber` and `buildNumber` in case your Info.plist doesn't have them (Buck iOS apps) - Bruno Rocha
 

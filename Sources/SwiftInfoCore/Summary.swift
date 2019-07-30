@@ -39,14 +39,14 @@ public struct Summary: Codable, Hashable {
         self.stringValue = stringValue
     }
 
-    static func genericFor<T: BinaryInteger>(prefix: String,
-                                             now: T,
-                                             old: T?,
-                                             increaseIsBad: Bool,
-                                             stringValueFormatter: ((T) -> String)? = nil,
-                                             numericValueFormatter: ((T) -> Float)? = nil,
-                                             difference: ((T, T) -> T))
-                                             -> Summary {
+    public static func genericFor<T: BinaryInteger>(prefix: String,
+                                                    now: T,
+                                                    old: T?,
+                                                    increaseIsBad: Bool,
+                                                    stringValueFormatter: ((T) -> String)? = nil,
+                                                    numericValueFormatter: ((T) -> Float)? = nil,
+                                                    difference: ((T, T) -> T))
+                                                    -> Summary {
         let stringFormatter = stringValueFormatter ?? { return "\($0)" }
         let numberFormatter = numericValueFormatter ?? { Float($0) }
         func result(text: String, style: Style) -> Summary {
