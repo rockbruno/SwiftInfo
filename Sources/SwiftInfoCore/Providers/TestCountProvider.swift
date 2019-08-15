@@ -12,6 +12,7 @@ public struct TestCountProvider: InfoProvider {
             self.buildSystem = buildSystem
         }
     }
+
     public typealias Arguments = Args
 
     public static let identifier: String = "test_count"

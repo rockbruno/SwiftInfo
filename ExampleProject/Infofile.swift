@@ -18,6 +18,6 @@ let output = api.extract(IPASizeProvider.self)                +
              api.extract(LongestTestDurationProvider.self) +
              api.extract(ArchiveDurationProvider.self)
 
-api.sendToSlack(output: output, webhookUrl: "slackUrlHere")
-
+//api.sendToSlack(output: output, webhookUrl: "slackUrlHere")
+api.print(output: output)
 api.save(output: output)
