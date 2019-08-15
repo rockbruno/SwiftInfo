@@ -4,6 +4,7 @@ public struct FileUtils {
     public static let supportedInfofilePaths = ["./", "../", "../../", "../../../"]
     public static var buildLogFilePath = ""
     public static var testLogFilePath = ""
+    public static var buckLogFilePath = ""
 
     public let outputFileName = "SwiftInfoOutput.json"
     public let infofileName = "Infofile.swift"
@@ -48,6 +49,20 @@ public struct FileUtils {
             throw SwiftInfoError.generic("""
                 Test log not found!
                 Expected path: \(FileUtils.testLogFilePath)
+                Thrown error: \(error.localizedDescription)
+            """)
+        }
+    }
+
+    public func buckLog() throws -> String {
+        let folder = try infofileFolder()
+        let url = URL(fileURLWithPath: folder + FileUtils.buckLogFilePath)
+        do {
+            return try fileOpener.stringContents(ofUrl: url)
+        } catch {
+            throw SwiftInfoError.generic("""
+                Buck's log not found!
+                Expected path: \(FileUtils.buckLogFilePath)
                 Thrown error: \(error.localizedDescription)
             """)
         }

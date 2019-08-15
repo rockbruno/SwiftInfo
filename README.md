@@ -12,31 +12,33 @@ By default SwiftInfo will assume you're extracting info from a release build and
 
 ## Available Providers
 
-| **Type Name** | **Description** | **Requirements** |
-|---|:---:|:---:|
-| **📦 IPASizeProvider**        | Size of the .ipa archive (Not the App Store size!) | Successful xcodebuild archive and build logs |
-| **📊 CodeCoverageProvider**        | Code coverage percentage | Test logs, Xcode developer tools, Test targets with code coverage reports enabled |
-| **👶 TargetCountProvider**        | Number of targets (dependencies) | Build logs |
-| **🎯 TestCountProvider**        | Sum of all test target's test count | Test logs |
-| **⚠️ WarningCountProvider**        | Number of warnings in a build | Build logs |
-| **🧙‍♂️ OBJCFileCountProvider**        | Number of OBJ-C files and headers (for mixed OBJ-C / Swift projects) | Build logs |
-| **⏰ LongestTestDurationProvider**        | The name and duration of the longest test | Test logs |
-| **🛏 TotalTestDurationProvider**        | Time it took to build and run all tests | Test logs |
-| **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs |
-| **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs |
-| **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. |
-| **🚚 ArchiveDurationProvider**        | Time it took to build and archive the app | Successful xcodebuild archive and build logs |
-| **📷 LargestAssetProvider**        | The largest asset in the project. Only considers files inside asset catalogs. | Build logs |
+| **Type Name** | **Description** | **Requirements** | **Supported build systems**
+|---|:---:|:---:|:---:|
+| **📦 IPASizeProvider**        | Size of the .ipa archive (not the App Store size!) | .ipa available in the `#{PROJECT_DIR}/build` folder | Xcode/Buck |
+| **📊 CodeCoverageProvider**        | Code coverage percentage | Test logs, Xcode developer tools, Test targets with code coverage reports enabled | Xcode |
+| **👶 TargetCountProvider**        | Number of targets (dependencies) | Build logs | Xcode |
+| **🎯 TestCountProvider**        | Sum of all test target's test count | Test logs (if building with Xcode) or Buck build log (if building with Buck) | Xcode/Buck |
+| **⚠️ WarningCountProvider**        | Number of warnings in a build | Build logs | Xcode |
+| **🧙‍♂️ OBJCFileCountProvider**        | Number of OBJ-C files and headers (for mixed OBJ-C / Swift projects) | Build logs | Xcode |
+| **⏰ LongestTestDurationProvider**        | The name and duration of the longest test | Test logs | Xcode |
+| **🛏 TotalTestDurationProvider**        | Time it took to build and run all tests | Test logs | Xcode |
+| **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs | Xcode |
+| **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs | Xcode |
+| **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. | Xcode |
+| **🚚 ArchiveDurationProvider**        | Time it took to build and archive the app | Successful xcodebuild archive and build logs | Xcode |
+| **📷 LargestAssetProvider**        | The largest asset in the project. Only considers files inside asset catalogs. | Build logs | Xcode |
 
 ## Usage
 
-SwiftInfo extracts information by analyzing the logs that logs that Xcode generates when you build and/or test your app. Because it requires these logs to work, SwiftInfo is meant to be used alongside a build automation tool like [fastlane](https://github.com/fastlane/fastlane). The following topics describe how you can retrieve these logs and setup SwiftInfo itself.
+SwiftInfo extracts information by analyzing the logs that your build system generates when you build and/or test your app. Because it requires these logs to work, SwiftInfo is meant to be used alongside a build automation tool like [fastlane](https://github.com/fastlane/fastlane). The following topics describe how you can retrieve these logs and setup SwiftInfo itself.
 
 We'll show how to get the logs first as you'll need them to configure SwiftInfo.
 
 **Note:** This repository contains an example project. Check it out to see the tool in action!
 
-### Retrieving raw logs with [fastlane](https://github.com/fastlane/fastlane)
+### If building with Xcode
+
+#### Retrieving raw logs with [fastlane](https://github.com/fastlane/fastlane)
 
 If you use fastlane, you can expose the raw logs by adding the `buildlog_path` argument to `scan` (test logs) and `gym` (build logs). Here's a simple example of a fastlane step that runs tests, submits an archive to TestFlight and runs SwiftInfo (be sure to edit the folder paths to what's being used by your project):
 
@@ -72,7 +74,7 @@ lane :beta do
 end
 ```
 
-### Retrieving raw logs manually
+#### Retrieving raw logs manually
 
 An alternative that doesn't require fastlane is to simply manually run `xcodebuild` / `xctest` and pipe the output to a file. We don't recommend doing this in a real project, but it can be useful if you just want to test the tool without having to setup fastlane.
 
@@ -80,7 +82,17 @@ An alternative that doesn't require fastlane is to simply manually run `xcodebui
 xcodebuild -workspace ./Example.xcworkspace -scheme Example &> ./build/build_log/Example-Release.log
 ```
 
+### If building with Buck
+
+If you're building with Buck, you can pipe the output to a file similarly to the Xcode example.
+
+```
+buck build //SwiftRocks:SwiftRocksPackage &> ./build/buck_log/SwiftRocks.log
+```
+
 ## Configuring SwiftInfo
+
+### If building with Xcode
 
 SwiftInfo itself is configured by creating a `Infofile.swift` file in your project's root. Here's an example one:
 
@@ -119,12 +131,23 @@ if isInPullRequestMode {
 }
 ```
 
-- 1: Use `FileUtils` to configure the path of your logs. If you're using fastlane and don't know what the name of the log files are going to be, just run it once to have it create them.
+- 1: Use `FileUtils` to configure the path of your logs. If you're retrieving them with fastlane and don't know what the name of the log files are going to be, just run it once to have it create them.
 - 2: Create a `SwiftInfo` instance by passing your project's information.
 - 3: Use `SwiftInfo`'s `extract()` to extract and append all the information you want into a single property.
 - 4: Lastly, you can act upon this output. Here, I print the results to a pull request if [danger-SwiftInfo](https://github.com/rockbruno/danger-SwiftInfo) is being used, or send it to Slack / save it to the repo if this is the result of a release build.
 
 You can see `SwiftInfo`'s properties and methods [here.](Sources/SwiftInfoCore/SwiftInfo.swift)
+
+### If building with Buck
+
+The setup for Buck projects is similar to the Xcode one, with the difference being that Buck rules use `FileUtils.buckLogFilePath` instead. If you're using a rule that isn't exclusive to Buck, you should also pass the `buildSystem: .buck` argument to the rule.
+
+```swift
+FileUtils.buckLogFilePath = "./build/buck_log/SwiftRocks.log"
+// ...
+let output = api.extract(TestCountProvider.self, args: .init(buildSystem: .buck))
+// ...
+```
 
 ## Available Arguments
 
@@ -135,6 +158,8 @@ To be able to support different types of projects, SwiftInfo provides customizat
 [💻 LinesOfCodeProvider](Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift#L11)
 
 [📊 CodeCoverageProvider](Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift#L11)
+
+[🎯 TestCountProvider](Sources/SwiftInfoCore/Providers/TestCountProvider.swift#L9)
 
 ## Output
 
