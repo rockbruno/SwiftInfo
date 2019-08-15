@@ -103,7 +103,7 @@ ahfgvnvnrjrjjffj fjjnf nhfjfjfj nfnfnf -module-name MyMock2 nbvbfhuff fjjf
         )
     }
 
-    func testTestCount() {
+    func testTestCountXcode() {
         FileUtils.testLogFilePath = "./test.log"
         let log =
 """
@@ -119,6 +119,26 @@ aaa
         api.mockFileManager.add(file: "test.log", contents: log)
         let extracted = try! TestCountProvider.extract(fromApi: api)
         XCTAssertEqual(extracted.count, 5)
+    }
+
+    func testTestCountBuck() {
+        FileUtils.buckLogFilePath = "./buck.log"
+        let log =
+        """
+PASS    <100ms  4 Passed   0 Skipped   0 Failed   CorporatePaymentChoicesWorkerSpec
+PASS    <100ms  3 Passed   0 Skipped   0 Failed   CrossSellingAnalyticSpec
+PASS     525ms 12 Passed   0 Skipped   0 Failed   CrossSellingCarouselCellSpec
+PASS    <100ms  4 Passed   0 Skipped   0 Failed   CrossSellingItemManagerProtocolSpec
+PASS    <100ms  3 Passed   0 Skipped   0 Failed   CrossSellingRemoteConfigSpec
+PASS    <100ms  3 Passed   0 Skipped   0 Failed   CrossSellingWokerSpec
+PASS    <100ms  3 Passed   0 Skipped   0 Failed   CustomerRequestModelSpec
+PASS    <100ms 10 Passed   0 Skipped   0 Failed   CustomizationManagerTests
+PASS    <100ms  5 Passed   0 Skipped   0 Failed   DateExtensionsSpec
+PASS    <100ms  6 Passed   0 Skipped   0 Failed   DateStrategyFactorySpec
+"""
+        api.mockFileManager.add(file: "buck.log", contents: log)
+        let extracted = try! TestCountProvider.extract(fromApi: api, args: .init(buildSystem: .buck))
+        XCTAssertEqual(extracted.count, 53)
     }
 
     func testObjcCount() {

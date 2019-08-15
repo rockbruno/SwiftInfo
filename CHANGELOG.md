@@ -10,6 +10,10 @@
 
 ## master
 
+## 2.3.5
+* Adding support for `buckLogFilePath` for the extraction of Buck Build related rules - Bruno Rocha
+* Adding Buck support to `TestCountProvider` - Bruno Rocha
+
 ## 2.3.4
 * Fixes version string and makes error methods public for custom providers - Bruno Rocha
 
