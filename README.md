@@ -79,7 +79,7 @@ end
 An alternative that doesn't require fastlane is to simply manually run `xcodebuild` / `xctest` and pipe the output to a file. We don't recommend doing this in a real project, but it can be useful if you just want to test the tool without having to setup fastlane.
 
 ```
-xcodebuild -workspace ./Example.xcworkspace -scheme Example &> ./build/build_log/Example-Release.log
+xcodebuild -workspace ./Example.xcworkspace -scheme Example 2>&1 | tee ./build/build_log/Example-Release.log
 ```
 
 ### If building with Buck
@@ -87,7 +87,7 @@ xcodebuild -workspace ./Example.xcworkspace -scheme Example &> ./build/build_log
 If you're building with Buck, you can pipe the output to a file similarly to the Xcode example.
 
 ```
-buck build //SwiftRocks:SwiftRocksPackage &> ./build/buck_log/SwiftRocks.log
+buck build //SwiftRocks:SwiftRocksPackage 2>&1 | tee ./build/buck_log/SwiftRocks.log
 ```
 
 ## Configuring SwiftInfo
