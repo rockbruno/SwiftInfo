@@ -10,6 +10,9 @@
 
 ## master
 
+## 2.3.6
+* Recompiled for Xcode 11's toolchain (Swift 5.1)
+
 ## 2.3.5
 * Adding support for `buckLogFilePath` for the extraction of Buck Build related rules - Bruno Rocha
 * Adding Buck support to `TestCountProvider` - Bruno Rocha
