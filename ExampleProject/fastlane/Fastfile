@@ -11,9 +11,9 @@ platform :ios do
 
     # Archive the app, copying the raw logs to the project folder 
     gym(
-     	workspace: "SwiftInfoExample.xcworkspace",
-     	scheme: "SwiftInfoExample",
-     	buildlog_path: "./build/build_log",
+        workspace: "SwiftInfoExample.xcworkspace",
+        scheme: "SwiftInfoExample",
+        buildlog_path: "./build/build_log",
       output_directory: "build",
       # This is so you can run this with automatic provisioning
       xcargs: "-allowProvisioningUpdates",

@@ -3,5 +3,5 @@ use_frameworks!
 inhibit_all_warnings!
 
 target 'SwiftInfoExample' do
-    pod 'SwiftInfo'
+    pod 'SwiftInfo', '2.3.7'
 end

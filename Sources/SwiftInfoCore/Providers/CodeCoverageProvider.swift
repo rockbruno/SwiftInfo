@@ -74,11 +74,19 @@ public struct CodeCoverageProvider: InfoProvider {
 
     public static func getCodeCoverageJson(api: SwiftInfo) throws -> [String: Any] {
         let testLog = try api.fileUtils.testLog()
-        guard let reportFilePath = testLog.match(regex: "(?<=Generated coverage report: ).*").first else {
+        if let xcode11CovPath = getCodeCoverageXcode11JsonPath(fromLogs: testLog) {
+            let command = "xcrun xccov view --report \(xcode11CovPath) --json > \(tempFileName)"
+            return try getCodeCoverageJson(reportFilePath: xcode11CovPath, command: command)
+        } else if let legacyPath = getCodeCoverageLegacyJsonPath(fromLogs: testLog) {
+            let command = "xcrun xccov view \(legacyPath) --json > \(tempFileName)"
+            return try getCodeCoverageJson(reportFilePath: legacyPath, command: command)
+        } else {
             throw error("Couldn't find code coverage report path in the logs, is it enabled?")
         }
+    }
+
+    private static func getCodeCoverageJson(reportFilePath: String, command: String) throws -> [String: Any] {
         removeTemporaryFileIfNeeded()
-        let command = "xcrun xccov view \(reportFilePath) --json > \(tempFileName)"
         log("Processing code coverage report: \(command)", verbose: true)
         runShell(command)
         do {
@@ -93,6 +101,24 @@ public struct CodeCoverageProvider: InfoProvider {
             let message = "Failed to read \(tempFile)! Error: \(error.localizedDescription)"
             throw self.error(message)
         }
+    }
+
+    public static func getCodeCoverageXcode11JsonPath(fromLogs logs: String) -> String? {
+        let xcode11Regex = "(?<=Test session results, code coverage, and logs:\n).*"
+        return getCodeCoverageJsonPath(fromLogs: logs, regex: xcode11Regex)
+    }
+
+    public static func getCodeCoverageLegacyJsonPath(fromLogs logs: String) -> String? {
+        let legacyRegex = "(?<=Generated coverage report: ).*"
+        return getCodeCoverageJsonPath(fromLogs: logs, regex: legacyRegex)
+    }
+
+    private static func getCodeCoverageJsonPath(fromLogs logs: String, regex: String) -> String? {
+        guard let match = logs.match(regex: regex).first else {
+            return nil
+        }
+        let characterSet = CharacterSet(charactersIn: " \t")
+        return match.trimmingCharacters(in: characterSet)
     }
 
     static func removeTemporaryFileIfNeeded() {

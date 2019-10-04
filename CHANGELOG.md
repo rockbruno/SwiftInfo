@@ -10,6 +10,9 @@
 
 ## master
 
+## 2.3.7
+* Fixed CodeCoverageProvider not working in Xcode 11
+
 ## 2.3.6
 * Recompiled for Xcode 11's toolchain (Swift 5.1)
 

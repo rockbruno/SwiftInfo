@@ -211,4 +211,22 @@ Touch /Users/bruno.rocha/Library/Developer/Xcode/DerivedData/Rapiddo-cbobntbmchy
         let extracted = try! ArchiveDurationProvider.extract(fromApi: api)
         XCTAssertEqual(extracted.timeInt, 309407)
     }
+
+    func testCoverageExtraction() {
+        var log = """
+        Generating coverage data...
+        Generated coverage report: /Users/bla/action.xccovreport
+        ** TEST SUCCEEDED ** [37.368 sec]
+        """
+        XCTAssertEqual("/Users/bla/action.xccovreport",
+                       CodeCoverageProvider.getCodeCoverageLegacyJsonPath(fromLogs: log))
+        log = """
+        Test session results, code coverage, and logs:
+            /Users/bla/action.xcresult
+
+        ** TEST SUCCEEDED ** [9.756 sec]
+        """
+        XCTAssertEqual("/Users/bla/action.xcresult",
+                       CodeCoverageProvider.getCodeCoverageXcode11JsonPath(fromLogs: log))
+    }
 }
