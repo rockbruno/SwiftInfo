@@ -16,7 +16,9 @@ build:
 	@swift build \
 		-c release \
 		--disable-sandbox \
-		--build-path "$(BUILDDIR)"
+		--build-path "$(BUILDDIR)" \
+		-Xswiftc \
+		-enable-library-evolution
 	@rm -rf "$(PRODUCTDIR)"
 	@rm -rf "$(TEMPPRODUCTDIR)"
 	@mkdir -p "$(TEMPPRODUCTDIR)"
