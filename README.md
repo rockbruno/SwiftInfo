@@ -25,7 +25,7 @@ By default SwiftInfo will assume you're extracting info from a release build and
 | **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs | Xcode |
 | **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs | Xcode |
 | **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. | Xcode |
-| **🚚 ArchiveDurationProvider**        | Time it took to build and archive the app | Successful xcodebuild archive and build logs | Xcode |
+| **🚚 ArchiveDurationProvider**        | Time it took to build and archive the app | Successful xcodebuild archive and build logs. Xcode ShowBuildOperationDuration should be enabled (run in the Terminal: `defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES`) | Xcode |
 | **📷 LargestAssetProvider**        | The largest asset in the project. Only considers files inside asset catalogs. | Build logs | Xcode |
 
 ## Usage
