@@ -2,6 +2,7 @@
 
 If you wish to track something that's not handled by the default providers, you can create your own provider by creating a `struct` that inherits from `InfoProvider` inside your Infofile. Here's a simple provider that tracks the number of files in a project where adding new files is bad:
 
+```swift
 struct FileCountProvider: InfoProvider {
 
     struct Args {
@@ -43,7 +44,8 @@ struct FileCountProvider: InfoProvider {
         return Summary(text: text, style: style, numericValue: Float(fileCount), stringValue: "\(fileCount) files")
     }
 }
+```
 
-Check our docs page to see the capabilities of the `SwiftInfo` api.
+[Check our docs page](https://rockbruno.github.io/SwiftInfo/Structs/SwiftInfo.html) to see the capabilities of the `SwiftInfo` api.
 
 **If you end up creating a custom provider, consider submitting it here as a pull request to have it added as a default one!**
