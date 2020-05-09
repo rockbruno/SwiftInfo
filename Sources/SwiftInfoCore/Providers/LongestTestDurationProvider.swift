@@ -1,7 +1,8 @@
 import Foundation
 
+/// The name and duration of the longest test.
+/// Requirements: Test logs.
 public struct LongestTestDurationProvider: InfoProvider {
-
     public struct Args {}
     public typealias Arguments = Args
 
@@ -20,7 +21,7 @@ public struct LongestTestDurationProvider: InfoProvider {
         self.durationInt = durationInt
     }
 
-    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LongestTestDurationProvider {
+    public static func extract(fromApi api: SwiftInfo, args _: Args?) throws -> LongestTestDurationProvider {
         let tests = try allTests(api: api)
         guard let longest = tests.max(by: { $0.1 < $1.1 }) else {
             throw error("Couldn't determine the longest test because no tests were found!")
@@ -44,10 +45,10 @@ public struct LongestTestDurationProvider: InfoProvider {
                     throw error("Failed to extract test duration from this line: \(str).")
                 }
                 return (name, duration)
-        }
+            }
     }
 
-    public func summary(comparingWith other: LongestTestDurationProvider?, args: Args?) -> Summary {
+    public func summary(comparingWith other: LongestTestDurationProvider?, args _: Args?) -> Summary {
         var prefix = "\(description): \(name) (\(duration) secs)"
         let style: Summary.Style
         if let other = other, other.durationInt != durationInt {

@@ -1,12 +1,17 @@
 import Foundation
 
+/// A `Summary` is a wrapper struct that represents the result of comparing two instances of a provider.
 public struct Summary: Codable, Hashable {
-
+    /// The sentimental result of a `Summary`.
     public enum Style {
+        /// Indicates that the result was good.
         case positive
+        /// Indicates that the result was neutral.
         case neutral
+        /// Indicates that the result was bad.
         case negative
 
+        /// The attributed hex color of this style.
         var hexColor: String {
             switch self {
             case .positive:
@@ -32,23 +37,52 @@ public struct Summary: Codable, Hashable {
         return ["text": text, "color": color]
     }
 
+    /// Creates a `Summary`.
+    ///
+    /// - Parameters:
+    ///   - text: The description of this summary.
+    ///   - style: The sentimental result of this summary. See `Summary.Style` for more information.
+    ///   - numericValue: The numeric value that represents this summary, to be used in tools like SwiftInfo-Reader.
+    ///   For example, if a build increased the number of tests by 3, `numericValue` should be 3.
+    ///   - stringValue: The string value that represents this summary. For example,
+    ///   if a build increased the number of tests by 3, `stringValue` can be either 3 or 'Three'. This is used only
+    ///   for visual purposes.
     public init(text: String, style: Style, numericValue: Float, stringValue: String) {
         self.text = text
-        self.color = style.hexColor
+        color = style.hexColor
         self.numericValue = numericValue
         self.stringValue = stringValue
     }
 
-    public static func genericFor<T: BinaryInteger>(prefix: String,
-                                                    now: T,
-                                                    old: T?,
-                                                    increaseIsBad: Bool,
-                                                    stringValueFormatter: ((T) -> String)? = nil,
-                                                    numericValueFormatter: ((T) -> Float)? = nil,
-                                                    difference: ((T, T) -> T))
-                                                    -> Summary {
-        let stringFormatter = stringValueFormatter ?? { return "\($0)" }
+    /// Creates a basic `Summary` that differs depending if a provider's value increased, decreased or stayed the same.
+    /// Here's an example:
+    /// Build Time: *Increased* by 3 (100 seconds)
+    ///
+    /// - Parameters:
+    ///   - prefix: The prefix of the message. Ideally, this should be the description of your provider.
+    ///   - now: The current numeric value of the provider.
+    ///   - old: The previous numeric value of the provider.
+    ///   - increaseIsBad: If set to true, increases in value will use the `.negative` `Summary.Style`.
+    ///   - stringValueFormatter: (Optional) The closure that translates the numeric value to a visual string.
+    ///   By default, the behavior is to simply cast the number to a String.
+    ///   - numericValueFormatter: (Optional) The closure that translates the numeric value to a Float.
+    ///   Float is the type used by reader tools like SwiftInfo-Reader, and by default, the behavior is to simply
+    ///   convert the number to a Float.
+    ///   - difference: (Optional) The closure that shows how to calculate the numerical difference between the providers.
+    ///   The first argument is the **new** value, and the second is the **old** one.
+    ///   By default, this closure is { abs(old - new) }.
+    public static func genericFor<T: BinaryInteger & SignedNumeric>(
+        prefix: String,
+        now: T,
+        old: T?,
+        increaseIsBad: Bool,
+        stringValueFormatter: ((T) -> String)? = nil,
+        numericValueFormatter: ((T) -> Float)? = nil,
+        difference: ((T, T) -> T)? = nil
+    ) -> Summary {
+        let stringFormatter = stringValueFormatter ?? { "\($0)" }
         let numberFormatter = numericValueFormatter ?? { Float($0) }
+        let difference = difference ?? { abs($1 - $0) }
         func result(text: String, style: Style) -> Summary {
             return Summary(text: text,
                            style: style,

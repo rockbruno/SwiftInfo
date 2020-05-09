@@ -1,11 +1,20 @@
 import Foundation
 
+/// The base API for SwiftInfo operations.
 public struct SwiftInfo {
+    /// The information about the current project.
     public let projectInfo: ProjectInfo
+
+    /// Utilities for opening and saving files.
     public let fileUtils: FileUtils
-    public let slackFormatter: SlackFormatter
+
+    /// A HTTP Client that sends synchronous POST requests.
     public let client: HTTPClient
+
+    /// An instance of SourceKit.
     public let sourceKit: SourceKit
+
+    let slackFormatter: SlackFormatter
 
     public init(projectInfo: ProjectInfo,
                 fileUtils: FileUtils = .init(),
@@ -24,6 +33,13 @@ public struct SwiftInfo {
         }
     }
 
+    /// Executes a provider with an optional set of additional arguments.
+    ///
+    /// - Parameters:
+    ///    - provider: The provider metatype to execute.
+    ///    - args: (Optional) The arguments to send to the provider, if applicable.
+    ///
+    /// - Returns: The output of this provider.
     public func extract<T: InfoProvider>(_ provider: T.Type,
                                          args: T.Arguments? = nil) -> Output {
         do {
@@ -45,6 +61,7 @@ public struct SwiftInfo {
         }
     }
 
+    /// Sends an output to slack.
     public func sendToSlack(output: Output, webhookUrl: String) {
         log("Sending to Slack")
         log("Slack Webhook: \(webhookUrl)", verbose: true)
@@ -52,6 +69,10 @@ public struct SwiftInfo {
         client.syncPost(urlString: webhookUrl, json: formatted.json)
     }
 
+    /// Uses the SlackFormatter to format the output and print it.
+    ///
+    /// - Parameters:
+    ///  - output: The output to print.
     public func print(output: Output) {
         let formatted = slackFormatter.format(output: output, projectInfo: projectInfo)
         // We print directly so that `log()`'s conditions don't interfere.
@@ -59,6 +80,11 @@ public struct SwiftInfo {
         Swift.print(formatted.message)
     }
 
+    /// Saves the current output to the device.
+    ///
+    /// - Parameters:
+    ///   - output: The output to save. The file will be saved as {Infofile path}/SwiftInfo-output.json.
+    ///   - timestamp: (Optional) A custom timestamp for the output.
     public func save(output: Output,
                      timestamp: TimeInterval = Date().timeIntervalSince1970) {
         log("Saving output to disk")
@@ -70,7 +96,7 @@ public struct SwiftInfo {
             "versionString": (try? projectInfo.getVersionString()) ?? "(Failed to parse version)",
             "buildNumber": (try? projectInfo.getBuildNumber()) ?? "(Failed to parse build number)",
             "description": projectInfo.description,
-            "timestamp": timestamp
+            "timestamp": timestamp,
         ]
         do {
             let outputFile = try fileUtils.outputArray()
@@ -81,6 +107,7 @@ public struct SwiftInfo {
     }
 }
 
+/// Crashes SwiftInfo with a message.
 public func fail(_ message: String) -> Never {
     print("SwiftInfo crashed. Reason: \(message)")
     exit(-1)

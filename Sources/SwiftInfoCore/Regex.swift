@@ -25,7 +25,7 @@ extension NSTextCheckingResult {
                                                    offsetBy: groupRange.location)
         let groupEndIndex = originalString.index(groupStartIndex,
                                                  offsetBy: groupRange.length)
-        let substring = originalString[groupStartIndex..<groupEndIndex]
+        let substring = originalString[groupStartIndex ..< groupEndIndex]
         return String(substring)
     }
 }

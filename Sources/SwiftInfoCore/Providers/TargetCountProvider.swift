@@ -1,7 +1,8 @@
 import Foundation
 
+/// Number of targets in the build.
+/// Requirements: Build logs.
 public struct TargetCountProvider: InfoProvider {
-
     public struct Args {
         public enum Mode {
             case complainOnAdditions
@@ -29,7 +30,7 @@ public struct TargetCountProvider: InfoProvider {
         self.count = count
     }
 
-    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> TargetCountProvider {
+    public static func extract(fromApi api: SwiftInfo, args _: Args?) throws -> TargetCountProvider {
         let buildLog = try api.fileUtils.buildLog()
         let modules = Set(buildLog.match(regex: "(?<=-module-name ).*?(?= )"))
         return TargetCountProvider(count: modules.count)
@@ -37,9 +38,7 @@ public struct TargetCountProvider: InfoProvider {
 
     public func summary(comparingWith other: TargetCountProvider?, args: Args?) -> Summary {
         let prefix = description
-        let summary = Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: false) {
-            return abs($1 - $0)
-        }
+        let summary = Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: false)
         guard let old = other?.count, old != count else {
             return summary
         }
@@ -53,7 +52,7 @@ public struct TargetCountProvider: InfoProvider {
                            numericValue: summary.numericValue,
                            stringValue: summary.stringValue)
         case .complainOnAdditions:
-            let style: Summary.Style = count > old ? .negative: .positive
+            let style: Summary.Style = count > old ? .negative : .positive
             return Summary(text: summary.text,
                            style: style,
                            numericValue: summary.numericValue,

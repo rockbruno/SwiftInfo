@@ -12,21 +12,23 @@ By default SwiftInfo will assume you're extracting info from a release build and
 
 ## Available Providers
 
-| **Type Name** | **Description** | **Requirements** | **Supported build systems**
-|---|:---:|:---:|:---:|
-| **📦 IPASizeProvider**        | Size of the .ipa archive (not the App Store size!) | .ipa available in the `#{PROJECT_DIR}/build` folder | Xcode/Buck |
-| **📊 CodeCoverageProvider**        | Code coverage percentage | Test logs, Xcode developer tools, Test targets with code coverage reports enabled | Xcode |
-| **👶 TargetCountProvider**        | Number of targets (dependencies) | Build logs | Xcode |
-| **🎯 TestCountProvider**        | Sum of all test target's test count | Test logs (if building with Xcode) or Buck build log (if building with Buck) | Xcode/Buck |
-| **⚠️ WarningCountProvider**        | Number of warnings in a build | Build logs | Xcode |
-| **🧙‍♂️ OBJCFileCountProvider**        | Number of OBJ-C files and headers (for mixed OBJ-C / Swift projects) | Build logs | Xcode |
-| **⏰ LongestTestDurationProvider**        | The name and duration of the longest test | Test logs | Xcode |
-| **🛏 TotalTestDurationProvider**        | Time it took to build and run all tests | Test logs | Xcode |
-| **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog | Build logs | Xcode |
-| **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs | Build logs | Xcode |
-| **💻 LinesOfCodeProvider**        | Executable lines of code | Same as CodeCoverageProvider. | Xcode |
-| **🚚 ArchiveDurationProvider**        | Time it took to build and archive the app | Successful xcodebuild archive and build logs. Xcode ShowBuildOperationDuration should be enabled (run in the Terminal: `defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES`) | Xcode |
-| **📷 LargestAssetProvider**        | The largest asset in the project. Only considers files inside asset catalogs. | Build logs | Xcode |
+| **Type Name** | **Description** |
+|---|:---:|
+| **📦 IPASizeProvider**        | Size of the .ipa archive (not the App Store size!) |
+| **📊 CodeCoverageProvider**        | Code coverage percentage |
+| **👶 TargetCountProvider**        | Number of targets (dependencies) |
+| **🎯 TestCountProvider**        | Sum of all test target's test count |
+| **⚠️ WarningCountProvider**        | Number of warnings in a build |
+| **🧙‍♂️ OBJCFileCountProvider**        | Number of OBJ-C files and headers (for mixed OBJ-C / Swift projects) |
+| **⏰ LongestTestDurationProvider**        | The name and duration of the longest test |
+| **🛏 TotalTestDurationProvider**        | Time it took to build and run all tests |
+| **🖼 LargestAssetCatalogProvider**        | The name and size of the largest asset catalog |
+| **🎨 TotalAssetCatalogsSizeProvider**        | The sum of the size of all asset catalogs |
+| **💻 LinesOfCodeProvider**        | Executable lines of code |
+| **🚚 ArchiveDurationProvider**        | Time it took to build and archive the app |
+| **📷 LargestAssetProvider**        | The largest asset in the project. Only considers files inside asset catalogs. |
+
+Each provider may have a specific set of requirements in order for them to work. Check their documentation to learn more.
 
 ## Usage
 
@@ -36,11 +38,9 @@ We'll show how to get the logs first as you'll need them to configure SwiftInfo.
 
 **Note:** This repository contains an example project. Check it out to see the tool in action!
 
-### If building with Xcode
+### Retrieving raw logs with [fastlane](https://github.com/fastlane/fastlane)
 
-#### Retrieving raw logs with [fastlane](https://github.com/fastlane/fastlane)
-
-If you use fastlane, you can expose the raw logs by adding the `buildlog_path` argument to `scan` (test logs) and `gym` (build logs). Here's a simple example of a fastlane step that runs tests, submits an archive to TestFlight and runs SwiftInfo (be sure to edit the folder paths to what's being used by your project):
+If you use fastlane, you can expose raw logs to SwiftInfo by adding the `buildlog_path` argument to `scan` (test logs) and `gym` (build logs). Here's a simple example of a fastlane lane that runs tests, submits an archive to TestFlight and runs SwiftInfo (make sure to edit the folder paths to what's being used by your project):
 
 ```ruby
 desc "Submits a new beta build and runs SwiftInfo"
@@ -64,17 +64,17 @@ lane :beta do
       skip_waiting_for_build_processing: true
   )
 
-  # Run SwiftInfo
+  # Run the CocoaPods version of SwiftInfo
   sh("../Pods/SwiftInfo/bin/swiftinfo")
 
-  # Commit and push SwiftInfo's result
+  # Commit and push SwiftInfo's output
   sh("git add ../SwiftInfo-output/SwiftInfoOutput.json")
   sh("git commit -m \"[ci skip] Updating SwiftInfo Output JSON\"")
   push_to_git_remote
 end
 ```
 
-#### Retrieving raw logs manually
+### Retrieving raw logs manually
 
 An alternative that doesn't require fastlane is to simply manually run `xcodebuild` / `xctest` and pipe the output to a file. We don't recommend doing this in a real project, but it can be useful if you just want to test the tool without having to setup fastlane.
 
@@ -82,35 +82,30 @@ An alternative that doesn't require fastlane is to simply manually run `xcodebui
 xcodebuild -workspace ./Example.xcworkspace -scheme Example 2>&1 | tee ./build/build_log/Example-Release.log
 ```
 
-### If building with Buck
-
-If you're building with Buck, you can pipe the output to a file similarly to the Xcode example.
-
-```
-buck build //SwiftRocks:SwiftRocksPackage 2>&1 | tee ./build/buck_log/SwiftRocks.log
-```
-
 ## Configuring SwiftInfo
 
-### If building with Xcode
-
-SwiftInfo itself is configured by creating a `Infofile.swift` file in your project's root. Here's an example one:
+SwiftInfo itself is configured by creating a `Infofile.swift` file in your project's root. Here's an example one with a detailed explanation:
 
 ```swift
 import SwiftInfoCore
 
-// 1
+// Use `FileUtils` to configure the path of your logs. 
+// If you're retrieving them with fastlane and don't know what the name of the log files are going to be, 
+// just run it once to have it create them.
+
 FileUtils.buildLogFilePath = "./build/build_log/MyApp-MyConfig.log"
 FileUtils.testLogFilePath = "./build/tests_log/MyApp-MyConfig.log"
 
-// 2
+// Now, create a `SwiftInfo` instance by passing your project's information.
+
 let projectInfo = ProjectInfo(xcodeproj: "MyApp.xcodeproj",
                               target: "MyTarget",
                               configuration: "MyConfig")
 
 let api = SwiftInfo(projectInfo: projectInfo)
 
-// 3
+// Use SwiftInfo's `extract()` method to extract and append all the information you want into a single property.
+
 let output = api.extract(IPASizeProvider.self) +
              api.extract(WarningCountProvider.self) +
              api.extract(TestCountProvider.self) +
@@ -118,7 +113,7 @@ let output = api.extract(IPASizeProvider.self) +
              api.extract(CodeCoverageProvider.self, args: .init(targets: ["NetworkModule", "MyApp"])) +
              api.extract(LinesOfCodeProvider.self, args: .init(targets: ["NetworkModule", "MyApp"]))
 
-// 4
+// Lastly, process the output.
 
 if isInPullRequestMode {
     // If called from danger-SwiftInfo, print the results to the pull request
@@ -131,125 +126,44 @@ if isInPullRequestMode {
 }
 ```
 
-- 1: Use `FileUtils` to configure the path of your logs. If you're retrieving them with fastlane and don't know what the name of the log files are going to be, just run it once to have it create them.
-- 2: Create a `SwiftInfo` instance by passing your project's information.
-- 3: Use `SwiftInfo`'s `extract()` to extract and append all the information you want into a single property.
-- 4: Lastly, you can act upon this output. Here, I print the results to a pull request if [danger-SwiftInfo](https://github.com/rockbruno/danger-SwiftInfo) is being used, or send it to Slack / save it to the repo if this is the result of a release build.
+## Saving and visualizing the data
 
-You can see `SwiftInfo`'s properties and methods [here.](Sources/SwiftInfoCore/SwiftInfo.swift)
+After successfully extracting data, you should call `api.save(output: output)` to have SwiftInfo add/update a json file in the `{Infofile path}/SwiftInfo-output` folder. It's important to add this file to version control after the running the tool as this is what SwiftInfo uses to compare new pieces of information.
 
-### If building with Buck
-
-The setup for Buck projects is similar to the Xcode one, with the difference being that Buck rules use `FileUtils.buckLogFilePath` instead. If you're using a rule that isn't exclusive to Buck, you should also pass the `buildSystem: .buck` argument to the rule.
-
-```swift
-FileUtils.buckLogFilePath = "./build/buck_log/SwiftRocks.log"
-// ...
-let output = api.extract(TestCountProvider.self, args: .init(buildSystem: .buck))
-// ...
-```
-
-## Available Arguments
-
-To be able to support different types of projects, SwiftInfo provides customization options to some providers. Click on each of them to see their documentation!
-
-[👶 TargetCountProvider](Sources/SwiftInfoCore/Providers/TargetCountProvider.swift#L16)
-
-[💻 LinesOfCodeProvider](Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift#L11)
-
-[📊 CodeCoverageProvider](Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift#L11)
-
-[🎯 TestCountProvider](Sources/SwiftInfoCore/Providers/TestCountProvider.swift#L9)
-
-## Output
-
-After successfully extracting data, you can call `api.save(output: output)` to have SwiftInfo add/update a json file in the `{Infofile path}/SwiftInfo-output` folder. It's important to add this file to version control after the running the tool as this is what SwiftInfo uses to compare new pieces of information.
-
-[SwiftInfo-Reader](https://github.com/rockbruno/SwiftInfo-Reader) can be used to transform this output into a more visual static HTML page.
+You can then use [SwiftInfo-Reader](https://github.com/rockbruno/SwiftInfo-Reader) to transform this output into a more visual static HTML page.
 
 <img src="https://i.imgur.com/62jNGdh.png">
 
-## Tracking custom info
+## Customizing Providers
 
-If you wish to track something that's not handled by the default providers, you can create your own provider by creating a `struct` that [inherits from InfoProvider](Sources/SwiftInfoCore/InfoProvider.swift) inside your Infofile. Here's a simple provider that tracks the number of files in a project where adding new files is bad:
-
-```swift
-struct FileCountProvider: InfoProvider {
-
-    struct Args {
-        let fromFolders: [String]
-    }
-
-    typealias Arguments = Args
-
-    static let identifier = "file_count"
-    let description = "Number of files"
-
-    let fileCount: Int
-
-    static func extract(fromApi api: SwiftInfo, args: Args?) throws -> FileCountProvider {
-        let count = // get the number of files from the provided `args?.fromFolders`
-        return FileCountProvider(fileCount: count)
-    }
-
-    // Given another instance of this provider, return a `Summary` that explains the difference between them.
-    func summary(comparingWith other: FileCountProvider?, args: Args?) -> Summary {
-        let prefix = "File Count"
-        guard let other = other else {
-            return Summary(text: prefix + ": \(fileCount)", style: .neutral)
-        }
-        guard count != other.count else {
-            return Summary(text: prefix + ": Unchanged. (\(fileCount))", style: .neutral)
-        }
-        let modifier: String
-        let style: Summary.Style
-        if fileCount > other.fileCount {
-            modifier = "*grew*"
-            style = .negative
-        } else {
-            modifier = "was *reduced*"
-            style = .positive
-        }
-        let difference = abs(other.fileCount - fileCount)
-        let text = prefix + " \(modifier) by \(difference) (\(fileCount))"
-        return Summary(text: text, style: style, numericValue: Float(fileCount), stringValue: "\(fileCount) files")
-    }
-}
-```
-
-Documentation of useful types and methods from SwiftInfoCore that you can use when building custom providers will be available soon.
-
-**If you end up creating a custom provider, consider submitting it here as a pull request to have it added as a default one!**
+To be able to support different types of projects, SwiftInfo provides customization options to some providers. See the documentation for each provider to see what it supports.
+If you wish to track something that's not handled by the default providers, you can also create your own providers. [Click here to see how](CREATING_CUSTOM_PROVIDERS.md).
 
 ## Installation
 
+### CocoaPods
+
+`pod 'SwiftInfo'`
+
 ### [Homebrew](https://brew.sh/)
 
-To install SwiftInfo the first time, simply run these commands:
+To install SwiftInfo with Homebrew the first time, simply run these commands:
 
 ```bash
 brew tap rockbruno/SwiftInfo https://github.com/rockbruno/SwiftInfo.git
 brew install rockbruno/SwiftInfo/swiftinfo
 ```
 
-To **update** to the newest version of SwiftInfo when you have an old version already installed run:
+To **update** to the newest Homebrew version of SwiftInfo when you have an old version already installed, run:
 
 ```bash
 brew upgrade swiftinfo
 ```
 
-### CocoaPods
-
-`pod 'SwiftInfo'`
-
-### Manual
+### Manually
 
 Download the [latest release](https://github.com/rockbruno/SwiftInfo/releases) and unzip the contents somewhere in your project's folder.
 
 ### Swift Package Manager
 
 SwiftPM is currently not supported due to the need of shipping additional files with the binary, which SwiftPM does not support. We might find a solution for this, but for now there's no way to use the tool with it.
-
-## License
-
-SwiftInfo is released under the MIT license. See LICENSE for details.

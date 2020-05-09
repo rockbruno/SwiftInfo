@@ -6,9 +6,9 @@ public struct Output {
     let errors: [String]
 
     init<T: InfoProvider>(info: ExtractedInfo<T>) throws {
-        self.rawDictionary = try info.encoded()
-        self.summaries = [info.summary].compactMap { $0 }
-        self.errors = []
+        rawDictionary = try info.encoded()
+        summaries = [info.summary].compactMap { $0 }
+        errors = []
     }
 
     func extractedInfo<T: InfoProvider>(ofType type: T.Type) throws -> T? {
@@ -22,18 +22,18 @@ public struct Output {
 }
 
 extension Output {
-    public static func +(lhs: Output, rhs: Output) -> Output {
+    public static func + (lhs: Output, rhs: Output) -> Output {
         let lhsDict = lhs.rawDictionary
         let rhsDict = rhs.rawDictionary
         let dict = lhsDict.merging(rhsDict) { new, _ in
-            return new
+            new
         }
         return Output(rawDictionary: dict,
                       summaries: lhs.summaries + rhs.summaries,
                       errors: lhs.errors + rhs.errors)
     }
 
-    public static func +=(lhs: inout Output, rhs: Output) {
+    public static func += (lhs: inout Output, rhs: Output) {
         lhs = lhs + rhs
     }
 

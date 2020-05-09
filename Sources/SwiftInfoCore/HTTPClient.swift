@@ -1,7 +1,6 @@
 import Foundation
 
 public final class HTTPClient {
-
     let client = URLSession.shared
     let group = DispatchGroup()
 

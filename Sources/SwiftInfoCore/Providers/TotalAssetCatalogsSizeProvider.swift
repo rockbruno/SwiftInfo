@@ -1,7 +1,8 @@
 import Foundation
 
+/// The sum of the size of all asset catalogs.
+/// Requirements: Build logs.
 public struct TotalAssetCatalogsSizeProvider: InfoProvider {
-
     public struct Args {}
     public typealias Arguments = Args
 
@@ -14,7 +15,7 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
         self.size = size
     }
 
-    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> TotalAssetCatalogsSizeProvider {
+    public static func extract(fromApi api: SwiftInfo, args _: Args?) throws -> TotalAssetCatalogsSizeProvider {
         let catalogs = try allCatalogs(api: api)
         let total = catalogs.map { $0.size }.reduce(0, +)
         return TotalAssetCatalogsSizeProvider(size: total)
@@ -60,7 +61,7 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
         return (fileSize, largestInnerFile)
     }
 
-    public func summary(comparingWith other: TotalAssetCatalogsSizeProvider?, args: Args?) -> Summary {
+    public func summary(comparingWith other: TotalAssetCatalogsSizeProvider?, args _: Args?) -> Summary {
         let prefix = description
         let stringFormatter: ((Int) -> String) = { value in
             let formatter = ByteCountFormatter()
@@ -68,9 +69,7 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
             formatter.countStyle = .file
             return formatter.string(fromByteCount: Int64(value))
         }
-        return Summary.genericFor(prefix: prefix, now: size, old: other?.size, increaseIsBad: true, stringValueFormatter: stringFormatter) {
-            return abs($1 - $0)
-        }
+        return Summary.genericFor(prefix: prefix, now: size, old: other?.size, increaseIsBad: true, stringValueFormatter: stringFormatter)
     }
 }
 

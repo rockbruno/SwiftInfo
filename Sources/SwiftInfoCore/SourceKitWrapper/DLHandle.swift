@@ -15,7 +15,7 @@ import Foundation
 // Adapted from SourceKit-LSP.
 
 public final class DLHandle {
-    var rawValue: UnsafeMutableRawPointer? = nil
+    var rawValue: UnsafeMutableRawPointer?
 
     init(rawValue: UnsafeMutableRawPointer) {
         self.rawValue = rawValue
@@ -40,7 +40,6 @@ public final class DLHandle {
 }
 
 public struct DLOpenFlags: RawRepresentable, OptionSet {
-
     public static let lazy: DLOpenFlags = DLOpenFlags(rawValue: RTLD_LAZY)
     public static let now: DLOpenFlags = DLOpenFlags(rawValue: RTLD_NOW)
     public static let local: DLOpenFlags = DLOpenFlags(rawValue: RTLD_LOCAL)
@@ -48,11 +47,11 @@ public struct DLOpenFlags: RawRepresentable, OptionSet {
 
     // Platform-specific flags.
     #if os(macOS)
-    public static let first: DLOpenFlags = DLOpenFlags(rawValue: RTLD_FIRST)
-    public static let deepBind: DLOpenFlags = DLOpenFlags(rawValue: 0)
+        public static let first: DLOpenFlags = DLOpenFlags(rawValue: RTLD_FIRST)
+        public static let deepBind: DLOpenFlags = DLOpenFlags(rawValue: 0)
     #else
-    public static let first: DLOpenFlags = DLOpenFlags(rawValue: 0)
-    public static let deepBind: DLOpenFlags = DLOpenFlags(rawValue: RTLD_DEEPBIND)
+        public static let first: DLOpenFlags = DLOpenFlags(rawValue: 0)
+        public static let deepBind: DLOpenFlags = DLOpenFlags(rawValue: RTLD_DEEPBIND)
     #endif
 
     public var rawValue: Int32

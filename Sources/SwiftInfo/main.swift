@@ -19,7 +19,7 @@ public struct Main {
         let args = Runner.getCoreSwiftCArguments(fileUtils: fileUtils,
                                                  toolchainPath: toolchainPath,
                                                  processInfoArgs: processInfoArgs)
-                                                 .joined(separator: " ")
+            .joined(separator: " ")
 
         log("Swiftc Args: \(args)", verbose: true)
 
@@ -60,6 +60,7 @@ source.setEventHandler {
     task.interrupt()
     exit(SIGINT)
 }
+
 ////////
 
 source.resume()

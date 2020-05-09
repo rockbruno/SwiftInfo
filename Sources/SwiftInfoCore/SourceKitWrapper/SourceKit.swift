@@ -16,7 +16,6 @@ import sourcekitd
 
 /// A wrapper for accessing the API of a sourcekitd library loaded via `dlopen`.
 open class SourceKit {
-
     /// The path to the sourcekitd dylib.
     public let path: String
 
@@ -41,17 +40,17 @@ open class SourceKit {
 
     public init() {
         // This is supposed to be used for unit tests. It won't work in production.
-        self.path = ""
-        self.api = nil
-        self.keys = nil
-        self.requests = nil
-        self.values = nil
-        self.dylib = nil
+        path = ""
+        api = nil
+        keys = nil
+        requests = nil
+        values = nil
+        dylib = nil
     }
 
     public init(path: String) {
         self.path = path
-        self.dylib = try! dlopen(path, mode: [.lazy, .local, .first, .deepBind])
+        dylib = try! dlopen(path, mode: [.lazy, .local, .first, .deepBind])
 
         func dlsym_required<T>(_ handle: DLHandle, symbol: String) throws -> T {
             guard let sym: T = dlsym(handle, symbol: symbol) else {
@@ -137,9 +136,9 @@ open class SourceKit {
 
         self.api = api
 
-        self.keys = sourcekitd_keys(api: self.api)
-        self.requests = sourcekitd_requests(api: self.api)
-        self.values = sourcekitd_values(api: self.api)
+        keys = sourcekitd_keys(api: self.api)
+        requests = sourcekitd_requests(api: self.api)
+        values = sourcekitd_values(api: self.api)
 
         api.initialize()
     }
@@ -159,7 +158,6 @@ public enum SKResult<T> {
 }
 
 extension SourceKit {
-
     // MARK: - Convenience API for requests.
 
     /// Send the given request and synchronously receive a reply dictionary (or error).
@@ -175,7 +173,6 @@ extension SourceKit {
 }
 
 public struct sourcekitd_keys {
-
     let request: sourcekitd_uid_t
     let compilerargs: sourcekitd_uid_t
     let offset: sourcekitd_uid_t
@@ -252,7 +249,6 @@ public struct sourcekitd_keys {
 }
 
 public struct sourcekitd_requests {
-
     let editor_open: sourcekitd_uid_t
     let editor_close: sourcekitd_uid_t
     let editor_replacetext: sourcekitd_uid_t
@@ -273,7 +269,6 @@ public struct sourcekitd_requests {
 }
 
 public struct sourcekitd_values {
-
     let notification_documentupdate: sourcekitd_uid_t
     let diag_error: sourcekitd_uid_t
     let diag_warning: sourcekitd_uid_t
@@ -470,18 +465,22 @@ public final class SKRequestDictionary {
         get { fatalError("request is set-only") }
         set { sourcekitd.api.request_dictionary_set_string(dict, key, newValue) }
     }
+
     public subscript(key: sourcekitd_uid_t?) -> Int {
         get { fatalError("request is set-only") }
         set { sourcekitd.api.request_dictionary_set_int64(dict, key, Int64(newValue)) }
     }
+
     public subscript(key: sourcekitd_uid_t?) -> sourcekitd_uid_t? {
         get { fatalError("request is set-only") }
         set { sourcekitd.api.request_dictionary_set_uid(dict, key, newValue) }
     }
+
     public subscript(key: sourcekitd_uid_t?) -> SKRequestDictionary {
         get { fatalError("request is set-only") }
         set { sourcekitd.api.request_dictionary_set_value(dict, key, newValue.dict) }
     }
+
     public subscript<S>(key: sourcekitd_uid_t?) -> S where S: Sequence, S.Element == String {
         get { fatalError("request is set-only") }
         set {
@@ -490,6 +489,7 @@ public final class SKRequestDictionary {
             sourcekitd.api.request_dictionary_set_value(dict, key, array.array)
         }
     }
+
     subscript(key: sourcekitd_uid_t?) -> SKRequestArray {
         get { fatalError("request is set-only") }
         set { sourcekitd.api.request_dictionary_set_value(dict, key, newValue.array) }
@@ -549,18 +549,21 @@ public final class SKResponseDictionary {
 
     public init(_ dict: sourcekitd_variant_t, response: SKResponse) {
         self.dict = dict
-        self.resp = response
+        resp = response
     }
 
     subscript(key: sourcekitd_uid_t?) -> String? {
         return sourcekitd.api.variant_dictionary_get_string(dict, key).map(String.init(cString:))
     }
+
     subscript(key: sourcekitd_uid_t?) -> Int? {
         return Int(sourcekitd.api.variant_dictionary_get_int64(dict, key))
     }
+
     subscript(key: sourcekitd_uid_t?) -> sourcekitd_uid_t? {
         return sourcekitd.api.variant_dictionary_get_uid(dict, key)
     }
+
     subscript(key: sourcekitd_uid_t?) -> SKResponseArray? {
         return SKResponseArray(sourcekitd.api.variant_dictionary_get_value(dict, key), response: resp)
     }
@@ -573,7 +576,7 @@ final class SKResponseArray {
 
     init(_ array: sourcekitd_variant_t, response: SKResponse) {
         self.array = array
-        self.resp = response
+        resp = response
     }
 
     var count: Int { return sourcekitd.api.variant_array_get_count(array) }
@@ -581,7 +584,7 @@ final class SKResponseArray {
     /// If the `applier` returns `false`, iteration terminates.
     @discardableResult
     func forEach(_ applier: (Int, SKResponseDictionary) -> Bool) -> Bool {
-        for i in 0..<count {
+        for i in 0 ..< count {
             if !applier(i, SKResponseDictionary(sourcekitd.api.variant_array_get_value(array, i), response: resp)) {
                 return false
             }

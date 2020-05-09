@@ -1,7 +1,8 @@
 import Foundation
 
+/// Size of the .ipa archive (not the App Store size!).
+/// Requirements: .ipa available in the `#{PROJECT_DIR}/build` folder.
 public struct IPASizeProvider: InfoProvider {
-
     public struct Args {}
     public typealias Arguments = Args
 
@@ -14,7 +15,7 @@ public struct IPASizeProvider: InfoProvider {
         self.size = size
     }
 
-    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> IPASizeProvider {
+    public static func extract(fromApi api: SwiftInfo, args _: Args?) throws -> IPASizeProvider {
         let fileUtils = api.fileUtils
         let infofileFolder = try fileUtils.infofileFolder()
         let buildFolder = infofileFolder + "build/"
@@ -27,7 +28,7 @@ public struct IPASizeProvider: InfoProvider {
         return IPASizeProvider(size: fileSize)
     }
 
-    public func summary(comparingWith other: IPASizeProvider?, args: Args?) -> Summary {
+    public func summary(comparingWith other: IPASizeProvider?, args _: Args?) -> Summary {
         let prefix = description
         let stringFormatter: ((Int) -> String) = { value in
             let formatter = ByteCountFormatter()
@@ -39,8 +40,6 @@ public struct IPASizeProvider: InfoProvider {
                                   now: size,
                                   old: other?.size,
                                   increaseIsBad: true,
-                                  stringValueFormatter: stringFormatter) {
-            return abs($1 - $0)
-        }
+                                  stringValueFormatter: stringFormatter)
     }
 }

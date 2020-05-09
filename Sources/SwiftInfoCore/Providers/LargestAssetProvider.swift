@@ -1,7 +1,8 @@
 import Foundation
 
+/// The largest asset in the project. Only considers files inside asset catalogs.
+/// Requirements: Build logs.
 public struct LargestAssetProvider: InfoProvider {
-
     public struct Args {}
     public typealias Arguments = Args
 
@@ -17,7 +18,7 @@ public struct LargestAssetProvider: InfoProvider {
         self.size = size
     }
 
-    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LargestAssetProvider {
+    public static func extract(fromApi api: SwiftInfo, args _: Args?) throws -> LargestAssetProvider {
         let catalogs = try TotalAssetCatalogsSizeProvider.allCatalogs(api: api)
         let files = catalogs.compactMap { $0.largestInnerFile }
         guard let maxFile = files.max(by: { $0.size < $1.size }) else {
@@ -26,7 +27,7 @@ public struct LargestAssetProvider: InfoProvider {
         return LargestAssetProvider(name: maxFile.name, size: maxFile.size)
     }
 
-    public func summary(comparingWith other: LargestAssetProvider?, args: Args?) -> Summary {
+    public func summary(comparingWith other: LargestAssetProvider?, args _: Args?) -> Summary {
         let stringFormatter: ((Int) -> String) = { value in
             let formatter = ByteCountFormatter()
             formatter.allowsNonnumericFormatting = false

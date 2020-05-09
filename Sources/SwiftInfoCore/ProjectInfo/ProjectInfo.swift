@@ -9,6 +9,7 @@ public struct ProjectInfo: CustomStringConvertible {
     let versionString: String?
     let buildNumber: String?
 
+    /// A visual description of this project.
     public var description: String {
         let version: String
         do {

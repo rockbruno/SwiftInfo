@@ -1,7 +1,8 @@
 import Foundation
 
+/// Number of warnings in a build.
+/// Requirements: Build logs.
 public struct WarningCountProvider: InfoProvider {
-
     public struct Args {}
     public typealias Arguments = Args
 
@@ -14,17 +15,15 @@ public struct WarningCountProvider: InfoProvider {
         self.count = count
     }
 
-    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> WarningCountProvider {
+    public static func extract(fromApi api: SwiftInfo, args _: Args?) throws -> WarningCountProvider {
         let buildLog = try api.fileUtils.buildLog()
         let results = buildLog.match(regex: "(: warning:.*\n)|((warning:.*\n))")
         let count = Set(results).count
         return WarningCountProvider(count: count)
     }
 
-    public func summary(comparingWith other: WarningCountProvider?, args: Args?) -> Summary {
+    public func summary(comparingWith other: WarningCountProvider?, args _: Args?) -> Summary {
         let prefix = description
-        return Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: true) {
-            return abs($1 - $0)
-        }
+        return Summary.genericFor(prefix: prefix, now: count, old: other?.count, increaseIsBad: true)
     }
 }

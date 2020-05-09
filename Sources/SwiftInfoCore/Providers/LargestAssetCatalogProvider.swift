@@ -1,7 +1,8 @@
 import Foundation
 
+/// The name and size of the largest asset catalog.
+/// Requirements: Build logs.
 public struct LargestAssetCatalogProvider: InfoProvider {
-
     public struct Args {}
     public typealias Arguments = Args
 
@@ -16,7 +17,7 @@ public struct LargestAssetCatalogProvider: InfoProvider {
         self.size = size
     }
 
-    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> LargestAssetCatalogProvider {
+    public static func extract(fromApi api: SwiftInfo, args _: Args?) throws -> LargestAssetCatalogProvider {
         let catalogs = try TotalAssetCatalogsSizeProvider.allCatalogs(api: api)
         guard let largest = catalogs.max(by: { $0.size < $1.size }) else {
             throw error("No Asset Catalogs were found!")
@@ -24,7 +25,7 @@ public struct LargestAssetCatalogProvider: InfoProvider {
         return LargestAssetCatalogProvider(name: largest.name, size: largest.size)
     }
 
-    public func summary(comparingWith other: LargestAssetCatalogProvider?, args: Args?) -> Summary {
+    public func summary(comparingWith other: LargestAssetCatalogProvider?, args _: Args?) -> Summary {
         let stringFormatter: ((Int) -> String) = { value in
             let formatter = ByteCountFormatter()
             formatter.allowsNonnumericFormatting = false

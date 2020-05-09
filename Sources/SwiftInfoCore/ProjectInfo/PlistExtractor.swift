@@ -1,6 +1,6 @@
 import Foundation
-import xcodeproj
 import PathKit
+import xcodeproj
 
 public protocol PlistExtractor {
     func extractPlistPath(xcodeproj: String,
@@ -10,7 +10,6 @@ public protocol PlistExtractor {
 }
 
 public struct XcodeprojPlistExtractor: PlistExtractor {
-
     public init() {}
 
     public func extractPlistPath(xcodeproj: String,

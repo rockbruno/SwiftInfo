@@ -1,7 +1,6 @@
 import Foundation
 
 public struct SlackFormatter {
-
     public init() {}
 
     public func format(output: Output, projectInfo: ProjectInfo) -> (json: [String: Any], message: String) {

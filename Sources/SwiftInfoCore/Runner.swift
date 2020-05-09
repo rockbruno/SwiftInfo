@@ -19,6 +19,7 @@ public enum Runner {
             "\(include)/Csourcekitd/include",
             (try! fileUtils.infofileFolder()) + "Infofile.swift",
             "-toolchain",
-            "\(toolchainPath)"] + Array(processInfoArgs.dropFirst()) // Route SwiftInfo args to the sub process
+            "\(toolchainPath)",
+        ] + Array(processInfoArgs.dropFirst()) // Route SwiftInfo args to the sub process
     }
 }
