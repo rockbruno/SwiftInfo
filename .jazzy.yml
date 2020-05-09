@@ -1,0 +1,6 @@
+clean: true
+author: rockbruno
+author_url: https://github.com/rockbruno/SwiftInfo
+module: SwiftInfoCore
+build_tool_arguments: -scheme,SwiftInfoCore,-sdk,iphonesimulator
+output: Documentation
