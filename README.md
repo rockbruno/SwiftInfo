@@ -36,7 +36,7 @@ SwiftInfo extracts information by analyzing the logs that your build system gene
 
 We'll show how to get the logs first as you'll need them to configure SwiftInfo.
 
-**Note:** This repository contains an example project. Check it out to see the tool in action!
+**Note:** This repository contains an example project. Check it out to see the tool in action -- just go to the example project folder and run `make swiftinfo` in your terminal.	
 
 ### Retrieving raw logs with [fastlane](https://github.com/fastlane/fastlane)
 
