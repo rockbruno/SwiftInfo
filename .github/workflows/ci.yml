@@ -19,6 +19,8 @@ jobs:
         DEVELOPER_DIR: /Applications/Xcode_11.4.app/Contents/Developer
     - name: Run tests
       run: swift test
+    - name: Check the example project
+      run: cd ./ExampleProject && make swiftinfo
       env:
         DEVELOPER_DIR: /Applications/Xcode_11.4.app/Contents/Developer
     - name: Package
