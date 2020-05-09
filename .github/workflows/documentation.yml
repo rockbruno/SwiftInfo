@@ -1,28 +1,16 @@
 name: Documentation
 
-on:
+on: 
   push:
     branches:
       - master
-    paths:
-      - .github/workflows/documentation.yml
-      - Sources/**.swift
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
+  deploy_docs:
+    runs-on: macos-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-      - name: Generate Documentation
-        uses: SwiftDocOrg/swift-doc@master
-        with:
-          inputs: "Sources"
-          output: "Documentation"
-      - name: Upload Documentation to Wiki
-        uses: SwiftDocOrg/github-wiki-publish-action@v1
-        with:
-          path: "Documentation"
-        env:
-          GH_PERSONAL_ACCESS_TOKEN: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+    - uses: actions/checkout@v1
+    - name: Publish Jazzy Docs
+      uses: steven0351/publish-jazzy-docs@v1
+      with:
+        personal_access_token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
