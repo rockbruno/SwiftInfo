@@ -28,7 +28,7 @@ By default SwiftInfo will assume you're extracting info from a release build and
 | **🚚 ArchiveDurationProvider**        | Time it took to build and archive the app |
 | **📷 LargestAssetProvider**        | The largest asset in the project. Only considers files inside asset catalogs. |
 
-Each provider may have a specific set of requirements in order for them to work. Check their documentation to learn more.
+Each provider may have a specific set of requirements in order for them to work. [Check their documentation to learn more](https://rockbruno.github.io/SwiftInfo/Structs.html).
 
 ## Usage
 
