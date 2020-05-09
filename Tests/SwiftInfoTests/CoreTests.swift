@@ -2,26 +2,6 @@ import XCTest
 @testable import SwiftInfoCore
 
 final class CoreTests: XCTestCase {
-    func testSwiftCArgs() {
-        let api = SwiftInfo.mock()
-        let exampleRun = ["swiftinfo", "-v", "-s"]
-        let toolchainPath = "/abc/"
-        let args = Runner.getCoreSwiftCArguments(fileUtils: api.fileUtils,
-                                                 toolchainPath: toolchainPath,
-                                                 processInfoArgs: exampleRun)
-        let executionPath = ProcessInfo.processInfo.arguments.first!
-        let toolFolder = URL(string: executionPath)!
-                         .deletingLastPathComponent()
-                         .absoluteString + "../include/swiftinfo"
-        XCTAssertEqual(args, ["swiftc",
-                              "--driver-mode=swift",
-                              "-L", toolFolder, "-I", toolFolder, "-lSwiftInfoCore",
-                              "-Xcc",
-                              "-fmodule-map-file=\(toolFolder)/Csourcekitd/include/module.modulemap",
-                              "-I", "\(toolFolder)/Csourcekitd/include",
-                              "./Infofile.swift", "-toolchain", "\(toolchainPath)", "-v", "-s"])
-    }
-
     func testFullRun() {
         let api = SwiftInfo.mock()
         let outputPath = "SwiftInfo-output/SwiftInfoOutput.json"
