@@ -14,6 +14,6 @@ SwiftInfo-output
 Pods
 *.xcworkspace
 build
-*.xml
-*.html
-*.junit
+ExampleProject/fastlane/report.xml
+ExampleProject/fastlane/test_output/report.html
+ExampleProject/fastlane/test_output/report.junit
