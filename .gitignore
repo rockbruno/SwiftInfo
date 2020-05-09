@@ -10,3 +10,10 @@ swiftinfo
 /SwiftInfo-output
 /bin
 BuildTools/.build
+SwiftInfo-output
+Pods
+*.xcworkspace
+build
+*.xml
+*.html
+*.junit

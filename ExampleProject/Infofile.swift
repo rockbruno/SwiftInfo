@@ -10,14 +10,10 @@ let projectInfo = ProjectInfo(xcodeproj: "SwiftInfoExample.xcodeproj",
 
 let api = SwiftInfo(projectInfo: projectInfo)
 
-let output = api.extract(IPASizeProvider.self)                +
-             api.extract(WarningCountProvider.self)           +
-             api.extract(LargestAssetProvider.self)           +
-             api.extract(TotalTestDurationProvider.self)      +
+let output = api.extract(TotalTestDurationProvider.self)      +
              api.extract(TestCountProvider.self)              +
              api.extract(CodeCoverageProvider.self)           +
-             api.extract(LongestTestDurationProvider.self)    +
-             api.extract(ArchiveDurationProvider.self)
+             api.extract(LongestTestDurationProvider.self)
 
 //api.sendToSlack(output: output, webhookUrl: "slackUrlHere")
 api.print(output: output)
