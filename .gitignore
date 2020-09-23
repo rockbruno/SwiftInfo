@@ -1,4 +1,6 @@
 .DS_Store
+/.swiftpm
+SwiftInfo-bin/
 /.build
 /.builda
 /Packages
