@@ -25,11 +25,7 @@ build:
 	@cp -a "$(TEMPPRODUCTDIR)/." "$(PRODUCTDIR)"
 	@rm -rf "$(TEMPPRODUCTDIR)"
 	@mkdir -p "$(PRODUCTDIR)/bin"
-	@rm -rf $(PRODUCTDIR)/include/swiftinfo/*.build
-	@rm -rf $(PRODUCTDIR)/include/swiftinfo/*.product
 	@rm -rf $(PRODUCTDIR)/include/swiftinfo/ModuleCache
-	@rm -f "$(PRODUCTDIR)/include/swiftinfo/SwiftInfo.swiftdoc"
-	@rm -f "$(PRODUCTDIR)/include/swiftinfo/SwiftInfo.swiftmodule"
 	@mv "$(PRODUCTDIR)/include/swiftinfo/swiftinfo" "$(PRODUCTDIR)/bin"
 	@cp -a "$(REPODIR)/Sources/Csourcekitd/." "$(PRODUCTDIR)/include/swiftinfo/Csourcekitd"
 	@rm -f "$(RELEASEBUILDDIR)/swiftinfo"
