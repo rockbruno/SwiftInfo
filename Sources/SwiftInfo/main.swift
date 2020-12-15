@@ -4,10 +4,11 @@ import SwiftInfoCore
 
 let task = Process()
 
-struct SwiftInfo: ParsableCommand {
-
-    @Flag(name: .long, help: "return current version of `SwiftInfo`")
-    var version = false
+struct Swiftinfo: ParsableCommand {
+    static var configuration = CommandConfiguration(
+        abstract: "Swiftinfo 2.3.12",
+        subcommands: []
+    )
 
     @Flag(name: .shortAndLong, help: "silent all logs")
     var silent = false
@@ -15,26 +16,19 @@ struct SwiftInfo: ParsableCommand {
     @Flag(name: .shortAndLong, help: "logs all details to console")
     var verbose = false
 
-    @Flag(name: .long, help: "is in pull request mode")
+    @Flag(name: .customLong("pullRequest", withSingleDash: true), help: "is in pull request mode")
     var pullRequest = false
 
-    @Flag(name: .long, help: "print source kit")
-    var sourceKit = false
-
-    @Argument(help: "One or more user related Swiftc Args")
-    var arguments: [String] = []
+    @Flag(name: .customLong("print-sourcekit", withSingleDash: true), help: "print source kit")
+    var printSourcekit = false
 
     mutating func run() throws {
         setupLogConfig()
-        if version {
-            log("SwiftInfo 2.3.12")
-            SwiftInfo.exit()
-        }
         guard let executablePath = CommandLine.arguments.first else {
             fail("Couldn't determine the folder that's running SwiftInfo.")
         }
         let fileUtils = FileUtils(path: executablePath)
-        let toolchainPath = SwiftInfo.getToolchainPath()
+        let toolchainPath = Swiftinfo.getToolchainPath()
 
         log("Dylib Folder: \(fileUtils.toolFolder)", verbose: true)
         log("Infofile Path: \(try! fileUtils.infofileFolder())", verbose: true)
@@ -42,7 +36,7 @@ struct SwiftInfo: ParsableCommand {
 
         let args = Runner.getCoreSwiftCArguments(fileUtils: fileUtils,
                                                  toolchainPath: toolchainPath,
-                                                 processInfoArgs: arguments)
+                                                 processInfoArgs: Array(CommandLine.arguments.dropFirst()))
             .joined(separator: " ")
 
         log("Swiftc Args: \(args)", verbose: true)
@@ -53,7 +47,7 @@ struct SwiftInfo: ParsableCommand {
         task.standardError = FileHandle.standardError
 
         task.terminationHandler = { t -> Void in
-            SwiftInfo.exit()
+            Swiftinfo.exit()
         }
 
         task.launch()
@@ -79,7 +73,7 @@ struct SwiftInfo: ParsableCommand {
         isInVerboseMode = verbose
         isInSilentMode = silent
         isInPullRequestMode = pullRequest
-        printSourceKitQueries = sourceKit
+        printSourceKitQueries = printSourcekit
     }
 }
 
@@ -95,5 +89,5 @@ source.setEventHandler {
 ////////
 
 source.resume()
-SwiftInfo.main(CommandLine.arguments)
+Swiftinfo.main()
 dispatchMain()
