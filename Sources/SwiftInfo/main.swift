@@ -10,6 +10,11 @@ struct Swiftinfo: ParsableCommand {
         subcommands: []
     )
 
+    /// since we are using .unconditionalRemaining --help doesnt work anymore
+    /// Thus we added a manual flag here
+    @Flag(name: .shortAndLong, help: "Show help information.")
+    var help = false
+
     @Flag(name: .shortAndLong, help: "silent all logs")
     var silent = false
 
@@ -22,7 +27,15 @@ struct Swiftinfo: ParsableCommand {
     @Flag(name: .customLong("print-sourcekit", withSingleDash: true), help: "print source kit")
     var printSourcekit = false
 
+    @Argument(parsing: .unconditionalRemaining)
+    var arguments: [String] = []
+
     mutating func run() throws {
+        if help {
+            print(Swiftinfo.helpMessage())
+            Swiftinfo.exit()
+        }
+
         setupLogConfig()
         guard let executablePath = CommandLine.arguments.first else {
             fail("Couldn't determine the folder that's running SwiftInfo.")
