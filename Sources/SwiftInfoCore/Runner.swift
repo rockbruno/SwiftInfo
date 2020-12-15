@@ -20,6 +20,6 @@ public enum Runner {
             (try! fileUtils.infofileFolder()) + "Infofile.swift",
             "-toolchain",
             "\(toolchainPath)",
-        ] + Array(processInfoArgs.dropFirst()) // Route SwiftInfo args to the sub process
+        ] + processInfoArgs // Route SwiftInfo args to the sub process
     }
 }
