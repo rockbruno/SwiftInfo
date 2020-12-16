@@ -10,24 +10,21 @@ struct Swiftinfo: ParsableCommand {
         subcommands: []
     )
 
-    /// since we are using .unconditionalRemaining --help doesnt work anymore
-    /// Thus we added a manual flag here
+    /// Since we are using .unconditionalRemaining, --help doesnt work anymore.
+    /// Thus, we added a manual flag here.
     @Flag(name: .shortAndLong, help: "Show help information.")
     var help = false
 
-    @Flag(name: .shortAndLong, help: "silent all logs")
+    @Flag(name: .shortAndLong, help: "Silences all logs.")
     var silent = false
 
-    @Flag(name: .shortAndLong, help: "logs all details to console")
+    @Flag(name: .shortAndLong, help: "Logs additional details to the console.")
     var verbose = false
 
-    @Flag(name: .customLong("pullRequest", withSingleDash: true), help: "is in pull request mode")
-    var pullRequest = false
-
-    @Flag(name: .customLong("print-sourcekit", withSingleDash: true), help: "print source kit")
+    @Flag(name: .shortAndLong, help: "Logs SourceKit requests to the console.")
     var printSourcekit = false
 
-    @Argument(parsing: .unconditionalRemaining)
+    @Argument(parsing: .unconditionalRemaining, help: "Any additional arguments that you would like your Infofile.swift to receive. These arguments can be retrieved in your Infofile through CommandLine's APIs to customize your runs.")
     var arguments: [String] = []
 
     mutating func run() throws {
@@ -85,7 +82,6 @@ struct Swiftinfo: ParsableCommand {
     private func setupLogConfig() {
         isInVerboseMode = verbose
         isInSilentMode = silent
-        isInPullRequestMode = pullRequest
         printSourceKitQueries = printSourcekit
     }
 }
