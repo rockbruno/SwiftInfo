@@ -22,19 +22,20 @@ public struct FileUtils {
     /// The utility that opens and saves files.
     public let fileOpener: FileOpener
 
+    /// The path of the executable file
+    public let path: String
+
     public init(fileManager: FileManager = .default,
-                fileOpener: FileOpener = .init()) {
+                fileOpener: FileOpener = .init(),
+                path: String = "") {
         self.fileManager = fileManager
         self.fileOpener = fileOpener
+        self.path = path
     }
 
     /// The working path that is containing the SwiftInfo binary.
     public var toolFolder: String {
-        guard let executablePath = ProcessInfo.processInfo.arguments.first else {
-            fail("Couldn't determine the folder that's running SwiftInfo.")
-        }
-
-        let executableUrl = URL(fileURLWithPath: executablePath)
+        let executableUrl = URL(fileURLWithPath: path)
         if let isAliasFile = try! executableUrl.resourceValues(forKeys: [URLResourceKey.isAliasFileKey]).isAliasFile, isAliasFile {
             return try! URL(resolvingAliasFileAt: executableUrl).deletingLastPathComponent().path
         } else {

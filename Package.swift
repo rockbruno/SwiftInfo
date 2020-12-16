@@ -10,7 +10,8 @@ let package = Package(
         .executable(name: "swiftinfo", targets: ["SwiftInfo"])
     ],
     dependencies: [
-        .package(url: "https://github.com/tuist/xcodeproj.git", .exact("7.8.0"))
+        .package(url: "https://github.com/tuist/xcodeproj.git", .exact("7.8.0")),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.3.0"),
     ],
     targets: [
         // Csourcekitd: C modules wrapper for sourcekitd.
@@ -24,7 +25,7 @@ let package = Package(
             dependencies: ["Csourcekitd", "XcodeProj"]),
         .target(
             name: "SwiftInfo",
-            dependencies: ["SwiftInfoCore"]),
+            dependencies: ["SwiftInfoCore", "ArgumentParser"]),
         .testTarget(
             name: "SwiftInfoTests",
             dependencies: ["SwiftInfo"]),
