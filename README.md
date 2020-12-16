@@ -139,6 +139,20 @@ You can then use [SwiftInfo-Reader](https://github.com/rockbruno/SwiftInfo-Reade
 To be able to support different types of projects, SwiftInfo provides customization options to some providers. See the documentation for each provider to see what it supports.
 If you wish to track something that's not handled by the default providers, you can also create your own providers. [Click here to see how](CREATING_CUSTOM_PROVIDERS.md).
 
+## Customizing Runs
+
+Any arguments you pass to SwiftInfo can be inspected inside your Infofile. This allows you to pass any custom information you want to the binary and use it to customize your runs.
+
+For example, if you run SwiftInfo by calling `swiftinfo -myCustomArgument`, you can use `ProcessInfo` to check for its presence inside your Infofile.
+
+```swift
+if ProcessInfo.processInfo.arguments.contains("-myCustomArgument") {
+  // do something cool and fun
+}
+```
+
+If the argument has a value, you can also fetch that value with `UserDefaults`.
+
 ## Installation
 
 ### CocoaPods
