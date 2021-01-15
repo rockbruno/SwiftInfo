@@ -21,16 +21,20 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
         return TotalAssetCatalogsSizeProvider(size: total)
     }
 
-    static func allCatalogs(api: SwiftInfo) throws -> [AssetCatalog] {
+    static func allCatalogsPaths(api: SwiftInfo) throws -> [String] {
         let buildLog = try api.fileUtils.buildLog()
         let compileRows = buildLog.match(regex: "CompileAssetCatalog.*")
-        let catalogs: [String] = compileRows.compactMap {
-            let formatted = $0.replacingEscapedSpaces
-            let catalog = formatted.components(separatedBy: " ").first {
-                $0.hasSuffix(".xcassets")
-            }
-            return catalog?.removingPlaceholder
-        }
+        let catalogs: [String] = compileRows.map { (row: String) -> [String] in
+            let formatted: String = row.replacingEscapedSpaces
+            let catalogs: [String] = formatted.components(separatedBy: " ").filter { $0.hasSuffix(".xcassets") }
+            return catalogs.compactMap { $0.removingPlaceholder }
+        }.flatMap { $0 }
+        let uniqueCatalogs: [String] = Array(Set(catalogs))
+        return uniqueCatalogs
+    }
+
+    static func allCatalogs(api: SwiftInfo) throws -> [AssetCatalog] {
+        let catalogs = try allCatalogsPaths(api: api)
         let sizes = try catalogs.map { try folderSize(ofCatalog: $0, api: api) }
         let result = zip(catalogs, sizes).map { ($0.0, $0.1) }
         return result.map { AssetCatalog(name: $0.0, size: $0.1.0, largestInnerFile: $0.1.1) }

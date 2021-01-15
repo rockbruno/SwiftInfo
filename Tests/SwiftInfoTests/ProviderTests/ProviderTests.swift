@@ -229,4 +229,20 @@ Touch /Users/bruno.rocha/Library/Developer/Xcode/DerivedData/Rapiddo-cbobntbmchy
         XCTAssertEqual("/Users/bla/action.xcresult",
                        CodeCoverageProvider.getCodeCoverageXcode11JsonPath(fromLogs: log))
     }
+
+    func testAssetCatalogPaths() {
+        FileUtils.buildLogFilePath = "./build.log"
+        let log =
+            """
+        CompileAssetCatalog /tmp/sandbox/58b30f5722d5c60100e34a03/ci/Build/Intermediates.noindex/ArchiveIntermediates/rogerluan-env/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/Stripe_Stripe.bundle /tmp/sandbox/58b30f5722d5c60100e34a03/ci/SourcePackages/checkouts/stripe-ios/Stripe/Resources/Images/Stripe.xcassets (in target 'Stripe_Stripe' from project 'Stripe')
+        CompileAssetCatalog /tmp/sandbox/58b30f5722d5c60100e34a03/ci/Build/Intermediates.noindex/ArchiveIntermediates/rogerluan-env/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/rogerluan.appex /tmp/sandbox/workspace/rogerluan-sticker-pack/Stickers.xcassets (in target 'rogerluan-sticker-pack' from project 'rogerluans-product')
+        CompileAssetCatalog /tmp/sandbox/58b30f5722d5c60100e34a03/ci/Build/Intermediates.noindex/ArchiveIntermediates/rogerluan-env/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/rogerluanCore.framework /tmp/sandbox/workspace/rogerluan-core-ios/rogerluan-core/Colors.xcassets (in target 'rogerluanCore' from project 'Pods')
+        CompileAssetCatalog /tmp/sandbox/58b30f5722d5c60100e34a03/ci/Build/Intermediates.noindex/ArchiveIntermediates/rogerluan-env/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/rogerluan-function-widget.appex /tmp/sandbox/workspace/rogerluan-function-widget/Icons.xcassets /tmp/sandbox/workspace/rogerluans-product/Colors.xcassets (in target 'rogerluan-function-widget' from project 'rogerluans-product')
+        CompileAssetCatalog /tmp/sandbox/58b30f5722d5c60100e34a03/ci/Build/Intermediates.noindex/ArchiveIntermediates/rogerluan-env/IntermediateBuildFilesPath/UninstalledProducts/iphoneos/rogerluan-share-plugin.appex /tmp/sandbox/workspace/rogerluans-product/Original Icons.xcassets /tmp/sandbox/workspace/rogerluan-share-plugin/Assets.xcassets /tmp/sandbox/workspace/rogerluans-product/Icons.xcassets /tmp/sandbox/workspace/rogerluans-product/SharedIcons.xcassets /tmp/sandbox/workspace/rogerluans-product/Colors.xcassets /tmp/sandbox/workspace/rogerluans-product/SharedImages.xcassets (in target 'rogerluan-share-plugin' from project 'rogerluans-product')
+        CompileAssetCatalog /tmp/sandbox/58b30f5722d5c60100e34a03/ci/Build/Intermediates.noindex/ArchiveIntermediates/rogerluan-env/InstallationBuildProductsLocation/Applications/rogerluan.app /tmp/sandbox/workspace/rogerluans-product/AppIcon.xcassets /tmp/sandbox/workspace/rogerluans-product/Original Icons.xcassets /tmp/sandbox/workspace/rogerluans-product/Images.xcassets /tmp/sandbox/workspace/rogerluans-product/SharedImages.xcassets /tmp/sandbox/workspace/rogerluans-product/Icons.xcassets /tmp/sandbox/workspace/rogerluans-product/SharedIcons.xcassets /tmp/sandbox/workspace/rogerluans-product/Colors.xcassets (in target 'rogerluans-product' from project 'rogerluans-product')
+        """
+        api.mockFileManager.add(file: "build.log", contents: log)
+        let paths = try! TotalAssetCatalogsSizeProvider.allCatalogsPaths(api: api)
+        XCTAssertEqual(paths.count, 12)
+    }
 }
