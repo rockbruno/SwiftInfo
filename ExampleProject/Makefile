@@ -9,6 +9,7 @@ swiftinfo:
 	cd ./SwiftInfo-bin && unzip swiftinfo.zip 
 	bundle install
 	bundle exec fastlane beta
-	./SwiftInfo-bin/bin/swiftinfo
+	./SwiftInfo-bin/bin/swiftinfo --help
+	./SwiftInfo-bin/bin/swiftinfo -v --myCustomArgument
 	echo "-------"
 	echo "This bash script runs SwiftInfo outside of fastlane so you can see the output, but check out the Fastfile to see how you could use this in a real project."

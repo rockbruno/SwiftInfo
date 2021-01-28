@@ -17,4 +17,9 @@ let output = api.extract(TotalTestDurationProvider.self)      +
 
 //api.sendToSlack(output: output, webhookUrl: "slackUrlHere")
 api.print(output: output)
+
+if ProcessInfo.processInfo.arguments.contains("--myCustomArgument") {
+    print("Yay, custom arguments!")
+}
+
 api.save(output: output)

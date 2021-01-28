@@ -30,7 +30,7 @@ struct Swiftinfo: ParsableCommand {
     mutating func run() throws {
         guard !help else {
             print(Swiftinfo.helpMessage())
-            return
+            Swiftinfo.exit()
         }
 
         setupLogConfig()
