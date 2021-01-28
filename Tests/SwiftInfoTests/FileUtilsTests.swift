@@ -13,7 +13,7 @@ final class FileUtilsTests: XCTestCase {
         FileUtils.testLogFilePath = ""
         fileManager = MockFileManager()
         fileOpener = MockFileOpener(mockFM: fileManager)
-        fileUtils = FileUtils(fileManager: fileManager, fileOpener: fileOpener, path: "")
+        fileUtils = FileUtils(fileManager: fileManager, fileOpener: fileOpener)
     }
 
     func testInfofileFinder() {

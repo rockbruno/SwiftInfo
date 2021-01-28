@@ -16,12 +16,12 @@ jobs:
     - name: Build
       run: make build
       env:
-        DEVELOPER_DIR: /Applications/Xcode_12.app/Contents/Developer
+        DEVELOPER_DIR: /Applications/Xcode_12.2.app/Contents/Developer
     - name: Run tests
       run: swift test
     - name: Check the example project
       run: cd ./ExampleProject && make swiftinfo
       env:
-        DEVELOPER_DIR: /Applications/Xcode_12.app/Contents/Developer
+        DEVELOPER_DIR: /Applications/Xcode_12.2.app/Contents/Developer
     - name: Package
       run: make package

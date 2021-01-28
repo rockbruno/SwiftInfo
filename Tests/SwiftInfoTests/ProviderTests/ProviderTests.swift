@@ -5,7 +5,7 @@ extension SwiftInfo {
     static func mock() -> SwiftInfo {
         let fileManager = MockFileManager()
         let fileOpener = MockFileOpener(mockFM: fileManager)
-        let fileUtils = FileUtils(fileManager: fileManager, fileOpener: fileOpener, path: "")
+        let fileUtils = FileUtils(fileManager: fileManager, fileOpener: fileOpener)
         fileManager.add(file: "./Infofile.swift", contents: "")
         let projectInfo = ProjectInfo(xcodeproj: "Mock.xcproject",
                                       target: "Mock",

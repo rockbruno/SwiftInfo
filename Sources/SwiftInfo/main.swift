@@ -28,25 +28,24 @@ struct Swiftinfo: ParsableCommand {
     var arguments: [String] = []
 
     mutating func run() throws {
-        if help {
+        guard !help else {
             print(Swiftinfo.helpMessage())
-            Swiftinfo.exit()
+            return
         }
 
         setupLogConfig()
-        guard let executablePath = CommandLine.arguments.first else {
-            fail("Couldn't determine the folder that's running SwiftInfo.")
-        }
-        let fileUtils = FileUtils(path: executablePath)
-        let toolchainPath = Swiftinfo.getToolchainPath()
+
+        let fileUtils = FileUtils()
+        let toolchainPath = getToolchainPath()
 
         log("Dylib Folder: \(fileUtils.toolFolder)", verbose: true)
         log("Infofile Path: \(try! fileUtils.infofileFolder())", verbose: true)
         log("Toolchain Path: \(toolchainPath)", verbose: true)
 
+        let processInfoArgs = ProcessInfo.processInfo.arguments
         let args = Runner.getCoreSwiftCArguments(fileUtils: fileUtils,
                                                  toolchainPath: toolchainPath,
-                                                 processInfoArgs: Array(CommandLine.arguments.dropFirst()))
+                                                 processInfoArgs: processInfoArgs)
             .joined(separator: " ")
 
         log("Swiftc Args: \(args)", verbose: true)
@@ -63,7 +62,7 @@ struct Swiftinfo: ParsableCommand {
         task.launch()
     }
 
-    static func getToolchainPath() -> String {
+    private func getToolchainPath() -> String {
         let task = Process()
         task.launchPath = "/bin/bash"
         task.arguments = ["-c", "xcode-select -p"]
