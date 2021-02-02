@@ -6,7 +6,7 @@ final class SlackFormatterTests: XCTestCase {
         let swiftInfo = SwiftInfo.mock()
         let summaries = [Summary(text: "A", style: .positive, numericValue: 0, stringValue: "a")]
         let output = Output(rawDictionary: [:], summaries: summaries, errors: [])
-        let formatted = SlackFormatter().format(output: output, projectInfo: swiftInfo.projectInfo)
+        let formatted = SlackFormatter().format(output: output, titlePrefix: nil, projectInfo: swiftInfo.projectInfo)
         let dictionary = NSDictionary(dictionary: formatted.json)
         let expected: [String: Any] =
             [
@@ -16,11 +16,27 @@ final class SlackFormatterTests: XCTestCase {
         XCTAssertEqual(dictionary, NSDictionary(dictionary: expected))
     }
 
+    func testFormatterWithTitlePrefix() {
+        let swiftInfo = SwiftInfo.mock()
+        let prefix = "<!subteam^mention_id|ios-team>"
+        let summaries = [Summary(text: "A", style: .positive, numericValue: 0, stringValue: "a")]
+        let output = Output(rawDictionary: [:], summaries: summaries, errors: [])
+        let formatted = SlackFormatter().format(output: output, titlePrefix: prefix, projectInfo: swiftInfo.projectInfo)
+        let dictionary = NSDictionary(dictionary: formatted.json)
+        let text = prefix + "Mock 1.0 (1) - Mock-Debug:"
+        let expected: [String: Any] =
+            [
+                "attachments": [["color": "#36a64f","text": "A"]],
+                "text": text
+        ]
+        XCTAssertEqual(dictionary, NSDictionary(dictionary: expected))
+    }
+
     func testFormatterWithError() {
         let swiftInfo = SwiftInfo.mock()
         let summaries = [Summary(text: "A", style: .positive, numericValue: 0, stringValue: "a")]
         let output = Output(rawDictionary: [:], summaries: summaries, errors: ["abc", "cde"])
-        let formatted = SlackFormatter().format(output: output, projectInfo: swiftInfo.projectInfo)
+        let formatted = SlackFormatter().format(output: output, titlePrefix: nil, projectInfo: swiftInfo.projectInfo)
         let dictionary = NSDictionary(dictionary: formatted.json)
         let expected: [String: Any] =
             [
@@ -34,7 +50,7 @@ final class SlackFormatterTests: XCTestCase {
         let swiftInfo = SwiftInfo.mock()
         let summaries = [Summary(text: "A", style: .positive, numericValue: 0, stringValue: "a")]
         let output = Output(rawDictionary: [:], summaries: summaries, errors: [])
-        let formatted = SlackFormatter().format(output: output, projectInfo: swiftInfo.projectInfo)
+        let formatted = SlackFormatter().format(output: output, titlePrefix: nil, projectInfo: swiftInfo.projectInfo)
         XCTAssertEqual(formatted.message, "SwiftInfo results for Mock 1.0 (1) - Mock-Debug:\nA")
     }
 }
