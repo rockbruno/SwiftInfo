@@ -33,7 +33,7 @@ struct Swiftinfo: ParsableCommand {
             Swiftinfo.exit()
         }
 
-        setupLogConfig()
+        setupConfig()
 
         let fileUtils = FileUtils()
         let toolchainPath = getToolchainPath()
@@ -78,10 +78,11 @@ struct Swiftinfo: ParsableCommand {
         return oneLined + "/Toolchains/XcodeDefault.xctoolchain/usr/lib/sourcekitd.framework/sourcekitd"
     }
 
-    private func setupLogConfig() {
+    private func setupConfig() {
         isInVerboseMode = verbose
         isInSilentMode = silent
         printSourceKitQueries = printSourcekit
+        isInPullRequestMode = ProcessInfo.processInfo.arguments.contains("--pullRequest")
     }
 }
 
