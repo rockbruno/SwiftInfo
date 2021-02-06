@@ -1,9 +1,13 @@
 import Foundation
 
-public var isInVerboseMode = false
-public var isInSilentMode = false
-public var isInPullRequestMode = false
-public var printSourceKitQueries = false
+func args() -> [String] {
+    return ProcessInfo.processInfo.arguments
+}
+
+public var isInVerboseMode = args().contains("-v") || args().contains("--verbose")
+public var isInSilentMode = args().contains("-s") || args().contains("--silent")
+public var isInPullRequestMode = args().contains("--pullRequest")
+public var printSourceKitQueries = args().contains("-p") || args().contains("--print-sourcekit")
 
 public func log(_ message: String, verbose: Bool = false, sourceKit: Bool = false, hasPrefix: Bool = true) {
     guard isInSilentMode == false else {
