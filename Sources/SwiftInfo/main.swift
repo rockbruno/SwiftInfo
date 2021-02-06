@@ -6,7 +6,7 @@ let task = Process()
 
 struct Swiftinfo: ParsableCommand {
     static var configuration = CommandConfiguration(
-        abstract: "Swiftinfo 2.5.0",
+        abstract: "Swiftinfo 2.5.1",
         subcommands: []
     )
 
@@ -32,8 +32,6 @@ struct Swiftinfo: ParsableCommand {
             print(Swiftinfo.helpMessage())
             Swiftinfo.exit()
         }
-
-        setupConfig()
 
         let fileUtils = FileUtils()
         let toolchainPath = getToolchainPath()
@@ -76,13 +74,6 @@ struct Swiftinfo: ParsableCommand {
         }
         let oneLined = developer.replacingOccurrences(of: "\n", with: "")
         return oneLined + "/Toolchains/XcodeDefault.xctoolchain/usr/lib/sourcekitd.framework/sourcekitd"
-    }
-
-    private func setupConfig() {
-        isInVerboseMode = verbose
-        isInSilentMode = silent
-        printSourceKitQueries = printSourcekit
-        isInPullRequestMode = ProcessInfo.processInfo.arguments.contains("--pullRequest")
     }
 }
 
