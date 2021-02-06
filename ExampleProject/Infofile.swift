@@ -20,6 +20,8 @@ api.print(output: output)
 
 if ProcessInfo.processInfo.arguments.contains("--myCustomArgument") {
     print("Yay, custom arguments!")
+} else {
+    preconditionFailure("The custom arguments test didn't work.")
 }
 
 api.save(output: output)
