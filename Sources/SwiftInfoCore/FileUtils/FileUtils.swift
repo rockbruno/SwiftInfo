@@ -132,7 +132,14 @@ public struct FileUtils {
         let path = try outputFileURL()
         log("Path to save: \(path.absoluteString)", verbose: true)
         let dictionary = ["data": output]
-        let json = try JSONSerialization.data(withJSONObject: dictionary, options: [.prettyPrinted])
+        let writingOptions: JSONSerialization.WritingOptions = {
+            if #available(OSX 10.13, *) {
+                return [.prettyPrinted, .sortedKeys]
+            } else {
+                return [.prettyPrinted]
+            }
+        }()
+        let json = try JSONSerialization.data(withJSONObject: dictionary, options: writingOptions)
         try? fileManager.createDirectory(atPath: try outputFileFolder(),
                                          withIntermediateDirectories: true,
                                          attributes: nil)
