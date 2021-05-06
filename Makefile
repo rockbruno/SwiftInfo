@@ -29,10 +29,10 @@ build:
 	@mkdir -p "$(TEMPPRODUCTDIR)"
 	@mkdir -p "$(TEMPPRODUCTDIR)/include/swiftinfo"
 
-	@# Module Stability - Replace *.swiftmodules with *.swiftinterface
+	@# Module Stability - Replace *.swiftmodule with *.swiftinterface
 	@mv *.swiftinterface $(RELEASEBUILDDIR)
 	@rm $(RELEASEBUILDDIR)/*.swiftmodule
-	@# Workaround for types that have the same name as the module
+	@# Workaround for types that have the same name as its module
 	@# https://forums.swift.org/t/frameworkname-is-not-a-member-type-of-frameworkname-errors-inside-swiftinterface/28962
 	@sed -i '' 's/XcodeProj\.//g' $(RELEASEBUILDDIR)/XcodeProj.swiftinterface
 
