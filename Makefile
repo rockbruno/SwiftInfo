@@ -16,11 +16,26 @@ build:
 	@swift build \
 		-c release \
 		--disable-sandbox \
-		--build-path "$(BUILDDIR)"
+		--build-path "$(BUILDDIR)" \
+		-Xswiftc \
+		-emit-module-interface \
+		-Xswiftc \
+		-enable-library-evolution \
+		-Xswiftc \
+		-swift-version \
+		-Xswiftc 5
 	@rm -rf "$(PRODUCTDIR)"
 	@rm -rf "$(TEMPPRODUCTDIR)"
 	@mkdir -p "$(TEMPPRODUCTDIR)"
 	@mkdir -p "$(TEMPPRODUCTDIR)/include/swiftinfo"
+
+	@# Module Stability - Replace *.swiftmodule with *.swiftinterface
+	@mv *.swiftinterface $(RELEASEBUILDDIR)
+	@rm $(RELEASEBUILDDIR)/*.swiftmodule
+	@# Workaround for types that have the same name as its module
+	@# https://forums.swift.org/t/frameworkname-is-not-a-member-type-of-frameworkname-errors-inside-swiftinterface/28962
+	@sed -i '' 's/XcodeProj\.//g' $(RELEASEBUILDDIR)/XcodeProj.swiftinterface
+
 	@cp -a "$(RELEASEBUILDDIR)/." "$(TEMPPRODUCTDIR)/include/swiftinfo"
 	@cp -a "$(TEMPPRODUCTDIR)/." "$(PRODUCTDIR)"
 	@rm -rf "$(TEMPPRODUCTDIR)"
