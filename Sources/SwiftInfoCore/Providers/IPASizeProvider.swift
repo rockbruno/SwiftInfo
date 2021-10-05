@@ -1,9 +1,16 @@
 import Foundation
 
 /// Size of the .ipa archive (not the App Store size!).
-/// Requirements: .ipa available in the `#{PROJECT_DIR}/build` folder.
+/// Requirements: .ipa available in the `#{PROJECT_DIR}/build` folder (or in another `PROJECT_DIR` subfolder provided as the `path` argument).
 public struct IPASizeProvider: InfoProvider {
-    public struct Args {}
+    public struct Args {
+        /// The path to the folder containing the .ipa file.
+        public let path: String
+
+        public init(path: String) {
+            self.path = path
+        }
+    }
     public typealias Arguments = Args
 
     public static let identifier: String = "ipa_size"
@@ -15,10 +22,10 @@ public struct IPASizeProvider: InfoProvider {
         self.size = size
     }
 
-    public static func extract(fromApi api: SwiftInfo, args _: Args?) throws -> IPASizeProvider {
+    public static func extract(fromApi api: SwiftInfo, args: Args?) throws -> IPASizeProvider {
         let fileUtils = api.fileUtils
         let infofileFolder = try fileUtils.infofileFolder()
-        let buildFolder = infofileFolder + "build/"
+        let buildFolder = infofileFolder + (args?.path ?? "build/")
         let contents = try fileUtils.fileManager.contentsOfDirectory(atPath: buildFolder)
         guard let ipa = contents.first(where: { $0.hasSuffix(".ipa") }) else {
             throw error(".ipa not found! Attempted to find .ipa at: \(buildFolder)")
