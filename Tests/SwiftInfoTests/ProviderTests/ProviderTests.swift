@@ -46,6 +46,14 @@ final class ProviderTests: XCTestCase {
         XCTAssertEqual(extracted.size, 5000)
     }
 
+    func testIPASizeWithCustomPath() {
+        let path = "./custom/path/App.ipa"
+        api.mockFileManager.add(file: path, contents: "")
+        api.mockFileManager.add(attributes: [.size: UInt64(5000)], file: path)
+        let extracted = try! IPASizeProvider.extract(fromApi: api, args: .init(path: "custom/path/"))
+        XCTAssertEqual(extracted.size, 5000)
+    }
+
     func testWarningCount() {
         FileUtils.buildLogFilePath = "./build.log"
         let log =
