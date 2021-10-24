@@ -20,6 +20,9 @@ public enum Runner {
             (try! fileUtils.infofileFolder()) + "Infofile.swift",
             "-toolchain",
             "\(toolchainPath)",
+            // Swift 5.5 (from Xcode 13+) uses the new swift-driver which doesn't support -toolchain arg
+            // Disabling the driver for now as a workaround so it works with Swift 5.5 and older versions
+            "-disallow-use-new-driver",
         ] + Array(processInfoArgs.dropFirst()) // Route SwiftInfo args to the sub process
     }
 }
