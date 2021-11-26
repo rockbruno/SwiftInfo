@@ -20,7 +20,7 @@ public struct LinesOfCodeProvider: InfoProvider {
 
     public static let identifier: String = "lines_of_code"
 
-    public let description: String = "💻 Executable Lines of Code"
+    public var description: String { "💻 Executable Lines of Code" }
     public let count: Int
 
     public init(count: Int) {

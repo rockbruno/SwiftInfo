@@ -8,7 +8,7 @@ public struct LongestTestDurationProvider: InfoProvider {
 
     public static let identifier: String = "longest_test_duration"
 
-    public let description: String = "⏰ Longest Test"
+    public var description: String { "⏰ Longest Test" }
     public let name: String
     public let durationInt: Int
 

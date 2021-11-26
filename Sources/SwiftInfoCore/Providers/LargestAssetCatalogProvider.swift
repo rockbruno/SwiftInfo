@@ -8,7 +8,7 @@ public struct LargestAssetCatalogProvider: InfoProvider {
 
     public static let identifier: String = "largest_asset_catalog_size"
 
-    public let description: String = "🖼 Largest Asset Catalog"
+    public var description: String { "🖼 Largest Asset Catalog" }
     public let name: String
     public let size: Int
 

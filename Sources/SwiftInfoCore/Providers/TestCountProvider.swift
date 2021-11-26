@@ -18,7 +18,7 @@ public struct TestCountProvider: InfoProvider {
 
     public static let identifier: String = "test_count"
 
-    public let description: String = "🎯 Test Count"
+    public var description: String { "🎯 Test Count" }
     public let count: Int
 
     public init(count: Int) {

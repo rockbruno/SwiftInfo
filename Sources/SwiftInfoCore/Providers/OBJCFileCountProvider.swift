@@ -8,7 +8,7 @@ public struct OBJCFileCountProvider: InfoProvider {
 
     public static let identifier: String = "objc_file_count"
 
-    public let description: String = "🧙‍♂️ OBJ-C .h/.m File Count"
+    public var description: String { "🧙‍♂️ OBJ-C .h/.m File Count" }
     public let count: Int
 
     public init(count: Int) {

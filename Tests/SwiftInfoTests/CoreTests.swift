@@ -105,7 +105,7 @@ struct MockInfoProvider: InfoProvider {
     public typealias Arguments = Args
 
     static let identifier: String = "mock_provider"
-    let description: String = "Fake provider for testing purposes"
+    var description: String { "Fake provider for testing purposes" }
     let value: Int
 
     static func extract(fromApi api: SwiftInfo, args: Args?) throws -> MockInfoProvider {

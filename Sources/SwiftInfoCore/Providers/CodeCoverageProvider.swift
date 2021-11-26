@@ -25,7 +25,7 @@ public struct CodeCoverageProvider: InfoProvider {
         return URL(fileURLWithPath: "./\(tempFileName)")
     }
 
-    public let description: String = "📊 Code Coverage"
+    public var description: String { "📊 Code Coverage" }
     public let percentageInt: Int
 
     public init(percentageInt: Int) {

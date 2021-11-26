@@ -8,7 +8,7 @@ public struct TotalAssetCatalogsSizeProvider: InfoProvider {
 
     public static let identifier: String = "total_asset_catalogs_size"
 
-    public let description: String = "🎨 Total Asset Catalogs Size"
+    public var description: String { "🎨 Total Asset Catalogs Size" }
     public let size: Int
 
     public init(size: Int) {
