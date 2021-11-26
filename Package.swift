@@ -10,7 +10,7 @@ let package = Package(
         .executable(name: "swiftinfo", targets: ["SwiftInfo"])
     ],
     dependencies: [
-        .package(url: "https://github.com/tuist/xcodeproj.git", .exact("8.5.0")),
+        .package(url: "https://github.com/tuist/xcodeproj.git", .upToNextMinor(from: "8.7.1")),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "1.0.0"),
     ],
     targets: [
@@ -32,7 +32,7 @@ let package = Package(
             name: "SwiftInfo",
             dependencies: [
                 "SwiftInfoCore",
-                .product(name: "ArgumentParser", package: "xcodeproj"),
+                .product(name: "ArgumentParser", package: "swift-argument-parser"),
             ]
         ),
         .testTarget(

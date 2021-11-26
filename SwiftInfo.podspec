@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
   s.name = 'SwiftInfo'
   s.module_name = 'SwiftInfo'
-  s.version = '2.6.0'
+  s.version = '2.7.0'
   s.license = { type: 'MIT', file: 'LICENSE' }
   s.summary = 'Extract and analyze the evolution of an iOS app\'s code.'
   s.homepage = 'https://github.com/rockbruno/SwiftInfo'
