@@ -44,7 +44,7 @@ final class CoreTests: XCTestCase {
             "mock_provider": [
                 "data": [
                     "value": 10,
-                    "description": "Fake provider for testing purposes"
+//                    "description": "Fake provider for testing purposes"
                 ],
                 "summary": [
                     "text": "Old: 5, New: 10",
@@ -54,6 +54,7 @@ final class CoreTests: XCTestCase {
                 ]
             ]
         ]] + dataArray
+
         expectedOutput["data"] = newDataArray
         let newOutputData = api.mockFileManager.dataContents(atPath: outputPath)!
         let newOutput = try! JSONSerialization.jsonObject(with: newOutputData, options: []) as! [String: Any]
@@ -81,7 +82,7 @@ final class CoreTests: XCTestCase {
             "mock_provider": [
                 "data": [
                     "value": 10,
-                    "description": "Fake provider for testing purposes"
+//                    "description": "Fake provider for testing purposes"
                 ],
                 "summary": [
                     "text": "10",
@@ -100,7 +101,6 @@ final class CoreTests: XCTestCase {
 }
 
 struct MockInfoProvider: InfoProvider {
-
     public struct Args {}
     public typealias Arguments = Args
 
