@@ -1,0 +1,957 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/BuildSystem.swift",
+      "line": 3,
+      "symbol": "BuildSystem",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/BuildSystem.swift",
+      "line": 4,
+      "symbol": "BuildSystem.xcode",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/BuildSystem.swift",
+      "line": 5,
+      "symbol": "BuildSystem.buck",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileOpener.swift",
+      "line": 3,
+      "symbol": "FileOpener",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileOpener.swift",
+      "line": 4,
+      "symbol": "FileOpener.stringContents(ofUrl:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileOpener.swift",
+      "line": 8,
+      "symbol": "FileOpener.dataContents(ofUrl:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileOpener.swift",
+      "line": 12,
+      "symbol": "FileOpener.plistContents(ofPath:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileOpener.swift",
+      "line": 16,
+      "symbol": "FileOpener.write(data:toUrl:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileOpener.swift",
+      "line": 20,
+      "symbol": "FileOpener.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileUtils.swift",
+      "line": 25,
+      "symbol": "FileUtils.init(fileManager:fileOpener:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileUtils.swift",
+      "line": 150,
+      "symbol": "SwiftInfoError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileUtils.swift",
+      "line": 151,
+      "symbol": "SwiftInfoError.generic(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/HTTPClient.swift",
+      "line": 3,
+      "symbol": "HTTPClient",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/HTTPClient.swift",
+      "line": 7,
+      "symbol": "HTTPClient.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/HTTPClient.swift",
+      "line": 9,
+      "symbol": "HTTPClient.syncPost(urlString:json:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/InfoProvider.swift",
+      "line": 30,
+      "symbol": "InfoProvider.error(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Logger.swift",
+      "line": 7,
+      "symbol": "isInVerboseMode",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Logger.swift",
+      "line": 8,
+      "symbol": "isInSilentMode",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Logger.swift",
+      "line": 9,
+      "symbol": "isInPullRequestMode",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Logger.swift",
+      "line": 10,
+      "symbol": "printSourceKitQueries",
+      "symbol_kind": "source.lang.swift.decl.var.global",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Logger.swift",
+      "line": 12,
+      "symbol": "log(_:verbose:sourceKit:hasPrefix:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Output.swift",
+      "line": 3,
+      "symbol": "Output",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Output.swift",
+      "line": 24,
+      "symbol": "Output",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Output.swift",
+      "line": 25,
+      "symbol": "Output.+(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Output.swift",
+      "line": 36,
+      "symbol": "Output.+=(_:_:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Output.swift",
+      "line": 40,
+      "symbol": "Output.init(rawDictionary:summaries:errors:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/PlistExtractor.swift",
+      "line": 5,
+      "symbol": "PlistExtractor",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/PlistExtractor.swift",
+      "line": 6,
+      "symbol": "PlistExtractor.extractPlistPath(xcodeproj:target:configuration:fileUtils:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/PlistExtractor.swift",
+      "line": 12,
+      "symbol": "XcodeprojPlistExtractor",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/PlistExtractor.swift",
+      "line": 13,
+      "symbol": "XcodeprojPlistExtractor.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/PlistExtractor.swift",
+      "line": 15,
+      "symbol": "XcodeprojPlistExtractor.extractPlistPath(xcodeproj:target:configuration:fileUtils:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/ProjectInfo.swift",
+      "line": 3,
+      "symbol": "ProjectInfo",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/ProjectInfo.swift",
+      "line": 23,
+      "symbol": "ProjectInfo.init(xcodeproj:target:configuration:plistPath:versionString:buildNumber:fileUtils:plistExtractor:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/ArchiveDurationProvider.swift",
+      "line": 8,
+      "symbol": "ArchiveDurationProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/ArchiveDurationProvider.swift",
+      "line": 14,
+      "symbol": "ArchiveDurationProvider.timeInt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/ArchiveDurationProvider.swift",
+      "line": 16,
+      "symbol": "ArchiveDurationProvider.init(timeInt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift",
+      "line": 6,
+      "symbol": "CodeCoverageProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift",
+      "line": 14,
+      "symbol": "CodeCoverageProvider.Args.init(targets:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift",
+      "line": 29,
+      "symbol": "CodeCoverageProvider.percentageInt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift",
+      "line": 31,
+      "symbol": "CodeCoverageProvider.init(percentageInt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift",
+      "line": 74,
+      "symbol": "CodeCoverageProvider.getCodeCoverageJson(api:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift",
+      "line": 104,
+      "symbol": "CodeCoverageProvider.getCodeCoverageXcode11JsonPath(fromLogs:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift",
+      "line": 109,
+      "symbol": "CodeCoverageProvider.getCodeCoverageLegacyJsonPath(fromLogs:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/IPASizeProvider.swift",
+      "line": 6,
+      "symbol": "IPASizeProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/IPASizeProvider.swift",
+      "line": 12,
+      "symbol": "IPASizeProvider.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/IPASizeProvider.swift",
+      "line": 14,
+      "symbol": "IPASizeProvider.init(size:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetCatalogProvider.swift",
+      "line": 6,
+      "symbol": "LargestAssetCatalogProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetCatalogProvider.swift",
+      "line": 12,
+      "symbol": "LargestAssetCatalogProvider.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetCatalogProvider.swift",
+      "line": 13,
+      "symbol": "LargestAssetCatalogProvider.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetCatalogProvider.swift",
+      "line": 15,
+      "symbol": "LargestAssetCatalogProvider.init(name:size:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetProvider.swift",
+      "line": 6,
+      "symbol": "LargestAssetProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetProvider.swift",
+      "line": 13,
+      "symbol": "LargestAssetProvider.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetProvider.swift",
+      "line": 14,
+      "symbol": "LargestAssetProvider.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetProvider.swift",
+      "line": 16,
+      "symbol": "LargestAssetProvider.init(name:size:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift",
+      "line": 6,
+      "symbol": "LinesOfCodeProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift",
+      "line": 14,
+      "symbol": "LinesOfCodeProvider.Args.init(targets:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift",
+      "line": 24,
+      "symbol": "LinesOfCodeProvider.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift",
+      "line": 26,
+      "symbol": "LinesOfCodeProvider.init(count:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LongestTestDurationProvider.swift",
+      "line": 6,
+      "symbol": "LongestTestDurationProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LongestTestDurationProvider.swift",
+      "line": 12,
+      "symbol": "LongestTestDurationProvider.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LongestTestDurationProvider.swift",
+      "line": 13,
+      "symbol": "LongestTestDurationProvider.durationInt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LongestTestDurationProvider.swift",
+      "line": 15,
+      "symbol": "LongestTestDurationProvider.duration",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LongestTestDurationProvider.swift",
+      "line": 19,
+      "symbol": "LongestTestDurationProvider.init(name:durationInt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/LongestTestDurationProvider.swift",
+      "line": 33,
+      "symbol": "LongestTestDurationProvider.allTests(api:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/OBJCFileCountProvider.swift",
+      "line": 6,
+      "symbol": "OBJCFileCountProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/OBJCFileCountProvider.swift",
+      "line": 12,
+      "symbol": "OBJCFileCountProvider.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/OBJCFileCountProvider.swift",
+      "line": 14,
+      "symbol": "OBJCFileCountProvider.init(count:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift",
+      "line": 6,
+      "symbol": "TargetCountProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift",
+      "line": 7,
+      "symbol": "TargetCountProvider.Args.Mode",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift",
+      "line": 8,
+      "symbol": "TargetCountProvider.Args.Mode.complainOnAdditions",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift",
+      "line": 9,
+      "symbol": "TargetCountProvider.Args.Mode.complainOnRemovals",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift",
+      "line": 10,
+      "symbol": "TargetCountProvider.Args.Mode.neutral",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift",
+      "line": 17,
+      "symbol": "TargetCountProvider.Args.init(mode:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift",
+      "line": 27,
+      "symbol": "TargetCountProvider.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift",
+      "line": 29,
+      "symbol": "TargetCountProvider.init(count:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TestCountProvider.swift",
+      "line": 6,
+      "symbol": "TestCountProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TestCountProvider.swift",
+      "line": 12,
+      "symbol": "TestCountProvider.Args.init(buildSystem:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TestCountProvider.swift",
+      "line": 22,
+      "symbol": "TestCountProvider.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TestCountProvider.swift",
+      "line": 24,
+      "symbol": "TestCountProvider.init(count:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalAssetCatalogsSizeProvider.swift",
+      "line": 6,
+      "symbol": "TotalAssetCatalogsSizeProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalAssetCatalogsSizeProvider.swift",
+      "line": 12,
+      "symbol": "TotalAssetCatalogsSizeProvider.size",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalAssetCatalogsSizeProvider.swift",
+      "line": 14,
+      "symbol": "TotalAssetCatalogsSizeProvider.init(size:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalTestDurationProvider.swift",
+      "line": 6,
+      "symbol": "TotalTestDurationProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalTestDurationProvider.swift",
+      "line": 12,
+      "symbol": "TotalTestDurationProvider.durationInt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalTestDurationProvider.swift",
+      "line": 14,
+      "symbol": "TotalTestDurationProvider.init(durationInt:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/WarningCountProvider.swift",
+      "line": 6,
+      "symbol": "WarningCountProvider.Args",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/WarningCountProvider.swift",
+      "line": 12,
+      "symbol": "WarningCountProvider.count",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Providers/WarningCountProvider.swift",
+      "line": 14,
+      "symbol": "WarningCountProvider.init(count:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Runner.swift",
+      "line": 3,
+      "symbol": "Runner",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/Runner.swift",
+      "line": 4,
+      "symbol": "Runner.getCoreSwiftCArguments(fileUtils:toolchainPath:processInfoArgs:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SlackFormatter.swift",
+      "line": 3,
+      "symbol": "SlackFormatter",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SlackFormatter.swift",
+      "line": 4,
+      "symbol": "SlackFormatter.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SlackFormatter.swift",
+      "line": 6,
+      "symbol": "SlackFormatter.format(output:titlePrefix:projectInfo:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 17,
+      "symbol": "DLHandle",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 28,
+      "symbol": "DLHandle.close()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 37,
+      "symbol": "DLHandle.leak()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 42,
+      "symbol": "DLOpenFlags",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 43,
+      "symbol": "DLOpenFlags.lazy",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 44,
+      "symbol": "DLOpenFlags.now",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 45,
+      "symbol": "DLOpenFlags.local",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 46,
+      "symbol": "DLOpenFlags.global",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 50,
+      "symbol": "DLOpenFlags.first",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 51,
+      "symbol": "DLOpenFlags.deepBind",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 64,
+      "symbol": "DLError",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 65,
+      "symbol": "DLError.dlopen(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 66,
+      "symbol": "DLError.dlclose(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 69,
+      "symbol": "dlopen(_:mode:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 76,
+      "symbol": "dlsym(_:symbol:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 83,
+      "symbol": "dlclose(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+      "line": 87,
+      "symbol": "dlerror()",
+      "symbol_kind": "source.lang.swift.decl.function.free",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 41,
+      "symbol": "SourceKit.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 51,
+      "symbol": "SourceKit.init(path:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 155,
+      "symbol": "SKResult",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 156,
+      "symbol": "SKResult.success(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 157,
+      "symbol": "SKResult.failure(_:)",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 175,
+      "symbol": "sourcekitd_keys",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 251,
+      "symbol": "sourcekitd_requests",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 271,
+      "symbol": "sourcekitd_values",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 451,
+      "symbol": "SKRequestDictionary",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 455,
+      "symbol": "SKRequestDictionary.init(_:sourcekitd:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 464,
+      "symbol": "SKRequestDictionary.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 469,
+      "symbol": "SKRequestDictionary.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 474,
+      "symbol": "SKRequestDictionary.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 479,
+      "symbol": "SKRequestDictionary.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 484,
+      "symbol": "SKRequestDictionary.subscript(_:)",
+      "symbol_kind": "source.lang.swift.decl.function.subscript",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 517,
+      "symbol": "SKResponse",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 521,
+      "symbol": "SKResponse.init(_:sourcekitd:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 545,
+      "symbol": "SKResponseDictionary",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 546,
+      "symbol": "SKResponseDictionary.dict",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 547,
+      "symbol": "SKResponseDictionary.resp",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 548,
+      "symbol": "SKResponseDictionary.sourcekitd",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 550,
+      "symbol": "SKResponseDictionary.init(_:response:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 596,
+      "symbol": "SKRequestDictionary",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 612,
+      "symbol": "SKResponse",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+      "line": 620,
+      "symbol": "SKResponseDictionary",
+      "symbol_kind": "source.lang.swift.decl.extension",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/SwiftInfo/SwiftInfo/Sources/SwiftInfoCore/SwiftInfo.swift",
+      "line": 19,
+      "symbol": "SwiftInfo.init(projectInfo:fileUtils:slackFormatter:client:sourceKit:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/SwiftInfo/SwiftInfo"
+}

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Structures  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Section/Structures" class="dashAnchor"></a>
+    <a title="Structures  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SwiftInfoCore 2.6.0 Docs</a> (50% documented)</p>
+        <div class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SwiftInfoCore Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        Structures  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/DLHandle.html">DLHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FileOpener.html">FileOpener</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HTTPClient.html">HTTPClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SKRequestDictionary.html">SKRequestDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SKResponse.html">SKResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SKResponseDictionary.html">SKResponseDictionary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SourceKit.html">SourceKit</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global%20Variables.html#/s:13SwiftInfoCore19isInPullRequestModeSbvp">isInPullRequestMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global%20Variables.html#/s:13SwiftInfoCore14isInSilentModeSbvp">isInSilentMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global%20Variables.html#/s:13SwiftInfoCore15isInVerboseModeSbvp">isInVerboseMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Global%20Variables.html#/s:13SwiftInfoCore21printSourceKitQueriesSbvp">printSourceKitQueries</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/BuildSystem.html">BuildSystem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/DLError.html">DLError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Runner.html">Runner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SKResult.html">SKResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/SwiftInfoError.html">SwiftInfoError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:13SwiftInfoCore7dlcloseyyAA8DLHandleCKF">dlclose(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:13SwiftInfoCore7dlerrorSSSgyF">dlerror()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:13SwiftInfoCore6dlopen_4modeAA8DLHandleCSSSg_AA11DLOpenFlagsVtKF">dlopen(_:mode:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:13SwiftInfoCore5dlsym_6symbolxSgAA8DLHandleC_SStlF">dlsym(_:symbol:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:13SwiftInfoCore4failys5NeverOSSF">fail(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:13SwiftInfoCore3log_7verbose9sourceKit9hasPrefixySS_S3btF">log(_:verbose:sourceKit:hasPrefix:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/InfoProvider.html">InfoProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/PlistExtractor.html">PlistExtractor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/ArchiveDurationProvider.html">ArchiveDurationProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ArchiveDurationProvider.html#/s:13SwiftInfoCore23ArchiveDurationProviderV4ArgsV">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CodeCoverageProvider.html">CodeCoverageProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/CodeCoverageProvider/Args.html">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/DLOpenFlags.html">DLOpenFlags</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/FileUtils.html">FileUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/IPASizeProvider.html">IPASizeProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/IPASizeProvider.html#/s:13SwiftInfoCore15IPASizeProviderV4ArgsV">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LargestAssetCatalogProvider.html">LargestAssetCatalogProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LargestAssetCatalogProvider.html#/s:13SwiftInfoCore27LargestAssetCatalogProviderV4ArgsV">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LargestAssetProvider.html">LargestAssetProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LargestAssetProvider.html#/s:13SwiftInfoCore20LargestAssetProviderV4ArgsV">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LinesOfCodeProvider.html">LinesOfCodeProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LinesOfCodeProvider/Args.html">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LongestTestDurationProvider.html">LongestTestDurationProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/LongestTestDurationProvider.html#/s:13SwiftInfoCore27LongestTestDurationProviderV4ArgsV">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/OBJCFileCountProvider.html">OBJCFileCountProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/OBJCFileCountProvider.html#/s:13SwiftInfoCore21OBJCFileCountProviderV4ArgsV">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Output.html">Output</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ProjectInfo.html">ProjectInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SlackFormatter.html">SlackFormatter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Summary.html">Summary</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Summary/Style.html">– Style</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SwiftInfo.html">SwiftInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TargetCountProvider.html">TargetCountProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TargetCountProvider/Args.html">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TestCountProvider.html">TestCountProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TestCountProvider/Args.html">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TotalAssetCatalogsSizeProvider.html">TotalAssetCatalogsSizeProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TotalAssetCatalogsSizeProvider.html#/s:13SwiftInfoCore30TotalAssetCatalogsSizeProviderV4ArgsV">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TotalTestDurationProvider.html">TotalTestDurationProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/TotalTestDurationProvider.html#/s:13SwiftInfoCore25TotalTestDurationProviderV4ArgsV">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/WarningCountProvider.html">WarningCountProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/WarningCountProvider.html#/s:13SwiftInfoCore20WarningCountProviderV4ArgsV">– Args</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/XcodeprojPlistExtractor.html">XcodeprojPlistExtractor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:13SwiftInfoCore15sourcekitd_keysV">sourcekitd_keys</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:13SwiftInfoCore19sourcekitd_requestsV">sourcekitd_requests</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:13SwiftInfoCore17sourcekitd_valuesV">sourcekitd_values</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Structures</h1>
+            <p>The following structures are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore9FileUtilsV"></a>
+                    <a name="//apple_ref/swift/Struct/FileUtils" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore9FileUtilsV">FileUtils</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Wraps utilities for opening and saving files needed by SwiftInfo.</p>
+
+                        <a href="Structs/FileUtils.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FileUtils</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore6OutputV"></a>
+                    <a name="//apple_ref/swift/Struct/Output" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore6OutputV">Output</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/Output.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Output</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore23XcodeprojPlistExtractorV"></a>
+                    <a name="//apple_ref/swift/Struct/XcodeprojPlistExtractor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore23XcodeprojPlistExtractorV">XcodeprojPlistExtractor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/XcodeprojPlistExtractor.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">XcodeprojPlistExtractor</span> <span class="p">:</span> <span class="kt"><a href="Protocols/PlistExtractor.html">PlistExtractor</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore07ProjectB0V"></a>
+                    <a name="//apple_ref/swift/Struct/ProjectInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore07ProjectB0V">ProjectInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/ProjectInfo.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ProjectInfo</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore23ArchiveDurationProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/ArchiveDurationProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore23ArchiveDurationProviderV">ArchiveDurationProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Time it took to build and archive the app.
+Requirements: Build logs of a successful xcodebuild archive.
+You must also have Xcode&rsquo;s ShowBuildOperationDuration enabled.
+(run in the Terminal: <code>defaults write com.apple.dt.Xcode ShowBuildOperationDuration YES</code> to enable it)</p>
+
+                        <a href="Structs/ArchiveDurationProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ArchiveDurationProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore20CodeCoverageProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/CodeCoverageProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore20CodeCoverageProviderV">CodeCoverageProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Code coverage percentage.
+Requirements: Test logs generated by test targets that have code coverage reports enabled in the scheme.</p>
+
+                        <a href="Structs/CodeCoverageProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">CodeCoverageProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore15IPASizeProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/IPASizeProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore15IPASizeProviderV">IPASizeProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Size of the .ipa archive (not the App Store size!).
+Requirements: .ipa available in the <code>#{PROJECT_DIR}/build</code> folder.</p>
+
+                        <a href="Structs/IPASizeProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">IPASizeProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore27LargestAssetCatalogProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/LargestAssetCatalogProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore27LargestAssetCatalogProviderV">LargestAssetCatalogProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name and size of the largest asset catalog.
+Requirements: Build logs.</p>
+
+                        <a href="Structs/LargestAssetCatalogProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LargestAssetCatalogProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore20LargestAssetProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/LargestAssetProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore20LargestAssetProviderV">LargestAssetProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The largest asset in the project. Only considers files inside asset catalogs.
+Requirements: Build logs.</p>
+
+                        <a href="Structs/LargestAssetProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LargestAssetProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore19LinesOfCodeProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/LinesOfCodeProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore19LinesOfCodeProviderV">LinesOfCodeProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Number of executable lines of code.
+Requirements: Test logs generated by test targets that have code coverage reports enabled in the scheme.</p>
+
+                        <a href="Structs/LinesOfCodeProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LinesOfCodeProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore27LongestTestDurationProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/LongestTestDurationProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore27LongestTestDurationProviderV">LongestTestDurationProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name and duration of the longest test.
+Requirements: Test logs.</p>
+
+                        <a href="Structs/LongestTestDurationProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">LongestTestDurationProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore21OBJCFileCountProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/OBJCFileCountProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore21OBJCFileCountProviderV">OBJCFileCountProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Number of OBJ-C files and headers (for mixed OBJ-C / Swift projects).
+Requirements: Build logs.</p>
+
+                        <a href="Structs/OBJCFileCountProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">OBJCFileCountProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore19TargetCountProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/TargetCountProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore19TargetCountProviderV">TargetCountProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Number of targets in the build.
+Requirements: Build logs.</p>
+
+                        <a href="Structs/TargetCountProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TargetCountProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore17TestCountProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/TestCountProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore17TestCountProviderV">TestCountProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sum of all test target&rsquo;s test count.
+Requirements: Test logs (if building with Xcode) or Buck build log (if building with Buck)</p>
+
+                        <a href="Structs/TestCountProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TestCountProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore30TotalAssetCatalogsSizeProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/TotalAssetCatalogsSizeProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore30TotalAssetCatalogsSizeProviderV">TotalAssetCatalogsSizeProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The sum of the size of all asset catalogs.
+Requirements: Build logs.</p>
+
+                        <a href="Structs/TotalAssetCatalogsSizeProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TotalAssetCatalogsSizeProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore25TotalTestDurationProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/TotalTestDurationProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore25TotalTestDurationProviderV">TotalTestDurationProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Time it took to build and run all tests.
+Requirements: Test logs.</p>
+
+                        <a href="Structs/TotalTestDurationProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">TotalTestDurationProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore20WarningCountProviderV"></a>
+                    <a name="//apple_ref/swift/Struct/WarningCountProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore20WarningCountProviderV">WarningCountProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Number of warnings in a build.
+Requirements: Build logs.</p>
+
+                        <a href="Structs/WarningCountProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">WarningCountProvider</span> <span class="p">:</span> <span class="kt"><a href="Protocols/InfoProvider.html">InfoProvider</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore14SlackFormatterV"></a>
+                    <a name="//apple_ref/swift/Struct/SlackFormatter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore14SlackFormatterV">SlackFormatter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/SlackFormatter.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SlackFormatter</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore11DLOpenFlagsV"></a>
+                    <a name="//apple_ref/swift/Struct/DLOpenFlags" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore11DLOpenFlagsV">DLOpenFlags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="Structs/DLOpenFlags.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DLOpenFlags</span> <span class="p">:</span> <span class="kt">RawRepresentable</span><span class="p">,</span> <span class="kt">OptionSet</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore15sourcekitd_keysV"></a>
+                    <a name="//apple_ref/swift/Struct/sourcekitd_keys" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore15sourcekitd_keysV">sourcekitd_keys</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="n">sourcekitd_keys</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore19sourcekitd_requestsV"></a>
+                    <a name="//apple_ref/swift/Struct/sourcekitd_requests" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore19sourcekitd_requestsV">sourcekitd_requests</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="n">sourcekitd_requests</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore17sourcekitd_valuesV"></a>
+                    <a name="//apple_ref/swift/Struct/sourcekitd_values" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore17sourcekitd_valuesV">sourcekitd_values</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="n">sourcekitd_values</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore7SummaryV"></a>
+                    <a name="//apple_ref/swift/Struct/Summary" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore7SummaryV">Summary</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>Summary</code> is a wrapper struct that represents the result of comparing two instances of a provider.</p>
+
+                        <a href="Structs/Summary.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Summary</span> <span class="p">:</span> <span class="kt">Codable</span><span class="p">,</span> <span class="kt">Hashable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13SwiftInfoCore0aB0V"></a>
+                    <a name="//apple_ref/swift/Struct/SwiftInfo" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13SwiftInfoCore0aB0V">SwiftInfo</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The base API for SwiftInfo operations.</p>
+
+                        <a href="Structs/SwiftInfo.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SwiftInfo</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2022 <a class="link" href="https://github.com/rockbruno/SwiftInfo" target="_blank" rel="external noopener">rockbruno</a>. All rights reserved. (Last updated: 2022-06-27)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
