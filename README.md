@@ -4,6 +4,8 @@
 
 [![GitHub release](https://img.shields.io/github/tag/rockbruno/SwiftInfo.svg)](https://github.com/rockbruno/SwiftInfo/releases)
 
+**Note: I don't intend to ship further updates to this tool.**
+
 SwiftInfo is a CLI tool that extracts, tracks and analyzes metrics that are useful for Swift apps. Besides the default tracking options that are shipped with the tool, you can also customize SwiftInfo to track pretty much anything that can be conveyed in a simple `.swift` script.
 
 By default SwiftInfo will assume you're extracting info from a release build and send the final results to Slack, but it can be used to extract info from individual pull requests as well with the [danger-SwiftInfo](https://github.com/rockbruno/danger-SwiftInfo) [danger](https://github.com/danger/danger) plugin.
