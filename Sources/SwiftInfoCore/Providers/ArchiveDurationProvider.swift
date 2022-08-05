@@ -10,7 +10,7 @@ public struct ArchiveDurationProvider: InfoProvider {
 
     public static let identifier: String = "archive_time"
 
-    public let description: String = "🚚 Time to Build and Archive"
+    public var description: String { "🚚 Time to Build and Archive" }
     public let timeInt: Int
 
     public init(timeInt: Int) {

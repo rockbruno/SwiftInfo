@@ -6,7 +6,7 @@ let task = Process()
 
 struct Swiftinfo: ParsableCommand {
     static var configuration = CommandConfiguration(
-        abstract: "Swiftinfo 2.5.1",
+        abstract: "Swiftinfo 2.7.0",
         subcommands: []
     )
 

@@ -8,7 +8,7 @@ public struct TotalTestDurationProvider: InfoProvider {
 
     public static let identifier: String = "total_test_duration"
 
-    public let description: String = "🛏 Time to Build and Run Tests"
+    public var description: String { "🛏 Time to Build and Run Tests" }
     public let durationInt: Int
 
     public init(durationInt: Int) {

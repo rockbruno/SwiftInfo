@@ -8,7 +8,7 @@ public struct WarningCountProvider: InfoProvider {
 
     public static let identifier: String = "warning_count"
 
-    public let description: String = "⚠️ Warning Count"
+    public var description: String { "⚠️ Warning Count" }
     public let count: Int
 
     public init(count: Int) {

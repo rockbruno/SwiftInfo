@@ -10,6 +10,12 @@
 
 ## master
 
+## 2.7.0
+* Build with Xcode 13.0
+* Set minimal swift-tools to 5.2
+* Update xcodeproj to 8.5.0
+* Update swift-argument-parser to 1.0.2
+
 ## 2.3.7
 * Fixed CodeCoverageProvider not working in Xcode 11
 

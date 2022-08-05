@@ -8,7 +8,7 @@ public struct IPASizeProvider: InfoProvider {
 
     public static let identifier: String = "ipa_size"
 
-    public let description: String = "📦 Compressed App Size (.ipa)"
+    public var description: String { "📦 Compressed App Size (.ipa)" }
     public let size: Int
 
     public init(size: Int) {

@@ -23,7 +23,7 @@ public struct TargetCountProvider: InfoProvider {
 
     public static let identifier: String = "target_count"
 
-    public let description: String = "👶 Dependency Count"
+    public var description: String { "👶 Dependency Count" }
     public let count: Int
 
     public init(count: Int) {
