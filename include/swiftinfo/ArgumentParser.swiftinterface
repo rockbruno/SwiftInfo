@@ -1,0 +1,412 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-macosx10.10 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -module-name ArgumentParser
+import Darwin
+import Swift
+import _Concurrency
+public struct CompletionShell : Swift.RawRepresentable, Swift.Hashable, Swift.CaseIterable {
+  public var rawValue: Swift.String
+  public init?(rawValue: Swift.String)
+  public static var zsh: ArgumentParser.CompletionShell {
+    get
+  }
+  public static var bash: ArgumentParser.CompletionShell {
+    get
+  }
+  public static var fish: ArgumentParser.CompletionShell {
+    get
+  }
+  public static func autodetected() -> ArgumentParser.CompletionShell?
+  public static var allCases: [ArgumentParser.CompletionShell] {
+    get
+  }
+  public typealias AllCases = [ArgumentParser.CompletionShell]
+  public typealias RawValue = Swift.String
+}
+@propertyWrapper public struct Argument<Value> : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+  @available(*, unavailable, message: "A default value must be provided unless the value type conforms to ExpressibleByArgument.")
+  public init()
+  public var wrappedValue: Value {
+    get
+    set
+  }
+}
+extension ArgumentParser.Argument : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension ArgumentParser.Argument where Value : ArgumentParser.ExpressibleByArgument {
+  public init(wrappedValue: Value, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil)
+  public init(help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil)
+}
+public enum ArgumentArrayParsingStrategy {
+  case remaining
+  case unconditionalRemaining
+  public static func == (a: ArgumentParser.ArgumentArrayParsingStrategy, b: ArgumentParser.ArgumentArrayParsingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ArgumentParser.Argument {
+  public init<T>(help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil) where Value == T?, T : ArgumentParser.ExpressibleByArgument
+  public init(wrappedValue: Value, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil, transform: @escaping (Swift.String) throws -> Value)
+  public init(help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil, transform: @escaping (Swift.String) throws -> Value)
+  public init<Element>(wrappedValue: Value, parsing parsingStrategy: ArgumentParser.ArgumentArrayParsingStrategy = .remaining, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil) where Value == Swift.Array<Element>, Element : ArgumentParser.ExpressibleByArgument
+  public init<Element>(parsing parsingStrategy: ArgumentParser.ArgumentArrayParsingStrategy = .remaining, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil) where Value == Swift.Array<Element>, Element : ArgumentParser.ExpressibleByArgument
+  public init<Element>(wrappedValue: Value, parsing parsingStrategy: ArgumentParser.ArgumentArrayParsingStrategy = .remaining, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil, transform: @escaping (Swift.String) throws -> Element) where Value == Swift.Array<Element>
+  public init<Element>(parsing parsingStrategy: ArgumentParser.ArgumentArrayParsingStrategy = .remaining, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil, transform: @escaping (Swift.String) throws -> Element) where Value == Swift.Array<Element>
+}
+public struct ArgumentHelp {
+  public var abstract: Swift.String
+  public var discussion: Swift.String
+  public var valueName: Swift.String?
+  public var shouldDisplay: Swift.Bool
+  public init(_ abstract: Swift.String = "", discussion: Swift.String = "", valueName: Swift.String? = nil, shouldDisplay: Swift.Bool = true)
+  public static var hidden: ArgumentParser.ArgumentHelp {
+    get
+  }
+}
+extension ArgumentParser.ArgumentHelp : Swift.ExpressibleByStringInterpolation {
+  public init(stringLiteral value: Swift.String)
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.String
+  public typealias StringInterpolation = Swift.DefaultStringInterpolation
+  public typealias StringLiteralType = Swift.String
+  public typealias UnicodeScalarLiteralType = Swift.String
+}
+public struct CompletionKind {
+  public static var `default`: ArgumentParser.CompletionKind {
+    get
+  }
+  public static func list(_ words: [Swift.String]) -> ArgumentParser.CompletionKind
+  public static func file(extensions: [Swift.String] = []) -> ArgumentParser.CompletionKind
+  public static var directory: ArgumentParser.CompletionKind {
+    get
+  }
+  public static func shellCommand(_ command: Swift.String) -> ArgumentParser.CompletionKind
+  public static func custom(_ completion: @escaping ([Swift.String]) -> [Swift.String]) -> ArgumentParser.CompletionKind
+}
+public struct ValidationError : Swift.Error, Swift.CustomStringConvertible {
+  public var message: Swift.String {
+    get
+  }
+  public init(_ message: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+}
+public struct ExitCode : Swift.Error, Swift.RawRepresentable, Swift.Hashable {
+  public var rawValue: Swift.Int32
+  public init(_ code: Swift.Int32)
+  public init(rawValue: Swift.Int32)
+  public static let success: ArgumentParser.ExitCode
+  public static let failure: ArgumentParser.ExitCode
+  public static let validationFailure: ArgumentParser.ExitCode
+  public var isSuccess: Swift.Bool {
+    get
+  }
+  public typealias RawValue = Swift.Int32
+}
+public enum CleanExit : Swift.Error, Swift.CustomStringConvertible {
+  case helpRequest(_: ArgumentParser.ParsableCommand.Type? = nil)
+  case message(Swift.String)
+  public var description: Swift.String {
+    get
+  }
+  public static func helpRequest(_ command: ArgumentParser.ParsableCommand) -> ArgumentParser.CleanExit
+}
+@propertyWrapper public struct Flag<Value> : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+  @available(*, unavailable, message: "A default value must be provided unless the value type is supported by Flag.")
+  public init()
+  public var wrappedValue: Value {
+    get
+    set
+  }
+}
+extension ArgumentParser.Flag : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+public enum FlagInversion {
+  case prefixedNo
+  case prefixedEnableDisable
+  public static func == (a: ArgumentParser.FlagInversion, b: ArgumentParser.FlagInversion) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum FlagExclusivity {
+  case exclusive
+  case chooseFirst
+  case chooseLast
+  public static func == (a: ArgumentParser.FlagExclusivity, b: ArgumentParser.FlagExclusivity) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ArgumentParser.Flag where Value == Swift.Optional<Swift.Bool> {
+  public init(name: ArgumentParser.NameSpecification = .long, inversion: ArgumentParser.FlagInversion, exclusivity: ArgumentParser.FlagExclusivity = .chooseLast, help: ArgumentParser.ArgumentHelp? = nil)
+}
+extension ArgumentParser.Flag where Value == Swift.Bool {
+  public init(wrappedValue: Swift.Bool, name: ArgumentParser.NameSpecification = .long, help: ArgumentParser.ArgumentHelp? = nil)
+  public init(wrappedValue: Swift.Bool, name: ArgumentParser.NameSpecification = .long, inversion: ArgumentParser.FlagInversion, exclusivity: ArgumentParser.FlagExclusivity = .chooseLast, help: ArgumentParser.ArgumentHelp? = nil)
+  public init(name: ArgumentParser.NameSpecification = .long, inversion: ArgumentParser.FlagInversion, exclusivity: ArgumentParser.FlagExclusivity = .chooseLast, help: ArgumentParser.ArgumentHelp? = nil)
+}
+extension ArgumentParser.Flag where Value == Swift.Int {
+  public init(name: ArgumentParser.NameSpecification = .long, help: ArgumentParser.ArgumentHelp? = nil)
+}
+extension ArgumentParser.Flag where Value : ArgumentParser.EnumerableFlag {
+  public init(wrappedValue: Value, exclusivity: ArgumentParser.FlagExclusivity = .exclusive, help: ArgumentParser.ArgumentHelp? = nil)
+  public init(exclusivity: ArgumentParser.FlagExclusivity = .exclusive, help: ArgumentParser.ArgumentHelp? = nil)
+}
+extension ArgumentParser.Flag {
+  public init<Element>(exclusivity: ArgumentParser.FlagExclusivity = .exclusive, help: ArgumentParser.ArgumentHelp? = nil) where Value == Element?, Element : ArgumentParser.EnumerableFlag
+  public init<Element>(wrappedValue: [Element], help: ArgumentParser.ArgumentHelp? = nil) where Value == Swift.Array<Element>, Element : ArgumentParser.EnumerableFlag
+  public init<Element>(help: ArgumentParser.ArgumentHelp? = nil) where Value == Swift.Array<Element>, Element : ArgumentParser.EnumerableFlag
+}
+extension ArgumentParser.Flag where Value : Swift.CaseIterable, Value : Swift.Equatable, Value : Swift.RawRepresentable, Value.RawValue == Swift.String {
+  @available(*, unavailable, message: "Add 'EnumerableFlag' conformance to your value type and, if needed, specify the 'name' of each case there.")
+  public init(name: ArgumentParser.NameSpecification = .long, default initial: Value? = nil, exclusivity: ArgumentParser.FlagExclusivity = .exclusive, help: ArgumentParser.ArgumentHelp? = nil)
+}
+extension ArgumentParser.Flag {
+  @available(*, unavailable, message: "Add 'EnumerableFlag' conformance to your value type and, if needed, specify the 'name' of each case there.")
+  public init<Element>(name: ArgumentParser.NameSpecification = .long, exclusivity: ArgumentParser.FlagExclusivity = .exclusive, help: ArgumentParser.ArgumentHelp? = nil) where Value == Element?, Element : Swift.CaseIterable, Element : Swift.Equatable, Element : Swift.RawRepresentable, Element.RawValue == Swift.String
+  @available(*, unavailable, message: "Add 'EnumerableFlag' conformance to your value type and, if needed, specify the 'name' of each case there.")
+  public init<Element>(name: ArgumentParser.NameSpecification = .long, help: ArgumentParser.ArgumentHelp? = nil) where Value == Swift.Array<Element>, Element : Swift.CaseIterable, Element : Swift.RawRepresentable, Element.RawValue == Swift.String
+}
+public struct NameSpecification : Swift.ExpressibleByArrayLiteral {
+  public enum Element : Swift.Hashable {
+    case long
+    case customLong(_: Swift.String, withSingleDash: Swift.Bool = false)
+    case short
+    case customShort(_: Swift.Character, allowingJoined: Swift.Bool = false)
+    public func hash(into hasher: inout Swift.Hasher)
+    public static func == (a: ArgumentParser.NameSpecification.Element, b: ArgumentParser.NameSpecification.Element) -> Swift.Bool
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init<S>(_ sequence: S) where S : Swift.Sequence, S.Element == ArgumentParser.NameSpecification.Element
+  public init(arrayLiteral elements: ArgumentParser.NameSpecification.Element...)
+  public typealias ArrayLiteralElement = ArgumentParser.NameSpecification.Element
+}
+extension ArgumentParser.NameSpecification {
+  public static var long: ArgumentParser.NameSpecification {
+    get
+  }
+  public static func customLong(_ name: Swift.String, withSingleDash: Swift.Bool = false) -> ArgumentParser.NameSpecification
+  public static var short: ArgumentParser.NameSpecification {
+    get
+  }
+  public static func customShort(_ char: Swift.Character, allowingJoined: Swift.Bool = false) -> ArgumentParser.NameSpecification
+  public static var shortAndLong: ArgumentParser.NameSpecification {
+    get
+  }
+}
+@propertyWrapper public struct Option<Value> : Swift.Decodable {
+  public init(from decoder: Swift.Decoder) throws
+  @available(*, unavailable, message: "A default value must be provided unless the value type conforms to ExpressibleByArgument.")
+  public init()
+  public var wrappedValue: Value {
+    get
+    set
+  }
+}
+extension ArgumentParser.Option : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension ArgumentParser.Option where Value : ArgumentParser.ExpressibleByArgument {
+  public init(wrappedValue: Value, name: ArgumentParser.NameSpecification = .long, parsing parsingStrategy: ArgumentParser.SingleValueParsingStrategy = .next, completion: ArgumentParser.CompletionKind? = nil, help: ArgumentParser.ArgumentHelp? = nil)
+  public init(name: ArgumentParser.NameSpecification = .long, parsing parsingStrategy: ArgumentParser.SingleValueParsingStrategy = .next, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil)
+}
+public enum SingleValueParsingStrategy {
+  case next
+  case unconditional
+  case scanningForValue
+  public static func == (a: ArgumentParser.SingleValueParsingStrategy, b: ArgumentParser.SingleValueParsingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum ArrayParsingStrategy {
+  case singleValue
+  case unconditionalSingleValue
+  case upToNextOption
+  case remaining
+  public static func == (a: ArgumentParser.ArrayParsingStrategy, b: ArgumentParser.ArrayParsingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension ArgumentParser.Option {
+  public init<T>(name: ArgumentParser.NameSpecification = .long, parsing parsingStrategy: ArgumentParser.SingleValueParsingStrategy = .next, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil) where Value == T?, T : ArgumentParser.ExpressibleByArgument
+  public init(wrappedValue: Value, name: ArgumentParser.NameSpecification = .long, parsing parsingStrategy: ArgumentParser.SingleValueParsingStrategy = .next, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil, transform: @escaping (Swift.String) throws -> Value)
+  public init(name: ArgumentParser.NameSpecification = .long, parsing parsingStrategy: ArgumentParser.SingleValueParsingStrategy = .next, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil, transform: @escaping (Swift.String) throws -> Value)
+  public init<Element>(wrappedValue: [Element], name: ArgumentParser.NameSpecification = .long, parsing parsingStrategy: ArgumentParser.ArrayParsingStrategy = .singleValue, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil) where Value == Swift.Array<Element>, Element : ArgumentParser.ExpressibleByArgument
+  public init<Element>(name: ArgumentParser.NameSpecification = .long, parsing parsingStrategy: ArgumentParser.ArrayParsingStrategy = .singleValue, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil) where Value == Swift.Array<Element>, Element : ArgumentParser.ExpressibleByArgument
+  public init<Element>(wrappedValue: [Element], name: ArgumentParser.NameSpecification = .long, parsing parsingStrategy: ArgumentParser.ArrayParsingStrategy = .singleValue, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil, transform: @escaping (Swift.String) throws -> Element) where Value == Swift.Array<Element>
+  public init<Element>(name: ArgumentParser.NameSpecification = .long, parsing parsingStrategy: ArgumentParser.ArrayParsingStrategy = .singleValue, help: ArgumentParser.ArgumentHelp? = nil, completion: ArgumentParser.CompletionKind? = nil, transform: @escaping (Swift.String) throws -> Element) where Value == Swift.Array<Element>
+}
+@propertyWrapper public struct OptionGroup<Value> : Swift.Decodable where Value : ArgumentParser.ParsableArguments {
+  public init(from decoder: Swift.Decoder) throws
+  public init()
+  public var wrappedValue: Value {
+    get
+    set
+  }
+}
+extension ArgumentParser.OptionGroup : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension ArgumentParser.OptionGroup {
+  public init(_hiddenFromHelp: Swift.Bool)
+}
+public struct CommandConfiguration {
+  public var commandName: Swift.String?
+  public var _superCommandName: Swift.String?
+  public var abstract: Swift.String
+  public var discussion: Swift.String
+  public var version: Swift.String
+  public var shouldDisplay: Swift.Bool
+  public var subcommands: [ArgumentParser.ParsableCommand.Type]
+  public var defaultSubcommand: ArgumentParser.ParsableCommand.Type?
+  public var helpNames: ArgumentParser.NameSpecification?
+  public init(commandName: Swift.String? = nil, abstract: Swift.String = "", discussion: Swift.String = "", version: Swift.String = "", shouldDisplay: Swift.Bool = true, subcommands: [ArgumentParser.ParsableCommand.Type] = [], defaultSubcommand: ArgumentParser.ParsableCommand.Type? = nil, helpNames: ArgumentParser.NameSpecification? = nil)
+  public init(commandName: Swift.String? = nil, _superCommandName: Swift.String, abstract: Swift.String = "", discussion: Swift.String = "", version: Swift.String = "", shouldDisplay: Swift.Bool = true, subcommands: [ArgumentParser.ParsableCommand.Type] = [], defaultSubcommand: ArgumentParser.ParsableCommand.Type? = nil, helpNames: ArgumentParser.NameSpecification? = nil)
+}
+public protocol EnumerableFlag : Swift.CaseIterable, Swift.Equatable {
+  static func name(for value: Self) -> ArgumentParser.NameSpecification
+  static func help(for value: Self) -> ArgumentParser.ArgumentHelp?
+}
+extension ArgumentParser.EnumerableFlag {
+  public static func name(for value: Self) -> ArgumentParser.NameSpecification
+  public static func help(for value: Self) -> ArgumentParser.ArgumentHelp?
+}
+public protocol ExpressibleByArgument {
+  init?(argument: Swift.String)
+  var defaultValueDescription: Swift.String { get }
+  static var allValueStrings: [Swift.String] { get }
+  static var defaultCompletionKind: ArgumentParser.CompletionKind { get }
+}
+extension ArgumentParser.ExpressibleByArgument {
+  public var defaultValueDescription: Swift.String {
+    get
+  }
+  public static var allValueStrings: [Swift.String] {
+    get
+  }
+  public static var defaultCompletionKind: ArgumentParser.CompletionKind {
+    get
+  }
+}
+extension ArgumentParser.ExpressibleByArgument where Self : Swift.CaseIterable {
+  public static var allValueStrings: [Swift.String] {
+    get
+  }
+  public static var defaultCompletionKind: ArgumentParser.CompletionKind {
+    get
+  }
+}
+extension ArgumentParser.ExpressibleByArgument where Self : Swift.CaseIterable, Self : Swift.RawRepresentable, Self.RawValue == Swift.String {
+  public static var allValueStrings: [Swift.String] {
+    get
+  }
+}
+extension Swift.String : ArgumentParser.ExpressibleByArgument {
+  public init?(argument: Swift.String)
+}
+extension Swift.RawRepresentable where Self : ArgumentParser.ExpressibleByArgument, Self.RawValue : ArgumentParser.ExpressibleByArgument {
+  public init?(argument: Swift.String)
+}
+extension Swift.LosslessStringConvertible where Self : ArgumentParser.ExpressibleByArgument {
+  public init?(argument: Swift.String)
+}
+extension Swift.Int : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.Int8 : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.Int16 : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.Int32 : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.Int64 : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.UInt : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.UInt8 : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.UInt16 : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.UInt32 : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.UInt64 : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.Float : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.Double : ArgumentParser.ExpressibleByArgument {
+}
+extension Swift.Bool : ArgumentParser.ExpressibleByArgument {
+}
+public protocol ParsableArguments : Swift.Decodable {
+  init()
+  mutating func validate() throws
+  static var _errorLabel: Swift.String { get }
+}
+extension ArgumentParser.ParsableArguments {
+  public mutating func validate() throws
+  public static var _errorLabel: Swift.String {
+    get
+  }
+}
+extension ArgumentParser.ParsableArguments {
+  public static func parse(_ arguments: [Swift.String]? = nil) throws -> Self
+  public static func message(for error: Swift.Error) -> Swift.String
+  public static func fullMessage(for error: Swift.Error) -> Swift.String
+  public static func helpMessage(columns: Swift.Int? = nil) -> Swift.String
+  public static func exitCode(for error: Swift.Error) -> ArgumentParser.ExitCode
+  public static func completionScript(for shell: ArgumentParser.CompletionShell) -> Swift.String
+  public static func exit(withError error: Swift.Error? = nil) -> Swift.Never
+  public static func parseOrExit(_ arguments: [Swift.String]? = nil) -> Self
+}
+public protocol ParsableCommand : ArgumentParser.ParsableArguments {
+  static var configuration: ArgumentParser.CommandConfiguration { get }
+  static var _commandName: Swift.String { get }
+  mutating func run() throws
+}
+extension ArgumentParser.ParsableCommand {
+  public static var _commandName: Swift.String {
+    get
+  }
+  public static var configuration: ArgumentParser.CommandConfiguration {
+    get
+  }
+  public mutating func run() throws
+}
+extension ArgumentParser.ParsableCommand {
+  public static func parseAsRoot(_ arguments: [Swift.String]? = nil) throws -> ArgumentParser.ParsableCommand
+  public static func helpMessage(for subcommand: ArgumentParser.ParsableCommand.Type, columns: Swift.Int? = nil) -> Swift.String
+  public static func main(_ arguments: [Swift.String]?)
+  public static func main()
+}
+extension ArgumentParser.ArgumentArrayParsingStrategy : Swift.Equatable {}
+extension ArgumentParser.ArgumentArrayParsingStrategy : Swift.Hashable {}
+extension ArgumentParser.FlagInversion : Swift.Equatable {}
+extension ArgumentParser.FlagInversion : Swift.Hashable {}
+extension ArgumentParser.FlagExclusivity : Swift.Equatable {}
+extension ArgumentParser.FlagExclusivity : Swift.Hashable {}
+extension ArgumentParser.SingleValueParsingStrategy : Swift.Equatable {}
+extension ArgumentParser.SingleValueParsingStrategy : Swift.Hashable {}
+extension ArgumentParser.ArrayParsingStrategy : Swift.Equatable {}
+extension ArgumentParser.ArrayParsingStrategy : Swift.Hashable {}

@@ -1,0 +1,4 @@
+module ArgumentParser {
+    header "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/ArgumentParser-Swift.h"
+    requires objc
+}

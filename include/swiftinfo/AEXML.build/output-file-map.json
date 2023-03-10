@@ -1,0 +1,32 @@
+{
+  "": {
+    "dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/AEXML.d",
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/AEXML.o",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/master.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Document.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Document.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Document~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Document.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Element.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Element.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Element~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Element.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Error.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Error.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Error~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Error.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Options.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Options.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Options~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Options.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Parser.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Parser.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Parser~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Parser.swiftdeps"
+  }
+}

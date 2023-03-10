@@ -1,0 +1,186 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "ade84a954d36f5afe79209e9ff20c8f3352db158ff597e92dcf622e597af4d3a"
+build_start_time: [1678457729, 960356950]
+build_end_time: [1678457750, 239069938]
+inputs:
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Errors/Errors.swift": [1678457725, 822064399]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/AEXML+XcodeFormat.swift"
+  : [1678457725, 822193622]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Array+Extras.swift"
+  : [1678457725, 822257757]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Bool+Extras.swift"
+  : [1678457725, 822317123]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Dictionary+Enumerate.swift"
+  : [1678457725, 822383880]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Dictionary+Extras.swift"
+  : [1678457725, 822450637]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/KeyedDecodingContainer+Additions.swift"
+  : [1678457725, 822527885]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/NSRecursiveLock+Sync.swift"
+  : [1678457725, 822597265]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Path+Extras.swift"
+  : [1678457725, 822680473]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/String+Utils.swift"
+  : [1678457725, 822761774]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/String+md5.swift"
+  : [1678457725, 823096752]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/BuildPhase.swift"
+  : [1678457725, 823271274]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildFile.swift"
+  : [1678457725, 823384761]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildPhase.swift"
+  : [1678457725, 823502540]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildRule.swift"
+  : [1678457725, 823606967]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXCopyFilesBuildPhase.swift"
+  : [1678457725, 823719978]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXFrameworksBuildPhase.swift"
+  : [1678457725, 823806762]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXHeadersBuildPhase.swift"
+  : [1678457725, 823877811]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXResourcesBuildPhase.swift"
+  : [1678457725, 823972225]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXRezBuildPhase.swift"
+  : [1678457725, 824035167]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXShellScriptBuildPhase.swift"
+  : [1678457725, 824112415]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXSourcesBuildPhase.swift"
+  : [1678457725, 824183940]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/BuildSettings.swift"
+  : [1678457725, 824296236]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/XCBuildConfiguration.swift"
+  : [1678457725, 824392080]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/XCConfigurationList.swift"
+  : [1678457725, 824487447]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXContainerItem.swift"
+  : [1678457725, 824604511]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXContainerItemProxy.swift"
+  : [1678457725, 824699640]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXFileElement.swift"
+  : [1678457725, 824789762]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXFileReference.swift"
+  : [1678457725, 824877023]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXGroup.swift"
+  : [1678457725, 824980735]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXSourceTree.swift"
+  : [1678457725, 825066328]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXVariantGroup.swift"
+  : [1678457725, 825173854]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/XCVersionGroup.swift"
+  : [1678457725, 825269699]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObject.swift"
+  : [1678457725, 825392723]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjectParser.swift"
+  : [1678457725, 825503349]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjectReference.swift"
+  : [1678457725, 825593471]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjects.swift"
+  : [1678457725, 825758457]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXOutputSettings.swift"
+  : [1678457725, 825870990]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProj.swift"
+  : [1678457725, 825977802]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProjEncoder.swift"
+  : [1678457725, 826113939]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProject.swift"
+  : [1678457725, 826274156]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Sourcery/Equality.generated.swift"
+  : [1678457725, 826427221]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Sourcery/Sourcery.swift"
+  : [1678457725, 826481819]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/SwiftPackage/XCRemoteSwiftPackageReference.swift"
+  : [1678457725, 826583385]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/SwiftPackage/XCSwiftPackageProductDependency.swift"
+  : [1678457725, 826648712]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXAggregateTarget.swift"
+  : [1678457725, 826758861]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXLegacyTarget.swift"
+  : [1678457725, 826848030]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXNativeTarget.swift"
+  : [1678457725, 826921701]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXProductType.swift"
+  : [1678457725, 826988458]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXReferenceProxy.swift"
+  : [1678457725, 827067375]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXTarget.swift"
+  : [1678457725, 827166557]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXTargetDependency.swift"
+  : [1678457725, 827231168]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/WorkspaceSettings.swift"
+  : [1678457725, 827344179]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XCBreakpointList.swift"
+  : [1678457725, 827469348]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XCSharedData.swift"
+  : [1678457725, 827566146]
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/Xcode.swift": [1678457725, 827657222]
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XcodeProj.swift": [1678457725, 827769517]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Protocols/Writable.swift"
+  : [1678457725, 827872037]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+AditionalOption.swift"
+  : [1678457725, 827971458]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+AnalyzeAction.swift"
+  : [1678457725, 828063488]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ArchiveAction.swift"
+  : [1678457725, 828125238]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildAction.swift"
+  : [1678457725, 828198432]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildableProductRunnable.swift"
+  : [1678457725, 828289031]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildableReference.swift"
+  : [1678457725, 828367710]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+CommandLineArguments.swift"
+  : [1678457725, 828436851]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+EnvironmentVariable.swift"
+  : [1678457725, 828504562]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ExecutionAction.swift"
+  : [1678457725, 828579425]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+LaunchAction.swift"
+  : [1678457725, 828701257]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+LocationScenarioReference.swift"
+  : [1678457725, 828882932]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+PathRunnable.swift"
+  : [1678457725, 828964233]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ProfileAction.swift"
+  : [1678457725, 829047203]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+RemoteRunnable.swift"
+  : [1678457725, 829113483]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+Runnable.swift"
+  : [1678457725, 829177379]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+SerialAction.swift"
+  : [1678457725, 829246520]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+StoreKitConfigurationFileReference.swift"
+  : [1678457725, 829319477]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestAction.swift"
+  : [1678457725, 829576969]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestItem.swift"
+  : [1678457725, 829712390]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestPlanReference.swift"
+  : [1678457725, 829843521]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestableReference.swift"
+  : [1678457725, 829957008]
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme.swift": [1678457725, 830080032]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/BuildSettingsProvider.swift"
+  : [1678457725, 830291509]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/CommentedString.swift"
+  : [1678457725, 830390453]
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/Decoders.swift": [1678457725, 830496788]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/JSONDecoding.swift"
+  : [1678457725, 830620288]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/PBXBatchUpdater.swift"
+  : [1678457725, 830757141]
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/PlistValue.swift": [1678457725, 830869674]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/ReferenceGenerator.swift"
+  : [1678457725, 831055164]
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/XCConfig.swift": [1678457725, 831154346]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspace.swift"
+  : [1678457725, 831293821]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceData.swift"
+  : [1678457725, 831383705]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataElement.swift"
+  : [1678457725, 831510543]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataElementLocationType.swift"
+  : [1678457725, 831634283]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataFileRef.swift"
+  : [1678457725, 831718444]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataGroup.swift"
+  : [1678457725, 831836223]

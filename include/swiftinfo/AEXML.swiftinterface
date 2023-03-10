@@ -1,0 +1,119 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-macosx10.10 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -module-name AEXML
+import Foundation
+import Swift
+import _Concurrency
+open class AEXMLDocument : AEXML.AEXMLElement {
+  open var root: AEXML.AEXMLElement {
+    get
+  }
+  final public let options: AEXML.AEXMLOptions
+  public init(root: AEXML.AEXMLElement? = nil, options: AEXML.AEXMLOptions = AEXMLOptions())
+  convenience public init(xml: Foundation.Data, options: AEXML.AEXMLOptions = AEXMLOptions()) throws
+  convenience public init(xml: Swift.String, encoding: Swift.String.Encoding = String.Encoding.utf8, options: AEXML.AEXMLOptions = AEXMLOptions()) throws
+  open func loadXML(_ data: Foundation.Data) throws
+  override open var xml: Swift.String {
+    get
+  }
+  @objc deinit
+}
+open class AEXMLElement {
+  weak open var parent: AEXML.AEXMLElement? {
+    get
+  }
+  open var children: [AEXML.AEXMLElement] {
+    get
+  }
+  open var name: Swift.String
+  open var value: Swift.String?
+  open var attributes: [Swift.String : Swift.String]
+  open var error: AEXML.AEXMLError?
+  open var string: Swift.String {
+    get
+  }
+  open var bool: Swift.Bool? {
+    get
+  }
+  open var int: Swift.Int? {
+    get
+  }
+  open var double: Swift.Double? {
+    get
+  }
+  public init(name: Swift.String, value: Swift.String? = nil, attributes: [Swift.String : Swift.String] = [:])
+  open subscript(key: Swift.String) -> AEXML.AEXMLElement {
+    get
+  }
+  open var all: [AEXML.AEXMLElement]? {
+    get
+  }
+  open var first: AEXML.AEXMLElement? {
+    get
+  }
+  open var last: AEXML.AEXMLElement? {
+    get
+  }
+  open var count: Swift.Int {
+    get
+  }
+  open func all(withValue value: Swift.String) -> [AEXML.AEXMLElement]?
+  open func all(containingAttributeKeys keys: [Swift.String]) -> [AEXML.AEXMLElement]?
+  open func all(withAttributes attributes: [Swift.String : Swift.String]) -> [AEXML.AEXMLElement]?
+  open func allDescendants(where predicate: (AEXML.AEXMLElement) -> Swift.Bool) -> [AEXML.AEXMLElement]
+  open func firstDescendant(where predicate: (AEXML.AEXMLElement) -> Swift.Bool) -> AEXML.AEXMLElement?
+  open func hasDescendant(where predicate: (AEXML.AEXMLElement) -> Swift.Bool) -> Swift.Bool
+  @discardableResult
+  open func addChild(_ child: AEXML.AEXMLElement) -> AEXML.AEXMLElement
+  @discardableResult
+  open func addChild(name: Swift.String, value: Swift.String? = nil, attributes: [Swift.String : Swift.String] = [:]) -> AEXML.AEXMLElement
+  @discardableResult
+  open func addChildren(_ children: [AEXML.AEXMLElement]) -> [AEXML.AEXMLElement]
+  open func removeFromParent()
+  open var xml: Swift.String {
+    get
+  }
+  open var xmlCompact: Swift.String {
+    get
+  }
+  open var xmlSpaces: Swift.String {
+    get
+  }
+  @objc deinit
+}
+extension Swift.String {
+  public var xmlEscaped: Swift.String {
+    get
+  }
+}
+public enum AEXMLError : Swift.Error {
+  case elementNotFound
+  case rootElementMissing
+  case parsingFailed
+  public static func == (a: AEXML.AEXMLError, b: AEXML.AEXMLError) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct AEXMLOptions {
+  public struct DocumentHeader {
+    public var version: Swift.Double
+    public var encoding: Swift.String
+    public var standalone: Swift.String
+    public var xmlString: Swift.String {
+      get
+    }
+  }
+  public struct ParserSettings {
+    public var shouldProcessNamespaces: Swift.Bool
+    public var shouldReportNamespacePrefixes: Swift.Bool
+    public var shouldResolveExternalEntities: Swift.Bool
+    public var shouldTrimWhitespace: Swift.Bool
+  }
+  public var documentHeader: AEXML.AEXMLOptions.DocumentHeader
+  public var parserSettings: AEXML.AEXMLOptions.ParserSettings
+  public init()
+}
+extension AEXML.AEXMLError : Swift.Equatable {}
+extension AEXML.AEXMLError : Swift.Hashable {}

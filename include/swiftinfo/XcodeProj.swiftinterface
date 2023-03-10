@@ -1,0 +1,1487 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-macosx10.10 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -module-name XcodeProj
+import AEXML
+import CryptoKit
+import Foundation
+import PathKit
+import Swift
+import _Concurrency
+public enum XCodeProjError : Swift.Error, Swift.CustomStringConvertible {
+  case notFound(path: PathKit.Path)
+  case pbxprojNotFound(path: PathKit.Path)
+  case xcworkspaceNotFound(path: PathKit.Path)
+  public var description: Swift.String {
+    get
+  }
+}
+public enum XCSharedDataError : Swift.Error, Swift.CustomStringConvertible {
+  case notFound(path: PathKit.Path)
+  public var description: Swift.String {
+    get
+  }
+}
+public enum XCWorkspaceError : Swift.Error, Swift.CustomStringConvertible {
+  case notFound(path: PathKit.Path)
+  public var description: Swift.String {
+    get
+  }
+}
+public enum XCWorkspaceDataError : Swift.Error, Swift.CustomStringConvertible {
+  case notFound(path: PathKit.Path)
+  public var description: Swift.String {
+    get
+  }
+}
+public enum XcodeprojEditingError : Swift.Error, Swift.CustomStringConvertible {
+  case unexistingFile(PathKit.Path)
+  public var description: Swift.String {
+    get
+  }
+}
+public enum XcodeprojWritingError : Swift.Error, Swift.CustomStringConvertible {
+  case invalidType(class: Swift.String, expected: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+}
+public enum PBXObjectError : Swift.Error, Swift.CustomStringConvertible {
+  case missingIsa
+  case unknownElement(Swift.String)
+  case objectsReleased
+  case objectNotFound(Swift.String)
+  case orphaned(type: Swift.String, reference: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+}
+public enum XCBreakpointListError : Swift.Error, Swift.CustomStringConvertible {
+  case notFound(path: PathKit.Path)
+  case missing(property: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+}
+public enum XCConfigError : Swift.Error, Swift.CustomStringConvertible {
+  case notFound(path: PathKit.Path)
+  public var description: Swift.String {
+    get
+  }
+}
+extension Swift.Array where Element : Swift.Hashable {
+  public func uniqued() -> [Element]
+}
+extension Swift.Bool {
+  public var xmlString: Swift.String {
+    get
+  }
+  public var int: Swift.UInt {
+    get
+  }
+}
+public func loadPlist(path: Swift.String) -> [Swift.String : Swift.AnyObject]?
+extension Swift.String {
+  public var quoted: Swift.String {
+    get
+  }
+  public var isQuoted: Swift.Bool {
+    get
+  }
+  public static func random(length: Swift.Int = 20) -> Swift.String
+}
+public enum BuildPhase : Swift.String {
+  case sources
+  case frameworks
+  case resources
+  case copyFiles
+  case runScript
+  case headers
+  case carbonResources
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers final public class PBXBuildFile : PBXObject {
+  final public var file: PBXFileElement? {
+    get
+    set
+  }
+  final public var product: XCSwiftPackageProductDependency? {
+    get
+    set
+  }
+  final public var settings: [Swift.String : Any]?
+  final public var platformFilter: Swift.String?
+  public init(file: PBXFileElement? = nil, product: XCSwiftPackageProductDependency? = nil, settings: [Swift.String : Any]? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PBXBuildPhase : PBXContainerItem {
+  public static let defaultBuildActionMask: Swift.UInt
+  public var buildActionMask: Swift.UInt
+  public var files: [PBXBuildFile]? {
+    get
+    set
+  }
+  public var inputFileListPaths: [Swift.String]?
+  public var outputFileListPaths: [Swift.String]?
+  public var runOnlyForDeploymentPostprocessing: Swift.Bool
+  public var buildPhase: BuildPhase {
+    get
+  }
+  public init(files: [PBXBuildFile] = [], inputFileListPaths: [Swift.String]? = nil, outputFileListPaths: [Swift.String]? = nil, buildActionMask: Swift.UInt = defaultBuildActionMask, runOnlyForDeploymentPostprocessing: Swift.Bool = false)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+extension PBXBuildPhase {
+  public func add(file: PBXFileElement) throws -> PBXBuildFile
+}
+extension PBXBuildPhase {
+  @available(*, deprecated, message: "Please use buildPhase property instead")
+  public func type() -> BuildPhase?
+  public func name() -> Swift.String?
+}
+@_hasMissingDesignatedInitializers final public class PBXBuildRule : PBXObject {
+  final public var compilerSpec: Swift.String
+  final public var filePatterns: Swift.String?
+  final public var fileType: Swift.String
+  final public var isEditable: Swift.Bool
+  final public var name: Swift.String?
+  final public var outputFiles: [Swift.String]
+  final public var inputFiles: [Swift.String]?
+  final public var outputFilesCompilerFlags: [Swift.String]?
+  final public var script: Swift.String?
+  final public var runOncePerArchitecture: Swift.Bool?
+  public init(compilerSpec: Swift.String, fileType: Swift.String, isEditable: Swift.Bool = true, filePatterns: Swift.String? = nil, name: Swift.String? = nil, outputFiles: [Swift.String] = [], inputFiles: [Swift.String]? = nil, outputFilesCompilerFlags: [Swift.String]? = nil, script: Swift.String? = nil, runOncePerArchitecture: Swift.Bool? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+final public class PBXCopyFilesBuildPhase : PBXBuildPhase {
+  public enum SubFolder : Swift.UInt, Swift.Decodable {
+    case absolutePath
+    case productsDirectory
+    case wrapper
+    case executables
+    case resources
+    case javaResources
+    case frameworks
+    case sharedFrameworks
+    case sharedSupport
+    case plugins
+    case other
+    public init?(rawValue: Swift.UInt)
+    public typealias RawValue = Swift.UInt
+    public var rawValue: Swift.UInt {
+      get
+    }
+  }
+  final public var dstPath: Swift.String?
+  final public var dstSubfolderSpec: PBXCopyFilesBuildPhase.SubFolder?
+  final public var name: Swift.String?
+  override final public var buildPhase: BuildPhase {
+    get
+  }
+  public init(dstPath: Swift.String? = nil, dstSubfolderSpec: PBXCopyFilesBuildPhase.SubFolder? = nil, name: Swift.String? = nil, buildActionMask: Swift.UInt = defaultBuildActionMask, files: [PBXBuildFile] = [], runOnlyForDeploymentPostprocessing: Swift.Bool = false)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class PBXFrameworksBuildPhase : PBXBuildPhase {
+  override final public var buildPhase: BuildPhase {
+    get
+  }
+  override public init(files: [PBXBuildFile] = super, inputFileListPaths: [Swift.String]? = nil, outputFileListPaths: [Swift.String]? = nil, buildActionMask: Swift.UInt = super, runOnlyForDeploymentPostprocessing: Swift.Bool = super)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class PBXHeadersBuildPhase : PBXBuildPhase {
+  override final public var buildPhase: BuildPhase {
+    get
+  }
+  override public init(files: [PBXBuildFile] = super, inputFileListPaths: [Swift.String]? = nil, outputFileListPaths: [Swift.String]? = nil, buildActionMask: Swift.UInt = super, runOnlyForDeploymentPostprocessing: Swift.Bool = super)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class PBXResourcesBuildPhase : PBXBuildPhase {
+  override final public var buildPhase: BuildPhase {
+    get
+  }
+  override public init(files: [PBXBuildFile] = super, inputFileListPaths: [Swift.String]? = nil, outputFileListPaths: [Swift.String]? = nil, buildActionMask: Swift.UInt = super, runOnlyForDeploymentPostprocessing: Swift.Bool = super)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class PBXRezBuildPhase : PBXBuildPhase {
+  override final public var buildPhase: BuildPhase {
+    get
+  }
+  override public init(files: [PBXBuildFile] = super, inputFileListPaths: [Swift.String]? = nil, outputFileListPaths: [Swift.String]? = nil, buildActionMask: Swift.UInt = super, runOnlyForDeploymentPostprocessing: Swift.Bool = super)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+final public class PBXShellScriptBuildPhase : PBXBuildPhase {
+  final public var name: Swift.String?
+  final public var inputPaths: [Swift.String]
+  final public var outputPaths: [Swift.String]
+  final public var shellPath: Swift.String?
+  final public var shellScript: Swift.String?
+  final public var showEnvVarsInLog: Swift.Bool
+  final public var alwaysOutOfDate: Swift.Bool
+  final public var dependencyFile: Swift.String?
+  override final public var buildPhase: BuildPhase {
+    get
+  }
+  public init(files: [PBXBuildFile] = [], name: Swift.String? = nil, inputPaths: [Swift.String] = [], outputPaths: [Swift.String] = [], inputFileListPaths: [Swift.String]? = nil, outputFileListPaths: [Swift.String]? = nil, shellPath: Swift.String = "/bin/sh", shellScript: Swift.String? = nil, buildActionMask: Swift.UInt = defaultBuildActionMask, runOnlyForDeploymentPostprocessing: Swift.Bool = false, showEnvVarsInLog: Swift.Bool = true, alwaysOutOfDate: Swift.Bool = false, dependencyFile: Swift.String? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class PBXSourcesBuildPhase : PBXBuildPhase {
+  override final public var buildPhase: BuildPhase {
+    get
+  }
+  override public init(files: [PBXBuildFile] = super, inputFileListPaths: [Swift.String]? = nil, outputFileListPaths: [Swift.String]? = nil, buildActionMask: Swift.UInt = super, runOnlyForDeploymentPostprocessing: Swift.Bool = super)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public typealias BuildSettings = [Swift.String : Any]
+@_hasMissingDesignatedInitializers final public class XCBuildConfiguration : PBXObject {
+  final public var baseConfiguration: PBXFileReference? {
+    get
+    set
+  }
+  final public var buildSettings: BuildSettings
+  final public var name: Swift.String
+  public init(name: Swift.String, baseConfiguration: PBXFileReference? = nil, buildSettings: BuildSettings = [:])
+  required public init(from decoder: Swift.Decoder) throws
+  final public func append(setting name: Swift.String, value: Swift.String)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class XCConfigurationList : PBXObject {
+  final public var buildConfigurations: [XCBuildConfiguration] {
+    get
+    set
+  }
+  final public var defaultConfigurationIsVisible: Swift.Bool
+  final public var defaultConfigurationName: Swift.String?
+  public init(buildConfigurations: [XCBuildConfiguration] = [], defaultConfigurationName: Swift.String? = nil, defaultConfigurationIsVisible: Swift.Bool = false)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+extension XCConfigurationList {
+  final public func configuration(name: Swift.String) -> XCBuildConfiguration?
+  final public func addDefaultConfigurations() throws -> [XCBuildConfiguration]
+  final public func objectWithConfigurationList() throws -> PBXObject?
+}
+@_hasMissingDesignatedInitializers public class PBXContainerItem : PBXObject {
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class PBXContainerItemProxy : PBXObject {
+  public enum ProxyType : Swift.UInt, Swift.Decodable {
+    case nativeTarget
+    case reference
+    case other
+    public init?(rawValue: Swift.UInt)
+    public typealias RawValue = Swift.UInt
+    public var rawValue: Swift.UInt {
+      get
+    }
+  }
+  public enum ContainerPortal : Swift.Equatable {
+    case project(PBXProject)
+    case fileReference(PBXFileReference)
+    case unknownObject(PBXObject?)
+    public static func == (a: PBXContainerItemProxy.ContainerPortal, b: PBXContainerItemProxy.ContainerPortal) -> Swift.Bool
+  }
+  public enum RemoteGlobalID : Swift.Equatable {
+    case object(PBXObject)
+    case string(Swift.String)
+    public static func == (a: PBXContainerItemProxy.RemoteGlobalID, b: PBXContainerItemProxy.RemoteGlobalID) -> Swift.Bool
+  }
+  final public var containerPortal: PBXContainerItemProxy.ContainerPortal {
+    get
+    set
+  }
+  final public var proxyType: PBXContainerItemProxy.ProxyType?
+  final public var remoteGlobalID: PBXContainerItemProxy.RemoteGlobalID? {
+    get
+    set
+  }
+  final public var remoteInfo: Swift.String?
+  public init(containerPortal: PBXContainerItemProxy.ContainerPortal, remoteGlobalID: PBXContainerItemProxy.RemoteGlobalID? = nil, proxyType: PBXContainerItemProxy.ProxyType? = nil, remoteInfo: Swift.String? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PBXFileElement : PBXContainerItem {
+  public var sourceTree: PBXSourceTree?
+  public var path: Swift.String?
+  public var name: Swift.String?
+  public var includeInIndex: Swift.Bool?
+  public var usesTabs: Swift.Bool?
+  public var indentWidth: Swift.UInt?
+  public var tabWidth: Swift.UInt?
+  public var wrapsLines: Swift.Bool?
+  weak public var parent: PBXFileElement?
+  public init(sourceTree: PBXSourceTree? = nil, path: Swift.String? = nil, name: Swift.String? = nil, includeInIndex: Swift.Bool? = nil, usesTabs: Swift.Bool? = nil, indentWidth: Swift.UInt? = nil, tabWidth: Swift.UInt? = nil, wrapsLines: Swift.Bool? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+extension PBXFileElement {
+  public func fullPath(sourceRoot: PathKit.Path) throws -> PathKit.Path?
+  public func assignParentToChildren()
+}
+final public class PBXFileReference : PBXFileElement {
+  final public var fileEncoding: Swift.UInt?
+  final public var explicitFileType: Swift.String?
+  final public var lastKnownFileType: Swift.String?
+  final public var lineEnding: Swift.UInt?
+  final public var languageSpecificationIdentifier: Swift.String?
+  final public var xcLanguageSpecificationIdentifier: Swift.String?
+  final public var plistStructureDefinitionIdentifier: Swift.String?
+  public init(sourceTree: PBXSourceTree? = nil, name: Swift.String? = nil, fileEncoding: Swift.UInt? = nil, explicitFileType: Swift.String? = nil, lastKnownFileType: Swift.String? = nil, path: Swift.String? = nil, includeInIndex: Swift.Bool? = nil, wrapsLines: Swift.Bool? = nil, usesTabs: Swift.Bool? = nil, indentWidth: Swift.UInt? = nil, tabWidth: Swift.UInt? = nil, lineEnding: Swift.UInt? = nil, languageSpecificationIdentifier: Swift.String? = nil, xcLanguageSpecificationIdentifier: Swift.String? = nil, plistStructureDefinitionIdentifier: Swift.String? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public class PBXGroup : PBXFileElement {
+  public var children: [PBXFileElement] {
+    get
+    set
+  }
+  public init(children: [PBXFileElement] = [], sourceTree: PBXSourceTree? = nil, name: Swift.String? = nil, path: Swift.String? = nil, includeInIndex: Swift.Bool? = nil, wrapsLines: Swift.Bool? = nil, usesTabs: Swift.Bool? = nil, indentWidth: Swift.UInt? = nil, tabWidth: Swift.UInt? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public struct GroupAddingOptions : Swift.OptionSet {
+  public let rawValue: Swift.Int
+  public init(rawValue: Swift.Int)
+  public static let withoutFolder: GroupAddingOptions
+  public typealias ArrayLiteralElement = GroupAddingOptions
+  public typealias Element = GroupAddingOptions
+  public typealias RawValue = Swift.Int
+}
+extension PBXGroup {
+  public func group(named name: Swift.String) -> PBXGroup?
+  public func file(named name: Swift.String) -> PBXFileReference?
+  @discardableResult
+  public func addGroup(named groupName: Swift.String, options: GroupAddingOptions = []) throws -> [PBXGroup]
+  @discardableResult
+  public func addVariantGroup(named groupName: Swift.String) throws -> [PBXVariantGroup]
+  @discardableResult
+  public func addFile(at filePath: PathKit.Path, sourceTree: PBXSourceTree = .group, sourceRoot: PathKit.Path, override: Swift.Bool = true, validatePresence: Swift.Bool = true) throws -> PBXFileReference
+}
+public enum PBXSourceTree : Swift.CustomStringConvertible, Swift.Equatable, Swift.Decodable {
+  case none
+  case absolute
+  case group
+  case sourceRoot
+  case buildProductsDir
+  case sdkRoot
+  case developerDir
+  case custom(Swift.String)
+  public init(value: Swift.String)
+  public init(from decoder: Swift.Decoder) throws
+  public static func == (lhs: PBXSourceTree, rhs: PBXSourceTree) -> Swift.Bool
+  public var description: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers final public class PBXVariantGroup : PBXGroup {
+  override public init(children: [PBXFileElement] = super, sourceTree: PBXSourceTree? = nil, name: Swift.String? = nil, path: Swift.String? = nil, includeInIndex: Swift.Bool? = nil, wrapsLines: Swift.Bool? = nil, usesTabs: Swift.Bool? = nil, indentWidth: Swift.UInt? = nil, tabWidth: Swift.UInt? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+final public class XCVersionGroup : PBXGroup {
+  final public var currentVersion: PBXFileReference? {
+    get
+    set
+  }
+  final public var versionGroupType: Swift.String?
+  public init(currentVersion: PBXFileReference? = nil, path: Swift.String? = nil, name: Swift.String? = nil, sourceTree: PBXSourceTree? = nil, versionGroupType: Swift.String? = nil, children: [PBXFileElement] = [], includeInIndex: Swift.Bool? = nil, wrapsLines: Swift.Bool? = nil, usesTabs: Swift.Bool? = nil, indentWidth: Swift.UInt? = nil, tabWidth: Swift.UInt? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PBXObject : Swift.Hashable, Swift.Decodable, Swift.Equatable {
+  public var uuid: Swift.String {
+    get
+  }
+  public var context: Swift.String?
+  required public init(from decoder: Swift.Decoder) throws
+  public static var isa: Swift.String {
+    get
+  }
+  public static func == (lhs: PBXObject, rhs: PBXObject) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBXFileOrder {
+  case byUUID
+  case byFilename
+  public static func == (a: PBXFileOrder, b: PBXFileOrder) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBXNavigatorFileOrder {
+  case unsorted
+  case byFilename
+  case byFilenameGroupsFirst
+  public static func == (a: PBXNavigatorFileOrder, b: PBXNavigatorFileOrder) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBXBuildPhaseFileOrder {
+  case unsorted
+  case byFilename
+  public static func == (a: PBXBuildPhaseFileOrder, b: PBXBuildPhaseFileOrder) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PBXReferenceFormat {
+  case withPrefixAndSuffix
+  case xcode
+  public static func == (a: PBXReferenceFormat, b: PBXReferenceFormat) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct PBXOutputSettings {
+  public init(projFileListOrder: PBXFileOrder = .byUUID, projNavigatorFileOrder: PBXNavigatorFileOrder = .unsorted, projBuildPhaseFileOrder: PBXBuildPhaseFileOrder = .unsorted, projReferenceFormat: PBXReferenceFormat = .xcode)
+}
+final public class PBXProj : Swift.Decodable {
+  final public var archiveVersion: Swift.UInt
+  final public var objectVersion: Swift.UInt
+  final public var classes: [Swift.String : Any]
+  final public var rootObject: PBXProject? {
+    get
+    set
+  }
+  public init(rootObject: PBXProject? = nil, objectVersion: Swift.UInt = Xcode.LastKnown.objectVersion, archiveVersion: Swift.UInt = Xcode.LastKnown.archiveVersion, classes: [Swift.String : Any] = [:], objects: [PBXObject] = [])
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+extension PBXProj {
+  final public var projects: [PBXProject] {
+    get
+  }
+  final public var referenceProxies: [PBXReferenceProxy] {
+    get
+  }
+  final public var fileReferences: [PBXFileReference] {
+    get
+  }
+  final public var versionGroups: [XCVersionGroup] {
+    get
+  }
+  final public var variantGroups: [PBXVariantGroup] {
+    get
+  }
+  final public var groups: [PBXGroup] {
+    get
+  }
+  final public var buildConfigurations: [XCBuildConfiguration] {
+    get
+  }
+  final public var configurationLists: [XCConfigurationList] {
+    get
+  }
+  final public var legacyTargets: [PBXLegacyTarget] {
+    get
+  }
+  final public var aggregateTargets: [PBXAggregateTarget] {
+    get
+  }
+  final public var nativeTargets: [PBXNativeTarget] {
+    get
+  }
+  final public var targetDependencies: [PBXTargetDependency] {
+    get
+  }
+  final public var containerItemProxies: [PBXContainerItemProxy] {
+    get
+  }
+  final public var buildRules: [PBXBuildRule] {
+    get
+  }
+  final public var buildFiles: [PBXBuildFile] {
+    get
+  }
+  final public var copyFilesBuildPhases: [PBXCopyFilesBuildPhase] {
+    get
+  }
+  final public var shellScriptBuildPhases: [PBXShellScriptBuildPhase] {
+    get
+  }
+  final public var resourcesBuildPhases: [PBXResourcesBuildPhase] {
+    get
+  }
+  final public var frameworksBuildPhases: [PBXFrameworksBuildPhase] {
+    get
+  }
+  final public var headersBuildPhases: [PBXHeadersBuildPhase] {
+    get
+  }
+  final public var sourcesBuildPhases: [PBXSourcesBuildPhase] {
+    get
+  }
+  final public var carbonResourcesBuildPhases: [PBXRezBuildPhase] {
+    get
+  }
+  final public var buildPhases: [PBXBuildPhase] {
+    get
+  }
+  final public func rootProject() throws -> PBXProject?
+  final public func rootGroup() throws -> PBXGroup?
+  final public func add(object: PBXObject)
+  final public func delete(object: PBXObject)
+  final public func targets(named name: Swift.String) -> [PBXTarget]
+  final public func invalidateUUIDs()
+  final public func forEach(_ closure: (PBXObject) -> Swift.Void)
+  final public func batchUpdate(sourceRoot: PathKit.Path, closure: (PBXBatchUpdater) throws -> Swift.Void) throws
+}
+extension PBXProj : Swift.Equatable {
+  public static func == (lhs: PBXProj, rhs: PBXProj) -> Swift.Bool
+}
+extension PBXProj : Writable {
+  final public func write(path: PathKit.Path, override: Swift.Bool) throws
+  final public func write(path: PathKit.Path, override: Swift.Bool, outputSettings: PBXOutputSettings) throws
+}
+@_hasMissingDesignatedInitializers final public class PBXProject : PBXObject {
+  final public var name: Swift.String
+  final public var buildConfigurationList: XCConfigurationList! {
+    get
+    set
+  }
+  final public var compatibilityVersion: Swift.String
+  final public var developmentRegion: Swift.String?
+  final public var hasScannedForEncodings: Swift.Int
+  final public var knownRegions: [Swift.String]
+  final public var mainGroup: PBXGroup! {
+    get
+    set
+  }
+  final public var productsGroup: PBXGroup? {
+    get
+    set
+  }
+  final public var projectDirPath: Swift.String
+  final public var projects: [[Swift.String : PBXFileElement]] {
+    get
+    set
+  }
+  final public var projectRoots: [Swift.String]
+  final public var targets: [PBXTarget] {
+    get
+    set
+  }
+  final public var attributes: [Swift.String : Any]
+  final public var targetAttributes: [PBXTarget : [Swift.String : Any]] {
+    get
+    set
+  }
+  final public var packages: [XCRemoteSwiftPackageReference] {
+    get
+    set
+  }
+  final public func setTargetAttributes(_ attributes: [Swift.String : Any], target: PBXTarget)
+  final public func removeTargetAttributes(target: PBXTarget)
+  final public func clearAllTargetAttributes()
+  final public func attributes(for target: PBXTarget) -> [Swift.String : Any]?
+  final public func addSwiftPackage(repositoryURL: Swift.String, productName: Swift.String, versionRequirement: XCRemoteSwiftPackageReference.VersionRequirement, targetName: Swift.String) throws -> XCRemoteSwiftPackageReference
+  final public func addLocalSwiftPackage(path: PathKit.Path, productName: Swift.String, targetName: Swift.String, addFileReference: Swift.Bool = true) throws -> XCSwiftPackageProductDependency
+  public init(name: Swift.String, buildConfigurationList: XCConfigurationList, compatibilityVersion: Swift.String, mainGroup: PBXGroup, developmentRegion: Swift.String? = nil, hasScannedForEncodings: Swift.Int = 0, knownRegions: [Swift.String] = [], productsGroup: PBXGroup? = nil, projectDirPath: Swift.String = "", projects: [[Swift.String : PBXFileElement]] = [], projectRoots: [Swift.String] = [], targets: [PBXTarget] = [], packages: [XCRemoteSwiftPackageReference] = [], attributes: [Swift.String : Any] = [:], targetAttributes: [PBXTarget : [Swift.String : Any]] = [:])
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class XCRemoteSwiftPackageReference : PBXContainerItem {
+  public enum VersionRequirement : Swift.Decodable, Swift.Equatable {
+    case upToNextMajorVersion(Swift.String)
+    case upToNextMinorVersion(Swift.String)
+    case range(from: Swift.String, to: Swift.String)
+    case exact(Swift.String)
+    case branch(Swift.String)
+    case revision(Swift.String)
+    public init(from decoder: Swift.Decoder) throws
+    public static func == (a: XCRemoteSwiftPackageReference.VersionRequirement, b: XCRemoteSwiftPackageReference.VersionRequirement) -> Swift.Bool
+  }
+  public var repositoryURL: Swift.String?
+  public var versionRequirement: XCRemoteSwiftPackageReference.VersionRequirement?
+  public init(repositoryURL: Swift.String, versionRequirement: XCRemoteSwiftPackageReference.VersionRequirement? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  public var name: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class XCSwiftPackageProductDependency : PBXContainerItem {
+  public var productName: Swift.String
+  public var package: XCRemoteSwiftPackageReference? {
+    get
+    set
+  }
+  public init(productName: Swift.String, package: XCRemoteSwiftPackageReference? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_inheritsConvenienceInitializers final public class PBXAggregateTarget : PBXTarget {
+  override public init(name: Swift.String, buildConfigurationList: XCConfigurationList? = nil, buildPhases: [PBXBuildPhase] = super, buildRules: [PBXBuildRule] = super, dependencies: [PBXTargetDependency] = super, packageProductDependencies: [XCSwiftPackageProductDependency] = super, productName: Swift.String? = nil, product: PBXFileReference? = nil, productType: PBXProductType? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+final public class PBXLegacyTarget : PBXTarget {
+  final public var buildToolPath: Swift.String?
+  final public var buildArgumentsString: Swift.String?
+  final public var passBuildSettingsInEnvironment: Swift.Bool
+  final public var buildWorkingDirectory: Swift.String?
+  public init(name: Swift.String, buildToolPath: Swift.String? = nil, buildArgumentsString: Swift.String? = nil, passBuildSettingsInEnvironment: Swift.Bool = false, buildWorkingDirectory: Swift.String? = nil, buildConfigurationList: XCConfigurationList? = nil, buildPhases: [PBXBuildPhase] = [], buildRules: [PBXBuildRule] = [], dependencies: [PBXTargetDependency] = [], productName: Swift.String? = nil, product: PBXFileReference? = nil, productType: PBXProductType? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+final public class PBXNativeTarget : PBXTarget {
+  final public var productInstallPath: Swift.String?
+  public init(name: Swift.String, buildConfigurationList: XCConfigurationList? = nil, buildPhases: [PBXBuildPhase] = [], buildRules: [PBXBuildRule] = [], dependencies: [PBXTargetDependency] = [], productInstallPath: Swift.String? = nil, productName: Swift.String? = nil, product: PBXFileReference? = nil, productType: PBXProductType? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+extension PBXNativeTarget {
+  final public func addDependency(target: PBXTarget) throws -> PBXTargetDependency?
+}
+public enum PBXProductType : Swift.String, Swift.Decodable {
+  case none
+  case application
+  case framework
+  case staticFramework
+  case xcFramework
+  case dynamicLibrary
+  case staticLibrary
+  case bundle
+  case unitTestBundle
+  case uiTestBundle
+  case appExtension
+  case commandLineTool
+  case watchApp
+  case watch2App
+  case watch2AppContainer
+  case watchExtension
+  case watch2Extension
+  case tvExtension
+  case messagesApplication
+  case messagesExtension
+  case stickerPack
+  case xpcService
+  case ocUnitTestBundle
+  case xcodeExtension
+  case instrumentsPackage
+  case intentsServiceExtension
+  case onDemandInstallCapableApplication
+  case metalLibrary
+  case driverExtension
+  case systemExtension
+  public var fileExtension: Swift.String? {
+    get
+  }
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+final public class PBXReferenceProxy : PBXFileElement {
+  final public var fileType: Swift.String?
+  final public var remote: PBXContainerItemProxy? {
+    get
+    set
+  }
+  public init(fileType: Swift.String? = nil, path: Swift.String? = nil, name: Swift.String? = nil, remote: PBXContainerItemProxy? = nil, sourceTree: PBXSourceTree? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class PBXTarget : PBXContainerItem {
+  public var buildConfigurationList: XCConfigurationList? {
+    get
+    set
+  }
+  public var buildPhases: [PBXBuildPhase] {
+    get
+    set
+  }
+  public var buildRules: [PBXBuildRule] {
+    get
+    set
+  }
+  public var dependencies: [PBXTargetDependency] {
+    get
+    set
+  }
+  public var name: Swift.String
+  public var productName: Swift.String?
+  public var product: PBXFileReference? {
+    get
+    set
+  }
+  public var packageProductDependencies: [XCSwiftPackageProductDependency] {
+    get
+    set
+  }
+  public var productType: PBXProductType?
+  public init(name: Swift.String, buildConfigurationList: XCConfigurationList? = nil, buildPhases: [PBXBuildPhase] = [], buildRules: [PBXBuildRule] = [], dependencies: [PBXTargetDependency] = [], packageProductDependencies: [XCSwiftPackageProductDependency] = [], productName: Swift.String? = nil, product: PBXFileReference? = nil, productType: PBXProductType? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+extension PBXTarget {
+  public func productNameWithExtension() -> Swift.String?
+  public func frameworksBuildPhase() throws -> PBXFrameworksBuildPhase?
+  public func sourcesBuildPhase() throws -> PBXSourcesBuildPhase?
+  public func resourcesBuildPhase() throws -> PBXResourcesBuildPhase?
+  public func sourceFiles() throws -> [PBXFileElement]
+  public func embedFrameworksBuildPhases() -> [PBXCopyFilesBuildPhase]
+}
+@_hasMissingDesignatedInitializers final public class PBXTargetDependency : PBXObject {
+  final public var name: Swift.String?
+  final public var target: PBXTarget? {
+    get
+    set
+  }
+  final public var targetProxy: PBXContainerItemProxy? {
+    get
+    set
+  }
+  final public var product: XCSwiftPackageProductDependency? {
+    get
+    set
+  }
+  final public var platformFilter: Swift.String?
+  public init(name: Swift.String? = nil, platformFilter: Swift.String? = nil, target: PBXTarget? = nil, targetProxy: PBXContainerItemProxy? = nil, product: XCSwiftPackageProductDependency? = nil)
+  required public init(from decoder: Swift.Decoder) throws
+  @objc deinit
+}
+public enum WorkspaceSettingsError : Swift.Error {
+  case notFound(path: PathKit.Path)
+}
+@_hasMissingDesignatedInitializers public class WorkspaceSettings : Swift.Codable, Swift.Equatable, Writable {
+  public enum BuildSystem : Swift.String {
+    case original
+    case new
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var buildSystem: WorkspaceSettings.BuildSystem
+  public var autoCreateSchemes: Swift.Bool?
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+  public static func at(path: PathKit.Path) throws -> WorkspaceSettings
+  public static func == (lhs: WorkspaceSettings, rhs: WorkspaceSettings) -> Swift.Bool
+  public func write(path: PathKit.Path, override: Swift.Bool) throws
+  @objc deinit
+}
+final public class XCBreakpointList : Swift.Equatable, Writable {
+  @_hasMissingDesignatedInitializers final public class BreakpointProxy : Swift.Equatable {
+    @_hasMissingDesignatedInitializers final public class BreakpointContent : Swift.Equatable {
+      @_hasMissingDesignatedInitializers final public class BreakpointActionProxy : Swift.Equatable {
+        @_hasMissingDesignatedInitializers final public class ActionContent : Swift.Equatable {
+          final public var consoleCommand: Swift.String?
+          final public var message: Swift.String?
+          final public var conveyanceType: Swift.String?
+          final public var command: Swift.String?
+          final public var arguments: Swift.String?
+          final public var waitUntilDone: Swift.Bool?
+          final public var script: Swift.String?
+          final public var soundName: Swift.String?
+          public init(consoleCommand: Swift.String? = nil, message: Swift.String? = nil, conveyanceType: Swift.String? = nil, command: Swift.String? = nil, arguments: Swift.String? = nil, waitUntilDone: Swift.Bool? = nil, script: Swift.String? = nil, soundName: Swift.String? = nil)
+          public static func == (lhs: XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy.ActionContent, rhs: XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy.ActionContent) -> Swift.Bool
+          @objc deinit
+        }
+        public enum ActionExtensionID : Swift.String {
+          case debuggerCommand
+          case log
+          case shellCommand
+          case graphicsTrace
+          case appleScript
+          case sound
+          case openGLError
+          public init?(rawValue: Swift.String)
+          public typealias RawValue = Swift.String
+          public var rawValue: Swift.String {
+            get
+          }
+        }
+        final public var actionExtensionID: XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy.ActionExtensionID
+        final public var actionContent: XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy.ActionContent
+        public init(actionExtensionID: XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy.ActionExtensionID, actionContent: XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy.ActionContent)
+        public static func == (lhs: XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy, rhs: XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy) -> Swift.Bool
+        @objc deinit
+      }
+      @_hasMissingDesignatedInitializers final public class BreakpointLocationProxy : Swift.Equatable {
+        public init()
+        public static func == (_: XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointLocationProxy, _: XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointLocationProxy) -> Swift.Bool
+        @objc deinit
+      }
+      public static func == (lhs: XCBreakpointList.BreakpointProxy.BreakpointContent, rhs: XCBreakpointList.BreakpointProxy.BreakpointContent) -> Swift.Bool
+      final public var enabled: Swift.Bool
+      final public var ignoreCount: Swift.String
+      final public var continueAfterRunningActions: Swift.Bool
+      final public var filePath: Swift.String?
+      final public var timestamp: Swift.String?
+      final public var startingColumn: Swift.String?
+      final public var endingColumn: Swift.String?
+      final public var startingLine: Swift.String?
+      final public var endingLine: Swift.String?
+      final public var breakpointStackSelectionBehavior: Swift.String?
+      final public var symbol: Swift.String?
+      final public var module: Swift.String?
+      final public var scope: Swift.String?
+      final public var stopOnStyle: Swift.String?
+      final public var condition: Swift.String?
+      final public var actions: [XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy]
+      final public var locations: [XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointLocationProxy]
+      public init(enabled: Swift.Bool = true, ignoreCount: Swift.String = "0", continueAfterRunningActions: Swift.Bool = false, filePath: Swift.String? = nil, timestamp: Swift.String? = nil, startingColumn: Swift.String? = nil, endingColumn: Swift.String? = nil, startingLine: Swift.String? = nil, endingLine: Swift.String? = nil, breakpointStackSelectionBehavior: Swift.String? = nil, symbol: Swift.String? = nil, module: Swift.String? = nil, scope: Swift.String? = nil, stopOnStyle: Swift.String? = nil, condition: Swift.String? = nil, actions: [XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy] = [], locations: [XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointLocationProxy] = [])
+      @objc deinit
+    }
+    public enum BreakpointExtensionID : Swift.String {
+      case file
+      case exception
+      case swiftError
+      case openGLError
+      case symbolic
+      case ideConstraintError
+      case ideTestFailure
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    final public var breakpointExtensionID: XCBreakpointList.BreakpointProxy.BreakpointExtensionID
+    final public var breakpointContent: XCBreakpointList.BreakpointProxy.BreakpointContent
+    public init(breakpointExtensionID: XCBreakpointList.BreakpointProxy.BreakpointExtensionID, breakpointContent: XCBreakpointList.BreakpointProxy.BreakpointContent)
+    public static func == (lhs: XCBreakpointList.BreakpointProxy, rhs: XCBreakpointList.BreakpointProxy) -> Swift.Bool
+    @objc deinit
+  }
+  final public var breakpoints: [XCBreakpointList.BreakpointProxy]
+  final public var type: Swift.String?
+  final public var version: Swift.String?
+  public init(path: PathKit.Path) throws
+  public init(type: Swift.String? = nil, version: Swift.String? = nil, breakpoints: [XCBreakpointList.BreakpointProxy] = [])
+  final public func add(breakpointProxy: XCBreakpointList.BreakpointProxy) -> XCBreakpointList
+  final public func write(path: PathKit.Path, override: Swift.Bool) throws
+  public static func == (lhs: XCBreakpointList, rhs: XCBreakpointList) -> Swift.Bool
+  @objc deinit
+}
+final public class XCSharedData : Swift.Equatable {
+  final public var schemes: [XCScheme]
+  final public var breakpoints: XCBreakpointList?
+  final public var workspaceSettings: WorkspaceSettings?
+  public init(schemes: [XCScheme], breakpoints: XCBreakpointList? = nil, workspaceSettings: WorkspaceSettings? = nil)
+  public init(path: PathKit.Path) throws
+  public static func == (lhs: XCSharedData, rhs: XCSharedData) -> Swift.Bool
+  @objc deinit
+}
+public struct Xcode {
+  public struct LastKnown {
+    public struct SDK {
+      public static let ios: Swift.String
+      public static let macos: Swift.String
+      public static let tvos: Swift.String
+      public static let watchos: Swift.String
+    }
+    public static let archiveVersion: Swift.UInt
+    public static let swiftVersion: Swift.String
+    public static let objectVersion: Swift.UInt
+    public static let upgradeCheck: Swift.String
+    public static let swiftUpgradeCheck: Swift.String
+  }
+  public struct Default {
+    public static let objectVersion: Swift.UInt
+    public static let compatibilityVersion: Swift.String
+    public static let developmentRegion: Swift.String
+  }
+  public static let inheritedKeywords: [Swift.String]
+  public static let headersExtensions: [Swift.String]
+  public struct Supported {
+    public static let xcschemeFormatVersion: Swift.String
+  }
+  public static func filetype(extension: Swift.String) -> Swift.String?
+  public struct ProjectReference {
+    public static let projectReferenceKey: Swift.String
+    public static let productGroupKey: Swift.String
+  }
+}
+final public class XcodeProj : Swift.Equatable {
+  final public var workspace: XCWorkspace
+  final public var pbxproj: PBXProj
+  final public var sharedData: XCSharedData?
+  public init(path: PathKit.Path) throws
+  convenience public init(pathString: Swift.String) throws
+  public init(workspace: XCWorkspace, pbxproj: PBXProj, sharedData: XCSharedData? = nil)
+  public static func == (lhs: XcodeProj, rhs: XcodeProj) -> Swift.Bool
+  @objc deinit
+}
+extension XcodeProj : Writable {
+  final public func write(path: PathKit.Path, override: Swift.Bool = true) throws
+  final public func write(path: PathKit.Path, override: Swift.Bool = true, outputSettings: PBXOutputSettings) throws
+  public static func workspacePath(_ path: PathKit.Path) -> PathKit.Path
+  final public func writeWorkspace(path: PathKit.Path, override: Swift.Bool = true) throws
+  public static func pbxprojPath(_ path: PathKit.Path) -> PathKit.Path
+  final public func writePBXProj(path: PathKit.Path, override: Swift.Bool = true, outputSettings: PBXOutputSettings) throws
+  public static func sharedDataPath(_ path: PathKit.Path) -> PathKit.Path
+  public static func schemesPath(_ path: PathKit.Path) -> PathKit.Path
+  public static func schemePath(_ path: PathKit.Path, schemeName: Swift.String) -> PathKit.Path
+  final public func writeSchemes(path: PathKit.Path, override: Swift.Bool = true) throws
+  public static func debuggerPath(_ path: PathKit.Path) -> PathKit.Path
+  public static func breakPointsPath(_ path: PathKit.Path) -> PathKit.Path
+  final public func writeBreakPoints(path: PathKit.Path, override: Swift.Bool = true) throws
+}
+public protocol Writable {
+  func write(path: PathKit.Path, override: Swift.Bool) throws
+  func write(pathString: Swift.String, override: Swift.Bool) throws
+}
+extension Writable {
+  public func write(pathString: Swift.String, override: Swift.Bool) throws
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class AdditionalOption : Swift.Equatable {
+    final public var key: Swift.String
+    final public var value: Swift.String
+    final public var isEnabled: Swift.Bool
+    public init(key: Swift.String, value: Swift.String, isEnabled: Swift.Bool)
+    public static func == (lhs: XCScheme.AdditionalOption, rhs: XCScheme.AdditionalOption) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class AnalyzeAction : Swift.Equatable {
+    final public var buildConfiguration: Swift.String
+    public init(buildConfiguration: Swift.String)
+    public static func == (lhs: XCScheme.AnalyzeAction, rhs: XCScheme.AnalyzeAction) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class ArchiveAction : XCScheme.SerialAction {
+    final public var buildConfiguration: Swift.String
+    final public var revealArchiveInOrganizer: Swift.Bool
+    final public var customArchiveName: Swift.String?
+    public init(buildConfiguration: Swift.String, revealArchiveInOrganizer: Swift.Bool, customArchiveName: Swift.String? = nil, preActions: [XCScheme.ExecutionAction] = [], postActions: [XCScheme.ExecutionAction] = [])
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class BuildAction : XCScheme.SerialAction {
+    @_hasMissingDesignatedInitializers final public class Entry : Swift.Equatable {
+      public enum BuildFor {
+        case running, testing, profiling, archiving, analyzing
+        public static var `default`: [XCScheme.BuildAction.Entry.BuildFor]
+        public static var indexing: [XCScheme.BuildAction.Entry.BuildFor]
+        public static var testOnly: [XCScheme.BuildAction.Entry.BuildFor]
+        public static func == (a: XCScheme.BuildAction.Entry.BuildFor, b: XCScheme.BuildAction.Entry.BuildFor) -> Swift.Bool
+        public func hash(into hasher: inout Swift.Hasher)
+        public var hashValue: Swift.Int {
+          get
+        }
+      }
+      final public var buildableReference: XCScheme.BuildableReference
+      final public var buildFor: [XCScheme.BuildAction.Entry.BuildFor]
+      public init(buildableReference: XCScheme.BuildableReference, buildFor: [XCScheme.BuildAction.Entry.BuildFor])
+      public static func == (lhs: XCScheme.BuildAction.Entry, rhs: XCScheme.BuildAction.Entry) -> Swift.Bool
+      @objc deinit
+    }
+    final public var buildActionEntries: [XCScheme.BuildAction.Entry]
+    final public var parallelizeBuild: Swift.Bool
+    final public var buildImplicitDependencies: Swift.Bool
+    final public var runPostActionsOnFailure: Swift.Bool?
+    public init(buildActionEntries: [XCScheme.BuildAction.Entry] = [], preActions: [XCScheme.ExecutionAction] = [], postActions: [XCScheme.ExecutionAction] = [], parallelizeBuild: Swift.Bool = false, buildImplicitDependencies: Swift.Bool = false, runPostActionsOnFailure: Swift.Bool? = nil)
+    final public func add(buildActionEntry: XCScheme.BuildAction.Entry) -> XCScheme.BuildAction
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers final public class BuildableProductRunnable : XCScheme.Runnable {
+    override public init(buildableReference: XCScheme.BuildableReference, runnableDebuggingMode: Swift.String = super)
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class BuildableReference : Swift.Equatable {
+    final public var referencedContainer: Swift.String
+    final public func setBlueprint(_ object: PBXObject)
+    final public var blueprintIdentifier: Swift.String? {
+      get
+    }
+    final public var buildableName: Swift.String
+    final public var buildableIdentifier: Swift.String
+    final public var blueprintName: Swift.String
+    public init(referencedContainer: Swift.String, blueprint: PBXObject?, buildableName: Swift.String, blueprintName: Swift.String, buildableIdentifier: Swift.String = "primary")
+    public init(referencedContainer: Swift.String, blueprintIdentifier: Swift.String?, buildableName: Swift.String, blueprintName: Swift.String, buildableIdentifier: Swift.String = "primary")
+    public static func == (lhs: XCScheme.BuildableReference, rhs: XCScheme.BuildableReference) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class CommandLineArguments : Swift.Equatable {
+    final public let arguments: [XCScheme.CommandLineArguments.CommandLineArgument]
+    public init(arguments args: [XCScheme.CommandLineArguments.CommandLineArgument])
+    public static func == (lhs: XCScheme.CommandLineArguments, rhs: XCScheme.CommandLineArguments) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme.CommandLineArguments {
+  public struct CommandLineArgument : Swift.Equatable {
+    public let name: Swift.String
+    public let enabled: Swift.Bool
+    public init(name: Swift.String, enabled: Swift.Bool)
+    public static func == (lhs: XCScheme.CommandLineArguments.CommandLineArgument, rhs: XCScheme.CommandLineArguments.CommandLineArgument) -> Swift.Bool
+  }
+}
+extension XCScheme {
+  public struct EnvironmentVariable : Swift.Equatable {
+    public let variable: Swift.String
+    public let value: Swift.String
+    public let enabled: Swift.Bool
+    public init(variable: Swift.String, value: Swift.String, enabled: Swift.Bool)
+    public static func == (lhs: XCScheme.EnvironmentVariable, rhs: XCScheme.EnvironmentVariable) -> Swift.Bool
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class ExecutionAction : Swift.Equatable {
+    final public var title: Swift.String
+    final public var scriptText: Swift.String
+    final public var environmentBuildable: XCScheme.BuildableReference?
+    public init(scriptText: Swift.String, title: Swift.String = "Run Script", environmentBuildable: XCScheme.BuildableReference? = nil)
+    public static func == (lhs: XCScheme.ExecutionAction, rhs: XCScheme.ExecutionAction) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class LaunchAction : XCScheme.SerialAction {
+    public enum Style : Swift.String {
+      case auto
+      case wait
+      case custom
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public enum GPUFrameCaptureMode : Swift.String {
+      case autoEnabled
+      case metal
+      case openGL
+      case disabled
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public enum GPUValidationMode : Swift.String {
+      case enabled
+      case disabled
+      case extended
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    public static let defaultDebugServiceExtension: Swift.String
+    public static let defaultGPUFrameCaptureMode: XCScheme.LaunchAction.GPUFrameCaptureMode
+    public static let defaultGPUValidationMode: XCScheme.LaunchAction.GPUValidationMode
+    final public var runnable: XCScheme.Runnable?
+    final public var macroExpansion: XCScheme.BuildableReference?
+    final public var selectedDebuggerIdentifier: Swift.String
+    final public var selectedLauncherIdentifier: Swift.String
+    final public var buildConfiguration: Swift.String
+    final public var launchStyle: XCScheme.LaunchAction.Style
+    final public var askForAppToLaunch: Swift.Bool?
+    final public var pathRunnable: XCScheme.PathRunnable?
+    final public var useCustomWorkingDirectory: Swift.Bool
+    final public var ignoresPersistentStateOnLaunch: Swift.Bool
+    final public var debugDocumentVersioning: Swift.Bool
+    final public var debugServiceExtension: Swift.String
+    final public var allowLocationSimulation: Swift.Bool
+    final public var locationScenarioReference: XCScheme.LocationScenarioReference?
+    final public var enableGPUFrameCaptureMode: XCScheme.LaunchAction.GPUFrameCaptureMode
+    final public var enableGPUValidationMode: XCScheme.LaunchAction.GPUValidationMode
+    final public var enableAddressSanitizer: Swift.Bool
+    final public var enableASanStackUseAfterReturn: Swift.Bool
+    final public var enableThreadSanitizer: Swift.Bool
+    final public var stopOnEveryThreadSanitizerIssue: Swift.Bool
+    final public var enableUBSanitizer: Swift.Bool
+    final public var stopOnEveryUBSanitizerIssue: Swift.Bool
+    final public var disableMainThreadChecker: Swift.Bool
+    final public var stopOnEveryMainThreadCheckerIssue: Swift.Bool
+    final public var additionalOptions: [XCScheme.AdditionalOption]
+    final public var commandlineArguments: XCScheme.CommandLineArguments?
+    final public var environmentVariables: [XCScheme.EnvironmentVariable]?
+    final public var language: Swift.String?
+    final public var region: Swift.String?
+    final public var launchAutomaticallySubstyle: Swift.String?
+    final public var storeKitConfigurationFileReference: XCScheme.StoreKitConfigurationFileReference?
+    final public var customLaunchCommand: Swift.String?
+    final public var customLLDBInitFile: Swift.String?
+    public init(runnable: XCScheme.Runnable?, buildConfiguration: Swift.String, preActions: [XCScheme.ExecutionAction] = [], postActions: [XCScheme.ExecutionAction] = [], macroExpansion: XCScheme.BuildableReference? = nil, selectedDebuggerIdentifier: Swift.String = XCScheme.defaultDebugger, selectedLauncherIdentifier: Swift.String = XCScheme.defaultLauncher, launchStyle: XCScheme.LaunchAction.Style = .auto, askForAppToLaunch: Swift.Bool? = nil, pathRunnable: XCScheme.PathRunnable? = nil, useCustomWorkingDirectory: Swift.Bool = false, ignoresPersistentStateOnLaunch: Swift.Bool = false, debugDocumentVersioning: Swift.Bool = true, debugServiceExtension: Swift.String = LaunchAction.defaultDebugServiceExtension, allowLocationSimulation: Swift.Bool = true, locationScenarioReference: XCScheme.LocationScenarioReference? = nil, enableGPUFrameCaptureMode: XCScheme.LaunchAction.GPUFrameCaptureMode = LaunchAction.defaultGPUFrameCaptureMode, enableGPUValidationMode: XCScheme.LaunchAction.GPUValidationMode = LaunchAction.defaultGPUValidationMode, enableAddressSanitizer: Swift.Bool = false, enableASanStackUseAfterReturn: Swift.Bool = false, enableThreadSanitizer: Swift.Bool = false, stopOnEveryThreadSanitizerIssue: Swift.Bool = false, enableUBSanitizer: Swift.Bool = false, stopOnEveryUBSanitizerIssue: Swift.Bool = false, disableMainThreadChecker: Swift.Bool = false, stopOnEveryMainThreadCheckerIssue: Swift.Bool = false, additionalOptions: [XCScheme.AdditionalOption] = [], commandlineArguments: XCScheme.CommandLineArguments? = nil, environmentVariables: [XCScheme.EnvironmentVariable]? = nil, language: Swift.String? = nil, region: Swift.String? = nil, launchAutomaticallySubstyle: Swift.String? = nil, storeKitConfigurationFileReference: XCScheme.StoreKitConfigurationFileReference? = nil, customLaunchCommand: Swift.String? = nil, customLLDBInitFile: Swift.String? = nil)
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class LocationScenarioReference : Swift.Equatable {
+    final public var identifier: Swift.String
+    final public var referenceType: Swift.String
+    public init(identifier: Swift.String, referenceType: Swift.String)
+    public static func == (lhs: XCScheme.LocationScenarioReference, rhs: XCScheme.LocationScenarioReference) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers public class PathRunnable : Swift.Equatable {
+    public var runnableDebuggingMode: Swift.String
+    public var filePath: Swift.String
+    public init(filePath: Swift.String, runnableDebuggingMode: Swift.String = "0")
+    public static func == (lhs: XCScheme.PathRunnable, rhs: XCScheme.PathRunnable) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class ProfileAction : XCScheme.SerialAction {
+    final public var buildableProductRunnable: XCScheme.BuildableProductRunnable?
+    final public var buildConfiguration: Swift.String
+    final public var shouldUseLaunchSchemeArgsEnv: Swift.Bool
+    final public var savedToolIdentifier: Swift.String
+    final public var ignoresPersistentStateOnLaunch: Swift.Bool
+    final public var useCustomWorkingDirectory: Swift.Bool
+    final public var debugDocumentVersioning: Swift.Bool
+    final public var askForAppToLaunch: Swift.Bool?
+    final public var commandlineArguments: XCScheme.CommandLineArguments?
+    final public var environmentVariables: [XCScheme.EnvironmentVariable]?
+    final public var macroExpansion: XCScheme.BuildableReference?
+    final public var enableTestabilityWhenProfilingTests: Swift.Bool
+    public init(buildableProductRunnable: XCScheme.BuildableProductRunnable?, buildConfiguration: Swift.String, preActions: [XCScheme.ExecutionAction] = [], postActions: [XCScheme.ExecutionAction] = [], macroExpansion: XCScheme.BuildableReference? = nil, shouldUseLaunchSchemeArgsEnv: Swift.Bool = true, savedToolIdentifier: Swift.String = "", ignoresPersistentStateOnLaunch: Swift.Bool = false, useCustomWorkingDirectory: Swift.Bool = false, debugDocumentVersioning: Swift.Bool = true, askForAppToLaunch: Swift.Bool? = nil, commandlineArguments: XCScheme.CommandLineArguments? = nil, environmentVariables: [XCScheme.EnvironmentVariable]? = nil, enableTestabilityWhenProfilingTests: Swift.Bool = true)
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class RemoteRunnable : XCScheme.Runnable {
+    final public var bundleIdentifier: Swift.String
+    final public var remotePath: Swift.String?
+    public init(buildableReference: XCScheme.BuildableReference, bundleIdentifier: Swift.String, runnableDebuggingMode: Swift.String = "0", remotePath: Swift.String? = nil)
+    public static func == (lhs: XCScheme.RemoteRunnable, rhs: XCScheme.RemoteRunnable) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers public class Runnable : Swift.Equatable {
+    public var runnableDebuggingMode: Swift.String
+    public var buildableReference: XCScheme.BuildableReference
+    public init(buildableReference: XCScheme.BuildableReference, runnableDebuggingMode: Swift.String = "0")
+    public static func == (lhs: XCScheme.Runnable, rhs: XCScheme.Runnable) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers public class SerialAction : Swift.Equatable {
+    public var preActions: [XCScheme.ExecutionAction]
+    public var postActions: [XCScheme.ExecutionAction]
+    public static func == (lhs: XCScheme.SerialAction, rhs: XCScheme.SerialAction) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class StoreKitConfigurationFileReference : Swift.Equatable {
+    final public var identifier: Swift.String
+    public init(identifier: Swift.String)
+    public static func == (lhs: XCScheme.StoreKitConfigurationFileReference, rhs: XCScheme.StoreKitConfigurationFileReference) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class TestAction : XCScheme.SerialAction {
+    public enum AttachmentLifetime : Swift.String {
+      case keepAlways, keepNever
+      public init?(rawValue: Swift.String)
+      public typealias RawValue = Swift.String
+      public var rawValue: Swift.String {
+        get
+      }
+    }
+    final public var testables: [XCScheme.TestableReference]
+    final public var testPlans: [XCScheme.TestPlanReference]?
+    final public var codeCoverageTargets: [XCScheme.BuildableReference]
+    final public var buildConfiguration: Swift.String
+    final public var selectedDebuggerIdentifier: Swift.String
+    final public var selectedLauncherIdentifier: Swift.String
+    final public var shouldUseLaunchSchemeArgsEnv: Swift.Bool
+    final public var codeCoverageEnabled: Swift.Bool
+    final public var onlyGenerateCoverageForSpecifiedTargets: Swift.Bool?
+    final public var enableAddressSanitizer: Swift.Bool
+    final public var enableASanStackUseAfterReturn: Swift.Bool
+    final public var enableThreadSanitizer: Swift.Bool
+    final public var enableUBSanitizer: Swift.Bool
+    final public var disableMainThreadChecker: Swift.Bool
+    final public var macroExpansion: XCScheme.BuildableReference?
+    final public var additionalOptions: [XCScheme.AdditionalOption]
+    final public var commandlineArguments: XCScheme.CommandLineArguments?
+    final public var environmentVariables: [XCScheme.EnvironmentVariable]?
+    final public var language: Swift.String?
+    final public var region: Swift.String?
+    final public var systemAttachmentLifetime: XCScheme.TestAction.AttachmentLifetime?
+    final public var userAttachmentLifetime: XCScheme.TestAction.AttachmentLifetime?
+    final public var customLLDBInitFile: Swift.String?
+    public init(buildConfiguration: Swift.String, macroExpansion: XCScheme.BuildableReference?, testables: [XCScheme.TestableReference] = [], testPlans: [XCScheme.TestPlanReference]? = nil, preActions: [XCScheme.ExecutionAction] = [], postActions: [XCScheme.ExecutionAction] = [], selectedDebuggerIdentifier: Swift.String = XCScheme.defaultDebugger, selectedLauncherIdentifier: Swift.String = XCScheme.defaultLauncher, shouldUseLaunchSchemeArgsEnv: Swift.Bool = true, codeCoverageEnabled: Swift.Bool = false, codeCoverageTargets: [XCScheme.BuildableReference] = [], onlyGenerateCoverageForSpecifiedTargets: Swift.Bool? = nil, enableAddressSanitizer: Swift.Bool = false, enableASanStackUseAfterReturn: Swift.Bool = false, enableThreadSanitizer: Swift.Bool = false, enableUBSanitizer: Swift.Bool = false, disableMainThreadChecker: Swift.Bool = false, additionalOptions: [XCScheme.AdditionalOption] = [], commandlineArguments: XCScheme.CommandLineArguments? = nil, environmentVariables: [XCScheme.EnvironmentVariable]? = nil, language: Swift.String? = nil, region: Swift.String? = nil, systemAttachmentLifetime: XCScheme.TestAction.AttachmentLifetime? = nil, userAttachmentLifetime: XCScheme.TestAction.AttachmentLifetime? = nil, customLLDBInitFile: Swift.String? = nil)
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class TestItem : Swift.Equatable {
+    final public var identifier: Swift.String
+    public init(identifier: Swift.String)
+    public static func == (lhs: XCScheme.TestItem, rhs: XCScheme.TestItem) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class TestPlanReference : Swift.Equatable {
+    final public var reference: Swift.String
+    final public var `default`: Swift.Bool
+    public init(reference: Swift.String, default: Swift.Bool = false)
+    public static func == (lhs: XCScheme.TestPlanReference, rhs: XCScheme.TestPlanReference) -> Swift.Bool
+    @objc deinit
+  }
+}
+extension XCScheme {
+  @_hasMissingDesignatedInitializers final public class TestableReference : Swift.Equatable {
+    final public var skipped: Swift.Bool
+    final public var parallelizable: Swift.Bool
+    final public var randomExecutionOrdering: Swift.Bool
+    final public var useTestSelectionWhitelist: Swift.Bool?
+    final public var buildableReference: XCScheme.BuildableReference
+    final public var skippedTests: [XCScheme.TestItem]
+    final public var selectedTests: [XCScheme.TestItem]
+    public init(skipped: Swift.Bool, parallelizable: Swift.Bool = false, randomExecutionOrdering: Swift.Bool = false, buildableReference: XCScheme.BuildableReference, skippedTests: [XCScheme.TestItem] = [], selectedTests: [XCScheme.TestItem] = [], useTestSelectionWhitelist: Swift.Bool? = nil)
+    public static func == (lhs: XCScheme.TestableReference, rhs: XCScheme.TestableReference) -> Swift.Bool
+    @objc deinit
+  }
+}
+public enum XCSchemeError : Swift.Error, Swift.CustomStringConvertible {
+  case notFound(path: PathKit.Path)
+  case missing(property: Swift.String)
+  public var description: Swift.String {
+    get
+  }
+}
+final public class XCScheme : Writable, Swift.Equatable {
+  public static let defaultDebugger: Swift.String
+  public static let defaultLauncher: Swift.String
+  final public var buildAction: XCScheme.BuildAction?
+  final public var testAction: XCScheme.TestAction?
+  final public var launchAction: XCScheme.LaunchAction?
+  final public var profileAction: XCScheme.ProfileAction?
+  final public var analyzeAction: XCScheme.AnalyzeAction?
+  final public var archiveAction: XCScheme.ArchiveAction?
+  final public var lastUpgradeVersion: Swift.String?
+  final public var version: Swift.String?
+  final public var wasCreatedForAppExtension: Swift.Bool?
+  final public var name: Swift.String
+  public init(path: PathKit.Path) throws
+  public init(name: Swift.String, lastUpgradeVersion: Swift.String?, version: Swift.String?, buildAction: XCScheme.BuildAction? = nil, testAction: XCScheme.TestAction? = nil, launchAction: XCScheme.LaunchAction? = nil, profileAction: XCScheme.ProfileAction? = nil, analyzeAction: XCScheme.AnalyzeAction? = nil, archiveAction: XCScheme.ArchiveAction? = nil, wasCreatedForAppExtension: Swift.Bool? = nil)
+  final public func write(path: PathKit.Path, override: Swift.Bool) throws
+  public static func == (lhs: XCScheme, rhs: XCScheme) -> Swift.Bool
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class BuildSettingsProvider {
+  public enum Variant {
+    case all, debug, release
+    public static func == (a: BuildSettingsProvider.Variant, b: BuildSettingsProvider.Variant) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Platform {
+    case iOS, macOS, tvOS, watchOS
+    public static func == (a: BuildSettingsProvider.Platform, b: BuildSettingsProvider.Platform) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public enum Product {
+    case framework, staticLibrary, dynamicLibrary, application, bundle, appExtension, watchExtension, unitTests, uiTests
+    public static func == (a: BuildSettingsProvider.Product, b: BuildSettingsProvider.Product) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public static func targetDefault(variant: BuildSettingsProvider.Variant? = nil, platform: BuildSettingsProvider.Platform?, product: BuildSettingsProvider.Product?, swift: Swift.Bool? = nil) -> BuildSettings
+  public static func projectDefault(variant: BuildSettingsProvider.Variant) -> BuildSettings
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class PBXBatchUpdater {
+  @discardableResult
+  final public func addFile(to project: PBXProject, at filePath: PathKit.Path, sourceTree: PBXSourceTree = .group) throws -> PBXFileReference
+  @discardableResult
+  final public func addFile(to group: PBXGroup, fileName: Swift.String, sourceTree: PBXSourceTree = .group) throws -> PBXFileReference
+  @objc deinit
+}
+public typealias XCConfigInclude = (include: PathKit.Path, config: XCConfig)
+final public class XCConfig {
+  final public var includes: [XCConfigInclude]
+  final public var buildSettings: BuildSettings
+  public init(includes: [XCConfigInclude], buildSettings: BuildSettings = [:])
+  public init(path: PathKit.Path, projectPath: PathKit.Path? = nil) throws
+  @objc deinit
+}
+extension XCConfig : Swift.Equatable {
+  public static func == (lhs: XCConfig, rhs: XCConfig) -> Swift.Bool
+}
+extension XCConfig {
+  final public func flattenedBuildSettings() -> [Swift.String : Any]
+}
+extension XCConfig : Writable {
+  final public func write(path: PathKit.Path, override: Swift.Bool) throws
+}
+final public class XCWorkspace : Writable, Swift.Equatable {
+  final public var data: XCWorkspaceData
+  convenience public init(path: PathKit.Path) throws
+  convenience public init()
+  convenience public init(pathString: Swift.String) throws
+  public init(data: XCWorkspaceData)
+  final public func write(path: PathKit.Path, override: Swift.Bool = true) throws
+  public static func == (lhs: XCWorkspace, rhs: XCWorkspace) -> Swift.Bool
+  @objc deinit
+}
+final public class XCWorkspaceData {
+  final public var children: [XCWorkspaceDataElement]
+  public init(children: [XCWorkspaceDataElement])
+  @objc deinit
+}
+extension XCWorkspaceData : Swift.Equatable {
+  public static func == (lhs: XCWorkspaceData, rhs: XCWorkspaceData) -> Swift.Bool
+}
+extension XCWorkspaceData : Writable {
+  convenience public init(path: PathKit.Path) throws
+  final public func write(path: PathKit.Path, override: Swift.Bool = true) throws
+}
+public enum XCWorkspaceDataElement : Swift.Equatable {
+  public enum Error : Swift.Error {
+    case unknownName(Swift.String)
+  }
+  case file(XCWorkspaceDataFileRef)
+  case group(XCWorkspaceDataGroup)
+  public var location: XCWorkspaceDataElementLocationType {
+    get
+  }
+  public static func == (lhs: XCWorkspaceDataElement, rhs: XCWorkspaceDataElement) -> Swift.Bool
+}
+public enum XCWorkspaceDataElementLocationType {
+  public enum Error : Swift.Error {
+    case missingSchema
+    public static func == (a: XCWorkspaceDataElementLocationType.Error, b: XCWorkspaceDataElementLocationType.Error) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  case absolute(Swift.String)
+  case container(Swift.String)
+  case developer(Swift.String)
+  case group(Swift.String)
+  case `self`(Swift.String)
+  case other(Swift.String, Swift.String)
+  public var schema: Swift.String {
+    get
+  }
+  public var path: Swift.String {
+    get
+  }
+  public init(string: Swift.String) throws
+}
+extension XCWorkspaceDataElementLocationType : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension XCWorkspaceDataElementLocationType : Swift.Equatable {
+  public static func == (lhs: XCWorkspaceDataElementLocationType, rhs: XCWorkspaceDataElementLocationType) -> Swift.Bool
+}
+final public class XCWorkspaceDataFileRef {
+  final public var location: XCWorkspaceDataElementLocationType
+  public init(location: XCWorkspaceDataElementLocationType)
+  @objc deinit
+}
+extension XCWorkspaceDataFileRef : Swift.Equatable {
+  public static func == (lhs: XCWorkspaceDataFileRef, rhs: XCWorkspaceDataFileRef) -> Swift.Bool
+}
+final public class XCWorkspaceDataGroup {
+  final public var location: XCWorkspaceDataElementLocationType
+  final public var name: Swift.String?
+  final public var children: [XCWorkspaceDataElement]
+  public init(location: XCWorkspaceDataElementLocationType, name: Swift.String?, children: [XCWorkspaceDataElement])
+  @objc deinit
+}
+extension XCWorkspaceDataGroup : Swift.Equatable {
+  public static func == (lhs: XCWorkspaceDataGroup, rhs: XCWorkspaceDataGroup) -> Swift.Bool
+}
+extension BuildPhase : Swift.Equatable {}
+extension BuildPhase : Swift.Hashable {}
+extension BuildPhase : Swift.RawRepresentable {}
+extension PBXCopyFilesBuildPhase.SubFolder : Swift.Equatable {}
+extension PBXCopyFilesBuildPhase.SubFolder : Swift.Hashable {}
+extension PBXCopyFilesBuildPhase.SubFolder : Swift.RawRepresentable {}
+extension PBXContainerItemProxy.ProxyType : Swift.Equatable {}
+extension PBXContainerItemProxy.ProxyType : Swift.Hashable {}
+extension PBXContainerItemProxy.ProxyType : Swift.RawRepresentable {}
+extension PBXFileOrder : Swift.Equatable {}
+extension PBXFileOrder : Swift.Hashable {}
+extension PBXNavigatorFileOrder : Swift.Equatable {}
+extension PBXNavigatorFileOrder : Swift.Hashable {}
+extension PBXBuildPhaseFileOrder : Swift.Equatable {}
+extension PBXBuildPhaseFileOrder : Swift.Hashable {}
+extension PBXReferenceFormat : Swift.Equatable {}
+extension PBXReferenceFormat : Swift.Hashable {}
+extension PBXProductType : Swift.Equatable {}
+extension PBXProductType : Swift.Hashable {}
+extension PBXProductType : Swift.RawRepresentable {}
+extension WorkspaceSettings.BuildSystem : Swift.Equatable {}
+extension WorkspaceSettings.BuildSystem : Swift.Hashable {}
+extension WorkspaceSettings.BuildSystem : Swift.RawRepresentable {}
+extension XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy.ActionExtensionID : Swift.Equatable {}
+extension XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy.ActionExtensionID : Swift.Hashable {}
+extension XCBreakpointList.BreakpointProxy.BreakpointContent.BreakpointActionProxy.ActionExtensionID : Swift.RawRepresentable {}
+extension XCBreakpointList.BreakpointProxy.BreakpointExtensionID : Swift.Equatable {}
+extension XCBreakpointList.BreakpointProxy.BreakpointExtensionID : Swift.Hashable {}
+extension XCBreakpointList.BreakpointProxy.BreakpointExtensionID : Swift.RawRepresentable {}
+extension XCScheme.BuildAction.Entry.BuildFor : Swift.Equatable {}
+extension XCScheme.BuildAction.Entry.BuildFor : Swift.Hashable {}
+extension XCScheme.LaunchAction.Style : Swift.Equatable {}
+extension XCScheme.LaunchAction.Style : Swift.Hashable {}
+extension XCScheme.LaunchAction.Style : Swift.RawRepresentable {}
+extension XCScheme.LaunchAction.GPUFrameCaptureMode : Swift.Equatable {}
+extension XCScheme.LaunchAction.GPUFrameCaptureMode : Swift.Hashable {}
+extension XCScheme.LaunchAction.GPUFrameCaptureMode : Swift.RawRepresentable {}
+extension XCScheme.LaunchAction.GPUValidationMode : Swift.Equatable {}
+extension XCScheme.LaunchAction.GPUValidationMode : Swift.Hashable {}
+extension XCScheme.LaunchAction.GPUValidationMode : Swift.RawRepresentable {}
+extension XCScheme.TestAction.AttachmentLifetime : Swift.Equatable {}
+extension XCScheme.TestAction.AttachmentLifetime : Swift.Hashable {}
+extension XCScheme.TestAction.AttachmentLifetime : Swift.RawRepresentable {}
+extension BuildSettingsProvider.Variant : Swift.Equatable {}
+extension BuildSettingsProvider.Variant : Swift.Hashable {}
+extension BuildSettingsProvider.Platform : Swift.Equatable {}
+extension BuildSettingsProvider.Platform : Swift.Hashable {}
+extension BuildSettingsProvider.Product : Swift.Equatable {}
+extension BuildSettingsProvider.Product : Swift.Hashable {}
+extension XCWorkspaceDataElementLocationType.Error : Swift.Equatable {}
+extension XCWorkspaceDataElementLocationType.Error : Swift.Hashable {}

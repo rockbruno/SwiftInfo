@@ -1,0 +1,477 @@
+{
+  "": {
+    "dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/XcodeProj.d",
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/XcodeProj.o",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/master.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Errors/Errors.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Errors/Errors.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Errors/Errors~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Errors/Errors.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/AEXML+XcodeFormat.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/AEXML+XcodeFormat.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/AEXML+XcodeFormat~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/AEXML+XcodeFormat.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Array+Extras.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Array+Extras.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Array+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Array+Extras.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Bool+Extras.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Bool+Extras.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Bool+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Bool+Extras.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Dictionary+Enumerate.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Dictionary+Enumerate.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Dictionary+Enumerate~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Dictionary+Enumerate.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Dictionary+Extras.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Dictionary+Extras.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Dictionary+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Dictionary+Extras.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/KeyedDecodingContainer+Additions.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/KeyedDecodingContainer+Additions.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/KeyedDecodingContainer+Additions~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/KeyedDecodingContainer+Additions.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/NSRecursiveLock+Sync.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/NSRecursiveLock+Sync.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/NSRecursiveLock+Sync~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/NSRecursiveLock+Sync.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Path+Extras.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Path+Extras.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Path+Extras~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Path+Extras.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/String+Utils.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/String+Utils.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/String+Utils~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/String+Utils.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/String+md5.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/String+md5.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/String+md5~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/String+md5.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/BuildPhase.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/BuildPhase.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/BuildPhase~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/BuildPhase.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildFile.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildFile.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildFile~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildFile.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildPhase.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildPhase.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildPhase~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildPhase.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildRule.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildRule.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildRule~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildRule.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXCopyFilesBuildPhase.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXCopyFilesBuildPhase.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXCopyFilesBuildPhase~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXCopyFilesBuildPhase.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXFrameworksBuildPhase.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXFrameworksBuildPhase.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXFrameworksBuildPhase~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXFrameworksBuildPhase.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXHeadersBuildPhase.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXHeadersBuildPhase.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXHeadersBuildPhase~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXHeadersBuildPhase.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXResourcesBuildPhase.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXResourcesBuildPhase.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXResourcesBuildPhase~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXResourcesBuildPhase.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXRezBuildPhase.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXRezBuildPhase.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXRezBuildPhase~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXRezBuildPhase.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXShellScriptBuildPhase.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXShellScriptBuildPhase.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXShellScriptBuildPhase~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXShellScriptBuildPhase.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXSourcesBuildPhase.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXSourcesBuildPhase.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXSourcesBuildPhase~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXSourcesBuildPhase.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/BuildSettings.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/BuildSettings.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/BuildSettings~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/BuildSettings.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/XCBuildConfiguration.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/XCBuildConfiguration.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/XCBuildConfiguration~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/XCBuildConfiguration.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/XCConfigurationList.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/XCConfigurationList.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/XCConfigurationList~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/XCConfigurationList.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXContainerItem.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXContainerItem.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXContainerItem~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXContainerItem.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXContainerItemProxy.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXContainerItemProxy.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXContainerItemProxy~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXContainerItemProxy.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXFileElement.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXFileElement.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXFileElement~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXFileElement.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXFileReference.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXFileReference.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXFileReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXFileReference.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXGroup.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXGroup.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXGroup.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXSourceTree.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXSourceTree.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXSourceTree~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXSourceTree.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXVariantGroup.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXVariantGroup.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXVariantGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXVariantGroup.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/XCVersionGroup.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/XCVersionGroup.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/XCVersionGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/XCVersionGroup.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObject.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObject.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObject~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObject.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjectParser.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjectParser.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjectParser~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjectParser.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjectReference.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjectReference.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjectReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjectReference.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjects.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjects.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjects~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjects.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXOutputSettings.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXOutputSettings.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXOutputSettings~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXOutputSettings.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProj.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProj.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProj~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProj.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProjEncoder.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProjEncoder.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProjEncoder~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProjEncoder.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProject.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProject.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProject~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProject.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Sourcery/Equality.generated.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Sourcery/Equality.generated.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Sourcery/Equality.generated~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Sourcery/Equality.generated.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Sourcery/Sourcery.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Sourcery/Sourcery.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Sourcery/Sourcery~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Sourcery/Sourcery.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/SwiftPackage/XCRemoteSwiftPackageReference.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/SwiftPackage/XCRemoteSwiftPackageReference.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/SwiftPackage/XCRemoteSwiftPackageReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/SwiftPackage/XCRemoteSwiftPackageReference.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/SwiftPackage/XCSwiftPackageProductDependency.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/SwiftPackage/XCSwiftPackageProductDependency.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/SwiftPackage/XCSwiftPackageProductDependency~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/SwiftPackage/XCSwiftPackageProductDependency.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXAggregateTarget.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXAggregateTarget.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXAggregateTarget~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXAggregateTarget.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXLegacyTarget.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXLegacyTarget.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXLegacyTarget~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXLegacyTarget.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXNativeTarget.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXNativeTarget.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXNativeTarget~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXNativeTarget.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXProductType.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXProductType.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXProductType~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXProductType.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXReferenceProxy.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXReferenceProxy.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXReferenceProxy~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXReferenceProxy.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXTarget.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXTarget.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXTarget~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXTarget.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXTargetDependency.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXTargetDependency.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXTargetDependency~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXTargetDependency.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/WorkspaceSettings.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/WorkspaceSettings.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/WorkspaceSettings~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/WorkspaceSettings.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XCBreakpointList.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XCBreakpointList.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XCBreakpointList~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XCBreakpointList.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XCSharedData.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XCSharedData.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XCSharedData~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XCSharedData.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/Xcode.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/Xcode.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/Xcode~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/Xcode.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XcodeProj.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XcodeProj.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XcodeProj~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XcodeProj.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Protocols/Writable.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Protocols/Writable.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Protocols/Writable~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Protocols/Writable.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+AditionalOption.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+AditionalOption.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+AditionalOption~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+AditionalOption.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+AnalyzeAction.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+AnalyzeAction.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+AnalyzeAction~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+AnalyzeAction.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ArchiveAction.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ArchiveAction.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ArchiveAction~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ArchiveAction.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildAction.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildAction.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildAction~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildAction.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildableProductRunnable.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildableProductRunnable.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildableProductRunnable~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildableProductRunnable.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildableReference.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildableReference.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildableReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildableReference.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+CommandLineArguments.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+CommandLineArguments.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+CommandLineArguments~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+CommandLineArguments.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+EnvironmentVariable.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+EnvironmentVariable.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+EnvironmentVariable~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+EnvironmentVariable.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ExecutionAction.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ExecutionAction.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ExecutionAction~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ExecutionAction.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+LaunchAction.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+LaunchAction.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+LaunchAction~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+LaunchAction.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+LocationScenarioReference.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+LocationScenarioReference.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+LocationScenarioReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+LocationScenarioReference.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+PathRunnable.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+PathRunnable.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+PathRunnable~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+PathRunnable.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ProfileAction.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ProfileAction.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ProfileAction~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ProfileAction.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+RemoteRunnable.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+RemoteRunnable.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+RemoteRunnable~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+RemoteRunnable.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+Runnable.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+Runnable.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+Runnable~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+Runnable.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+SerialAction.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+SerialAction.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+SerialAction~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+SerialAction.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+StoreKitConfigurationFileReference.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+StoreKitConfigurationFileReference.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+StoreKitConfigurationFileReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+StoreKitConfigurationFileReference.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestAction.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestAction.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestAction~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestAction.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestItem.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestItem.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestItem~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestItem.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestPlanReference.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestPlanReference.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestPlanReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestPlanReference.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestableReference.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestableReference.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestableReference~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestableReference.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/BuildSettingsProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/BuildSettingsProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/BuildSettingsProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/BuildSettingsProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/CommentedString.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/CommentedString.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/CommentedString~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/CommentedString.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/Decoders.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/Decoders.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/Decoders~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/Decoders.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/JSONDecoding.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/JSONDecoding.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/JSONDecoding~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/JSONDecoding.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/PBXBatchUpdater.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/PBXBatchUpdater.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/PBXBatchUpdater~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/PBXBatchUpdater.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/PlistValue.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/PlistValue.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/PlistValue~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/PlistValue.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/ReferenceGenerator.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/ReferenceGenerator.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/ReferenceGenerator~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/ReferenceGenerator.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/XCConfig.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/XCConfig.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/XCConfig~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/XCConfig.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspace.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspace.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspace~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspace.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceData.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceData.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceData~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceData.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataElement.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataElement.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataElement~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataElement.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataElementLocationType.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataElementLocationType.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataElementLocationType~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataElementLocationType.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataFileRef.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataFileRef.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataFileRef~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataFileRef.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataGroup.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataGroup.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataGroup~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataGroup.swiftdeps"
+  }
+}

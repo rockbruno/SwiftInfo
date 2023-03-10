@@ -1,0 +1,75 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "ade84a954d36f5afe79209e9ff20c8f3352db158ff597e92dcf622e597af4d3a"
+build_start_time: [1678457727, 543627023]
+build_end_time: [1678457735, 337068080]
+inputs:
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift"
+  : [1678457726, 179728031]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift"
+  : [1678457726, 179815292]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift"
+  : [1678457726, 179908037]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift"
+  : [1678457726, 180005550]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift"
+  : [1678457726, 180160760]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift"
+  : [1678457726, 180260658]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift"
+  : [1678457726, 180326938]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift"
+  : [1678457726, 180403232]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift"
+  : [1678457726, 180521965]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift"
+  : [1678457726, 180630922]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift"
+  : [1678457726, 180764198]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift"
+  : [1678457726, 180863380]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift"
+  : [1678457726, 180977582]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift"
+  : [1678457726, 181047439]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift"
+  : [1678457726, 181123018]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift"
+  : [1678457726, 181230545]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArgumentsValidation.swift"
+  : [1678457726, 181329250]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift"
+  : [1678457726, 181416034]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift"
+  : [1678457726, 181542873]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift"
+  : [1678457726, 181635141]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift"
+  : [1678457726, 181769609]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift"
+  : [1678457726, 181972980]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift"
+  : [1678457726, 182091236]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift"
+  : [1678457726, 182178020]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift"
+  : [1678457726, 182256221]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift"
+  : [1678457726, 182327270]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift"
+  : [1678457726, 182402372]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift"
+  : [1678457726, 182559728]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift"
+  : [1678457726, 182689666]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift"
+  : [1678457726, 182798624]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift"
+  : [1678457726, 182884693]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift"
+  : [1678457726, 182991504]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift"
+  : [1678457726, 183085918]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift"
+  : [1678457726, 183175086]
+  ? "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift"
+  : [1678457726, 183248043]

@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "c6367e392ed6bde0c51957dcba1346b273f0c2abd83944440b4de267908c075e"
+build_start_time: [1678457753, 637433052]
+build_end_time: [1678457753, 894998073]
+inputs:
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfo/main.swift": [1678456775, 562667369]

@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "ade84a954d36f5afe79209e9ff20c8f3352db158ff597e92dcf622e597af4d3a"
+build_start_time: [1678457727, 541305065]
+build_end_time: [1678457729, 869212150]
+inputs:
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/PathKit/Sources/PathKit.swift": [1678457725, 673209190]

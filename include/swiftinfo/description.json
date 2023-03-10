@@ -1,0 +1,2331 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoPackageTests.xctest/Contents/MacOS/SwiftInfoPackageTests",
+      "productName" : "SwiftInfoPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.AEXML-release.module" : {
+      "executable" : "/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Document.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Element.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Error.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Options.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Parser.swift"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "AEXML",
+      "moduleOutputPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.swiftmodule",
+      "objects" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Document.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Element.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Error.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Options.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Parser.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.10",
+        "-swift-version",
+        "5",
+        "-O",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-module-cache-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/AEXML-Swift.h",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-emit-module-interface",
+        "-enable-library-evolution",
+        "-swift-version",
+        "5"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Document.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Element.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Error.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Options.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build/Parser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Document.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Element.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Error.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Options.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Parser.swift"
+      ],
+      "tempsPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.ArgumentParser-release.module" : {
+      "executable" : "/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArgumentsValidation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "ArgumentParser",
+      "moduleOutputPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.swiftmodule",
+      "objects" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Completions/BashCompletionsGenerator.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Completions/CompletionsGenerator.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Completions/FishCompletionsGenerator.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Completions/ZshCompletionsGenerator.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/Argument.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/ArgumentHelp.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/CompletionKind.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/Errors.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/Flag.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/NameSpecification.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/Option.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/OptionGroup.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/CommandConfiguration.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/EnumerableFlag.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/ExpressibleByArgument.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/ParsableArguments.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/ParsableArgumentsValidation.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/ParsableCommand.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/ArgumentDecoder.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/ArgumentDefinition.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/ArgumentSet.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/CommandParser.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/InputOrigin.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/Name.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/Parsed.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/ParsedValues.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/ParserError.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/SplitArguments.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Usage/HelpCommand.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Usage/HelpGenerator.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Usage/MessageInfo.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Usage/UsageGenerator.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Utilities/SequenceExtensions.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Utilities/StringExtensions.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Utilities/Tree.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.10",
+        "-swift-version",
+        "5",
+        "-O",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-module-cache-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/ArgumentParser-Swift.h",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-emit-module-interface",
+        "-enable-library-evolution",
+        "-swift-version",
+        "5"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Completions/BashCompletionsGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Completions/CompletionsGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Completions/FishCompletionsGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Completions/ZshCompletionsGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/Argument.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/ArgumentHelp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/CompletionKind.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/Errors.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/Flag.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/NameSpecification.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/Option.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Properties/OptionGroup.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/CommandConfiguration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/EnumerableFlag.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/ExpressibleByArgument.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/ParsableArguments.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/ParsableArgumentsValidation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsable Types/ParsableCommand.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/ArgumentDecoder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/ArgumentDefinition.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/ArgumentSet.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/CommandParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/InputOrigin.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/Name.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/Parsed.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/ParsedValues.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/ParserError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Parsing/SplitArguments.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Usage/HelpCommand.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Usage/HelpGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Usage/MessageInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Usage/UsageGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Utilities/SequenceExtensions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Utilities/StringExtensions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build/Utilities/Tree.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/BashCompletionsGenerator.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/CompletionsGenerator.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/FishCompletionsGenerator.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Completions/ZshCompletionsGenerator.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Argument.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/ArgumentHelp.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/CompletionKind.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Errors.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Flag.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/NameSpecification.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/Option.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Properties/OptionGroup.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/CommandConfiguration.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/EnumerableFlag.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ExpressibleByArgument.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArguments.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableArgumentsValidation.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsable Types/ParsableCommand.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDecoder.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentDefinition.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ArgumentSet.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/CommandParser.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/InputOrigin.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Name.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/Parsed.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParsedValues.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/ParserError.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Parsing/SplitArguments.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpCommand.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/HelpGenerator.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/MessageInfo.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Usage/UsageGenerator.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/SequenceExtensions.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/StringExtensions.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/swift-argument-parser/Sources/ArgumentParser/Utilities/Tree.swift"
+      ],
+      "tempsPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.PathKit-release.module" : {
+      "executable" : "/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/PathKit/Sources/PathKit.swift"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "PathKit",
+      "moduleOutputPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.swiftmodule",
+      "objects" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build/PathKit.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.10",
+        "-swift-version",
+        "4.2",
+        "-O",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-module-cache-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build/PathKit-Swift.h",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-emit-module-interface",
+        "-enable-library-evolution",
+        "-swift-version",
+        "5"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build/PathKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/PathKit/Sources/PathKit.swift"
+      ],
+      "tempsPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.Spectre-release.module" : {
+      "executable" : "/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Case.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Context.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Expectation.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Failure.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Global.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/GlobalContext.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Reporter.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Reporters.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/XCTest.swift"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Spectre",
+      "moduleOutputPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.swiftmodule",
+      "objects" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Case.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Context.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Expectation.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Failure.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Global.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/GlobalContext.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Reporter.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Reporters.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/XCTest.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.10",
+        "-swift-version",
+        "4.2",
+        "-O",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-module-cache-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Spectre-Swift.h",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-emit-module-interface",
+        "-enable-library-evolution",
+        "-swift-version",
+        "5"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Case.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Context.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Expectation.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Failure.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Global.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/GlobalContext.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Reporter.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Reporters.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/XCTest.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Case.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Context.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Expectation.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Failure.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Global.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/GlobalContext.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Reporter.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/Reporters.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/Spectre/Sources/Spectre/XCTest.swift"
+      ],
+      "tempsPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.SwiftInfo-release.module" : {
+      "executable" : "/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfo/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ArgumentParser.swiftmodule"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "SwiftInfo",
+      "moduleOutputPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build/SwiftInfo.swiftmodule",
+      "objects" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.10",
+        "-swift-version",
+        "5",
+        "-O",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-Xcc",
+        "-fmodule-map-file=/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/Csourcekitd/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/Csourcekitd/include",
+        "-module-cache-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-emit-module-interface",
+        "-enable-library-evolution",
+        "-swift-version",
+        "5"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build/SwiftInfo.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfo/main.swift"
+      ],
+      "tempsPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.SwiftInfoCore-release.module" : {
+      "executable" : "/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/BuildSystem.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/ExtractedInfo.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileOpener.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileUtils.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/HTTPClient.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/InfoProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Logger.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Output.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/PlistExtractor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/ProjectInfo.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/ArchiveDurationProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/AssetCatalog.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/IPASizeProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetCatalogProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LongestTestDurationProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/OBJCFileCountProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TestCountProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalAssetCatalogsSizeProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalTestDurationProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/WarningCountProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Regex.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Runner.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SlackFormatter.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Summary.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SwiftInfo.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Csourcekitd.build/sourcekitd.c.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SwiftInfoCore",
+      "moduleOutputPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.swiftmodule",
+      "objects" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/BuildSystem.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ExtractedInfo.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/FileUtils/FileOpener.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/FileUtils/FileUtils.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/HTTPClient.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/InfoProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Logger.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Output.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ProjectInfo/PlistExtractor.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ProjectInfo/ProjectInfo.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/ArchiveDurationProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/AssetCatalog.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/CodeCoverageProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/IPASizeProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LargestAssetCatalogProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LargestAssetProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LinesOfCodeProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LongestTestDurationProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/OBJCFileCountProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TargetCountProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TestCountProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TotalAssetCatalogsSizeProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TotalTestDurationProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/WarningCountProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Regex.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Runner.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SlackFormatter.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SourceKitWrapper/DLHandle.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SourceKitWrapper/SourceKit.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Summary.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SwiftInfo.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.10",
+        "-swift-version",
+        "5",
+        "-O",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-Xcc",
+        "-fmodule-map-file=/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/Csourcekitd/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/Csourcekitd/include",
+        "-module-cache-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SwiftInfoCore-Swift.h",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-emit-module-interface",
+        "-enable-library-evolution",
+        "-swift-version",
+        "5"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/BuildSystem.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ExtractedInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/FileUtils/FileOpener.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/FileUtils/FileUtils.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/HTTPClient.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/InfoProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Logger.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Output.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ProjectInfo/PlistExtractor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ProjectInfo/ProjectInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/ArchiveDurationProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/AssetCatalog.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/CodeCoverageProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/IPASizeProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LargestAssetCatalogProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LargestAssetProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LinesOfCodeProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LongestTestDurationProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/OBJCFileCountProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TargetCountProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TestCountProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TotalAssetCatalogsSizeProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TotalTestDurationProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/WarningCountProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Regex.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Runner.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SlackFormatter.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SourceKitWrapper/DLHandle.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SourceKitWrapper/SourceKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Summary.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SwiftInfo.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/BuildSystem.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/ExtractedInfo.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileOpener.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileUtils.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/HTTPClient.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/InfoProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Logger.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Output.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/PlistExtractor.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/ProjectInfo.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/ArchiveDurationProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/AssetCatalog.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/IPASizeProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetCatalogProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LongestTestDurationProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/OBJCFileCountProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TestCountProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalAssetCatalogsSizeProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalTestDurationProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/WarningCountProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Regex.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Runner.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SlackFormatter.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Summary.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SwiftInfo.swift"
+      ],
+      "tempsPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.SwiftInfoTests-release.module" : {
+      "executable" : "/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/CoreTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/FileUtilsTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/MockFileManager.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/MockFileOpener.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/MockPlistExtractor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/MockSourceKit.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/ProjectInfoDataTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/ProviderTests/ProviderTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/SlackFormatterTests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/XCTestManifests.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/swiftinfo"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "SwiftInfoTests",
+      "moduleOutputPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.swiftmodule",
+      "objects" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/CoreTests.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/FileUtilsTests.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/MockFileManager.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/MockFileOpener.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/MockPlistExtractor.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/MockSourceKit.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/ProjectInfoDataTests.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/ProviderTests/ProviderTests.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/SlackFormatterTests.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/XCTestManifests.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx11.0",
+        "-swift-version",
+        "5",
+        "-index-store-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/index/store",
+        "-O",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-Xcc",
+        "-fmodule-map-file=/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/Csourcekitd/include/module.modulemap",
+        "-Xcc",
+        "-I",
+        "-Xcc",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/Csourcekitd/include",
+        "-module-cache-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-emit-module-interface",
+        "-enable-library-evolution",
+        "-swift-version",
+        "5"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/CoreTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/FileUtilsTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/MockFileManager.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/MockFileOpener.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/MockPlistExtractor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/MockSourceKit.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/ProjectInfoDataTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/ProviderTests/ProviderTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/SlackFormatterTests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build/XCTestManifests.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/CoreTests.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/FileUtilsTests.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/MockFileManager.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/MockFileOpener.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/MockPlistExtractor.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/MockSourceKit.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/ProjectInfoDataTests.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/ProviderTests/ProviderTests.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/SlackFormatterTests.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Tests/SwiftInfoTests/XCTestManifests.swift"
+      ],
+      "tempsPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoTests.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.XcodeProj-release.module" : {
+      "executable" : "/Applications/Xcode_13.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "importPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Errors/Errors.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/AEXML+XcodeFormat.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Array+Extras.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Bool+Extras.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Dictionary+Enumerate.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Dictionary+Extras.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/KeyedDecodingContainer+Additions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/NSRecursiveLock+Sync.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Path+Extras.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/String+Utils.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/String+md5.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/BuildPhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildFile.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildPhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildRule.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXCopyFilesBuildPhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXFrameworksBuildPhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXHeadersBuildPhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXResourcesBuildPhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXRezBuildPhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXShellScriptBuildPhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXSourcesBuildPhase.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/BuildSettings.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/XCBuildConfiguration.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/XCConfigurationList.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXContainerItem.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXContainerItemProxy.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXFileElement.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXFileReference.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXGroup.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXSourceTree.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXVariantGroup.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/XCVersionGroup.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObject.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjectParser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjectReference.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjects.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXOutputSettings.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProj.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProjEncoder.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProject.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Sourcery/Equality.generated.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Sourcery/Sourcery.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/SwiftPackage/XCRemoteSwiftPackageReference.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/SwiftPackage/XCSwiftPackageProductDependency.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXAggregateTarget.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXLegacyTarget.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXNativeTarget.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXProductType.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXReferenceProxy.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXTarget.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXTargetDependency.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/WorkspaceSettings.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XCBreakpointList.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XCSharedData.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/Xcode.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XcodeProj.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Protocols/Writable.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+AditionalOption.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+AnalyzeAction.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ArchiveAction.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildAction.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildableProductRunnable.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildableReference.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+CommandLineArguments.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+EnvironmentVariable.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ExecutionAction.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+LaunchAction.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+LocationScenarioReference.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+PathRunnable.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ProfileAction.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+RemoteRunnable.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+Runnable.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+SerialAction.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+StoreKitConfigurationFileReference.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestAction.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestItem.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestPlanReference.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestableReference.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/BuildSettingsProvider.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/CommentedString.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/Decoders.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/JSONDecoding.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/PBXBatchUpdater.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/PlistValue.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/ReferenceGenerator.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/XCConfig.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspace.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceData.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataElement.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataElementLocationType.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataFileRef.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataGroup.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/AEXML.swiftmodule"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "XcodeProj",
+      "moduleOutputPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.swiftmodule",
+      "objects" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Errors/Errors.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/AEXML+XcodeFormat.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Array+Extras.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Bool+Extras.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Dictionary+Enumerate.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Dictionary+Extras.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/KeyedDecodingContainer+Additions.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/NSRecursiveLock+Sync.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Path+Extras.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/String+Utils.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/String+md5.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/BuildPhase.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildFile.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildPhase.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildRule.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXCopyFilesBuildPhase.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXFrameworksBuildPhase.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXHeadersBuildPhase.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXResourcesBuildPhase.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXRezBuildPhase.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXShellScriptBuildPhase.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXSourcesBuildPhase.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/BuildSettings.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/XCBuildConfiguration.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/XCConfigurationList.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXContainerItem.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXContainerItemProxy.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXFileElement.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXFileReference.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXGroup.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXSourceTree.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXVariantGroup.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/XCVersionGroup.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObject.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjectParser.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjectReference.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjects.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXOutputSettings.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProj.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProjEncoder.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProject.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Sourcery/Equality.generated.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Sourcery/Sourcery.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/SwiftPackage/XCRemoteSwiftPackageReference.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/SwiftPackage/XCSwiftPackageProductDependency.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXAggregateTarget.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXLegacyTarget.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXNativeTarget.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXProductType.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXReferenceProxy.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXTarget.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXTargetDependency.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/WorkspaceSettings.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XCBreakpointList.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XCSharedData.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/Xcode.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XcodeProj.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Protocols/Writable.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+AditionalOption.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+AnalyzeAction.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ArchiveAction.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildAction.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildableProductRunnable.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildableReference.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+CommandLineArguments.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+EnvironmentVariable.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ExecutionAction.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+LaunchAction.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+LocationScenarioReference.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+PathRunnable.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ProfileAction.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+RemoteRunnable.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+Runnable.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+SerialAction.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+StoreKitConfigurationFileReference.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestAction.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestItem.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestPlanReference.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestableReference.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/BuildSettingsProvider.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/CommentedString.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/Decoders.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/JSONDecoding.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/PBXBatchUpdater.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/PlistValue.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/ReferenceGenerator.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/XCConfig.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspace.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceData.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataElement.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataElementLocationType.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataFileRef.swift.o",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataGroup.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.10",
+        "-swift-version",
+        "5",
+        "-O",
+        "-g",
+        "-j10",
+        "-DSWIFT_PACKAGE",
+        "-module-cache-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/XcodeProj-Swift.h",
+        "-color-diagnostics",
+        "-sdk",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk",
+        "-F",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode_13.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-emit-module-interface",
+        "-enable-library-evolution",
+        "-swift-version",
+        "5"
+      ],
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Errors/Errors.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/AEXML+XcodeFormat.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Array+Extras.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Bool+Extras.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Dictionary+Enumerate.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Dictionary+Extras.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/KeyedDecodingContainer+Additions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/NSRecursiveLock+Sync.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/Path+Extras.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/String+Utils.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Extensions/String+md5.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/BuildPhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildFile.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildPhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXBuildRule.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXCopyFilesBuildPhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXFrameworksBuildPhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXHeadersBuildPhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXResourcesBuildPhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXRezBuildPhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXShellScriptBuildPhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/BuildPhase/PBXSourcesBuildPhase.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/BuildSettings.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/XCBuildConfiguration.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Configuration/XCConfigurationList.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXContainerItem.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXContainerItemProxy.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXFileElement.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXFileReference.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXGroup.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXSourceTree.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/PBXVariantGroup.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Files/XCVersionGroup.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObject.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjectParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjectReference.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXObjects.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXOutputSettings.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProj.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProjEncoder.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Project/PBXProject.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Sourcery/Equality.generated.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Sourcery/Sourcery.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/SwiftPackage/XCRemoteSwiftPackageReference.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/SwiftPackage/XCSwiftPackageProductDependency.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXAggregateTarget.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXLegacyTarget.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXNativeTarget.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXProductType.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXReferenceProxy.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXTarget.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Objects/Targets/PBXTargetDependency.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/WorkspaceSettings.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XCBreakpointList.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XCSharedData.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/Xcode.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Project/XcodeProj.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Protocols/Writable.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+AditionalOption.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+AnalyzeAction.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ArchiveAction.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildAction.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildableProductRunnable.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+BuildableReference.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+CommandLineArguments.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+EnvironmentVariable.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ExecutionAction.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+LaunchAction.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+LocationScenarioReference.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+PathRunnable.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+ProfileAction.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+RemoteRunnable.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+Runnable.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+SerialAction.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+StoreKitConfigurationFileReference.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestAction.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestItem.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestPlanReference.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme+TestableReference.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Scheme/XCScheme.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/BuildSettingsProvider.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/CommentedString.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/Decoders.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/JSONDecoding.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/PBXBatchUpdater.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/PlistValue.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/ReferenceGenerator.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Utils/XCConfig.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspace.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceData.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataElement.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataElementLocationType.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataFileRef.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build/Workspace/XCWorkspaceDataGroup.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.swiftmodule"
+        }
+      ],
+      "sources" : [
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Errors/Errors.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/AEXML+XcodeFormat.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Array+Extras.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Bool+Extras.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Dictionary+Enumerate.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Dictionary+Extras.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/KeyedDecodingContainer+Additions.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/NSRecursiveLock+Sync.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/Path+Extras.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/String+Utils.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Extensions/String+md5.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/BuildPhase.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildFile.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildPhase.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXBuildRule.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXCopyFilesBuildPhase.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXFrameworksBuildPhase.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXHeadersBuildPhase.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXResourcesBuildPhase.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXRezBuildPhase.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXShellScriptBuildPhase.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/BuildPhase/PBXSourcesBuildPhase.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/BuildSettings.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/XCBuildConfiguration.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Configuration/XCConfigurationList.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXContainerItem.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXContainerItemProxy.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXFileElement.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXFileReference.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXGroup.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXSourceTree.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/PBXVariantGroup.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Files/XCVersionGroup.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObject.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjectParser.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjectReference.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXObjects.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXOutputSettings.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProj.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProjEncoder.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Project/PBXProject.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Sourcery/Equality.generated.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Sourcery/Sourcery.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/SwiftPackage/XCRemoteSwiftPackageReference.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/SwiftPackage/XCSwiftPackageProductDependency.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXAggregateTarget.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXLegacyTarget.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXNativeTarget.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXProductType.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXReferenceProxy.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXTarget.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Objects/Targets/PBXTargetDependency.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/WorkspaceSettings.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XCBreakpointList.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XCSharedData.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/Xcode.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Project/XcodeProj.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Protocols/Writable.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+AditionalOption.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+AnalyzeAction.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ArchiveAction.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildAction.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildableProductRunnable.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+BuildableReference.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+CommandLineArguments.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+EnvironmentVariable.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ExecutionAction.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+LaunchAction.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+LocationScenarioReference.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+PathRunnable.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+ProfileAction.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+RemoteRunnable.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+Runnable.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+SerialAction.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+StoreKitConfigurationFileReference.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestAction.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestItem.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestPlanReference.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme+TestableReference.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Scheme/XCScheme.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/BuildSettingsProvider.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/CommentedString.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/Decoders.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/JSONDecoding.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/PBXBatchUpdater.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/PlistValue.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/ReferenceGenerator.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Utils/XCConfig.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspace.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceData.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataElement.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataElementLocationType.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataFileRef.swift",
+        "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/xcodeproj/Sources/XcodeProj/Workspace/XCWorkspaceDataGroup.swift"
+      ],
+      "tempsPath" : "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/XcodeProj.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

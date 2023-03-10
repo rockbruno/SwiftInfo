@@ -1,0 +1,4 @@
+module SwiftInfoCore {
+    header "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SwiftInfoCore-Swift.h"
+    requires objc
+}

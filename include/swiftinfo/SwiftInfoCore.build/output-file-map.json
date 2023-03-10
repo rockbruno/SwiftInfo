@@ -1,0 +1,162 @@
+{
+  "": {
+    "dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SwiftInfoCore.d",
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SwiftInfoCore.o",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/master.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/BuildSystem.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/BuildSystem.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/BuildSystem~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/BuildSystem.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/ExtractedInfo.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ExtractedInfo.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ExtractedInfo~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ExtractedInfo.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileOpener.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/FileUtils/FileOpener.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/FileUtils/FileOpener~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/FileUtils/FileOpener.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/FileUtils/FileUtils.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/FileUtils/FileUtils.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/FileUtils/FileUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/FileUtils/FileUtils.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/HTTPClient.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/HTTPClient.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/HTTPClient~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/HTTPClient.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/InfoProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/InfoProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/InfoProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/InfoProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Logger.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Logger.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Logger~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Logger.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Output.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Output.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Output~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Output.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/PlistExtractor.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ProjectInfo/PlistExtractor.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ProjectInfo/PlistExtractor~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ProjectInfo/PlistExtractor.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/ProjectInfo/ProjectInfo.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ProjectInfo/ProjectInfo.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ProjectInfo/ProjectInfo~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/ProjectInfo/ProjectInfo.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/ArchiveDurationProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/ArchiveDurationProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/ArchiveDurationProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/ArchiveDurationProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/AssetCatalog.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/AssetCatalog.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/AssetCatalog~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/AssetCatalog.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/CodeCoverageProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/CodeCoverageProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/CodeCoverageProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/CodeCoverageProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/IPASizeProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/IPASizeProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/IPASizeProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/IPASizeProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetCatalogProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LargestAssetCatalogProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LargestAssetCatalogProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LargestAssetCatalogProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LargestAssetProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LargestAssetProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LargestAssetProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LargestAssetProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LinesOfCodeProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LinesOfCodeProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LinesOfCodeProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LinesOfCodeProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/LongestTestDurationProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LongestTestDurationProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LongestTestDurationProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/LongestTestDurationProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/OBJCFileCountProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/OBJCFileCountProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/OBJCFileCountProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/OBJCFileCountProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TargetCountProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TargetCountProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TargetCountProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TargetCountProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TestCountProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TestCountProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TestCountProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TestCountProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalAssetCatalogsSizeProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TotalAssetCatalogsSizeProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TotalAssetCatalogsSizeProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TotalAssetCatalogsSizeProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/TotalTestDurationProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TotalTestDurationProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TotalTestDurationProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/TotalTestDurationProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Providers/WarningCountProvider.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/WarningCountProvider.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/WarningCountProvider~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Providers/WarningCountProvider.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Regex.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Regex.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Regex~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Regex.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Runner.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Runner.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Runner~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Runner.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SlackFormatter.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SlackFormatter.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SlackFormatter~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SlackFormatter.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/DLHandle.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SourceKitWrapper/DLHandle.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SourceKitWrapper/DLHandle~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SourceKitWrapper/DLHandle.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SourceKitWrapper/SourceKit.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SourceKitWrapper/SourceKit.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SourceKitWrapper/SourceKit~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SourceKitWrapper/SourceKit.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/Summary.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Summary.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Summary~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/Summary.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfoCore/SwiftInfo.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SwiftInfo.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SwiftInfo~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfoCore.build/SwiftInfo.swiftdeps"
+  }
+}

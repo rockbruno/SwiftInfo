@@ -10,7 +10,6 @@ swiftinfo
 /build1
 /build2
 /SwiftInfo-output
-/bin
 BuildTools/.build
 SwiftInfo-output
 Pods

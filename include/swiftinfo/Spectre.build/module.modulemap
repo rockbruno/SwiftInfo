@@ -1,0 +1,4 @@
+module Spectre {
+    header "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/Spectre.build/Spectre-Swift.h"
+    requires objc
+}

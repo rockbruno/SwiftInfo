@@ -1,0 +1,29 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "ArgumentParser",
+      "printedName": "ArgumentParser",
+      "declKind": "Import",
+      "moduleName": "SwiftInfo"
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "SwiftInfo"
+    },
+    {
+      "kind": "Import",
+      "name": "SwiftInfoCore",
+      "printedName": "SwiftInfoCore",
+      "declKind": "Import",
+      "moduleName": "SwiftInfo"
+    }
+  ],
+  "json_format_version": 6
+}

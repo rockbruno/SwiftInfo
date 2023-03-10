@@ -1,0 +1,168 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-macosx10.10 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -module-name PathKit
+import Darwin
+import Foundation
+import Swift
+import _Concurrency
+public struct Path {
+  public static let separator: Swift.String
+  public init()
+  public init(_ path: Swift.String)
+  public init<S>(components: S) where S : Swift.Collection, S.Element == Swift.String
+}
+extension PathKit.Path : Swift.ExpressibleByStringLiteral {
+  public typealias ExtendedGraphemeClusterLiteralType = Swift.StringLiteralType
+  public typealias UnicodeScalarLiteralType = Swift.StringLiteralType
+  public init(extendedGraphemeClusterLiteral path: Swift.StringLiteralType)
+  public init(unicodeScalarLiteral path: Swift.StringLiteralType)
+  public init(stringLiteral value: Swift.StringLiteralType)
+  public typealias StringLiteralType = Swift.StringLiteralType
+}
+extension PathKit.Path : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+extension PathKit.Path {
+  public var string: Swift.String {
+    get
+  }
+  public var url: Foundation.URL {
+    get
+  }
+}
+extension PathKit.Path : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension PathKit.Path {
+  public var isAbsolute: Swift.Bool {
+    get
+  }
+  public var isRelative: Swift.Bool {
+    get
+  }
+  public func absolute() -> PathKit.Path
+  public func normalize() -> PathKit.Path
+  public func abbreviate() -> PathKit.Path
+  public func symlinkDestination() throws -> PathKit.Path
+}
+extension PathKit.Path {
+  public var lastComponent: Swift.String {
+    get
+  }
+  public var lastComponentWithoutExtension: Swift.String {
+    get
+  }
+  public var components: [Swift.String] {
+    get
+  }
+  public var `extension`: Swift.String? {
+    get
+  }
+}
+extension PathKit.Path {
+  public var exists: Swift.Bool {
+    get
+  }
+  public var isDirectory: Swift.Bool {
+    get
+  }
+  public var isFile: Swift.Bool {
+    get
+  }
+  public var isSymlink: Swift.Bool {
+    get
+  }
+  public var isReadable: Swift.Bool {
+    get
+  }
+  public var isWritable: Swift.Bool {
+    get
+  }
+  public var isExecutable: Swift.Bool {
+    get
+  }
+  public var isDeletable: Swift.Bool {
+    get
+  }
+}
+extension PathKit.Path {
+  public func mkdir() throws
+  public func mkpath() throws
+  public func delete() throws
+  public func move(_ destination: PathKit.Path) throws
+  public func copy(_ destination: PathKit.Path) throws
+  public func link(_ destination: PathKit.Path) throws
+  public func symlink(_ destination: PathKit.Path) throws
+}
+extension PathKit.Path {
+  public static var current: PathKit.Path {
+    get
+    set
+  }
+  public func chdir(closure: () throws -> ()) rethrows
+}
+extension PathKit.Path {
+  public static var home: PathKit.Path {
+    get
+  }
+  public static var temporary: PathKit.Path {
+    get
+  }
+  public static func processUniqueTemporary() throws -> PathKit.Path
+  public static func uniqueTemporary() throws -> PathKit.Path
+}
+extension PathKit.Path {
+  public func read() throws -> Foundation.Data
+  public func read(_ encoding: Swift.String.Encoding = String.Encoding.utf8) throws -> Swift.String
+  public func write(_ data: Foundation.Data) throws
+  public func write(_ string: Swift.String, encoding: Swift.String.Encoding = String.Encoding.utf8) throws
+}
+extension PathKit.Path {
+  public func parent() -> PathKit.Path
+  public func children() throws -> [PathKit.Path]
+  public func recursiveChildren() throws -> [PathKit.Path]
+}
+extension PathKit.Path {
+  public static func glob(_ pattern: Swift.String) -> [PathKit.Path]
+  public func glob(_ pattern: Swift.String) -> [PathKit.Path]
+}
+extension PathKit.Path : Swift.Sequence {
+  public struct DirectoryEnumerationOptions : Swift.OptionSet {
+    public let rawValue: Swift.UInt
+    public init(rawValue: Swift.UInt)
+    public static var skipsSubdirectoryDescendants: PathKit.Path.DirectoryEnumerationOptions
+    public static var skipsPackageDescendants: PathKit.Path.DirectoryEnumerationOptions
+    public static var skipsHiddenFiles: PathKit.Path.DirectoryEnumerationOptions
+    public typealias ArrayLiteralElement = PathKit.Path.DirectoryEnumerationOptions
+    public typealias Element = PathKit.Path.DirectoryEnumerationOptions
+    public typealias RawValue = Swift.UInt
+  }
+  public struct PathSequence : Swift.Sequence {
+    public func makeIterator() -> PathKit.Path.DirectoryEnumerator
+    public typealias Element = PathKit.Path.DirectoryEnumerator.Element
+    public typealias Iterator = PathKit.Path.DirectoryEnumerator
+  }
+  public struct DirectoryEnumerator : Swift.IteratorProtocol {
+    public typealias Element = PathKit.Path
+    public func next() -> PathKit.Path?
+    public func skipDescendants()
+  }
+  public func makeIterator() -> PathKit.Path.DirectoryEnumerator
+  public func iterateChildren(options: PathKit.Path.DirectoryEnumerationOptions = []) -> PathKit.Path.PathSequence
+  public typealias Element = PathKit.Path.DirectoryEnumerator.Element
+  public typealias Iterator = PathKit.Path.DirectoryEnumerator
+}
+extension PathKit.Path : Swift.Equatable {
+}
+public func == (lhs: PathKit.Path, rhs: PathKit.Path) -> Swift.Bool
+public func ~= (lhs: PathKit.Path, rhs: PathKit.Path) -> Swift.Bool
+extension PathKit.Path : Swift.Comparable {
+}
+public func < (lhs: PathKit.Path, rhs: PathKit.Path) -> Swift.Bool
+public func + (lhs: PathKit.Path, rhs: PathKit.Path) -> PathKit.Path
+public func + (lhs: PathKit.Path, rhs: Swift.String) -> PathKit.Path

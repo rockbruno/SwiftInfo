@@ -1,0 +1,2804 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Darwin",
+      "printedName": "Darwin",
+      "declKind": "Import",
+      "moduleName": "PathKit"
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "PathKit"
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "Path",
+      "printedName": "Path",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "separator",
+          "printedName": "separator",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V9separatorSSvpZ",
+          "mangledName": "$s7PathKit0A0V9separatorSSvpZ",
+          "moduleName": "PathKit",
+          "static": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V9separatorSSvgZ",
+              "mangledName": "$s7PathKit0A0V9separatorSSvgZ",
+              "moduleName": "PathKit",
+              "static": true,
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:7PathKit0A0VACycfc",
+          "mangledName": "$s7PathKit0A0VACycfc",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:7PathKit0A0VyACSScfc",
+          "mangledName": "$s7PathKit0A0VyACSScfc",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(components:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "GenericTypeParam",
+              "printedName": "τ_0_0"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:7PathKit0A0V10componentsACx_tcSlRzSS7ElementRtzlufc",
+          "mangledName": "$s7PathKit0A0V10componentsACx_tcSlRzSS7ElementRtzlufc",
+          "moduleName": "PathKit",
+          "genericSig": "<τ_0_0 where τ_0_0 : Swift.Collection, τ_0_0.Element == Swift.String>",
+          "sugared_genericSig": "<S where S : Swift.Collection, S.Element == Swift.String>",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(extendedGraphemeClusterLiteral:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:7PathKit0A0V30extendedGraphemeClusterLiteralACSS_tcfc",
+          "mangledName": "$s7PathKit0A0V30extendedGraphemeClusterLiteralACSS_tcfc",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(unicodeScalarLiteral:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:7PathKit0A0V20unicodeScalarLiteralACSS_tcfc",
+          "mangledName": "$s7PathKit0A0V20unicodeScalarLiteralACSS_tcfc",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(stringLiteral:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:7PathKit0A0V13stringLiteralACSS_tcfc",
+          "mangledName": "$s7PathKit0A0V13stringLiteralACSS_tcfc",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Var",
+          "name": "description",
+          "printedName": "description",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V11descriptionSSvp",
+          "mangledName": "$s7PathKit0A0V11descriptionSSvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V11descriptionSSvg",
+              "mangledName": "$s7PathKit0A0V11descriptionSSvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "string",
+          "printedName": "string",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V6stringSSvp",
+          "mangledName": "$s7PathKit0A0V6stringSSvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V6stringSSvg",
+              "mangledName": "$s7PathKit0A0V6stringSSvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "url",
+          "printedName": "url",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "URL",
+              "printedName": "Foundation.URL",
+              "usr": "s:10Foundation3URLV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V3url10Foundation3URLVvp",
+          "mangledName": "$s7PathKit0A0V3url10Foundation3URLVvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "URL",
+                  "printedName": "Foundation.URL",
+                  "usr": "s:10Foundation3URLV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V3url10Foundation3URLVvg",
+              "mangledName": "$s7PathKit0A0V3url10Foundation3URLVvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "hash",
+          "printedName": "hash(into:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Hasher",
+              "printedName": "Swift.Hasher",
+              "paramValueOwnership": "InOut",
+              "usr": "s:s6HasherV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V4hash4intoys6HasherVz_tF",
+          "mangledName": "$s7PathKit0A0V4hash4intoys6HasherVz_tF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "hashValue",
+          "printedName": "hashValue",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V9hashValueSivp",
+          "mangledName": "$s7PathKit0A0V9hashValueSivp",
+          "moduleName": "PathKit",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V9hashValueSivg",
+              "mangledName": "$s7PathKit0A0V9hashValueSivg",
+              "moduleName": "PathKit",
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isAbsolute",
+          "printedName": "isAbsolute",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V10isAbsoluteSbvp",
+          "mangledName": "$s7PathKit0A0V10isAbsoluteSbvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V10isAbsoluteSbvg",
+              "mangledName": "$s7PathKit0A0V10isAbsoluteSbvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isRelative",
+          "printedName": "isRelative",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V10isRelativeSbvp",
+          "mangledName": "$s7PathKit0A0V10isRelativeSbvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V10isRelativeSbvg",
+              "mangledName": "$s7PathKit0A0V10isRelativeSbvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "absolute",
+          "printedName": "absolute()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V8absoluteACyF",
+          "mangledName": "$s7PathKit0A0V8absoluteACyF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "normalize",
+          "printedName": "normalize()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V9normalizeACyF",
+          "mangledName": "$s7PathKit0A0V9normalizeACyF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "abbreviate",
+          "printedName": "abbreviate()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V10abbreviateACyF",
+          "mangledName": "$s7PathKit0A0V10abbreviateACyF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "symlinkDestination",
+          "printedName": "symlinkDestination()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V18symlinkDestinationACyKF",
+          "mangledName": "$s7PathKit0A0V18symlinkDestinationACyKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "lastComponent",
+          "printedName": "lastComponent",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V13lastComponentSSvp",
+          "mangledName": "$s7PathKit0A0V13lastComponentSSvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V13lastComponentSSvg",
+              "mangledName": "$s7PathKit0A0V13lastComponentSSvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "lastComponentWithoutExtension",
+          "printedName": "lastComponentWithoutExtension",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V29lastComponentWithoutExtensionSSvp",
+          "mangledName": "$s7PathKit0A0V29lastComponentWithoutExtensionSSvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V29lastComponentWithoutExtensionSSvg",
+              "mangledName": "$s7PathKit0A0V29lastComponentWithoutExtensionSSvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "components",
+          "printedName": "components",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V10componentsSaySSGvp",
+          "mangledName": "$s7PathKit0A0V10componentsSaySSGvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V10componentsSaySSGvg",
+              "mangledName": "$s7PathKit0A0V10componentsSaySSGvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "extension",
+          "printedName": "extension",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V9extensionSSSgvp",
+          "mangledName": "$s7PathKit0A0V9extensionSSSgvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V9extensionSSSgvg",
+              "mangledName": "$s7PathKit0A0V9extensionSSSgvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "exists",
+          "printedName": "exists",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V6existsSbvp",
+          "mangledName": "$s7PathKit0A0V6existsSbvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V6existsSbvg",
+              "mangledName": "$s7PathKit0A0V6existsSbvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isDirectory",
+          "printedName": "isDirectory",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V11isDirectorySbvp",
+          "mangledName": "$s7PathKit0A0V11isDirectorySbvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V11isDirectorySbvg",
+              "mangledName": "$s7PathKit0A0V11isDirectorySbvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isFile",
+          "printedName": "isFile",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V6isFileSbvp",
+          "mangledName": "$s7PathKit0A0V6isFileSbvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V6isFileSbvg",
+              "mangledName": "$s7PathKit0A0V6isFileSbvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isSymlink",
+          "printedName": "isSymlink",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V9isSymlinkSbvp",
+          "mangledName": "$s7PathKit0A0V9isSymlinkSbvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V9isSymlinkSbvg",
+              "mangledName": "$s7PathKit0A0V9isSymlinkSbvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isReadable",
+          "printedName": "isReadable",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V10isReadableSbvp",
+          "mangledName": "$s7PathKit0A0V10isReadableSbvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V10isReadableSbvg",
+              "mangledName": "$s7PathKit0A0V10isReadableSbvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isWritable",
+          "printedName": "isWritable",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V10isWritableSbvp",
+          "mangledName": "$s7PathKit0A0V10isWritableSbvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V10isWritableSbvg",
+              "mangledName": "$s7PathKit0A0V10isWritableSbvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isExecutable",
+          "printedName": "isExecutable",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V12isExecutableSbvp",
+          "mangledName": "$s7PathKit0A0V12isExecutableSbvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V12isExecutableSbvg",
+              "mangledName": "$s7PathKit0A0V12isExecutableSbvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "isDeletable",
+          "printedName": "isDeletable",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V11isDeletableSbvp",
+          "mangledName": "$s7PathKit0A0V11isDeletableSbvp",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V11isDeletableSbvg",
+              "mangledName": "$s7PathKit0A0V11isDeletableSbvg",
+              "moduleName": "PathKit",
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "mkdir",
+          "printedName": "mkdir()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V5mkdiryyKF",
+          "mangledName": "$s7PathKit0A0V5mkdiryyKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "mkpath",
+          "printedName": "mkpath()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V6mkpathyyKF",
+          "mangledName": "$s7PathKit0A0V6mkpathyyKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "delete",
+          "printedName": "delete()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V6deleteyyKF",
+          "mangledName": "$s7PathKit0A0V6deleteyyKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "move",
+          "printedName": "move(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V4moveyyACKF",
+          "mangledName": "$s7PathKit0A0V4moveyyACKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "copy",
+          "printedName": "copy(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V4copyyyACKF",
+          "mangledName": "$s7PathKit0A0V4copyyyACKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "link",
+          "printedName": "link(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V4linkyyACKF",
+          "mangledName": "$s7PathKit0A0V4linkyyACKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "symlink",
+          "printedName": "symlink(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V7symlinkyyACKF",
+          "mangledName": "$s7PathKit0A0V7symlinkyyACKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "current",
+          "printedName": "current",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V7currentACvpZ",
+          "mangledName": "$s7PathKit0A0V7currentACvpZ",
+          "moduleName": "PathKit",
+          "static": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Path",
+                  "printedName": "PathKit.Path",
+                  "usr": "s:7PathKit0A0V"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V7currentACvgZ",
+              "mangledName": "$s7PathKit0A0V7currentACvgZ",
+              "moduleName": "PathKit",
+              "static": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Path",
+                  "printedName": "PathKit.Path",
+                  "usr": "s:7PathKit0A0V"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V7currentACvsZ",
+              "mangledName": "$s7PathKit0A0V7currentACvsZ",
+              "moduleName": "PathKit",
+              "static": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V7currentACvMZ",
+              "mangledName": "$s7PathKit0A0V7currentACvMZ",
+              "moduleName": "PathKit",
+              "static": true,
+              "implicit": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "chdir",
+          "printedName": "chdir(closure:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "() throws -> ()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "typeAttributes": [
+                "noescape"
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V5chdir7closureyyyKXE_tKF",
+          "mangledName": "$s7PathKit0A0V5chdir7closureyyyKXE_tKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "Rethrows",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "home",
+          "printedName": "home",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V4homeACvpZ",
+          "mangledName": "$s7PathKit0A0V4homeACvpZ",
+          "moduleName": "PathKit",
+          "static": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Path",
+                  "printedName": "PathKit.Path",
+                  "usr": "s:7PathKit0A0V"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V4homeACvgZ",
+              "mangledName": "$s7PathKit0A0V4homeACvgZ",
+              "moduleName": "PathKit",
+              "static": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "temporary",
+          "printedName": "temporary",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:7PathKit0A0V9temporaryACvpZ",
+          "mangledName": "$s7PathKit0A0V9temporaryACvpZ",
+          "moduleName": "PathKit",
+          "static": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Path",
+                  "printedName": "PathKit.Path",
+                  "usr": "s:7PathKit0A0V"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:7PathKit0A0V9temporaryACvgZ",
+              "mangledName": "$s7PathKit0A0V9temporaryACvgZ",
+              "moduleName": "PathKit",
+              "static": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "processUniqueTemporary",
+          "printedName": "processUniqueTemporary()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V22processUniqueTemporaryACyKFZ",
+          "mangledName": "$s7PathKit0A0V22processUniqueTemporaryACyKFZ",
+          "moduleName": "PathKit",
+          "static": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "uniqueTemporary",
+          "printedName": "uniqueTemporary()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V15uniqueTemporaryACyKFZ",
+          "mangledName": "$s7PathKit0A0V15uniqueTemporaryACyKFZ",
+          "moduleName": "PathKit",
+          "static": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "read",
+          "printedName": "read()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Data",
+              "printedName": "Foundation.Data",
+              "usr": "s:10Foundation4DataV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V4read10Foundation4DataVyKF",
+          "mangledName": "$s7PathKit0A0V4read10Foundation4DataVyKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "read",
+          "printedName": "read(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Encoding",
+              "printedName": "Swift.String.Encoding",
+              "hasDefaultArg": true,
+              "usr": "s:SS10FoundationE8EncodingV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V4readyS2S10FoundationE8EncodingVKF",
+          "mangledName": "$s7PathKit0A0V4readyS2S10FoundationE8EncodingVKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "write",
+          "printedName": "write(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Data",
+              "printedName": "Foundation.Data",
+              "usr": "s:10Foundation4DataV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V5writeyy10Foundation4DataVKF",
+          "mangledName": "$s7PathKit0A0V5writeyy10Foundation4DataVKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "write",
+          "printedName": "write(_:encoding:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Encoding",
+              "printedName": "Swift.String.Encoding",
+              "hasDefaultArg": true,
+              "usr": "s:SS10FoundationE8EncodingV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V5write_8encodingySS_SS10FoundationE8EncodingVtKF",
+          "mangledName": "$s7PathKit0A0V5write_8encodingySS_SS10FoundationE8EncodingVtKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "parent",
+          "printedName": "parent()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Path",
+              "printedName": "PathKit.Path",
+              "usr": "s:7PathKit0A0V"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V6parentACyF",
+          "mangledName": "$s7PathKit0A0V6parentACyF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "children",
+          "printedName": "children()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[PathKit.Path]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Path",
+                  "printedName": "PathKit.Path",
+                  "usr": "s:7PathKit0A0V"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V8childrenSayACGyKF",
+          "mangledName": "$s7PathKit0A0V8childrenSayACGyKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "recursiveChildren",
+          "printedName": "recursiveChildren()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[PathKit.Path]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Path",
+                  "printedName": "PathKit.Path",
+                  "usr": "s:7PathKit0A0V"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V17recursiveChildrenSayACGyKF",
+          "mangledName": "$s7PathKit0A0V17recursiveChildrenSayACGyKF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "glob",
+          "printedName": "glob(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[PathKit.Path]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Path",
+                  "printedName": "PathKit.Path",
+                  "usr": "s:7PathKit0A0V"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V4globySayACGSSFZ",
+          "mangledName": "$s7PathKit0A0V4globySayACGSSFZ",
+          "moduleName": "PathKit",
+          "static": true,
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "glob",
+          "printedName": "glob(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[PathKit.Path]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Path",
+                  "printedName": "PathKit.Path",
+                  "usr": "s:7PathKit0A0V"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V4globySayACGSSF",
+          "mangledName": "$s7PathKit0A0V4globySayACGSSF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "DirectoryEnumerationOptions",
+          "printedName": "DirectoryEnumerationOptions",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "rawValue",
+              "printedName": "rawValue",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UInt",
+                  "printedName": "Swift.UInt",
+                  "usr": "s:Su"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV8rawValueSuvp",
+              "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV8rawValueSuvp",
+              "moduleName": "PathKit",
+              "declAttributes": [
+                "HasStorage",
+                "AccessControl"
+              ],
+              "isLet": true,
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "UInt",
+                      "printedName": "Swift.UInt",
+                      "usr": "s:Su"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV8rawValueSuvg",
+                  "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV8rawValueSuvg",
+                  "moduleName": "PathKit",
+                  "implicit": true,
+                  "accessorKind": "get"
+                }
+              ]
+            },
+            {
+              "kind": "Constructor",
+              "name": "init",
+              "printedName": "init(rawValue:)",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "DirectoryEnumerationOptions",
+                  "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "UInt",
+                  "printedName": "Swift.UInt",
+                  "usr": "s:Su"
+                }
+              ],
+              "declKind": "Constructor",
+              "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV8rawValueAESu_tcfc",
+              "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV8rawValueAESu_tcfc",
+              "moduleName": "PathKit",
+              "declAttributes": [
+                "AccessControl"
+              ],
+              "init_kind": "Designated"
+            },
+            {
+              "kind": "Var",
+              "name": "skipsSubdirectoryDescendants",
+              "printedName": "skipsSubdirectoryDescendants",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "DirectoryEnumerationOptions",
+                  "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV28skipsSubdirectoryDescendantsAEvpZ",
+              "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV28skipsSubdirectoryDescendantsAEvpZ",
+              "moduleName": "PathKit",
+              "static": true,
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl"
+              ],
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "DirectoryEnumerationOptions",
+                      "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                      "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV28skipsSubdirectoryDescendantsAEvgZ",
+                  "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV28skipsSubdirectoryDescendantsAEvgZ",
+                  "moduleName": "PathKit",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "DirectoryEnumerationOptions",
+                      "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                      "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV28skipsSubdirectoryDescendantsAEvsZ",
+                  "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV28skipsSubdirectoryDescendantsAEvsZ",
+                  "moduleName": "PathKit",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV28skipsSubdirectoryDescendantsAEvMZ",
+                  "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV28skipsSubdirectoryDescendantsAEvMZ",
+                  "moduleName": "PathKit",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "_modify"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "skipsPackageDescendants",
+              "printedName": "skipsPackageDescendants",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "DirectoryEnumerationOptions",
+                  "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV23skipsPackageDescendantsAEvpZ",
+              "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV23skipsPackageDescendantsAEvpZ",
+              "moduleName": "PathKit",
+              "static": true,
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl"
+              ],
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "DirectoryEnumerationOptions",
+                      "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                      "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV23skipsPackageDescendantsAEvgZ",
+                  "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV23skipsPackageDescendantsAEvgZ",
+                  "moduleName": "PathKit",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "DirectoryEnumerationOptions",
+                      "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                      "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV23skipsPackageDescendantsAEvsZ",
+                  "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV23skipsPackageDescendantsAEvsZ",
+                  "moduleName": "PathKit",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV23skipsPackageDescendantsAEvMZ",
+                  "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV23skipsPackageDescendantsAEvMZ",
+                  "moduleName": "PathKit",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "_modify"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "skipsHiddenFiles",
+              "printedName": "skipsHiddenFiles",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "DirectoryEnumerationOptions",
+                  "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV16skipsHiddenFilesAEvpZ",
+              "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV16skipsHiddenFilesAEvpZ",
+              "moduleName": "PathKit",
+              "static": true,
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl"
+              ],
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "DirectoryEnumerationOptions",
+                      "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                      "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV16skipsHiddenFilesAEvgZ",
+                  "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV16skipsHiddenFilesAEvgZ",
+                  "moduleName": "PathKit",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "DirectoryEnumerationOptions",
+                      "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                      "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV16skipsHiddenFilesAEvsZ",
+                  "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV16skipsHiddenFilesAEvsZ",
+                  "moduleName": "PathKit",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV16skipsHiddenFilesAEvMZ",
+                  "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV16skipsHiddenFilesAEvMZ",
+                  "moduleName": "PathKit",
+                  "static": true,
+                  "implicit": true,
+                  "accessorKind": "_modify"
+                }
+              ]
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV",
+          "mangledName": "$s7PathKit0A0V27DirectoryEnumerationOptionsV",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl"
+          ],
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "OptionSet",
+              "printedName": "OptionSet",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "Element",
+                  "printedName": "Element",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "DirectoryEnumerationOptions",
+                      "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                      "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:s9OptionSetP",
+              "mangledName": "$ss9OptionSetP"
+            },
+            {
+              "kind": "Conformance",
+              "name": "RawRepresentable",
+              "printedName": "RawRepresentable",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "RawValue",
+                  "printedName": "RawValue",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "UInt",
+                      "printedName": "Swift.UInt",
+                      "usr": "s:Su"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:SY",
+              "mangledName": "$sSY"
+            },
+            {
+              "kind": "Conformance",
+              "name": "SetAlgebra",
+              "printedName": "SetAlgebra",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "Element",
+                  "printedName": "Element",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "DirectoryEnumerationOptions",
+                      "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                      "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:s10SetAlgebraP",
+              "mangledName": "$ss10SetAlgebraP"
+            },
+            {
+              "kind": "Conformance",
+              "name": "Equatable",
+              "printedName": "Equatable",
+              "usr": "s:SQ",
+              "mangledName": "$sSQ"
+            },
+            {
+              "kind": "Conformance",
+              "name": "ExpressibleByArrayLiteral",
+              "printedName": "ExpressibleByArrayLiteral",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "ArrayLiteralElement",
+                  "printedName": "ArrayLiteralElement",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "DirectoryEnumerationOptions",
+                      "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+                      "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:s25ExpressibleByArrayLiteralP",
+              "mangledName": "$ss25ExpressibleByArrayLiteralP"
+            }
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "PathSequence",
+          "printedName": "PathSequence",
+          "children": [
+            {
+              "kind": "Function",
+              "name": "makeIterator",
+              "printedName": "makeIterator()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "DirectoryEnumerator",
+                  "printedName": "PathKit.Path.DirectoryEnumerator",
+                  "usr": "s:7PathKit0A0V19DirectoryEnumeratorV"
+                }
+              ],
+              "declKind": "Func",
+              "usr": "s:7PathKit0A0V0A8SequenceV12makeIteratorAC19DirectoryEnumeratorVyF",
+              "mangledName": "$s7PathKit0A0V0A8SequenceV12makeIteratorAC19DirectoryEnumeratorVyF",
+              "moduleName": "PathKit",
+              "declAttributes": [
+                "AccessControl"
+              ],
+              "funcSelfKind": "NonMutating"
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:7PathKit0A0V0A8SequenceV",
+          "mangledName": "$s7PathKit0A0V0A8SequenceV",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "Sequence",
+              "printedName": "Sequence",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "Element",
+                  "printedName": "Element",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Path",
+                      "printedName": "PathKit.Path",
+                      "usr": "s:7PathKit0A0V"
+                    }
+                  ]
+                },
+                {
+                  "kind": "TypeWitness",
+                  "name": "Iterator",
+                  "printedName": "Iterator",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "DirectoryEnumerator",
+                      "printedName": "PathKit.Path.DirectoryEnumerator",
+                      "usr": "s:7PathKit0A0V19DirectoryEnumeratorV"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:ST",
+              "mangledName": "$sST"
+            }
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "DirectoryEnumerator",
+          "printedName": "DirectoryEnumerator",
+          "children": [
+            {
+              "kind": "Function",
+              "name": "next",
+              "printedName": "next()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "PathKit.Path?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Path",
+                      "printedName": "PathKit.Path",
+                      "usr": "s:7PathKit0A0V"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Func",
+              "usr": "s:7PathKit0A0V19DirectoryEnumeratorV4nextACSgyF",
+              "mangledName": "$s7PathKit0A0V19DirectoryEnumeratorV4nextACSgyF",
+              "moduleName": "PathKit",
+              "declAttributes": [
+                "AccessControl"
+              ],
+              "funcSelfKind": "NonMutating"
+            },
+            {
+              "kind": "Function",
+              "name": "skipDescendants",
+              "printedName": "skipDescendants()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Func",
+              "usr": "s:7PathKit0A0V19DirectoryEnumeratorV15skipDescendantsyyF",
+              "mangledName": "$s7PathKit0A0V19DirectoryEnumeratorV15skipDescendantsyyF",
+              "moduleName": "PathKit",
+              "declAttributes": [
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "funcSelfKind": "NonMutating"
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:7PathKit0A0V19DirectoryEnumeratorV",
+          "mangledName": "$s7PathKit0A0V19DirectoryEnumeratorV",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "conformances": [
+            {
+              "kind": "Conformance",
+              "name": "IteratorProtocol",
+              "printedName": "IteratorProtocol",
+              "children": [
+                {
+                  "kind": "TypeWitness",
+                  "name": "Element",
+                  "printedName": "Element",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Path",
+                      "printedName": "PathKit.Path",
+                      "usr": "s:7PathKit0A0V"
+                    }
+                  ]
+                }
+              ],
+              "usr": "s:St",
+              "mangledName": "$sSt"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "makeIterator",
+          "printedName": "makeIterator()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "DirectoryEnumerator",
+              "printedName": "PathKit.Path.DirectoryEnumerator",
+              "usr": "s:7PathKit0A0V19DirectoryEnumeratorV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V12makeIteratorAC19DirectoryEnumeratorVyF",
+          "mangledName": "$s7PathKit0A0V12makeIteratorAC19DirectoryEnumeratorVyF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "iterateChildren",
+          "printedName": "iterateChildren(options:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "PathSequence",
+              "printedName": "PathKit.Path.PathSequence",
+              "usr": "s:7PathKit0A0V0A8SequenceV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "DirectoryEnumerationOptions",
+              "printedName": "PathKit.Path.DirectoryEnumerationOptions",
+              "hasDefaultArg": true,
+              "usr": "s:7PathKit0A0V27DirectoryEnumerationOptionsV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:7PathKit0A0V15iterateChildren7optionsAC0A8SequenceVAC27DirectoryEnumerationOptionsV_tF",
+          "mangledName": "$s7PathKit0A0V15iterateChildren7optionsAC0A8SequenceVAC27DirectoryEnumerationOptionsV_tF",
+          "moduleName": "PathKit",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:7PathKit0A0V",
+      "mangledName": "$s7PathKit0A0V",
+      "moduleName": "PathKit",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "ExpressibleByStringLiteral",
+          "printedName": "ExpressibleByStringLiteral",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "StringLiteralType",
+              "printedName": "StringLiteralType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ]
+            }
+          ],
+          "usr": "s:s26ExpressibleByStringLiteralP",
+          "mangledName": "$ss26ExpressibleByStringLiteralP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+          "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "ExtendedGraphemeClusterLiteralType",
+              "printedName": "ExtendedGraphemeClusterLiteralType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ]
+            }
+          ],
+          "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+          "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "ExpressibleByUnicodeScalarLiteral",
+          "printedName": "ExpressibleByUnicodeScalarLiteral",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "UnicodeScalarLiteralType",
+              "printedName": "UnicodeScalarLiteralType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ]
+            }
+          ],
+          "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+          "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Sequence",
+          "printedName": "Sequence",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Element",
+              "printedName": "Element",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Path",
+                  "printedName": "PathKit.Path",
+                  "usr": "s:7PathKit0A0V"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "Iterator",
+              "printedName": "Iterator",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "DirectoryEnumerator",
+                  "printedName": "PathKit.Path.DirectoryEnumerator",
+                  "usr": "s:7PathKit0A0V19DirectoryEnumeratorV"
+                }
+              ]
+            }
+          ],
+          "usr": "s:ST",
+          "mangledName": "$sST"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Comparable",
+          "printedName": "Comparable",
+          "usr": "s:SL",
+          "mangledName": "$sSL"
+        }
+      ]
+    },
+    {
+      "kind": "Function",
+      "name": "==",
+      "printedName": "==(_:_:)",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Bool",
+          "printedName": "Swift.Bool",
+          "usr": "s:Sb"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        }
+      ],
+      "declKind": "Func",
+      "usr": "s:7PathKit2eeoiySbAA0A0V_ADtF",
+      "mangledName": "$s7PathKit2eeoiySbAA0A0V_ADtF",
+      "moduleName": "PathKit",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "funcSelfKind": "NonMutating"
+    },
+    {
+      "kind": "Function",
+      "name": "~=",
+      "printedName": "~=(_:_:)",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Bool",
+          "printedName": "Swift.Bool",
+          "usr": "s:Sb"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        }
+      ],
+      "declKind": "Func",
+      "usr": "s:7PathKit2teoiySbAA0A0V_ADtF",
+      "mangledName": "$s7PathKit2teoiySbAA0A0V_ADtF",
+      "moduleName": "PathKit",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "funcSelfKind": "NonMutating"
+    },
+    {
+      "kind": "Function",
+      "name": "<",
+      "printedName": "<(_:_:)",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Bool",
+          "printedName": "Swift.Bool",
+          "usr": "s:Sb"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        }
+      ],
+      "declKind": "Func",
+      "usr": "s:7PathKit1loiySbAA0A0V_ADtF",
+      "mangledName": "$s7PathKit1loiySbAA0A0V_ADtF",
+      "moduleName": "PathKit",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "funcSelfKind": "NonMutating"
+    },
+    {
+      "kind": "Function",
+      "name": "+",
+      "printedName": "+(_:_:)",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        }
+      ],
+      "declKind": "Func",
+      "usr": "s:7PathKit1poiyAA0A0VAD_ADtF",
+      "mangledName": "$s7PathKit1poiyAA0A0VAD_ADtF",
+      "moduleName": "PathKit",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "funcSelfKind": "NonMutating"
+    },
+    {
+      "kind": "Function",
+      "name": "+",
+      "printedName": "+(_:_:)",
+      "children": [
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "Path",
+          "printedName": "PathKit.Path",
+          "usr": "s:7PathKit0A0V"
+        },
+        {
+          "kind": "TypeNominal",
+          "name": "String",
+          "printedName": "Swift.String",
+          "usr": "s:SS"
+        }
+      ],
+      "declKind": "Func",
+      "usr": "s:7PathKit1poiyAA0A0VAD_SStF",
+      "mangledName": "$s7PathKit1poiyAA0A0VAD_SStF",
+      "moduleName": "PathKit",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "funcSelfKind": "NonMutating"
+    }
+  ],
+  "json_format_version": 6
+}

@@ -1,0 +1,437 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-macosx10.10 -enable-objc-interop -enable-library-evolution -swift-version 5 -O -module-name SwiftInfoCore
+import Foundation
+import PathKit
+import Swift
+import XcodeProj
+import _Concurrency
+import sourcekitd
+public enum BuildSystem {
+  case xcode
+  case buck
+  public static func == (a: SwiftInfoCore.BuildSystem, b: SwiftInfoCore.BuildSystem) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+open class FileOpener {
+  open func stringContents(ofUrl url: Foundation.URL) throws -> Swift.String
+  open func dataContents(ofUrl url: Foundation.URL) throws -> Foundation.Data
+  open func plistContents(ofPath path: Swift.String) -> Foundation.NSDictionary?
+  open func write(data: Foundation.Data, toUrl url: Foundation.URL) throws
+  public init()
+  @objc deinit
+}
+public struct FileUtils {
+  public static var buildLogFilePath: Swift.String
+  public static var testLogFilePath: Swift.String
+  public static var buckLogFilePath: Swift.String
+  public let fileManager: Foundation.FileManager
+  public let fileOpener: SwiftInfoCore.FileOpener
+  public init(fileManager: Foundation.FileManager = .default, fileOpener: SwiftInfoCore.FileOpener = .init())
+  public var toolFolder: Swift.String {
+    get
+  }
+  public func infofileFolder() throws -> Swift.String
+  public func testLog() throws -> Swift.String
+  public func buckLog() throws -> Swift.String
+  public func buildLog() throws -> Swift.String
+  public func outputFileFolder() throws -> Swift.String
+  public func outputFileURL() throws -> Foundation.URL
+  public func fullOutput() throws -> [Swift.String : Any]
+  public func outputArray() throws -> [[Swift.String : Any]]
+  public func lastOutput() throws -> SwiftInfoCore.Output
+  public func save(output: [[Swift.String : Any]]) throws
+}
+public enum SwiftInfoError : Swift.Error, Foundation.LocalizedError {
+  case generic(Swift.String)
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+final public class HTTPClient {
+  public init()
+  final public func syncPost(urlString: Swift.String, json: [Swift.String : Any])
+  @objc deinit
+}
+public protocol InfoProvider : Swift.Decodable, Swift.Encodable {
+  associatedtype Arguments
+  static var identifier: Swift.String { get }
+  static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args: Self.Arguments?) throws -> Self
+  var description: Swift.String { get }
+  func summary(comparingWith other: Self?, args: Self.Arguments?) -> SwiftInfoCore.Summary
+}
+extension SwiftInfoCore.InfoProvider {
+  public static func error(_ message: Swift.String) -> SwiftInfoCore.SwiftInfoError
+}
+public var isInVerboseMode: Swift.Bool
+public var isInSilentMode: Swift.Bool
+public var isInPullRequestMode: Swift.Bool
+public var printSourceKitQueries: Swift.Bool
+public func log(_ message: Swift.String, verbose: Swift.Bool = false, sourceKit: Swift.Bool = false, hasPrefix: Swift.Bool = true)
+public struct Output {
+}
+extension SwiftInfoCore.Output {
+  public static func + (lhs: SwiftInfoCore.Output, rhs: SwiftInfoCore.Output) -> SwiftInfoCore.Output
+  public static func += (lhs: inout SwiftInfoCore.Output, rhs: SwiftInfoCore.Output)
+  public init(rawDictionary: [Swift.String : Any], summaries: [SwiftInfoCore.Summary], errors: [Swift.String])
+}
+public protocol PlistExtractor {
+  func extractPlistPath(xcodeproj: Swift.String, target: Swift.String, configuration: Swift.String, fileUtils: SwiftInfoCore.FileUtils) -> Swift.String
+}
+public struct XcodeprojPlistExtractor : SwiftInfoCore.PlistExtractor {
+  public init()
+  public func extractPlistPath(xcodeproj: Swift.String, target: Swift.String, configuration: Swift.String, fileUtils: SwiftInfoCore.FileUtils) -> Swift.String
+}
+public struct ProjectInfo : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public init(xcodeproj: Swift.String, target: Swift.String, configuration: Swift.String, plistPath: Swift.String? = nil, versionString: Swift.String? = nil, buildNumber: Swift.String? = nil, fileUtils: SwiftInfoCore.FileUtils = .init(), plistExtractor: SwiftInfoCore.PlistExtractor = XcodeprojPlistExtractor())
+}
+public struct ArchiveDurationProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+  }
+  public typealias Arguments = SwiftInfoCore.ArchiveDurationProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let timeInt: Swift.Int
+  public init(timeInt: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args _: SwiftInfoCore.ArchiveDurationProvider.Args?) throws -> SwiftInfoCore.ArchiveDurationProvider
+  public func summary(comparingWith other: SwiftInfoCore.ArchiveDurationProvider?, args _: SwiftInfoCore.ArchiveDurationProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct CodeCoverageProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+    public let targets: Swift.Set<Swift.String>
+    public init(targets: Swift.Set<Swift.String>)
+  }
+  public typealias Arguments = SwiftInfoCore.CodeCoverageProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let percentageInt: Swift.Int
+  public init(percentageInt: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args: SwiftInfoCore.CodeCoverageProvider.Args?) throws -> SwiftInfoCore.CodeCoverageProvider
+  public static func getCodeCoverageJson(api: SwiftInfoCore.SwiftInfo) throws -> [Swift.String : Any]
+  public static func getCodeCoverageXcode11JsonPath(fromLogs logs: Swift.String) -> Swift.String?
+  public static func getCodeCoverageLegacyJsonPath(fromLogs logs: Swift.String) -> Swift.String?
+  public func summary(comparingWith other: SwiftInfoCore.CodeCoverageProvider?, args _: SwiftInfoCore.CodeCoverageProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct IPASizeProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+  }
+  public typealias Arguments = SwiftInfoCore.IPASizeProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let size: Swift.Int
+  public init(size: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args _: SwiftInfoCore.IPASizeProvider.Args?) throws -> SwiftInfoCore.IPASizeProvider
+  public func summary(comparingWith other: SwiftInfoCore.IPASizeProvider?, args _: SwiftInfoCore.IPASizeProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LargestAssetCatalogProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+  }
+  public typealias Arguments = SwiftInfoCore.LargestAssetCatalogProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let name: Swift.String
+  public let size: Swift.Int
+  public init(name: Swift.String, size: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args _: SwiftInfoCore.LargestAssetCatalogProvider.Args?) throws -> SwiftInfoCore.LargestAssetCatalogProvider
+  public func summary(comparingWith other: SwiftInfoCore.LargestAssetCatalogProvider?, args _: SwiftInfoCore.LargestAssetCatalogProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LargestAssetProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+  }
+  public typealias Arguments = SwiftInfoCore.LargestAssetProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let name: Swift.String
+  public let size: Swift.Int
+  public init(name: Swift.String, size: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args _: SwiftInfoCore.LargestAssetProvider.Args?) throws -> SwiftInfoCore.LargestAssetProvider
+  public func summary(comparingWith other: SwiftInfoCore.LargestAssetProvider?, args _: SwiftInfoCore.LargestAssetProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LinesOfCodeProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+    public let targets: Swift.Set<Swift.String>
+    public init(targets: Swift.Set<Swift.String>)
+  }
+  public typealias Arguments = SwiftInfoCore.LinesOfCodeProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let count: Swift.Int
+  public init(count: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args: SwiftInfoCore.LinesOfCodeProvider.Args?) throws -> SwiftInfoCore.LinesOfCodeProvider
+  public func summary(comparingWith other: SwiftInfoCore.LinesOfCodeProvider?, args _: SwiftInfoCore.LinesOfCodeProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct LongestTestDurationProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+  }
+  public typealias Arguments = SwiftInfoCore.LongestTestDurationProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let name: Swift.String
+  public let durationInt: Swift.Int
+  public var duration: Swift.Float {
+    get
+  }
+  public init(name: Swift.String, durationInt: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args _: SwiftInfoCore.LongestTestDurationProvider.Args?) throws -> SwiftInfoCore.LongestTestDurationProvider
+  public static func allTests(api: SwiftInfoCore.SwiftInfo) throws -> [(Swift.String, Swift.Float)]
+  public func summary(comparingWith other: SwiftInfoCore.LongestTestDurationProvider?, args _: SwiftInfoCore.LongestTestDurationProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct OBJCFileCountProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+  }
+  public typealias Arguments = SwiftInfoCore.OBJCFileCountProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let count: Swift.Int
+  public init(count: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args _: SwiftInfoCore.OBJCFileCountProvider.Args?) throws -> SwiftInfoCore.OBJCFileCountProvider
+  public func summary(comparingWith other: SwiftInfoCore.OBJCFileCountProvider?, args _: SwiftInfoCore.OBJCFileCountProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TargetCountProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+    public enum Mode {
+      case complainOnAdditions
+      case complainOnRemovals
+      case neutral
+      public static func == (a: SwiftInfoCore.TargetCountProvider.Args.Mode, b: SwiftInfoCore.TargetCountProvider.Args.Mode) -> Swift.Bool
+      public func hash(into hasher: inout Swift.Hasher)
+      public var hashValue: Swift.Int {
+        get
+      }
+    }
+    public let mode: SwiftInfoCore.TargetCountProvider.Args.Mode
+    public init(mode: SwiftInfoCore.TargetCountProvider.Args.Mode)
+  }
+  public typealias Arguments = SwiftInfoCore.TargetCountProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let count: Swift.Int
+  public init(count: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args _: SwiftInfoCore.TargetCountProvider.Args?) throws -> SwiftInfoCore.TargetCountProvider
+  public func summary(comparingWith other: SwiftInfoCore.TargetCountProvider?, args: SwiftInfoCore.TargetCountProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TestCountProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+    public let buildSystem: SwiftInfoCore.BuildSystem
+    public init(buildSystem: SwiftInfoCore.BuildSystem = .xcode)
+  }
+  public typealias Arguments = SwiftInfoCore.TestCountProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let count: Swift.Int
+  public init(count: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args: SwiftInfoCore.TestCountProvider.Args?) throws -> SwiftInfoCore.TestCountProvider
+  public func summary(comparingWith other: SwiftInfoCore.TestCountProvider?, args _: SwiftInfoCore.TestCountProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TotalAssetCatalogsSizeProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+  }
+  public typealias Arguments = SwiftInfoCore.TotalAssetCatalogsSizeProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let size: Swift.Int
+  public init(size: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args _: SwiftInfoCore.TotalAssetCatalogsSizeProvider.Args?) throws -> SwiftInfoCore.TotalAssetCatalogsSizeProvider
+  public func summary(comparingWith other: SwiftInfoCore.TotalAssetCatalogsSizeProvider?, args _: SwiftInfoCore.TotalAssetCatalogsSizeProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct TotalTestDurationProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+  }
+  public typealias Arguments = SwiftInfoCore.TotalTestDurationProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let durationInt: Swift.Int
+  public init(durationInt: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args _: SwiftInfoCore.TotalTestDurationProvider.Args?) throws -> SwiftInfoCore.TotalTestDurationProvider
+  public func summary(comparingWith other: SwiftInfoCore.TotalTestDurationProvider?, args _: SwiftInfoCore.TotalTestDurationProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct WarningCountProvider : SwiftInfoCore.InfoProvider {
+  public struct Args {
+  }
+  public typealias Arguments = SwiftInfoCore.WarningCountProvider.Args
+  public static let identifier: Swift.String
+  public let description: Swift.String
+  public let count: Swift.Int
+  public init(count: Swift.Int)
+  public static func extract(fromApi api: SwiftInfoCore.SwiftInfo, args _: SwiftInfoCore.WarningCountProvider.Args?) throws -> SwiftInfoCore.WarningCountProvider
+  public func summary(comparingWith other: SwiftInfoCore.WarningCountProvider?, args _: SwiftInfoCore.WarningCountProvider.Args?) -> SwiftInfoCore.Summary
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public enum Runner {
+  public static func getCoreSwiftCArguments(fileUtils: SwiftInfoCore.FileUtils, toolchainPath: Swift.String, processInfoArgs: [Swift.String]) -> [Swift.String]
+}
+public struct SlackFormatter {
+  public init()
+  public func format(output: SwiftInfoCore.Output, titlePrefix: Swift.String?, projectInfo: SwiftInfoCore.ProjectInfo) -> (json: [Swift.String : Any], message: Swift.String)
+}
+@_hasMissingDesignatedInitializers final public class DLHandle {
+  @objc deinit
+  final public func close() throws
+  final public func leak()
+}
+public struct DLOpenFlags : Swift.RawRepresentable, Swift.OptionSet {
+  public static let lazy: SwiftInfoCore.DLOpenFlags
+  public static let now: SwiftInfoCore.DLOpenFlags
+  public static let local: SwiftInfoCore.DLOpenFlags
+  public static let global: SwiftInfoCore.DLOpenFlags
+  public static let first: SwiftInfoCore.DLOpenFlags
+  public static let deepBind: SwiftInfoCore.DLOpenFlags
+  public var rawValue: Swift.Int32
+  public init(rawValue: Swift.Int32)
+  public typealias ArrayLiteralElement = SwiftInfoCore.DLOpenFlags
+  public typealias Element = SwiftInfoCore.DLOpenFlags
+  public typealias RawValue = Swift.Int32
+}
+public enum DLError : Swift.Error {
+  case dlopen(Swift.String)
+  case dlclose(Swift.String)
+}
+public func dlopen(_ path: Swift.String?, mode: SwiftInfoCore.DLOpenFlags) throws -> SwiftInfoCore.DLHandle
+public func dlsym<T>(_ handle: SwiftInfoCore.DLHandle, symbol: Swift.String) -> T?
+public func dlclose(_ handle: SwiftInfoCore.DLHandle) throws
+public func dlerror() -> Swift.String?
+open class SourceKit {
+  final public let path: Swift.String
+  final public let api: sourcekitd.sourcekitd_functions_t!
+  final public let keys: SwiftInfoCore.sourcekitd_keys!
+  final public let requests: SwiftInfoCore.sourcekitd_requests!
+  final public let values: SwiftInfoCore.sourcekitd_values!
+  public init()
+  public init(path: Swift.String)
+  @objc deinit
+}
+public enum SKResult<T> {
+  case success(T)
+  case failure(Swift.String)
+}
+extension SwiftInfoCore.SourceKit {
+  public func sendSync(_ req: SwiftInfoCore.SKRequestDictionary) -> SwiftInfoCore.SKResult<SwiftInfoCore.SKResponseDictionary>
+}
+public struct sourcekitd_keys {
+}
+public struct sourcekitd_requests {
+}
+public struct sourcekitd_values {
+}
+final public class SKRequestDictionary {
+  public init(_ dict: sourcekitd.sourcekitd_object_t? = nil, sourcekitd: SwiftInfoCore.SourceKit)
+  @objc deinit
+  final public subscript(key: sourcekitd.sourcekitd_uid_t?) -> Swift.String {
+    get
+    set
+  }
+  final public subscript(key: sourcekitd.sourcekitd_uid_t?) -> Swift.Int {
+    get
+    set
+  }
+  final public subscript(key: sourcekitd.sourcekitd_uid_t?) -> sourcekitd.sourcekitd_uid_t? {
+    get
+    set
+  }
+  final public subscript(key: sourcekitd.sourcekitd_uid_t?) -> SwiftInfoCore.SKRequestDictionary {
+    get
+    set
+  }
+  final public subscript<S>(key: sourcekitd.sourcekitd_uid_t?) -> S where S : Swift.Sequence, S.Element == Swift.String {
+    get
+    set
+  }
+}
+final public class SKResponse {
+  public init(_ response: sourcekitd.sourcekitd_response_t?, sourcekitd: SwiftInfoCore.SourceKit)
+  @objc deinit
+}
+final public class SKResponseDictionary {
+  final public let dict: sourcekitd.sourcekitd_variant_t
+  final public let resp: SwiftInfoCore.SKResponse
+  final public var sourcekitd: SwiftInfoCore.SourceKit {
+    get
+  }
+  public init(_ dict: sourcekitd.sourcekitd_variant_t, response: SwiftInfoCore.SKResponse)
+  @objc deinit
+}
+extension SwiftInfoCore.SKRequestDictionary : Swift.CustomStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+}
+extension SwiftInfoCore.SKResponse : Swift.CustomStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+}
+extension SwiftInfoCore.SKResponseDictionary : Swift.CustomStringConvertible {
+  final public var description: Swift.String {
+    get
+  }
+}
+public struct Summary : Swift.Codable, Swift.Hashable {
+  public enum Style {
+    case positive
+    case neutral
+    case negative
+    public static func == (a: SwiftInfoCore.Summary.Style, b: SwiftInfoCore.Summary.Style) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public init(text: Swift.String, style: SwiftInfoCore.Summary.Style, numericValue: Swift.Float, stringValue: Swift.String)
+  public static func genericFor<T>(prefix: Swift.String, now: T, old: T?, increaseIsBad: Swift.Bool, stringValueFormatter: ((T) -> Swift.String)? = nil, numericValueFormatter: ((T) -> Swift.Float)? = nil, difference: ((T, T) -> T)? = nil) -> SwiftInfoCore.Summary where T : Swift.BinaryInteger, T : Swift.SignedNumeric
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: SwiftInfoCore.Summary, b: SwiftInfoCore.Summary) -> Swift.Bool
+  public func encode(to encoder: Swift.Encoder) throws
+  public var hashValue: Swift.Int {
+    get
+  }
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct SwiftInfo {
+  public let projectInfo: SwiftInfoCore.ProjectInfo
+  public let fileUtils: SwiftInfoCore.FileUtils
+  public let client: SwiftInfoCore.HTTPClient
+  public let sourceKit: SwiftInfoCore.SourceKit
+  public init(projectInfo: SwiftInfoCore.ProjectInfo, fileUtils: SwiftInfoCore.FileUtils = .init(), slackFormatter: SwiftInfoCore.SlackFormatter = .init(), client: SwiftInfoCore.HTTPClient = .init(), sourceKit: SwiftInfoCore.SourceKit? = nil)
+  public func extract<T>(_ provider: T.Type, args: T.Arguments? = nil) -> SwiftInfoCore.Output where T : SwiftInfoCore.InfoProvider
+  public func sendToSlack(output: SwiftInfoCore.Output, webhookUrl: Swift.String, titlePrefix: Swift.String? = nil)
+  public func print(output: SwiftInfoCore.Output)
+  public func save(output: SwiftInfoCore.Output, timestamp: Foundation.TimeInterval = Date().timeIntervalSince1970)
+}
+public func fail(_ message: Swift.String) -> Swift.Never
+extension SwiftInfoCore.BuildSystem : Swift.Equatable {}
+extension SwiftInfoCore.BuildSystem : Swift.Hashable {}
+extension SwiftInfoCore.TargetCountProvider.Args.Mode : Swift.Equatable {}
+extension SwiftInfoCore.TargetCountProvider.Args.Mode : Swift.Hashable {}
+extension SwiftInfoCore.Summary.Style : Swift.Equatable {}
+extension SwiftInfoCore.Summary.Style : Swift.Hashable {}

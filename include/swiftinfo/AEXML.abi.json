@@ -1,0 +1,3927 @@
+{
+  "kind": "Root",
+  "name": "TopLevel",
+  "printedName": "TopLevel",
+  "children": [
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "AEXML",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "AEXMLDocument",
+      "printedName": "AEXMLDocument",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "root",
+          "printedName": "root",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLElement",
+              "printedName": "AEXML.AEXMLElement",
+              "usr": "s:5AEXML12AEXMLElementC"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML13AEXMLDocumentC4rootAA12AEXMLElementCvp",
+          "mangledName": "$s5AEXML13AEXMLDocumentC4rootAA12AEXMLElementCvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML13AEXMLDocumentC4rootAA12AEXMLElementCvg",
+              "mangledName": "$s5AEXML13AEXMLDocumentC4rootAA12AEXMLElementCvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "options",
+          "printedName": "options",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLOptions",
+              "printedName": "AEXML.AEXMLOptions",
+              "usr": "s:5AEXML12AEXMLOptionsV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML13AEXMLDocumentC7optionsAA12AEXMLOptionsVvp",
+          "mangledName": "$s5AEXML13AEXMLDocumentC7optionsAA12AEXMLOptionsVvp",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "Final",
+            "HasStorage",
+            "AccessControl"
+          ],
+          "isLet": true,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLOptions",
+                  "printedName": "AEXML.AEXMLOptions",
+                  "usr": "s:5AEXML12AEXMLOptionsV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML13AEXMLDocumentC7optionsAA12AEXMLOptionsVvg",
+              "mangledName": "$s5AEXML13AEXMLDocumentC7optionsAA12AEXMLOptionsVvg",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "declAttributes": [
+                "Final"
+              ],
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(root:options:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLDocument",
+              "printedName": "AEXML.AEXMLDocument",
+              "usr": "s:5AEXML13AEXMLDocumentC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "AEXML.AEXMLElement?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLOptions",
+              "printedName": "AEXML.AEXMLOptions",
+              "hasDefaultArg": true,
+              "usr": "s:5AEXML12AEXMLOptionsV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:5AEXML13AEXMLDocumentC4root7optionsAcA12AEXMLElementCSg_AA12AEXMLOptionsVtcfc",
+          "mangledName": "$s5AEXML13AEXMLDocumentC4root7optionsAcA12AEXMLElementCSg_AA12AEXMLOptionsVtcfc",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(xml:options:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLDocument",
+              "printedName": "AEXML.AEXMLDocument",
+              "usr": "s:5AEXML13AEXMLDocumentC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Data",
+              "printedName": "Foundation.Data",
+              "usr": "s:10Foundation4DataV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLOptions",
+              "printedName": "AEXML.AEXMLOptions",
+              "hasDefaultArg": true,
+              "usr": "s:5AEXML12AEXMLOptionsV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:5AEXML13AEXMLDocumentC3xml7optionsAC10Foundation4DataV_AA12AEXMLOptionsVtKcfc",
+          "mangledName": "$s5AEXML13AEXMLDocumentC3xml7optionsAC10Foundation4DataV_AA12AEXMLOptionsVtKcfc",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "Convenience",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "init_kind": "Convenience"
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(xml:encoding:options:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLDocument",
+              "printedName": "AEXML.AEXMLDocument",
+              "usr": "s:5AEXML13AEXMLDocumentC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Encoding",
+              "printedName": "Swift.String.Encoding",
+              "hasDefaultArg": true,
+              "usr": "s:SS10FoundationE8EncodingV"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLOptions",
+              "printedName": "AEXML.AEXMLOptions",
+              "hasDefaultArg": true,
+              "usr": "s:5AEXML12AEXMLOptionsV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:5AEXML13AEXMLDocumentC3xml8encoding7optionsACSS_SS10FoundationE8EncodingVAA12AEXMLOptionsVtKcfc",
+          "mangledName": "$s5AEXML13AEXMLDocumentC3xml8encoding7optionsACSS_SS10FoundationE8EncodingVAA12AEXMLOptionsVtKcfc",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "Convenience",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "init_kind": "Convenience"
+        },
+        {
+          "kind": "Function",
+          "name": "loadXML",
+          "printedName": "loadXML(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Data",
+              "printedName": "Foundation.Data",
+              "usr": "s:10Foundation4DataV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML13AEXMLDocumentC7loadXMLyy10Foundation4DataVKF",
+          "mangledName": "$s5AEXML13AEXMLDocumentC7loadXMLyy10Foundation4DataVKF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "throwing": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "xml",
+          "printedName": "xml",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML13AEXMLDocumentC3xmlSSvp",
+          "mangledName": "$s5AEXML13AEXMLDocumentC3xmlSSvp",
+          "moduleName": "AEXML",
+          "overriding": true,
+          "isOpen": true,
+          "declAttributes": [
+            "Override",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML13AEXMLDocumentC3xmlSSvg",
+              "mangledName": "$s5AEXML13AEXMLDocumentC3xmlSSvg",
+              "moduleName": "AEXML",
+              "overriding": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(name:value:attributes:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLDocument",
+              "printedName": "AEXML.AEXMLDocument",
+              "usr": "s:5AEXML13AEXMLDocumentC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:5AEXML13AEXMLDocumentC4name5value10attributesACSS_SSSgSDyS2SGtcfc",
+          "mangledName": "$s5AEXML13AEXMLDocumentC4name5value10attributesACSS_SSSgSDyS2SGtcfc",
+          "moduleName": "AEXML",
+          "overriding": true,
+          "implicit": true,
+          "declAttributes": [
+            "Override"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:5AEXML13AEXMLDocumentC",
+      "mangledName": "$s5AEXML13AEXMLDocumentC",
+      "moduleName": "AEXML",
+      "isOpen": true,
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "superclassUsr": "s:5AEXML12AEXMLElementC",
+      "superclassNames": [
+        "AEXML.AEXMLElement"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "AEXML",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "AEXMLElement",
+      "printedName": "AEXMLElement",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "parent",
+          "printedName": "parent",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "WeakStorage",
+              "printedName": "AEXML.AEXMLElement?"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC6parentACSgvp",
+          "mangledName": "$s5AEXML12AEXMLElementC6parentACSgvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "ReferenceOwnership",
+            "SetterAccess",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "ownership": 1,
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "AEXML.AEXMLElement?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLElement",
+                      "printedName": "AEXML.AEXMLElement",
+                      "usr": "s:5AEXML12AEXMLElementC"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC6parentACSgvg",
+              "mangledName": "$s5AEXML12AEXMLElementC6parentACSgvg",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "children",
+          "printedName": "children",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[AEXML.AEXMLElement]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC8childrenSayACGvp",
+          "mangledName": "$s5AEXML12AEXMLElementC8childrenSayACGvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "SetterAccess",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[AEXML.AEXMLElement]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLElement",
+                      "printedName": "AEXML.AEXMLElement",
+                      "usr": "s:5AEXML12AEXMLElementC"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC8childrenSayACGvg",
+              "mangledName": "$s5AEXML12AEXMLElementC8childrenSayACGvg",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "name",
+          "printedName": "name",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC4nameSSvp",
+          "mangledName": "$s5AEXML12AEXMLElementC4nameSSvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC4nameSSvg",
+              "mangledName": "$s5AEXML12AEXMLElementC4nameSSvg",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC4nameSSvs",
+              "mangledName": "$s5AEXML12AEXMLElementC4nameSSvs",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC4nameSSvM",
+              "mangledName": "$s5AEXML12AEXMLElementC4nameSSvM",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "value",
+          "printedName": "value",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC5valueSSSgvp",
+          "mangledName": "$s5AEXML12AEXMLElementC5valueSSSgvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC5valueSSSgvg",
+              "mangledName": "$s5AEXML12AEXMLElementC5valueSSSgvg",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.String?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC5valueSSSgvs",
+              "mangledName": "$s5AEXML12AEXMLElementC5valueSSSgvs",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC5valueSSSgvM",
+              "mangledName": "$s5AEXML12AEXMLElementC5valueSSSgvM",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "attributes",
+          "printedName": "attributes",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC10attributesSDyS2SGvp",
+          "mangledName": "$s5AEXML12AEXMLElementC10attributesSDyS2SGvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.String : Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC10attributesSDyS2SGvg",
+              "mangledName": "$s5AEXML12AEXMLElementC10attributesSDyS2SGvg",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Dictionary",
+                  "printedName": "[Swift.String : Swift.String]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:SD"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC10attributesSDyS2SGvs",
+              "mangledName": "$s5AEXML12AEXMLElementC10attributesSDyS2SGvs",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC10attributesSDyS2SGvM",
+              "mangledName": "$s5AEXML12AEXMLElementC10attributesSDyS2SGvM",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "error",
+          "printedName": "error",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "AEXML.AEXMLError?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLError",
+                  "printedName": "AEXML.AEXMLError",
+                  "usr": "s:5AEXML10AEXMLErrorO"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC5errorAA10AEXMLErrorOSgvp",
+          "mangledName": "$s5AEXML12AEXMLElementC5errorAA10AEXMLErrorOSgvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "AEXML.AEXMLError?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLError",
+                      "printedName": "AEXML.AEXMLError",
+                      "usr": "s:5AEXML10AEXMLErrorO"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC5errorAA10AEXMLErrorOSgvg",
+              "mangledName": "$s5AEXML12AEXMLElementC5errorAA10AEXMLErrorOSgvg",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "AEXML.AEXMLError?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLError",
+                      "printedName": "AEXML.AEXMLError",
+                      "usr": "s:5AEXML10AEXMLErrorO"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC5errorAA10AEXMLErrorOSgvs",
+              "mangledName": "$s5AEXML12AEXMLElementC5errorAA10AEXMLErrorOSgvs",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC5errorAA10AEXMLErrorOSgvM",
+              "mangledName": "$s5AEXML12AEXMLElementC5errorAA10AEXMLErrorOSgvM",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "isOpen": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "string",
+          "printedName": "string",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC6stringSSvp",
+          "mangledName": "$s5AEXML12AEXMLElementC6stringSSvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC6stringSSvg",
+              "mangledName": "$s5AEXML12AEXMLElementC6stringSSvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "bool",
+          "printedName": "bool",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.Bool?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC4boolSbSgvp",
+          "mangledName": "$s5AEXML12AEXMLElementC4boolSbSgvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.Bool?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Bool",
+                      "printedName": "Swift.Bool",
+                      "usr": "s:Sb"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC4boolSbSgvg",
+              "mangledName": "$s5AEXML12AEXMLElementC4boolSbSgvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "int",
+          "printedName": "int",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.Int?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC3intSiSgvp",
+          "mangledName": "$s5AEXML12AEXMLElementC3intSiSgvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.Int?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Int",
+                      "printedName": "Swift.Int",
+                      "usr": "s:Si"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC3intSiSgvg",
+              "mangledName": "$s5AEXML12AEXMLElementC3intSiSgvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "double",
+          "printedName": "double",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.Double?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Double",
+                  "printedName": "Swift.Double",
+                  "usr": "s:Sd"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC6doubleSdSgvp",
+          "mangledName": "$s5AEXML12AEXMLElementC6doubleSdSgvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "Swift.Double?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Double",
+                      "printedName": "Swift.Double",
+                      "usr": "s:Sd"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC6doubleSdSgvg",
+              "mangledName": "$s5AEXML12AEXMLElementC6doubleSdSgvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init(name:value:attributes:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLElement",
+              "printedName": "AEXML.AEXMLElement",
+              "usr": "s:5AEXML12AEXMLElementC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:5AEXML12AEXMLElementC4name5value10attributesACSS_SSSgSDyS2SGtcfc",
+          "mangledName": "$s5AEXML12AEXMLElementC4name5value10attributesACSS_SSSgSDyS2SGtcfc",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        },
+        {
+          "kind": "Subscript",
+          "name": "subscript",
+          "printedName": "subscript(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLElement",
+              "printedName": "AEXML.AEXMLElement",
+              "usr": "s:5AEXML12AEXMLElementC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Subscript",
+          "usr": "s:5AEXML12AEXMLElementCyACSScip",
+          "mangledName": "$s5AEXML12AEXMLElementCyACSScip",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementCyACSScig",
+              "mangledName": "$s5AEXML12AEXMLElementCyACSScig",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "all",
+          "printedName": "all",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[AEXML.AEXMLElement]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[AEXML.AEXMLElement]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLElement",
+                      "printedName": "AEXML.AEXMLElement",
+                      "usr": "s:5AEXML12AEXMLElementC"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC3allSayACGSgvp",
+          "mangledName": "$s5AEXML12AEXMLElementC3allSayACGSgvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "[AEXML.AEXMLElement]?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Array",
+                      "printedName": "[AEXML.AEXMLElement]",
+                      "children": [
+                        {
+                          "kind": "TypeNominal",
+                          "name": "AEXMLElement",
+                          "printedName": "AEXML.AEXMLElement",
+                          "usr": "s:5AEXML12AEXMLElementC"
+                        }
+                      ],
+                      "usr": "s:Sa"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC3allSayACGSgvg",
+              "mangledName": "$s5AEXML12AEXMLElementC3allSayACGSgvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "first",
+          "printedName": "first",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "AEXML.AEXMLElement?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC5firstACSgvp",
+          "mangledName": "$s5AEXML12AEXMLElementC5firstACSgvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "AEXML.AEXMLElement?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLElement",
+                      "printedName": "AEXML.AEXMLElement",
+                      "usr": "s:5AEXML12AEXMLElementC"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC5firstACSgvg",
+              "mangledName": "$s5AEXML12AEXMLElementC5firstACSgvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "last",
+          "printedName": "last",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "AEXML.AEXMLElement?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "usr": "s:Sq"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC4lastACSgvp",
+          "mangledName": "$s5AEXML12AEXMLElementC4lastACSgvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Optional",
+                  "printedName": "AEXML.AEXMLElement?",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLElement",
+                      "printedName": "AEXML.AEXMLElement",
+                      "usr": "s:5AEXML12AEXMLElementC"
+                    }
+                  ],
+                  "usr": "s:Sq"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC4lastACSgvg",
+              "mangledName": "$s5AEXML12AEXMLElementC4lastACSgvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "count",
+          "printedName": "count",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC5countSivp",
+          "mangledName": "$s5AEXML12AEXMLElementC5countSivp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC5countSivg",
+              "mangledName": "$s5AEXML12AEXMLElementC5countSivg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "all",
+          "printedName": "all(withValue:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[AEXML.AEXMLElement]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[AEXML.AEXMLElement]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLElement",
+                      "printedName": "AEXML.AEXMLElement",
+                      "usr": "s:5AEXML12AEXMLElementC"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML12AEXMLElementC3all9withValueSayACGSgSS_tF",
+          "mangledName": "$s5AEXML12AEXMLElementC3all9withValueSayACGSgSS_tF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "all",
+          "printedName": "all(containingAttributeKeys:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[AEXML.AEXMLElement]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[AEXML.AEXMLElement]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLElement",
+                      "printedName": "AEXML.AEXMLElement",
+                      "usr": "s:5AEXML12AEXMLElementC"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML12AEXMLElementC3all23containingAttributeKeysSayACGSgSaySSG_tF",
+          "mangledName": "$s5AEXML12AEXMLElementC3all23containingAttributeKeysSayACGSgSaySSG_tF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "all",
+          "printedName": "all(withAttributes:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "[AEXML.AEXMLElement]?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Array",
+                  "printedName": "[AEXML.AEXMLElement]",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLElement",
+                      "printedName": "AEXML.AEXMLElement",
+                      "usr": "s:5AEXML12AEXMLElementC"
+                    }
+                  ],
+                  "usr": "s:Sa"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML12AEXMLElementC3all14withAttributesSayACGSgSDyS2SG_tF",
+          "mangledName": "$s5AEXML12AEXMLElementC3all14withAttributesSayACGSgSDyS2SG_tF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "allDescendants",
+          "printedName": "allDescendants(where:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[AEXML.AEXMLElement]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(AEXML.AEXMLElement) -> Swift.Bool",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "typeAttributes": [
+                "noescape"
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML12AEXMLElementC14allDescendants5whereSayACGSbACXE_tF",
+          "mangledName": "$s5AEXML12AEXMLElementC14allDescendants5whereSayACGSbACXE_tF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "firstDescendant",
+          "printedName": "firstDescendant(where:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "AEXML.AEXMLElement?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(AEXML.AEXMLElement) -> Swift.Bool",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "typeAttributes": [
+                "noescape"
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML12AEXMLElementC15firstDescendant5whereACSgSbACXE_tF",
+          "mangledName": "$s5AEXML12AEXMLElementC15firstDescendant5whereACSgSbACXE_tF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "hasDescendant",
+          "printedName": "hasDescendant(where:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(AEXML.AEXMLElement) -> Swift.Bool",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "typeAttributes": [
+                "noescape"
+              ]
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML12AEXMLElementC13hasDescendant5whereS2bACXE_tF",
+          "mangledName": "$s5AEXML12AEXMLElementC13hasDescendant5whereS2bACXE_tF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "addChild",
+          "printedName": "addChild(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLElement",
+              "printedName": "AEXML.AEXMLElement",
+              "usr": "s:5AEXML12AEXMLElementC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLElement",
+              "printedName": "AEXML.AEXMLElement",
+              "usr": "s:5AEXML12AEXMLElementC"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML12AEXMLElementC8addChildyA2CF",
+          "mangledName": "$s5AEXML12AEXMLElementC8addChildyA2CF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "DiscardableResult",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "addChild",
+          "printedName": "addChild(name:value:attributes:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLElement",
+              "printedName": "AEXML.AEXMLElement",
+              "usr": "s:5AEXML12AEXMLElementC"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Optional",
+              "printedName": "Swift.String?",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:Sq"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Dictionary",
+              "printedName": "[Swift.String : Swift.String]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "hasDefaultArg": true,
+              "usr": "s:SD"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML12AEXMLElementC8addChild4name5value10attributesACSS_SSSgSDyS2SGtF",
+          "mangledName": "$s5AEXML12AEXMLElementC8addChild4name5value10attributesACSS_SSSgSDyS2SGtF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "DiscardableResult",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "addChildren",
+          "printedName": "addChildren(_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[AEXML.AEXMLElement]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "usr": "s:Sa"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Array",
+              "printedName": "[AEXML.AEXMLElement]",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLElement",
+                  "printedName": "AEXML.AEXMLElement",
+                  "usr": "s:5AEXML12AEXMLElementC"
+                }
+              ],
+              "usr": "s:Sa"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML12AEXMLElementC11addChildrenySayACGAEF",
+          "mangledName": "$s5AEXML12AEXMLElementC11addChildrenySayACGAEF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "DiscardableResult",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Function",
+          "name": "removeFromParent",
+          "printedName": "removeFromParent()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML12AEXMLElementC16removeFromParentyyF",
+          "mangledName": "$s5AEXML12AEXMLElementC16removeFromParentyyF",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "xml",
+          "printedName": "xml",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC3xmlSSvp",
+          "mangledName": "$s5AEXML12AEXMLElementC3xmlSSvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC3xmlSSvg",
+              "mangledName": "$s5AEXML12AEXMLElementC3xmlSSvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "xmlCompact",
+          "printedName": "xmlCompact",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC10xmlCompactSSvp",
+          "mangledName": "$s5AEXML12AEXMLElementC10xmlCompactSSvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC10xmlCompactSSvg",
+              "mangledName": "$s5AEXML12AEXMLElementC10xmlCompactSSvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "xmlSpaces",
+          "printedName": "xmlSpaces",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLElementC9xmlSpacesSSvp",
+          "mangledName": "$s5AEXML12AEXMLElementC9xmlSpacesSSvp",
+          "moduleName": "AEXML",
+          "isOpen": true,
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLElementC9xmlSpacesSSvg",
+              "mangledName": "$s5AEXML12AEXMLElementC9xmlSpacesSSvg",
+              "moduleName": "AEXML",
+              "isOpen": true,
+              "accessorKind": "get"
+            }
+          ]
+        }
+      ],
+      "declKind": "Class",
+      "usr": "s:5AEXML12AEXMLElementC",
+      "mangledName": "$s5AEXML12AEXMLElementC",
+      "moduleName": "AEXML",
+      "isOpen": true,
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "AEXML",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "AEXMLError",
+      "printedName": "AEXMLError",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "elementNotFound",
+          "printedName": "elementNotFound",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(AEXML.AEXMLError.Type) -> AEXML.AEXMLError",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLError",
+                  "printedName": "AEXML.AEXMLError",
+                  "usr": "s:5AEXML10AEXMLErrorO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "AEXML.AEXMLError.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLError",
+                      "printedName": "AEXML.AEXMLError",
+                      "usr": "s:5AEXML10AEXMLErrorO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:5AEXML10AEXMLErrorO15elementNotFoundyA2CmF",
+          "mangledName": "$s5AEXML10AEXMLErrorO15elementNotFoundyA2CmF",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "RawDocComment"
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "rootElementMissing",
+          "printedName": "rootElementMissing",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(AEXML.AEXMLError.Type) -> AEXML.AEXMLError",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLError",
+                  "printedName": "AEXML.AEXMLError",
+                  "usr": "s:5AEXML10AEXMLErrorO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "AEXML.AEXMLError.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLError",
+                      "printedName": "AEXML.AEXMLError",
+                      "usr": "s:5AEXML10AEXMLErrorO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:5AEXML10AEXMLErrorO18rootElementMissingyA2CmF",
+          "mangledName": "$s5AEXML10AEXMLErrorO18rootElementMissingyA2CmF",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "RawDocComment"
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "parsingFailed",
+          "printedName": "parsingFailed",
+          "children": [
+            {
+              "kind": "TypeFunc",
+              "name": "Function",
+              "printedName": "(AEXML.AEXMLError.Type) -> AEXML.AEXMLError",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "AEXMLError",
+                  "printedName": "AEXML.AEXMLError",
+                  "usr": "s:5AEXML10AEXMLErrorO"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "Metatype",
+                  "printedName": "AEXML.AEXMLError.Type",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "AEXMLError",
+                      "printedName": "AEXML.AEXMLError",
+                      "usr": "s:5AEXML10AEXMLErrorO"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "declKind": "EnumElement",
+          "usr": "s:5AEXML10AEXMLErrorO13parsingFailedyA2CmF",
+          "mangledName": "$s5AEXML10AEXMLErrorO13parsingFailedyA2CmF",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "RawDocComment"
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "==",
+          "printedName": "==(_:_:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Bool",
+              "printedName": "Swift.Bool",
+              "usr": "s:Sb"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLError",
+              "printedName": "AEXML.AEXMLError",
+              "usr": "s:5AEXML10AEXMLErrorO"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLError",
+              "printedName": "AEXML.AEXMLError",
+              "usr": "s:5AEXML10AEXMLErrorO"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML10AEXMLErrorO2eeoiySbAC_ACtFZ",
+          "mangledName": "$s5AEXML10AEXMLErrorO2eeoiySbAC_ACtFZ",
+          "moduleName": "AEXML",
+          "static": true,
+          "implicit": true,
+          "funcSelfKind": "NonMutating"
+        },
+        {
+          "kind": "Var",
+          "name": "hashValue",
+          "printedName": "hashValue",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Int",
+              "printedName": "Swift.Int",
+              "usr": "s:Si"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML10AEXMLErrorO9hashValueSivp",
+          "mangledName": "$s5AEXML10AEXMLErrorO9hashValueSivp",
+          "moduleName": "AEXML",
+          "implicit": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Int",
+                  "printedName": "Swift.Int",
+                  "usr": "s:Si"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML10AEXMLErrorO9hashValueSivg",
+              "mangledName": "$s5AEXML10AEXMLErrorO9hashValueSivg",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "accessorKind": "get"
+            }
+          ]
+        },
+        {
+          "kind": "Function",
+          "name": "hash",
+          "printedName": "hash(into:)",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "Void",
+              "printedName": "()"
+            },
+            {
+              "kind": "TypeNominal",
+              "name": "Hasher",
+              "printedName": "Swift.Hasher",
+              "paramValueOwnership": "InOut",
+              "usr": "s:s6HasherV"
+            }
+          ],
+          "declKind": "Func",
+          "usr": "s:5AEXML10AEXMLErrorO4hash4intoys6HasherVz_tF",
+          "mangledName": "$s5AEXML10AEXMLErrorO4hash4intoys6HasherVz_tF",
+          "moduleName": "AEXML",
+          "implicit": true,
+          "funcSelfKind": "NonMutating"
+        }
+      ],
+      "declKind": "Enum",
+      "usr": "s:5AEXML10AEXMLErrorO",
+      "mangledName": "$s5AEXML10AEXMLErrorO",
+      "moduleName": "AEXML",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ],
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Error",
+          "printedName": "Error",
+          "usr": "s:s5ErrorP",
+          "mangledName": "$ss5ErrorP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        }
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "AEXML",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "AEXMLOptions",
+      "printedName": "AEXMLOptions",
+      "children": [
+        {
+          "kind": "TypeDecl",
+          "name": "DocumentHeader",
+          "printedName": "DocumentHeader",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "version",
+              "printedName": "version",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Double",
+                  "printedName": "Swift.Double",
+                  "usr": "s:Sd"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV7versionSdvp",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV7versionSdvp",
+              "moduleName": "AEXML",
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Double",
+                      "printedName": "Swift.Double",
+                      "usr": "s:Sd"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV7versionSdvg",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV7versionSdvg",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Double",
+                      "printedName": "Swift.Double",
+                      "usr": "s:Sd"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV7versionSdvs",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV7versionSdvs",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV7versionSdvM",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV7versionSdvM",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "_modify"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "encoding",
+              "printedName": "encoding",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV8encodingSSvp",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV8encodingSSvp",
+              "moduleName": "AEXML",
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV8encodingSSvg",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV8encodingSSvg",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV8encodingSSvs",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV8encodingSSvs",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV8encodingSSvM",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV8encodingSSvM",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "_modify"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "standalone",
+              "printedName": "standalone",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV10standaloneSSvp",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV10standaloneSSvp",
+              "moduleName": "AEXML",
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV10standaloneSSvg",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV10standaloneSSvg",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV10standaloneSSvs",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV10standaloneSSvs",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV10standaloneSSvM",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV10standaloneSSvM",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "_modify"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "xmlString",
+              "printedName": "xmlString",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV9xmlStringSSvp",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV9xmlStringSSvp",
+              "moduleName": "AEXML",
+              "declAttributes": [
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV9xmlStringSSvg",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV9xmlStringSSvg",
+                  "moduleName": "AEXML",
+                  "accessorKind": "get"
+                }
+              ]
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV",
+          "mangledName": "$s5AEXML12AEXMLOptionsV14DocumentHeaderV",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ]
+        },
+        {
+          "kind": "TypeDecl",
+          "name": "ParserSettings",
+          "printedName": "ParserSettings",
+          "children": [
+            {
+              "kind": "Var",
+              "name": "shouldProcessNamespaces",
+              "printedName": "shouldProcessNamespaces",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV23shouldProcessNamespacesSbvp",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV23shouldProcessNamespacesSbvp",
+              "moduleName": "AEXML",
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Bool",
+                      "printedName": "Swift.Bool",
+                      "usr": "s:Sb"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV23shouldProcessNamespacesSbvg",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV23shouldProcessNamespacesSbvg",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Bool",
+                      "printedName": "Swift.Bool",
+                      "usr": "s:Sb"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV23shouldProcessNamespacesSbvs",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV23shouldProcessNamespacesSbvs",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV23shouldProcessNamespacesSbvM",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV23shouldProcessNamespacesSbvM",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "_modify"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "shouldReportNamespacePrefixes",
+              "printedName": "shouldReportNamespacePrefixes",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV29shouldReportNamespacePrefixesSbvp",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV29shouldReportNamespacePrefixesSbvp",
+              "moduleName": "AEXML",
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Bool",
+                      "printedName": "Swift.Bool",
+                      "usr": "s:Sb"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV29shouldReportNamespacePrefixesSbvg",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV29shouldReportNamespacePrefixesSbvg",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Bool",
+                      "printedName": "Swift.Bool",
+                      "usr": "s:Sb"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV29shouldReportNamespacePrefixesSbvs",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV29shouldReportNamespacePrefixesSbvs",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV29shouldReportNamespacePrefixesSbvM",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV29shouldReportNamespacePrefixesSbvM",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "_modify"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "shouldResolveExternalEntities",
+              "printedName": "shouldResolveExternalEntities",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV29shouldResolveExternalEntitiesSbvp",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV29shouldResolveExternalEntitiesSbvp",
+              "moduleName": "AEXML",
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Bool",
+                      "printedName": "Swift.Bool",
+                      "usr": "s:Sb"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV29shouldResolveExternalEntitiesSbvg",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV29shouldResolveExternalEntitiesSbvg",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Bool",
+                      "printedName": "Swift.Bool",
+                      "usr": "s:Sb"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV29shouldResolveExternalEntitiesSbvs",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV29shouldResolveExternalEntitiesSbvs",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV29shouldResolveExternalEntitiesSbvM",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV29shouldResolveExternalEntitiesSbvM",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "_modify"
+                }
+              ]
+            },
+            {
+              "kind": "Var",
+              "name": "shouldTrimWhitespace",
+              "printedName": "shouldTrimWhitespace",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Bool",
+                  "printedName": "Swift.Bool",
+                  "usr": "s:Sb"
+                }
+              ],
+              "declKind": "Var",
+              "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV20shouldTrimWhitespaceSbvp",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV20shouldTrimWhitespaceSbvp",
+              "moduleName": "AEXML",
+              "declAttributes": [
+                "HasInitialValue",
+                "HasStorage",
+                "AccessControl",
+                "RawDocComment"
+              ],
+              "hasStorage": true,
+              "accessors": [
+                {
+                  "kind": "Accessor",
+                  "name": "Get",
+                  "printedName": "Get()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Bool",
+                      "printedName": "Swift.Bool",
+                      "usr": "s:Sb"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV20shouldTrimWhitespaceSbvg",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV20shouldTrimWhitespaceSbvg",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "get"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Set",
+                  "printedName": "Set()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    },
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Bool",
+                      "printedName": "Swift.Bool",
+                      "usr": "s:Sb"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV20shouldTrimWhitespaceSbvs",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV20shouldTrimWhitespaceSbvs",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "set"
+                },
+                {
+                  "kind": "Accessor",
+                  "name": "Modify",
+                  "printedName": "Modify()",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "Void",
+                      "printedName": "()"
+                    }
+                  ],
+                  "declKind": "Accessor",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV20shouldTrimWhitespaceSbvM",
+                  "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV20shouldTrimWhitespaceSbvM",
+                  "moduleName": "AEXML",
+                  "implicit": true,
+                  "accessorKind": "_modify"
+                }
+              ]
+            }
+          ],
+          "declKind": "Struct",
+          "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV",
+          "mangledName": "$s5AEXML12AEXMLOptionsV14ParserSettingsV",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "documentHeader",
+          "printedName": "documentHeader",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "DocumentHeader",
+              "printedName": "AEXML.AEXMLOptions.DocumentHeader",
+              "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLOptionsV14documentHeaderAC08DocumentD0Vvp",
+          "mangledName": "$s5AEXML12AEXMLOptionsV14documentHeaderAC08DocumentD0Vvp",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "DocumentHeader",
+                  "printedName": "AEXML.AEXMLOptions.DocumentHeader",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLOptionsV14documentHeaderAC08DocumentD0Vvg",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14documentHeaderAC08DocumentD0Vvg",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "DocumentHeader",
+                  "printedName": "AEXML.AEXMLOptions.DocumentHeader",
+                  "usr": "s:5AEXML12AEXMLOptionsV14DocumentHeaderV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLOptionsV14documentHeaderAC08DocumentD0Vvs",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14documentHeaderAC08DocumentD0Vvs",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLOptionsV14documentHeaderAC08DocumentD0VvM",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14documentHeaderAC08DocumentD0VvM",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Var",
+          "name": "parserSettings",
+          "printedName": "parserSettings",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "ParserSettings",
+              "printedName": "AEXML.AEXMLOptions.ParserSettings",
+              "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:5AEXML12AEXMLOptionsV14parserSettingsAC06ParserD0Vvp",
+          "mangledName": "$s5AEXML12AEXMLOptionsV14parserSettingsAC06ParserD0Vvp",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "HasInitialValue",
+            "HasStorage",
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "hasStorage": true,
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "ParserSettings",
+                  "printedName": "AEXML.AEXMLOptions.ParserSettings",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLOptionsV14parserSettingsAC06ParserD0Vvg",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14parserSettingsAC06ParserD0Vvg",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "accessorKind": "get"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Set",
+              "printedName": "Set()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                },
+                {
+                  "kind": "TypeNominal",
+                  "name": "ParserSettings",
+                  "printedName": "AEXML.AEXMLOptions.ParserSettings",
+                  "usr": "s:5AEXML12AEXMLOptionsV14ParserSettingsV"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLOptionsV14parserSettingsAC06ParserD0Vvs",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14parserSettingsAC06ParserD0Vvs",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "accessorKind": "set"
+            },
+            {
+              "kind": "Accessor",
+              "name": "Modify",
+              "printedName": "Modify()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Void",
+                  "printedName": "()"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:5AEXML12AEXMLOptionsV14parserSettingsAC06ParserD0VvM",
+              "mangledName": "$s5AEXML12AEXMLOptionsV14parserSettingsAC06ParserD0VvM",
+              "moduleName": "AEXML",
+              "implicit": true,
+              "accessorKind": "_modify"
+            }
+          ]
+        },
+        {
+          "kind": "Constructor",
+          "name": "init",
+          "printedName": "init()",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "AEXMLOptions",
+              "printedName": "AEXML.AEXMLOptions",
+              "usr": "s:5AEXML12AEXMLOptionsV"
+            }
+          ],
+          "declKind": "Constructor",
+          "usr": "s:5AEXML12AEXMLOptionsVACycfc",
+          "mangledName": "$s5AEXML12AEXMLOptionsVACycfc",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "AccessControl",
+            "RawDocComment"
+          ],
+          "init_kind": "Designated"
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:5AEXML12AEXMLOptionsV",
+      "mangledName": "$s5AEXML12AEXMLOptionsV",
+      "moduleName": "AEXML",
+      "declAttributes": [
+        "AccessControl",
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "Import",
+      "name": "Foundation",
+      "printedName": "Foundation",
+      "declKind": "Import",
+      "moduleName": "AEXML",
+      "declAttributes": [
+        "RawDocComment"
+      ]
+    },
+    {
+      "kind": "TypeDecl",
+      "name": "String",
+      "printedName": "String",
+      "children": [
+        {
+          "kind": "Var",
+          "name": "xmlEscaped",
+          "printedName": "xmlEscaped",
+          "children": [
+            {
+              "kind": "TypeNominal",
+              "name": "String",
+              "printedName": "Swift.String",
+              "usr": "s:SS"
+            }
+          ],
+          "declKind": "Var",
+          "usr": "s:SS5AEXMLE10xmlEscapedSSvp",
+          "mangledName": "$sSS5AEXMLE10xmlEscapedSSvp",
+          "moduleName": "AEXML",
+          "declAttributes": [
+            "RawDocComment"
+          ],
+          "accessors": [
+            {
+              "kind": "Accessor",
+              "name": "Get",
+              "printedName": "Get()",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ],
+              "declKind": "Accessor",
+              "usr": "s:SS5AEXMLE10xmlEscapedSSvg",
+              "mangledName": "$sSS5AEXMLE10xmlEscapedSSvg",
+              "moduleName": "AEXML",
+              "accessorKind": "get"
+            }
+          ]
+        }
+      ],
+      "declKind": "Struct",
+      "usr": "s:SS",
+      "mangledName": "$sSS",
+      "moduleName": "Swift",
+      "declAttributes": [
+        "Frozen"
+      ],
+      "isExternal": true,
+      "conformances": [
+        {
+          "kind": "Conformance",
+          "name": "Decodable",
+          "printedName": "Decodable",
+          "usr": "s:Se",
+          "mangledName": "$sSe"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Encodable",
+          "printedName": "Encodable",
+          "usr": "s:SE",
+          "mangledName": "$sSE"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CodingKeyRepresentable",
+          "printedName": "CodingKeyRepresentable",
+          "usr": "s:s22CodingKeyRepresentableP",
+          "mangledName": "$ss22CodingKeyRepresentableP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_HasContiguousBytes",
+          "printedName": "_HasContiguousBytes",
+          "usr": "s:s19_HasContiguousBytesP",
+          "mangledName": "$ss19_HasContiguousBytesP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomReflectable",
+          "printedName": "CustomReflectable",
+          "usr": "s:s17CustomReflectableP",
+          "mangledName": "$ss17CustomReflectableP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_CustomPlaygroundQuickLookable",
+          "printedName": "_CustomPlaygroundQuickLookable",
+          "usr": "s:s30_CustomPlaygroundQuickLookableP",
+          "mangledName": "$ss30_CustomPlaygroundQuickLookableP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "TextOutputStream",
+          "printedName": "TextOutputStream",
+          "usr": "s:s16TextOutputStreamP",
+          "mangledName": "$ss16TextOutputStreamP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "TextOutputStreamable",
+          "printedName": "TextOutputStreamable",
+          "usr": "s:s20TextOutputStreamableP",
+          "mangledName": "$ss20TextOutputStreamableP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Hashable",
+          "printedName": "Hashable",
+          "usr": "s:SH",
+          "mangledName": "$sSH"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Sendable",
+          "printedName": "Sendable",
+          "usr": "s:s8SendableP",
+          "mangledName": "$ss8SendableP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_ExpressibleByBuiltinUnicodeScalarLiteral",
+          "printedName": "_ExpressibleByBuiltinUnicodeScalarLiteral",
+          "usr": "s:s41_ExpressibleByBuiltinUnicodeScalarLiteralP",
+          "mangledName": "$ss41_ExpressibleByBuiltinUnicodeScalarLiteralP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
+          "printedName": "_ExpressibleByBuiltinExtendedGraphemeClusterLiteral",
+          "usr": "s:s51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP",
+          "mangledName": "$ss51_ExpressibleByBuiltinExtendedGraphemeClusterLiteralP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_ExpressibleByBuiltinStringLiteral",
+          "printedName": "_ExpressibleByBuiltinStringLiteral",
+          "usr": "s:s34_ExpressibleByBuiltinStringLiteralP",
+          "mangledName": "$ss34_ExpressibleByBuiltinStringLiteralP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "ExpressibleByStringLiteral",
+          "printedName": "ExpressibleByStringLiteral",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "StringLiteralType",
+              "printedName": "StringLiteralType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ]
+            }
+          ],
+          "usr": "s:s26ExpressibleByStringLiteralP",
+          "mangledName": "$ss26ExpressibleByStringLiteralP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "ExpressibleByExtendedGraphemeClusterLiteral",
+          "printedName": "ExpressibleByExtendedGraphemeClusterLiteral",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "ExtendedGraphemeClusterLiteralType",
+              "printedName": "ExtendedGraphemeClusterLiteralType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ]
+            }
+          ],
+          "usr": "s:s43ExpressibleByExtendedGraphemeClusterLiteralP",
+          "mangledName": "$ss43ExpressibleByExtendedGraphemeClusterLiteralP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "ExpressibleByUnicodeScalarLiteral",
+          "printedName": "ExpressibleByUnicodeScalarLiteral",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "UnicodeScalarLiteralType",
+              "printedName": "UnicodeScalarLiteralType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "String",
+                  "printedName": "Swift.String",
+                  "usr": "s:SS"
+                }
+              ]
+            }
+          ],
+          "usr": "s:s33ExpressibleByUnicodeScalarLiteralP",
+          "mangledName": "$ss33ExpressibleByUnicodeScalarLiteralP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomDebugStringConvertible",
+          "printedName": "CustomDebugStringConvertible",
+          "usr": "s:s28CustomDebugStringConvertibleP",
+          "mangledName": "$ss28CustomDebugStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CustomStringConvertible",
+          "printedName": "CustomStringConvertible",
+          "usr": "s:s23CustomStringConvertibleP",
+          "mangledName": "$ss23CustomStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "BidirectionalCollection",
+          "printedName": "BidirectionalCollection",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Element",
+              "printedName": "Element",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Character",
+                  "printedName": "Swift.Character",
+                  "usr": "s:SJ"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "Index",
+              "printedName": "Index",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Index",
+                  "printedName": "Swift.String.Index",
+                  "usr": "s:SS5IndexV"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "SubSequence",
+              "printedName": "SubSequence",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Substring",
+                  "printedName": "Swift.Substring",
+                  "usr": "s:Ss"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "Indices",
+              "printedName": "Indices",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "DefaultIndices",
+                  "printedName": "Swift.DefaultIndices<Swift.String>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:SI"
+                }
+              ]
+            }
+          ],
+          "usr": "s:SK",
+          "mangledName": "$sSK"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Collection",
+          "printedName": "Collection",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Element",
+              "printedName": "Element",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Character",
+                  "printedName": "Swift.Character",
+                  "usr": "s:SJ"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "Index",
+              "printedName": "Index",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Index",
+                  "printedName": "Swift.String.Index",
+                  "usr": "s:SS5IndexV"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "Iterator",
+              "printedName": "Iterator",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Iterator",
+                  "printedName": "Swift.String.Iterator",
+                  "usr": "s:SS8IteratorV"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "SubSequence",
+              "printedName": "SubSequence",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Substring",
+                  "printedName": "Swift.Substring",
+                  "usr": "s:Ss"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "Indices",
+              "printedName": "Indices",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "DefaultIndices",
+                  "printedName": "Swift.DefaultIndices<Swift.String>",
+                  "children": [
+                    {
+                      "kind": "TypeNominal",
+                      "name": "String",
+                      "printedName": "Swift.String",
+                      "usr": "s:SS"
+                    }
+                  ],
+                  "usr": "s:SI"
+                }
+              ]
+            }
+          ],
+          "usr": "s:Sl",
+          "mangledName": "$sSl"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Sequence",
+          "printedName": "Sequence",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "Element",
+              "printedName": "Element",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Character",
+                  "printedName": "Swift.Character",
+                  "usr": "s:SJ"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "Iterator",
+              "printedName": "Iterator",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Iterator",
+                  "printedName": "Swift.String.Iterator",
+                  "usr": "s:SS8IteratorV"
+                }
+              ]
+            }
+          ],
+          "usr": "s:ST",
+          "mangledName": "$sST"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Equatable",
+          "printedName": "Equatable",
+          "usr": "s:SQ",
+          "mangledName": "$sSQ"
+        },
+        {
+          "kind": "Conformance",
+          "name": "Comparable",
+          "printedName": "Comparable",
+          "usr": "s:SL",
+          "mangledName": "$sSL"
+        },
+        {
+          "kind": "Conformance",
+          "name": "StringProtocol",
+          "printedName": "StringProtocol",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "UTF8View",
+              "printedName": "UTF8View",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UTF8View",
+                  "printedName": "Swift.String.UTF8View",
+                  "usr": "s:SS8UTF8ViewV"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "UTF16View",
+              "printedName": "UTF16View",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UTF16View",
+                  "printedName": "Swift.String.UTF16View",
+                  "usr": "s:SS9UTF16ViewV"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "UnicodeScalarView",
+              "printedName": "UnicodeScalarView",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "UnicodeScalarView",
+                  "printedName": "Swift.String.UnicodeScalarView",
+                  "usr": "s:SS17UnicodeScalarViewV"
+                }
+              ]
+            },
+            {
+              "kind": "TypeWitness",
+              "name": "SubSequence",
+              "printedName": "SubSequence",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Substring",
+                  "printedName": "Swift.Substring",
+                  "usr": "s:Ss"
+                }
+              ]
+            }
+          ],
+          "usr": "s:Sy",
+          "mangledName": "$sSy"
+        },
+        {
+          "kind": "Conformance",
+          "name": "ExpressibleByStringInterpolation",
+          "printedName": "ExpressibleByStringInterpolation",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "StringInterpolation",
+              "printedName": "StringInterpolation",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "DefaultStringInterpolation",
+                  "printedName": "Swift.DefaultStringInterpolation",
+                  "usr": "s:s26DefaultStringInterpolationV"
+                }
+              ]
+            }
+          ],
+          "usr": "s:s32ExpressibleByStringInterpolationP",
+          "mangledName": "$ss32ExpressibleByStringInterpolationP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "LosslessStringConvertible",
+          "printedName": "LosslessStringConvertible",
+          "usr": "s:s25LosslessStringConvertibleP",
+          "mangledName": "$ss25LosslessStringConvertibleP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "RangeReplaceableCollection",
+          "printedName": "RangeReplaceableCollection",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "SubSequence",
+              "printedName": "SubSequence",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "Substring",
+                  "printedName": "Swift.Substring",
+                  "usr": "s:Ss"
+                }
+              ]
+            }
+          ],
+          "usr": "s:Sm",
+          "mangledName": "$sSm"
+        },
+        {
+          "kind": "Conformance",
+          "name": "MirrorPath",
+          "printedName": "MirrorPath",
+          "usr": "s:s10MirrorPathP",
+          "mangledName": "$ss10MirrorPathP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "_ObjectiveCBridgeable",
+          "printedName": "_ObjectiveCBridgeable",
+          "children": [
+            {
+              "kind": "TypeWitness",
+              "name": "_ObjectiveCType",
+              "printedName": "_ObjectiveCType",
+              "children": [
+                {
+                  "kind": "TypeNominal",
+                  "name": "NSString",
+                  "printedName": "Foundation.NSString",
+                  "usr": "c:objc(cs)NSString"
+                }
+              ]
+            }
+          ],
+          "usr": "s:s21_ObjectiveCBridgeableP",
+          "mangledName": "$ss21_ObjectiveCBridgeableP"
+        },
+        {
+          "kind": "Conformance",
+          "name": "CVarArg",
+          "printedName": "CVarArg",
+          "usr": "s:s7CVarArgP",
+          "mangledName": "$ss7CVarArgP"
+        }
+      ]
+    }
+  ],
+  "json_format_version": 6
+}

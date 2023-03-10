@@ -1,0 +1,12 @@
+{
+  "": {
+    "dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build/PathKit.d",
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build/PathKit.o",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build/master.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/PathKit/Sources/PathKit.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build/PathKit.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build/PathKit~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build/PathKit.swiftdeps"
+  }
+}

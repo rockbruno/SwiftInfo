@@ -1,0 +1,12 @@
+{
+  "": {
+    "dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build/SwiftInfo.d",
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build/SwiftInfo.o",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build/master.swiftdeps"
+  },
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/Sources/SwiftInfo/main.swift": {
+    "object": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build/main.swift.o",
+    "swiftmodule": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/SwiftInfo.build/main.swiftdeps"
+  }
+}

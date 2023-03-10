@@ -1,0 +1,10 @@
+version: "Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)"
+options: "ade84a954d36f5afe79209e9ff20c8f3352db158ff597e92dcf622e597af4d3a"
+build_start_time: [1678457727, 541459083]
+build_end_time: [1678457729, 911264896]
+inputs:
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Document.swift": [1678457726, 13959884]
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Element.swift": [1678457726, 14099597]
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Error.swift": [1678457726, 14215946]
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Options.swift": [1678457726, 14287710]
+  "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/checkouts/AEXML/Sources/AEXML/Parser.swift": [1678457726, 14366865]

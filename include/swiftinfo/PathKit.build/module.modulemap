@@ -1,0 +1,4 @@
+module PathKit {
+    header "/Users/asif/Documents/gitclone.noindex/opensource/SwiftInfo/.build/arm64-apple-macosx/release/PathKit.build/PathKit-Swift.h"
+    requires objc
+}
